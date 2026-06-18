@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+venv/
+data/daily/*.json
+data/weekly/*.md
+!data/daily/.gitkeep
+!data/weekly/.gitkeep

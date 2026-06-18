@@ -1,0 +1,28 @@
+{
+  "Finance": [
+    {"name": "Net Interest", "url": "https://www.netinterest.co/feed"},
+    {"name": "The Diff", "url": "https://www.thediff.co/feed"},
+    {"name": "Apricitas Economics", "url": "https://www.apricitas.io/feed"}
+  ],
+  "AI": [
+    {"name": "Import AI", "url": "https://importai.substack.com/feed"},
+    {"name": "Ahead of AI", "url": "https://magazine.sebastianraschka.com/feed"},
+    {"name": "Hugging Face Papers", "url": "https://hnrss.org/newest?q=Hugging+Face+Papers"}
+  ],
+  "Quantum": [
+    {"name": "arXiv quant-ph", "url": "http://export.arxiv.org/rss/quant-ph"},
+    {"name": "Quantum Software Engineering", "url": "https://qse.substack.com/feed"}
+  ],
+  "Engineering": [
+    {"name": "Pragmatic Engineer", "url": "https://blog.pragmaticengineer.com/rss/"},
+    {"name": "Netflix Tech Blog", "url": "https://netflixtechblog.com/feed"},
+    {"name": "Cloudflare Blog", "url": "https://blog.cloudflare.com/rss/"},
+    {"name": "Stripe Engineering", "url": "https://stripe.com/blog/feed"}
+  ],
+  "Semiconductors": [
+    {"name": "SemiAnalysis", "url": "https://www.semianalysis.com/feed"}
+  ],
+  "Startups": [
+    {"name": "Stratechery", "url": "https://stratechery.com/feed"}
+  ]
+}

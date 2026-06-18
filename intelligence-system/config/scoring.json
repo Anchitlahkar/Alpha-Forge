@@ -1,0 +1,16 @@
+{
+  "categories": {
+    "AI Research": 10,
+    "Quantum Computing": 10,
+    "Software Engineering": 9,
+    "Semiconductors": 9,
+    "Investing": 8,
+    "Startups": 8,
+    "Geopolitics": 5,
+    "Consumer Tech": 2
+  },
+  "weights": {
+    "signal": 0.7,
+    "personal": 0.3
+  }
+}
