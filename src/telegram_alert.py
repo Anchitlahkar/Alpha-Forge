@@ -2,8 +2,15 @@ import requests
 from src.config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, GITHUB_PAGES_URL
 
 def send_alert(top_insight: dict):
-    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
-        print("Telegram credentials not set. Skipping alert.")
+    # Proper validation of credentials and placeholders
+    placeholders = ["your_telegram_bot_token_here", "your_telegram_chat_id_here", ""]
+    
+    if not TELEGRAM_BOT_TOKEN or TELEGRAM_BOT_TOKEN in placeholders:
+        print("Telegram Bot Token is missing or using placeholder. Skipping alert.")
+        return
+        
+    if not TELEGRAM_CHAT_ID or TELEGRAM_CHAT_ID in placeholders:
+        print("Telegram Chat ID is missing or using placeholder. Skipping alert.")
         return
         
     title = top_insight.get("title", "No insights today")
@@ -11,7 +18,7 @@ def send_alert(top_insight: dict):
     message = (
         "📊 *Daily Intelligence Brief Ready*\n\n"
         f"🏆 *Top Insight:* {title}\n\n"
-        f"🔗 *Dashboard:* {GITHUB_PAGES_URL}"
+        f"🔗 *Dashboard:* [View Insights]({GITHUB_PAGES_URL})"
     )
     
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
@@ -22,7 +29,7 @@ def send_alert(top_insight: dict):
     }
     
     try:
-        response = requests.post(url, json=payload)
+        response = requests.post(url, json=payload, timeout=10)
         response.raise_for_status()
         print("Telegram alert sent successfully.")
     except Exception as e:

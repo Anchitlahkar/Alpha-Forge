@@ -2,7 +2,7 @@ import sys
 import os
 from pathlib import Path
 
-# Ensure the project root is in sys.path for robust imports in CI/CD
+# Fix sys.path for production environments
 root_dir = str(Path(__file__).parent.parent)
 if root_dir not in sys.path:
     sys.path.append(root_dir)
@@ -28,34 +28,42 @@ def run_daily():
     insights = []
     for article in raw_articles:
         try:
+            # Added internal error boundary per article
             insight = parse_and_analyze(article)
             if insight:
                 insights.append(insight)
         except Exception as e:
-            print(f"Error processing article {article.get('title')}: {e}")
+            print(f"Skipping article due to analysis failure: {e}")
             
     if not insights:
-        print("No articles parsed successfully.")
-        send_alert({"title": "No articles could be parsed today."})
+        print("No high-signal insights were extracted today.")
+        save_daily_archive([])
+        generate_dashboard([])
+        send_alert({"title": "No signal found today."})
         return
 
+    # Pipeline stages
     deduped = deduplicate_insights(insights)
     high_signal = filter_high_signal(deduped)
     ranked = rank_insights(high_signal)
     
+    # Artifact generation
     save_daily_archive(ranked)
     generate_dashboard(ranked)
     
     if ranked:
         send_alert(ranked[0])
     else:
-        send_alert({"title": "No high signal insights today."})
+        send_alert({"title": "Gathering complete: No items passed signal filter."})
         
     print("Daily run complete.")
 
 def run_weekly():
     print("Starting weekly synthesis...")
-    generate_weekly_synthesis()
+    try:
+        generate_weekly_synthesis()
+    except Exception as e:
+        print(f"Weekly synthesis failed: {e}")
     
     today = get_today_str()
     today_file = DAILY_DIR / f"{today}.json"

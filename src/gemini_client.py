@@ -1,5 +1,6 @@
 import time
 import json
+import re
 from typing import Any
 from google import genai
 from google.genai import types
@@ -29,25 +30,46 @@ class DeduplicationItem(BaseModel):
 class DeduplicationResponse(BaseModel):
     groups: list[DeduplicationItem]
 
+def clean_json_response(text: str) -> str:
+    """Removes markdown code blocks and cleans the response text."""
+    text = re.sub(r"```json\s*", "", text)
+    text = re.sub(r"```\s*", "", text)
+    return text.strip()
+
 def call_gemini_structured(prompt: str, schema_model: type[BaseModel], model: str = "gemini-2.5-flash", retries: int = 3) -> Any:
+    # Injecting the schema directly into the prompt to bypass SDK schema conversion bugs
+    schema_json = json.dumps(schema_model.model_json_schema(), indent=2)
+    full_prompt = (
+        f"{prompt}\n\n"
+        "IMPORTANT: You must return valid JSON that strictly conforms to the following JSON schema:\n"
+        f"{schema_json}\n"
+        "Return ONLY the JSON. No explanations, no markdown blocks."
+    )
+
     for attempt in range(retries):
         try:
             response = client.models.generate_content(
                 model=model,
-                contents=prompt,
+                contents=full_prompt,
                 config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    response_schema=schema_model,
-                    temperature=0.2
+                    temperature=0.1,
+                    # We avoid response_schema here to fix the 400 INVALID_ARGUMENT error
                 )
             )
-            # Some versions return an object that can be converted to dict directly
-            if hasattr(response, 'parsed'):
-                return response.parsed
-            return json.loads(response.text)
+            
+            if not response or not response.text:
+                continue
+
+            cleaned_text = clean_json_response(response.text)
+            
+            # Use Pydantic to validate and parse the response
+            parsed_data = schema_model.model_validate_json(cleaned_text)
+            return parsed_data
         except Exception as e:
-            print(f"Gemini API error (attempt {attempt+1}): {e}")
-            if attempt < retries - 1:
+            print(f"Gemini API failure (attempt {attempt+1}): {e}")
+            if "429" in str(e): # Rate limit backoff
+                time.sleep(10 * (attempt + 1))
+            else:
                 time.sleep(2 * (attempt + 1))
     return None
 
@@ -56,7 +78,6 @@ def extract_insights(text: str, source_url: str) -> dict[str, Any] | None:
     Analyze the following article text.
     Extract the core facts and insights. Determine a signal score (1-10) where 10 is groundbreaking and 1 is fluff.
     Determine personal relevance (1-10) based on these topics: AI Research, Quantum Computing, Software Engineering, Semiconductors, Investing, Startups.
-    Return JSON matching the schema.
     
     Source URL: {source_url}
     
@@ -64,7 +85,7 @@ def extract_insights(text: str, source_url: str) -> dict[str, Any] | None:
     {text[:15000]}
     """
     res = call_gemini_structured(prompt, ArticleAnalysis, model="gemini-2.5-flash")
-    return res if isinstance(res, dict) else res.model_dump() if res else None
+    return res.model_dump() if res else None
 
 def synthesize_weekly(daily_insights: list[dict]) -> str:
     prompt = f"""
@@ -78,9 +99,10 @@ def synthesize_weekly(daily_insights: list[dict]) -> str:
     try:
         response = client.models.generate_content(
             model="gemini-2.5-pro",
-            contents=prompt
+            contents=prompt,
+            config=types.GenerateContentConfig(temperature=0.3)
         )
-        return response.text
+        return response.text if response.text else "Synthesis empty."
     except Exception as e:
         print(f"Weekly synthesis error: {e}")
-        return "Failed to generate weekly synthesis."
+        return "Failed to generate weekly synthesis due to API error."

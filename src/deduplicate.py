@@ -5,6 +5,7 @@ def deduplicate_insights(insights: list[dict]) -> list[dict]:
     if not insights or len(insights) <= 1:
         return insights
         
+    # Simplify payload to avoid token bloat
     payload = [{"index": i, "title": ins["title"], "tldr": ins.get("tldr", "")} for i, ins in enumerate(insights)]
     prompt_text = f"""
     Group the following articles if they discuss the exact same underlying event or news.
@@ -16,53 +17,40 @@ def deduplicate_insights(insights: list[dict]) -> list[dict]:
     
     try:
         res = call_gemini_structured(prompt_text, DeduplicationResponse, model="gemini-2.5-flash")
-        if not res:
+        if not res or not res.groups:
             return insights
             
-        # Handle both dict and Pydantic model response
-        groups = res.groups if hasattr(res, 'groups') else res.get("groups", [])
-        
         deduped = []
         handled_indices = set()
         
-        for group in groups:
-            # Handle both dict and Pydantic model
-            if hasattr(group, 'model_dump'):
-                g_dict = group.model_dump()
-            else:
-                g_dict = group
-                
-            indices = g_dict.get("original_indices", [])
+        for group in res.groups:
+            indices = group.original_indices
             if not indices: continue
             
-            # Find first valid index to use as base
-            base_idx = -1
-            for idx in indices:
-                if 0 <= idx < len(insights):
-                    base_idx = idx
-                    break
+            # Determine base index safely
+            valid_indices = [idx for idx in indices if 0 <= idx < len(insights)]
+            if not valid_indices: continue
             
-            if base_idx == -1: continue
-            
+            base_idx = valid_indices[0]
             base_insight = insights[base_idx].copy()
-            base_insight["title"] = g_dict.get("event", base_insight["title"])
-            base_insight["tldr"] = g_dict.get("summary", base_insight.get("tldr", ""))
+            base_insight["title"] = group.event
+            base_insight["tldr"] = group.summary
             
+            # Combine sources
             all_sources = set()
-            for idx in indices:
-                if 0 <= idx < len(insights):
-                    all_sources.update(insights[idx].get("sources", []))
-                    handled_indices.add(idx)
+            for idx in valid_indices:
+                all_sources.update(insights[idx].get("sources", []))
+                handled_indices.add(idx)
                     
             base_insight["sources"] = list(all_sources)
             deduped.append(base_insight)
             
-        # Add remaining articles that weren't grouped
+        # Retain articles that weren't part of any group
         for i, ins in enumerate(insights):
             if i not in handled_indices:
                 deduped.append(ins)
                 
         return deduped
     except Exception as e:
-        print(f"Deduplication error: {e}")
+        print(f"Deduplication processing error: {e}")
         return insights
