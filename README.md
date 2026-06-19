@@ -1,4 +1,4 @@
-# 🧠 Personal Intelligence System
+# 🧠 Alpha-Forge Intelligence
 
 An automated, high-signal intelligence platform designed to cut through the noise. It gathers the latest developments in Finance, AI, Quantum Computing, Semiconductors, and Engineering, processes them using Gemini 2.5, and delivers a curated dashboard and Telegram alerts.
 
@@ -29,7 +29,7 @@ An automated, high-signal intelligence platform designed to cut through the nois
 ### 2. Local Installation
 ```bash
 git clone <your-repo-url>
-cd intelligence-system
+cd Alpha-Forge
 ./setup.sh
 ```
 
@@ -39,7 +39,7 @@ Edit the `.env` file:
 GEMINI_API_KEY=your_key
 TELEGRAM_BOT_TOKEN=your_token
 TELEGRAM_CHAT_ID=your_id
-GITHUB_PAGES_URL=https://<user>.github.io/<repo>/
+PAGES_URL=https://anchitlahkar.github.io/Alpha-Forge/dashboard/
 ```
 
 ### 4. GitHub Secrets
@@ -50,7 +50,7 @@ For automation, add these as **GitHub Actions Secrets**:
 
 ## 📁 Repository Structure
 ```text
-intelligence-system/
+Alpha-Forge/
 ├── .github/workflows/    # CI/CD (Daily/Weekly runs)
 ├── src/                  # Core Python logic
 ├── templates/            # HTML/CSS UI

@@ -1,6 +1,6 @@
-# 🏗️ System Architecture & Working Logic
+# 🏗️ Alpha-Forge Architecture & Working Logic
 
-This document provides a deep dive into how the Personal Intelligence System operates, from ingestion to delivery.
+This document provides a deep dive into how the Alpha-Forge Intelligence System operates, from ingestion to delivery.
 
 ## 1. High-Level Architecture
 The system follows a linear pipeline architecture, triggered by cron jobs (GitHub Actions).
@@ -49,7 +49,7 @@ The system is configured to monitor the following high-signal sources:
 
 ### ⚛️ Quantum Computing
 - **arXiv quant-ph:** Raw academic research pre-prints.
-- **Quantum Software Engineering:** Newsletter focused on the quantum stack.
+- **Quantum Zeitgeist:** Newsletter focused on the quantum stack.
 
 ### 💻 Software Engineering
 - **Pragmatic Engineer:** Market trends and engineering leadership.

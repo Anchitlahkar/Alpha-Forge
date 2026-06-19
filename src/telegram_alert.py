@@ -1,5 +1,5 @@
 import requests
-from src.config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, GITHUB_PAGES_URL
+from src.config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, PAGES_URL
 
 def send_alert(top_insight: dict):
     # Proper validation of credentials and placeholders
@@ -18,7 +18,7 @@ def send_alert(top_insight: dict):
     message = (
         "📊 *Daily Intelligence Brief Ready*\n\n"
         f"🏆 *Top Insight:* {title}\n\n"
-        f"🔗 *Dashboard:* [View Insights]({GITHUB_PAGES_URL})"
+        f"🔗 *Dashboard:* [View Insights]({PAGES_URL})"
     )
     
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
