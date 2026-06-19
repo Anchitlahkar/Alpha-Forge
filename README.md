@@ -1,30 +1,47 @@
-# 🧠 Alpha-Forge Intelligence
+# 🧠 Alpha-Forge Intelligence Platform
 
-An automated, high-signal intelligence platform designed to cut through the noise. It gathers the latest developments in Finance, AI, Quantum Computing, Semiconductors, and Engineering, processes them using Gemini 2.5, and delivers a curated dashboard and Telegram alerts.
+An automated, highly resilient, high-signal intelligence platform designed to cut through the noise. It gathers the latest developments across strategic technology domains, processes them using a smart Google Gemini API key-rotating manager, filters and ranks them according to relevance, and delivers a curated dashboard and Telegram alerts.
 
 ## 🚀 Features
-- **Automated Discovery:** Fetches from RSS feeds and blogs across 7 strategic technology domains.
-- **AI-Powered Analysis:** Uses **Gemini 2.5 Flash** for fact extraction, TLDR generation, and signal scoring.
+
+- **Automated Ingestion:** Polls high-signal RSS feeds and blogs across Finance, AI, Quantum Computing, Semiconductors, Software Engineering, and Startups.
+- **Token Optimization & Reduction:**
+  - Prefers RSS summaries over crawling complete articles, reducing prompt sizes by 70%-90%.
+  - Enforces a hard cap of `MAX_ARTICLES_PER_RUN = 10` to conserve Gemini API limits.
+  - Skips duplicate URLs within the same run.
+  - Excludes articles with content shorter than 200 characters.
+  - Bypasses already processed articles using a persistent history database stored in `data/processed_urls.json`.
+- **Intelligent API Key Rotation (Resilience):**
+  - Allows entering multiple Gemini keys under the `GEMINI_API_KEYS` variable.
+  - Automatically switches keys when encountering `RESOURCE_EXHAUSTED`, `QUOTA_EXCEEDED`, `429`, or rate limit errors.
+  - Logs transition progress in detail.
+  - Continues pipeline execution gracefully even if all keys fail.
 - **Semantic Deduplication:** Merges overlapping stories into unified events using LLM-based clustering.
-- **Relevance Ranking:** Scores insights based on a custom weighted model (Signal × 0.7 + Personal Relevance × 0.3).
-- **Weekly Deep Dives:** Uses **Gemini 2.5 Pro** to synthesize a week's worth of data into a strategic report.
-- **Zero-Cost Deployment:** Runs entirely on GitHub Actions with hosting on GitHub Pages.
-- **Real-time Alerts:** Sends the top daily insight directly to your Telegram.
+- **Relevance Ranking:** Scores and ranks insights based on a custom weighted model: `(Signal × 0.7) + (Personal Relevance × 0.3)`.
+- **Enhanced Structured Output:** Utilizes Pydantic schemas to validate LLM outputs across 11 fields. Employs `repair_json` to automatically resolve trailing commas, unescaped newlines in JSON strings, and unbalanced brackets.
+- **Fail-Safe Mode:** Ensures the pipeline never crashes and prevents empty dashboards. If Gemini is unavailable, it automatically degrades gracefully, showing standard cards marked as `Analysis unavailable.` with the original link.
+- **Premium Dark UI Dashboard:** Features a modern Outfit-typography design, interactive HSL gradients, glassmorphism cards, sorted descending by final score, displaying the daily top 5 insights.
+- **Real-Time Telegram Alerts:** Formats the day's top insight with direct read links and dashboard links.
+
+---
 
 ## 🛠️ Tech Stack
+
 - **Language:** Python 3.12
-- **LLM:** Google Gemini 2.5 Flash & Pro
+- **LLM:** Google Gemini 2.5 Flash & Pro (Google GenAI SDK)
 - **Automation:** GitHub Actions
 - **Storage:** Flat JSON files (Git-based history)
-- **Frontend:** HTML5/CSS3 (Jinja2 Templates)
+- **Frontend:** Jinja2 templates, HTML5, Vanilla CSS3 (Modern dark-slate/glassmorphism design)
 - **Notifications:** Telegram Bot API
+
+---
 
 ## 📋 Setup & Installation
 
 ### 1. Prerequisites
-- A Google AI Studio API Key ([Get it here](https://aistudio.google.com/))
-- A Telegram Bot Token (from [@BotFather](https://t.me/botfather))
-- A GitHub repository for hosting.
+- One or more Google AI Studio API Keys ([AI Studio Console](https://aistudio.google.com/))
+- A Telegram Bot Token and Chat ID ([@BotFather](https://t.me/botfather))
+- A GitHub repository for hosting the output on GitHub Pages.
 
 ### 2. Local Installation
 ```bash
@@ -34,31 +51,47 @@ cd Alpha-Forge
 ```
 
 ### 3. Environment Configuration
-Edit the `.env` file:
+Create or edit the `.env` file in the root directory:
 ```env
-GEMINI_API_KEY=your_key
-TELEGRAM_BOT_TOKEN=your_token
-TELEGRAM_CHAT_ID=your_id
-PAGES_URL=https://anchitlahkar.github.io/Alpha-Forge/dashboard/
+# Enter a single key or comma-separated keys for automatic rotation:
+GEMINI_API_KEYS=key_1,key_2,key_3,key_4
+GEMINI_API_KEY=fallback_key
+
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
+TELEGRAM_CHAT_ID=your_telegram_chat_id_here
+PAGES_URL=https://yourusername.github.io/Alpha-Forge/dashboard/
 ```
 
 ### 4. GitHub Secrets
-For automation, add these as **GitHub Actions Secrets**:
-- `GEMINI_API_KEY`
+For automatic cron execution, add these as **GitHub Actions Secrets**:
+- `GEMINI_API_KEYS`
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHAT_ID`
+
+---
 
 ## 📁 Repository Structure
 ```text
 Alpha-Forge/
-├── .github/workflows/    # CI/CD (Daily/Weekly runs)
-├── src/                  # Core Python logic
-├── templates/            # HTML/CSS UI
-├── dashboard/            # Generated site (GH Pages root)
-├── data/                 # JSON archives
-├── config/               # Feeds and scoring weights
-└── tests/                # Unit tests
+├── .github/workflows/    # CI/CD pipelines (Daily/Weekly workflow crons)
+├── src/                  # Python implementation files
+│   ├── config.py         # Config loading (API keys, Telegram, feeds, scoring)
+│   ├── gemini_client.py  # Rotation client, JSON repair, LLM schemas, weekly deep dives
+│   ├── fetch_sources.py  # RSS parsing & BeautifulSoup crawling fallback
+│   ├── article_parser.py # Content filters, summary preferences, fail-safe fallbacks
+│   ├── deduplicate.py    # Semantic LLM grouping
+│   ├── relevance_ranker.py# Custom personal-weighted ranking calculation
+│   ├── dashboard_generator.py# Daily/weekly HTML rendering
+│   ├── telegram_alert.py # Formatted notification dispatch
+│   └── utils.py          # IO helpers, processed URL registry
+├── templates/            # HTML/CSS Jinja templates
+├── dashboard/            # Target deployment directory (GitHub Pages root)
+├── data/                 # JSON archive folders and processed_urls.json
+├── config/               # Scoring coefficients and RSS feed lists
+└── tests/                # Pipeline test suite
 ```
+
+---
 
 ## ⚖️ License
 MIT License - See LICENSE for details.

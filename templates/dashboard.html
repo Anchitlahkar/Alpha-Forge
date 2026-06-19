@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Intelligence Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #121212;
-            --surface: #1e1e1e;
-            --primary: #bb86fc;
-            --text: #e0e0e0;
-            --text-muted: #a0a0a0;
-            --border: #333;
+            --bg: #0B0F19;
+            --surface: #151B2C;
+            --surface-hover: #1E2640;
+            --primary: #6366F1;
+            --primary-light: #8B5CF6;
+            --text: #F3F4F6;
+            --text-muted: #9CA3AF;
+            --border: #222E4A;
+            --accent: #10B981;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
@@ -24,47 +28,175 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
         header {
             border-bottom: 1px solid var(--border);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+            text-align: center;
         }
-        h1, h2, h3 { color: var(--primary); }
+        h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            background: linear-gradient(135deg, #6366F1, #A78BFA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: var(--text);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav a {
+            color: var(--text-muted);
+            font-weight: 500;
+            text-decoration: none;
+            padding: 6px 16px;
+            border-radius: 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        .nav a:hover {
+            color: var(--text);
+            border-color: var(--primary);
+            background: var(--surface-hover);
+        }
         .card {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
-        .meta {
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .card-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 0;
+            color: #FFFFFF;
+            flex: 1;
+            min-width: 250px;
+        }
+        .badges {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .badge {
+            font-size: 0.8em;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-category {
+            background: rgba(99, 102, 241, 0.15);
+            color: #A5B4FC;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        .badge-score {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #FFFFFF;
+        }
+        .meta-line {
             font-size: 0.9em;
             color: var(--text-muted);
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
         }
-        .score {
-            display: inline-block;
+        .meta-line span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .section-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #E5E7EB;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        .why-it-matters {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .tldr {
+            font-size: 1.05em;
+            color: #D1D5DB;
+            margin-bottom: 20px;
+        }
+        ul {
+            margin: 0 0 20px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+            color: #D1D5DB;
+        }
+        .card-footer {
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #FFFFFF;
             background: var(--primary);
-            color: var(--bg);
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 0.8em;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s ease;
         }
-        ul { margin: 10px 0; padding-left: 20px; }
-        a { color: var(--primary); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .nav { margin-bottom: 20px; }
-        .nav a { margin-right: 15px; font-weight: bold; }
+        .btn-link:hover {
+            background: #4F46E5;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p>Generated on {{ date }}</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on {{ date }}</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -76,45 +208,84 @@
             <h2>Today's Top Insights</h2>
             {% for item in top_insights %}
             <div class="card">
-                <h3>{{ item.title }}</h3>
-                <div class="meta">
-                    <span class="score">Score: {{ item.final_score }}</span> | Category: {{ item.category }}
+                <div class="card-header">
+                    <h3 class="card-title">{{ item.title }}</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">{{ item.category }}</span>
+                        <span class="badge badge-score">Signal: {{ item.signal_score }}</span>
+                    </div>
                 </div>
-                <p><strong>TLDR:</strong> {{ item.tldr }}</p>
-                <h4>Facts:</h4>
+                
+                <div class="meta-line">
+                    <span>📅 {{ item.date }}</span>
+                    <span>🌐 Source: {{ item.source_name }}</span>
+                </div>
+
+                {% if item.why_it_matters %}
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    {{ item.why_it_matters }}
+                </div>
+                {% endif %}
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    {{ item.tldr }}
+                </div>
+
+                {% if item.key_points %}
+                <div class="section-title">📌 Key Points</div>
                 <ul>
-                    {% for fact in item.facts %}
-                    <li>{{ fact }}</li>
+                    {% for pt in item.key_points %}
+                    <li>{{ pt }}</li>
                     {% endfor %}
                 </ul>
-                <h4>Takeaways:</h4>
+                {% endif %}
+
+                {% if item.action_items %}
+                <div class="section-title">⚡ Action Items</div>
                 <ul>
-                    {% for takeaway in item.takeaways %}
-                    <li>{{ takeaway }}</li>
+                    {% for action in item.action_items %}
+                    <li>{{ action }}</li>
                     {% endfor %}
                 </ul>
-                <div class="meta">
-                    Sources: 
-                    {% for src in item.sources %}
-                    <a href="{{ src }}" target="_blank">Link</a> 
-                    {% endfor %}
+                {% endif %}
+
+                <div class="card-footer">
+                    <span>Processed Category: {{ item.original_category }}</span>
+                    {% if item.source_url %}
+                    <a href="{{ item.source_url }}" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    {% endif %}
                 </div>
             </div>
             {% endfor %}
+            {% if not top_insights %}
+            <p style="color: var(--text-muted); font-style: italic;">No insights available for today.</p>
+            {% endif %}
         </section>
 
         <section id="categories">
             <h2>By Category</h2>
             {% for cat, items in categorized_insights.items() %}
-            <h3>{{ cat }}</h3>
-            {% for item in items %}
-            <div class="card">
-                <h4>{{ item.title }}</h4>
-                <p>{{ item.tldr }}</p>
-                <div class="meta">Score: {{ item.final_score }}</div>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">{{ cat }}</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                {% for item in items %}
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">{{ item.title }}</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">{{ item.tldr }}</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: {{ item.final_score }}</span>
+                        {% if item.source_url %}
+                        <a href="{{ item.source_url }}" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
             </div>
             {% endfor %}
-            {% endfor %}
+            {% if not categorized_insights %}
+            <p style="color: var(--text-muted); font-style: italic;">No categorized insights available.</p>
+            {% endif %}
         </section>
 
         <section id="weekly">
@@ -123,7 +294,7 @@
                 {% if weekly_content %}
                     {{ weekly_content | safe }}
                 {% else %}
-                    <p>No weekly synthesis available yet.</p>
+                    <p style="color: var(--text-muted); font-style: italic; margin: 0;">No weekly synthesis available yet.</p>
                 {% endif %}
             </div>
         </section>

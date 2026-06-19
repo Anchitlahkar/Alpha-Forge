@@ -1,83 +1,160 @@
-# 🏗️ Alpha-Forge Architecture & Working Logic
+# 🏗️ Alpha-Forge Architecture & Pipeline Processing Logic
 
-This document provides a deep dive into how the Alpha-Forge Intelligence System operates, from ingestion to delivery.
+This document provides a comprehensive technical walkthrough of how the **Alpha-Forge** Intelligence System operates across all phases of ingestion, analysis, filtering, deduplication, ranking, layout generation, and notification dispatch.
 
-## 1. High-Level Architecture
-The system follows a linear pipeline architecture, triggered by cron jobs (GitHub Actions).
+---
+
+## 1. High-Level Architecture Pipeline
+
+Alpha-Forge operates as a linear processing pipeline triggered by time-based crons (via GitHub Actions). The pipeline stages are executed as follows:
 
 ```text
-[Sources] -> [Fetch & Parse] -> [Gemini Extraction] -> [Deduplication] -> [Ranking] -> [Synthesis] -> [Delivery]
+[Feeds List]
+     |
+     v
+[RSS Aggregator] ---> [Length Filter & Seen Check]
+                             |
+                             v
+                    [Summary Extraction] (Fallback: Full Page Crawl)
+                             |
+                             v
+                    [Gemini API Client] <---> [Client Key Rotator]
+                             |
+                             v
+                    [JSON Repair Engine]
+                             |
+                             v
+                    [Pydantic Validation]
+                             | (On Failure/Exhaustion)
+                             +-------------------------> [Fail-Safe Fallback Model]
+                             |
+                             v
+                    [Deduplication Stage]
+                             |
+                             v
+                    [Score & Category Ranker]
+                             |
+                             v
+                    [Dashboard HTML Render] ---> [Telegram Notification Dispatch]
 ```
 
-## 2. Core Pipeline Components
+---
 
-### A. Content Ingestion (`fetch_sources.py` & `article_parser.py`)
-- **RSS Aggregation:** Polls high-signal RSS feeds defined in `config/feeds.json`.
-- **Full-Text Extraction:** Uses `BeautifulSoup4` with custom headers to bypass simple bot detection and extract the core article body, stripping away navigation, ads, and scripts.
-- **Classification:** Initial categorization is based on the source feed domain.
+## 2. Pipeline Components & Implementation Details
 
-### B. Intelligent Processing (`gemini_client.py`)
-The system employs a dual-model strategy:
-- **Gemini 2.5 Flash:** Used for high-volume daily tasks (Fact extraction, TLDR, classification validation). It provides low-latency, structured JSON output via Pydantic schemas.
-- **Gemini 2.5 Pro:** Reserved for the **Weekly Deep Dive**. It analyzes the cumulative data from the week to identify "cross-cutting" trends that aren't visible in individual daily reports.
+### A. Ingestion and Pre-Filtering (`fetch_sources.py` & `article_parser.py`)
+1. **Aggregated Sources**: The pipeline reads feeds from `config/feeds.json` classified under Finance, AI, Quantum, Engineering, Semiconductors, and Startups.
+2. **Duplication Filter**: The pipeline maintains two layers of URL filtering:
+   - **Current Run Deduplication**: Tracks unique links in the current execution loop using an in-memory set (`seen_urls`).
+   - **Historical Registry**: Loads processed URLs from `data/processed_urls.json` to prevent reprocessing articles analyzed in previous runs.
+3. **Summary Preference (Token Saving)**:
+   - Evaluates the RSS feed's summary first.
+   - If present, it bypasses the article crawler entirely, saving 70% to 90% in token ingestion costs.
+   - If the summary is absent, it calls a BeautifulSoup4 parser (`fetch_article_text`) using spoofed user-agent headers to scrape the main page content, discarding scripts, styles, and markup.
+4. **Length Constraint**: If the extracted text content is shorter than **200 characters**, the article is skipped to ignore short stub updates.
 
-### C. Semantic Deduplication (`deduplicate.py`)
-Unlike simple hash-based deduping, this system uses **LLM Semantic Clustering**.
-1. It sends the titles and summaries of all daily articles to Gemini.
-2. Gemini identifies which articles discuss the same underlying event (e.g., "Nvidia Earnings" reported by 5 different blogs).
-3. The system merges these into a single "Insight" but retains all source URLs for reference.
+---
 
-### D. The Relevance Model (`relevance_ranker.py`)
-Insights are ranked using a composite score:
-- **Signal Score (LLM Generated):** How much *new* information or technical depth is in the piece (1-10).
-- **Personal Relevance:** Based on category weights defined in `config/scoring.json`.
-- **Formula:** `(Signal * 0.7) + (Personal_Relevance * 0.3)`
+### B. Gemini Client Manager & Key Rotation (`gemini_client.py`)
+1. **Multi-Key Setup**: Allows setting multiple API keys via the `GEMINI_API_KEYS` env variable (comma-separated).
+2. **Automatic Failover**:
+   - The pipeline initiates calls using Key #1.
+   - If an API call fails due to `RESOURCE_EXHAUSTED`, `QUOTA_EXCEEDED`, `429`, or rate limit messages, the manager switches to Key #2, Key #3, and so on.
+   - Rotation activity is logged in the following format:
+     ```text
+     [Gemini]
+     Using Key #1
+     
+     [Gemini]
+     Key #1 exhausted
+     
+     [Gemini]
+     Switching to Key #2
+     ```
+3. **Hard Cap**: Processes a maximum of **10 articles** per daily run (`MAX_ARTICLES_PER_RUN = 10`) to control token consumption.
 
-## 3. Monitored Content Sources
+---
 
-The system is configured to monitor the following high-signal sources:
+### C. JSON Repair Engine & Validation (`gemini_client.py`)
+Before passing the generated response text to Pydantic, the raw text is cleaned using the `repair_json` function:
+1. Strips markdown block qualifiers (` ```json ` and ` ``` `).
+2. Isolates the outermost braces (finds the first `{` and last `}`) to remove peripheral conversational commentary.
+3. Fixes trailing commas inside lists or dictionary structures via regex replacement: `re.sub(r',\s*([\]}])', r'\1', text)`.
+4. Standardizes unescaped newline characters within string literals.
+5. Balances unmatched brackets/braces to prevent JSON syntax parser faults.
+6. The cleaned string is validated using Pydantic's `ArticleAnalysis` schema, representing 11 required fields:
+   ```json
+   {
+     "title": "string",
+     "category": "string",
+     "signal_score": 0.0,
+     "personal_relevance": 0.0,
+     "why_it_matters": "string",
+     "tldr": "string",
+     "key_points": [],
+     "action_items": [],
+     "source_name": "string",
+     "source_url": "string",
+     "date": "string"
+   }
+   ```
 
-### 📈 Finance & Economics
-- **Net Interest:** Deep dives into financial sector themes.
-- **The Diff:** Info-dense analysis of inflections in tech and finance.
-- **Apricitas Economics:** Data-driven macroeconomic insights.
+---
 
-### 🤖 Artificial Intelligence
-- **Import AI (Jack Clark):** Policy and technical research summaries.
-- **Ahead of AI (Sebastian Raschka):** Latest breakthroughs in ML and LLMs.
-- **Hugging Face Papers:** Daily trending research papers.
+### D. Semantic Deduplication (`deduplicate.py`)
+1. Simplifies insights by grouping overlapping titles and summaries via a Gemini structural prompt.
+2. Identifies stories covering the same underlying event.
+3. Blends them into single records, consolidating references into a aggregated list of sources.
 
-### ⚛️ Quantum Computing
-- **arXiv quant-ph:** Raw academic research pre-prints.
-- **Quantum Zeitgeist:** Newsletter focused on the quantum stack.
+---
 
-### 💻 Software Engineering
-- **Pragmatic Engineer:** Market trends and engineering leadership.
-- **Netflix Tech Blog:** High-scale infrastructure and culture.
-- **Cloudflare Blog:** Networking, security, and edge computing.
-- **Stripe Engineering:** Payment systems and platform reliability.
+### E. Scoring and Ranking (`relevance_ranker.py`)
+Each insight receives a `final_score` calculated as:
+$$\text{Final Score} = (\text{Signal Score} \times 0.7) + (\text{Adjusted Personal Relevance} \times 0.3)$$
+Where:
+- **Signal Score**: The LLM's assessment of Technical Depth (1-10).
+- **Adjusted Personal Relevance**: The average of the LLM's relevance score and the category-specific weight defined in `config/scoring.json`.
+- Discards any insight with a `signal_score < 5` to filter out low-signal stories.
 
-### 🔌 Semiconductors
-- **SemiAnalysis:** In-depth supply chain and hardware architecture analysis.
+---
 
-### 🚀 Startups & Strategy
-- **Stratechery (Ben Thompson):** Business strategy and tech ecosystems.
+### F. Failure Recovery & Fail-Safe Mode (`article_parser.py`)
+If Gemini becomes unavailable (all keys exhausted or net failure), the pipeline executes a **fail-safe degradation routine**:
+- Avoids crashing the pipeline.
+- Instantiates fallback mock dictionaries:
+  - `why_it_matters`: `"Analysis unavailable."`
+  - `tldr`: `"Analysis unavailable."`
+  - `key_points`: `[]`
+  - `action_items`: `[]`
+  - `signal_score` / `personal_relevance`: `5.0` (to bypass the signal score filter threshold).
+  - Preserves target article title, source name, original link (`source_url`), and date.
+- The pipeline proceeds to generate a dashboard with the remaining content.
 
-## 4. Automation & Deployment
+---
 
-### Daily Workflow (`daily.yml`)
-- Runs at **08:00 UTC**.
-- Fetches sources, generates the `dashboard/index.html`, and commits the JSON archive to the repo.
-- Deploys the result to **GitHub Pages**.
-- Sends a **Telegram Alert** with the #1 ranked insight.
+### G. UI & Dashboard Layout (`templates/dashboard.html`)
+The dashboard implements a modern visual design:
+- **Dark Theme Palette**: Uses space-blue/gray color tones (`#0B0F19`, `#151B2C`, `#1E2640`).
+- **Typography**: Imports the modern `Outfit` font for titles and structured contents.
+- **Card Elements**:
+  - Displays Category Badges and gradient Signal Score badges.
+  - Interactive cards that elevate on hover with border transitions.
+  - Distinct sections for **Why It Matters**, **Summary (TLDR)**, **Key Points**, and **Action Items**.
+  - Direct "Read Original Article" links leading to the source.
+- **Slicing**: Automatically sorts the final cards by `final_score` descending and restricts display to the **Top 5 Insights** of the day.
 
-### Weekly Workflow (`weekly.yml`)
-- Runs every **Sunday at 09:00 UTC**.
-- Aggregates the last 7 days of JSON files.
-- Uses Gemini 2.5 Pro to write a high-level strategic overview.
-- Re-generates the dashboard to include the "Weekly Deep Dive" section.
+---
 
-## 5. Data Integrity & Error Handling
-- **JSON Validation:** The system uses Pydantic to enforce Gemini's output format.
-- **Retry Logic:** If Gemini returns invalid JSON or fails, the system attempts up to 3 retries with exponential backoff.
-- **Signal Filtering:** Any insight with a Signal Score < 5 is automatically discarded to keep the dashboard fluff-free.
+### H. Notifications (`telegram_alert.py`)
+Dispatches a Real-Time message for the top-ranked insight of the day in this exact format:
+```text
+Top Insight:
+<title>
+
+Read:
+<article_url>
+
+Dashboard:
+<dashboard_url>
+```
+*Note: Validates tokens and chat IDs before dispatching, avoiding crashes if credentials are unset.*

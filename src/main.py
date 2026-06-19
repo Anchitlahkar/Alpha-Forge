@@ -10,7 +10,7 @@ if root_dir not in sys.path:
 import argparse
 import json
 from src.config import DAILY_DIR
-from src.utils import get_today_str
+from src.utils import get_today_str, load_processed_urls, save_processed_urls
 from src.fetch_sources import fetch_rss_feeds
 from src.article_parser import parse_and_analyze
 from src.deduplicate import deduplicate_insights
@@ -25,18 +25,46 @@ def run_daily():
     print("Starting daily intelligence gathering...")
     raw_articles = fetch_rss_feeds()
     
+    processed_urls = load_processed_urls()
+    seen_urls = set()
+    
     insights = []
+    analyzed_count = 0
+    
     for article in raw_articles:
+        url = article.get("link")
+        if not url:
+            continue
+            
+        # Feature 2: Skip duplicate URL in current run
+        if url in seen_urls:
+            print(f"Skipping duplicate URL in current run: {url}")
+            continue
+        seen_urls.add(url)
+        
+        # Feature 2: Skip already processed URL from past runs
+        if url in processed_urls:
+            print(f"Skipping already processed URL: {url}")
+            continue
+            
+        # Feature 2: Hard cap of 10 articles analyzed per run
+        if analyzed_count >= 10:
+            print("Reached MAX_ARTICLES_PER_RUN (10). Skipping remaining articles.")
+            break
+            
         try:
-            # Added internal error boundary per article
-            insight = parse_and_analyze(article)
+            insight = parse_and_analyze(article, processed_urls)
             if insight:
                 insights.append(insight)
+                analyzed_count += 1
         except Exception as e:
             print(f"Skipping article due to analysis failure: {e}")
             
+    # Save updated processed URLs
+    save_processed_urls(processed_urls)
+            
     if not insights:
-        print("No high-signal insights were extracted today.")
+        print("No insights were extracted today.")
         save_daily_archive([])
         generate_dashboard([])
         send_alert({"title": "No signal found today."})

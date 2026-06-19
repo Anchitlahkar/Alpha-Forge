@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Intelligence Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #121212;
-            --surface: #1e1e1e;
-            --primary: #bb86fc;
-            --text: #e0e0e0;
-            --text-muted: #a0a0a0;
-            --border: #333;
+            --bg: #0B0F19;
+            --surface: #151B2C;
+            --surface-hover: #1E2640;
+            --primary: #6366F1;
+            --primary-light: #8B5CF6;
+            --text: #F3F4F6;
+            --text-muted: #9CA3AF;
+            --border: #222E4A;
+            --accent: #10B981;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
@@ -24,47 +28,175 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
         header {
             border-bottom: 1px solid var(--border);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+            text-align: center;
         }
-        h1, h2, h3 { color: var(--primary); }
+        h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            background: linear-gradient(135deg, #6366F1, #A78BFA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: var(--text);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav a {
+            color: var(--text-muted);
+            font-weight: 500;
+            text-decoration: none;
+            padding: 6px 16px;
+            border-radius: 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        .nav a:hover {
+            color: var(--text);
+            border-color: var(--primary);
+            background: var(--surface-hover);
+        }
         .card {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
-        .meta {
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .card-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 0;
+            color: #FFFFFF;
+            flex: 1;
+            min-width: 250px;
+        }
+        .badges {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .badge {
+            font-size: 0.8em;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-category {
+            background: rgba(99, 102, 241, 0.15);
+            color: #A5B4FC;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        .badge-score {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #FFFFFF;
+        }
+        .meta-line {
             font-size: 0.9em;
             color: var(--text-muted);
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
         }
-        .score {
-            display: inline-block;
+        .meta-line span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .section-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #E5E7EB;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        .why-it-matters {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .tldr {
+            font-size: 1.05em;
+            color: #D1D5DB;
+            margin-bottom: 20px;
+        }
+        ul {
+            margin: 0 0 20px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+            color: #D1D5DB;
+        }
+        .card-footer {
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #FFFFFF;
             background: var(--primary);
-            color: var(--bg);
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 0.8em;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s ease;
         }
-        ul { margin: 10px 0; padding-left: 20px; }
-        a { color: var(--primary); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .nav { margin-bottom: 20px; }
-        .nav a { margin-right: 15px; font-weight: bold; }
+        .btn-link:hover {
+            background: #4F46E5;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p>Generated on 2026-06-19</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-06-19</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -75,10 +207,293 @@
         <section id="top">
             <h2>Today's Top Insights</h2>
             
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Solving Nonequilibrium Dynamics via Influence Matrix Bootstrap: Floquet-PXP Model</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 2026-06-19T00:00:00-04:00</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research addresses a fundamental and challenging problem in quantum many-body physics: accurately characterizing nonequilibrium dynamics. By developing novel theoretical and computational tools (influence matrix bootstrap, generalized zipper conditions), it provides a deeper understanding of how quantum systems evolve, thermalize, or remain non-thermal. The introduction of 'hidden Markov order' offers a new perspective on quantum memory and correlations. Crucially, the findings are experimentally testable in state-of-the-art quantum simulators like Rydberg atom arrays, making it highly relevant for advancing the design, control, and understanding of future quantum computing and simulation platforms.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Researchers developed a new tensor-network bootstrap method to solve challenging nonequilibrium dynamics in quantum systems, revealing complex behaviors, new insights into quantum memory ('hidden Markov order'), and providing an experimentally testable model for quantum simulators.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Introduces a novel tensor-network approach (influence matrix bootstrap) and 'generalized zipper conditions' to exactly solve local nonequilibrium dynamics in integrable quantum systems (Floquet-PXP model).</li>
+                    
+                    <li>Uncovers a rich landscape of nonequilibrium behavior, including initial-state dependence, non-thermal relaxation constrained by conservation laws, and numerically exact entanglement growth.</li>
+                    
+                    <li>Identifies a 'hidden Markov order' in multitime correlations, revealing a refined structure of quantum memory with finite-length and long-range distributed components.</li>
+                    
+                    <li>Provides an analytically tractable model that enables unified investigations of both nonthermalizing and thermalizing regimes of nonequilibrium dynamics.</li>
+                    
+                    <li>The theoretical predictions are directly testable experimentally in state-of-the-art quantum simulators, such as Rydberg atom arrays.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Monitor advancements in tensor-network methods and bootstrap techniques for quantum simulation and many-body physics.</li>
+                    
+                    <li>Investigate potential implications of 'hidden Markov order' for quantum information processing, quantum memory design, or error correction schemes.</li>
+                    
+                    <li>Track experimental validations of these theoretical predictions in Rydberg atom arrays and other quantum simulation platforms, as they could inform future quantum hardware development.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2606.19430" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Indefinite Quantum Causality</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum</span>
+                        <span class="badge badge-score">Signal: 5.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Fri, 19 Jun 2026 00:00:00 -0400</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    Analysis unavailable.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Analysis unavailable.
+                </div>
+
+                
+
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2606.19438" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Efficient classical representation and quantum state preparation of complete active space wavefunctions</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum</span>
+                        <span class="badge badge-score">Signal: 5.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Fri, 19 Jun 2026 00:00:00 -0400</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    Analysis unavailable.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Analysis unavailable.
+                </div>
+
+                
+
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2606.19457" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">PsiQuantum Begins Building World’s First Utility-Scale Quantum Computer</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum</span>
+                        <span class="badge badge-score">Signal: 5.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Thu, 18 Jun 2026 00:20:31 GMT</span>
+                    <span>🌐 Source: Quantum Zeitgeist</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    Analysis unavailable.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Analysis unavailable.
+                </div>
+
+                
+
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://quantumzeitgeist.substack.com/p/psiquantum-begins-building-worlds" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Pathfinder Connects 20 IQM Qubits to World’s Top Supercomputer</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum</span>
+                        <span class="badge badge-score">Signal: 5.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Wed, 17 Jun 2026 19:38:06 GMT</span>
+                    <span>🌐 Source: Quantum Zeitgeist</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    Analysis unavailable.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Analysis unavailable.
+                </div>
+
+                
+
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://quantumzeitgeist.substack.com/p/pathfinder-connects-20-iqm-qubits" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            
         </section>
 
         <section id="categories">
             <h2>By Category</h2>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Solving Nonequilibrium Dynamics via Influence Matrix Bootstrap: Floquet-PXP Model</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers developed a new tensor-network bootstrap method to solve challenging nonequilibrium dynamics in quantum systems, revealing complex behaviors, new insights into quantum memory ('hidden Markov order'), and providing an experimentally testable model for quantum simulators.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.45</span>
+                        
+                        <a href="https://arxiv.org/abs/2606.19430" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Indefinite Quantum Causality</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Analysis unavailable.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 5.0</span>
+                        
+                        <a href="https://arxiv.org/abs/2606.19438" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Efficient classical representation and quantum state preparation of complete active space wavefunctions</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Analysis unavailable.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 5.0</span>
+                        
+                        <a href="https://arxiv.org/abs/2606.19457" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">PsiQuantum Begins Building World’s First Utility-Scale Quantum Computer</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Analysis unavailable.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 5.0</span>
+                        
+                        <a href="https://quantumzeitgeist.substack.com/p/psiquantum-begins-building-worlds" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Pathfinder Connects 20 IQM Qubits to World’s Top Supercomputer</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Analysis unavailable.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 5.0</span>
+                        
+                        <a href="https://quantumzeitgeist.substack.com/p/pathfinder-connects-20-iqm-qubits" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
             
         </section>
 
@@ -86,7 +501,7 @@
             <h2>Weekly Deep Dive</h2>
             <div class="card">
                 
-                    <p>No weekly synthesis available yet.</p>
+                    <p style="color: var(--text-muted); font-style: italic; margin: 0;">No weekly synthesis available yet.</p>
                 
             </div>
         </section>

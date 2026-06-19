@@ -14,11 +14,13 @@ def send_alert(top_insight: dict):
         return
         
     title = top_insight.get("title", "No insights today")
+    article_url = top_insight.get("source_url", "")
     
+    # Feature 4: Format telegram alert as specified
     message = (
-        "📊 *Daily Intelligence Brief Ready*\n\n"
-        f"🏆 *Top Insight:* {title}\n\n"
-        f"🔗 *Dashboard:* [View Insights]({PAGES_URL})"
+        f"Top Insight:\n{title}\n\n"
+        f"Read:\n{article_url}\n\n"
+        f"Dashboard:\n{PAGES_URL}"
     )
     
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"

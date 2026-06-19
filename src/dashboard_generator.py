@@ -9,8 +9,12 @@ def generate_dashboard(insights: list[dict]):
     env = Environment(loader=FileSystemLoader(TEMPLATES_DIR))
     template = env.get_template("dashboard.html")
     
+    # Feature 5: Sort cards by final_score descending and show only top 5 insights daily
+    sorted_insights = sorted(insights, key=lambda x: x.get("final_score", 0), reverse=True)
+    top_insights = sorted_insights[:5]
+    
     categorized = {}
-    for insight in insights:
+    for insight in top_insights:
         cat = insight.get("category", "Other")
         if cat not in categorized:
             categorized[cat] = []
@@ -25,7 +29,7 @@ def generate_dashboard(insights: list[dict]):
             
     html_content = template.render(
         date=get_today_str(),
-        top_insights=insights[:5],
+        top_insights=top_insights,
         categorized_insights=categorized,
         weekly_content=weekly_content
     )
