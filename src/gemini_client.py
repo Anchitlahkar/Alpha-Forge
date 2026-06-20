@@ -80,7 +80,42 @@ def repair_json(text: str) -> str:
 
 class GeminiClientManager:
     def __init__(self):
-        self.keys = GEMINI_API_KEYS
+        # 1. Load Gemini API Keys
+        self.all_keys = GEMINI_API_KEYS
+        
+        # 2. Startup Diagnostics
+        print(f"Loaded {len(self.all_keys)} Gemini keys\n")
+        for i, key in enumerate(self.all_keys):
+            # Mask format: Key 1: xxxx... or key[:4] + "..."
+            masked = key[:4] + "..." if len(key) > 4 else "xxxx..."
+            print(f"Key {i + 1}: {masked}")
+        print()
+        
+        # 3. Validation on Startup
+        self.keys = []
+        for i, key in enumerate(self.all_keys):
+            is_valid = False
+            try:
+                temp_client = genai.Client(api_key=key)
+                temp_client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents="hello"
+                )
+                is_valid = True
+            except Exception as e:
+                err_str = str(e).upper()
+                if any(x in err_str for x in ["RESOURCE_EXHAUSTED", "QUOTA_EXCEEDED", "429", "RATE LIMIT", "RATE_LIMIT"]):
+                    is_valid = True
+                else:
+                    is_valid = False
+            
+            if is_valid:
+                print(f"Key {i + 1} VALID")
+                self.keys.append(key)
+            else:
+                print(f"Key {i + 1} INVALID")
+        print()
+        
         self.current_index = 0
         self.client = None
         self._init_client()
@@ -94,22 +129,22 @@ class GeminiClientManager:
             self.client = None
             return
         key = self.keys[self.current_index]
-        print(f"[Gemini]\nUsing Key #{self.current_index + 1}\n")
+        print(f"[Gemini] Using key {self.current_index + 1}/{len(self.keys)}")
         self.client = genai.Client(api_key=key)
+        print("[Gemini] New client created\n")
 
     def rotate_key(self) -> bool:
         if not self.keys:
-            return False
-        print(f"[Gemini]\nKey #{self.current_index + 1} exhausted\n")
+            raise RuntimeError("All Gemini API keys exhausted")
+        print(f"[Gemini] Key {self.current_index + 1} exhausted\n")
         self.current_index += 1
         if self.current_index < len(self.keys):
-            print(f"[Gemini]\nSwitching to Key #{self.current_index + 1}\n")
+            print(f"[Gemini] Rotating to key {self.current_index + 1}/{len(self.keys)}")
             self._init_client()
             return True
         else:
-            print("[Gemini] All keys exhausted.")
             self.client = None
-            return False
+            raise RuntimeError("All Gemini API keys exhausted")
 
 client_manager = GeminiClientManager()
 
@@ -172,7 +207,7 @@ def extract_insights(text: str, source_url: str, article_source_name: str = "", 
     prompt = f"""
     Analyze the following article text.
     Extract the core facts and insights. Determine a signal score (1-10) where 10 is groundbreaking and 1 is fluff.
-    Determine personal relevance (1-10) based on these topics: AI Research, Quantum Computing, Software Engineering, Semiconductors, Investing, Startups.
+    Determine a single personal relevance score (float from 1 to 10) representing the overall relevance to these topics: AI Research, Quantum Computing, Software Engineering, Semiconductors, Investing, Startups. Do NOT return a dictionary of individual scores.
     
     Article Title: {article_title}
     Source URL: {source_url}

@@ -3,9 +3,9 @@ from src.gemini_client import extract_insights
 from src.utils import get_today_str
 
 def parse_and_analyze(article: dict, processed_urls: set) -> dict | None:
-    # Feature 2: Use RSS summaries whenever available. Do NOT send full article text unless summary is missing.
+    # Feature 2: Use RSS summaries whenever available. Do NOT send full article text unless summary is missing or too short.
     text = article.get("summary", "")
-    if not text:
+    if not text or len(text) < 200:
         text = fetch_article_text(article["link"])
     
     # Feature 2: Skip articles shorter than 200 characters
