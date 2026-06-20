@@ -2,6 +2,8 @@
 
 An automated, highly resilient, high-signal intelligence platform designed to cut through the noise. It gathers the latest developments across strategic technology domains, processes them using a smart Google Gemini API key-rotating manager, filters and ranks them according to relevance, and delivers a curated dashboard and Telegram alerts.
 
+---
+
 ## 🚀 Features
 
 - **Automated Ingestion:** Polls high-signal RSS feeds and blogs across Finance, AI, Quantum Computing, Semiconductors, Software Engineering, and Startups.
@@ -36,12 +38,11 @@ An automated, highly resilient, high-signal intelligence platform designed to cu
 
 ---
 
-## 📋 Setup & Installation
+## 📋 Setup & Installation (Local Development)
 
 ### 1. Prerequisites
 - One or more Google AI Studio API Keys ([AI Studio Console](https://aistudio.google.com/))
 - A Telegram Bot Token and Chat ID ([@BotFather](https://t.me/botfather))
-- A GitHub repository for hosting the output on GitHub Pages.
 
 ### 2. Local Installation
 ```bash
@@ -62,11 +63,58 @@ TELEGRAM_CHAT_ID=your_telegram_chat_id_here
 PAGES_URL=https://yourusername.github.io/Alpha-Forge/dashboard/
 ```
 
-### 4. GitHub Secrets
-For automatic cron execution, add these as **GitHub Actions Secrets**:
-- `GEMINI_API_KEYS`
-- `TELEGRAM_BOT_TOKEN`
-- `TELEGRAM_CHAT_ID`
+---
+
+## ⚙️ GitHub Actions & Pages Setup Guide
+
+Follow these steps to deploy and run Alpha-Forge automatically in GitHub:
+
+### Step 1: Create a GitHub Repository
+1. Go to [GitHub](https://github.com) and click **New Repository**.
+2. Give your repository a name (e.g. `Alpha-Forge`), choose public/private, and click **Create repository**.
+3. Push your codebase to the repository:
+   ```bash
+   git remote add origin https://github.com/<your-username>/<your-repo-name>.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+### Step 2: Configure Repository Secrets
+To allow GitHub Actions to safely access your API keys and Telegram credentials, set them up as Secrets:
+1. Navigate to your GitHub repository home page.
+2. Click on **Settings** (the gear icon on the top tab).
+3. In the left sidebar, click on **Secrets and variables** -> **Actions**.
+4. Click the **New repository secret** button.
+5. Create the following secrets:
+   * **`GEMINI_API_KEY`** (or **`GEMINI_API_KEYS`**): Set your comma-separated list of Gemini API keys (e.g. `AIzaSy...,AIzaSy...`).
+   * **`TELEGRAM_BOT_TOKEN`**: Set your Telegram Bot Token.
+   * **`TELEGRAM_CHAT_ID`**: Set your Telegram Chat or Group ID.
+6. Click **Add secret** for each configuration.
+
+### Step 3: Configure Workflow Run Permissions
+The daily cron pipeline commits updated JSON data files and dashboard files back to the repository. This requires Read/Write permissions for Actions:
+1. Remain in **Settings**.
+2. In the left sidebar under *Security*, click on **Actions** -> **General**.
+3. Scroll down to the bottom of the page to locate **Workflow permissions**.
+4. Change the selection from *Read workflow permissions* to **Read and write permissions**.
+5. Check the box **"Allow GitHub Actions to create and approve pull requests"**.
+6. Click the **Save** button.
+
+### Step 4: Configure GitHub Pages Deployment
+The pipeline builds the frontend dashboard in the `dashboard/` directory and publishes it to a dedicated deployment branch named `gh-pages`:
+1. Remain in **Settings**.
+2. In the left sidebar, click on **Pages**.
+3. Under **Build and deployment**:
+   * **Source**: Select **Deploy from a branch**.
+   * **Branch**: Set the branch target to **`gh-pages`** (it will be created automatically after the first pipeline run) and the folder to **`/ (root)`**.
+4. Click **Save**.
+
+### Step 5: Enable & Trigger the Workflow
+1. Go to the **Actions** tab of your repository.
+2. If you forked or imported the repository, click the green button **"I understand my workflows, go ahead and enable them"**.
+3. Select **Daily Intelligence Run** from the list of workflows on the left sidebar.
+4. Click the **Run workflow** dropdown on the right hand side, select the branch (`main`), and click **Run workflow**.
+5. Once complete, you will see a `gh-pages` branch created, your telegram group will receive the alert, and your GitHub pages dashboard site (e.g. `https://<your-username>.github.io/<your-repo-name>/dashboard/`) will go live!
 
 ---
 

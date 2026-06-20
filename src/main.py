@@ -55,10 +55,20 @@ def run_daily():
         try:
             insight = parse_and_analyze(article, processed_urls)
             if insight:
+                # If analysis failed and returned fail-safe values, do not count it and try next article
+                if insight.get("why_it_matters") == "Analysis unavailable.":
+                    print(f"⚠️ Article analysis failed (fail-safe). Continuing to next article to take its place.")
+                    continue
                 insights.append(insight)
                 analyzed_count += 1
+            else:
+                print(f"Skipping article. Continuing to next article to take its place.")
+        except RuntimeError as re_err:
+            if "All Gemini API keys exhausted" in str(re_err):
+                raise re_err
+            print(f"Skipping article due to analysis failure: {re_err}. Continuing to next article to take its place.")
         except Exception as e:
-            print(f"Skipping article due to analysis failure: {e}")
+            print(f"Skipping article due to analysis failure: {e}. Continuing to next article to take its place.")
             
     # Save updated processed URLs
     save_processed_urls(processed_urls)
@@ -90,6 +100,10 @@ def run_weekly():
     print("Starting weekly synthesis...")
     try:
         generate_weekly_synthesis()
+    except RuntimeError as re_err:
+        if "All Gemini API keys exhausted" in str(re_err):
+            raise re_err
+        print(f"Weekly synthesis failed: {re_err}")
     except Exception as e:
         print(f"Weekly synthesis failed: {e}")
     
