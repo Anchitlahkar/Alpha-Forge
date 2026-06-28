@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-06-27</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-06-28</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -207,16 +207,178 @@
         <section id="top">
             <h2>Today's Top Insights</h2>
             
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Setting Up Local Coding Agents with Open-Weight LLMs</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Software Engineering</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Sat, 27 Jun 2026 11:21:58 GMT</span>
+                    <span>🌐 Source: Ahead of AI</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This article provides a practical and detailed guide for software engineers and AI researchers on how to set up powerful, private, and cost-effective local AI coding agents. It offers a compelling alternative to proprietary cloud-based services, empowering users with greater control, transparency, and flexibility over their AI-assisted development workflows. The insights into model performance and hardware considerations are crucial for effective implementation.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    This article provides a comprehensive tutorial on how to build a production-ready local coding agent stack using open-weight Large Language Models (LLMs) like Qwen3.6, served via Ollama, and integrated with coding harnesses. It highlights the benefits of this approach, including enhanced privacy, better cost control, and the ability to assess performance, positioning it as a viable alternative to proprietary cloud AI services.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Local coding agents offer significant advantages over proprietary cloud services, including enhanced privacy, predictable costs, full control, reproducibility, and offline functionality.</li>
+                    
+                    <li>A local agent stack comprises a locally served open-weight Large Language Model (LLM) for reasoning and code generation, and a coding harness that provides the operating environment for file interaction, editing, command execution, and verification.</li>
+                    
+                    <li>Ollama is recommended as an efficient and user-friendly framework for serving local LLMs due to its ease of installation and optimization for inference speed across various operating systems.</li>
+                    
+                    <li>Qwen3.6 35B-A3B is highlighted as a top-performing open-weight LLM in its size class, particularly when optimized for and used with the Qwen-Code harness; Cohere's North Mini Code 1.0 is presented as a strong alternative.</li>
+                    
+                    <li>Performance assessment for local agents should include tokens/second generation speed (aiming for >20-30 tok/sec), memory usage (35B models require ~30-40GB RAM for long contexts), and evaluation against standardized benchmarks.</li>
+                    
+                    <li>MLX-optimized model versions are highly recommended for Macs with Apple Silicon chips to leverage hardware acceleration and improve performance.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Explore setting up Ollama on your local machine to serve open-weight LLMs.</li>
+                    
+                    <li>Download and test Qwen3.6 35B-A3B (or North Mini Code 1.0) via Ollama to assess its capabilities.</li>
+                    
+                    <li>Investigate integrating a local LLM with an open-source coding agent harness like Qwen-Code, or adapt existing muscle memory with Codex or Claude Code harnesses.</li>
+                    
+                    <li>Run speed and memory benchmarks using provided scripts (e.g., `ollama_speed_memory_bench.py`) to evaluate the performance of chosen local LLMs on your hardware.</li>
+                    
+                    <li>Consider upgrading hardware (RAM, GPU) if current specifications do not meet the requirements for running larger, more capable open-weight models efficiently.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://magazine.sebastianraschka.com/p/using-local-coding-agents" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
             
-            <p style="color: var(--text-muted); font-style: italic;">No insights available for today.</p>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">In-Context World Modeling for Robotic Control</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jun 25</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This work significantly advances robotic generalization by enabling robots to adapt to novel environments and configurations without costly retraining or parameter updates. It addresses a major bottleneck in deploying AI-powered robots in diverse, real-world scenarios, making them more flexible and efficient.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    This article introduces In-Context World Modeling (ICWM), a novel framework designed to enable robot policies to adapt to new and unfamiliar configurations. ICWM achieves this by allowing robots to infer system variables through self-generated interactions, thereby eliminating the need for extensive parameter updates or fine-tuning.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Introduces In-Context World Modeling (ICWM) to address the generalization limitations of modern Vision-Language-Action (VLA) models in novel setups.</li>
+                    
+                    <li>ICWM treats system identification as an in-context adaptation problem, allowing robots to infer essential system variables autonomously.</li>
+                    
+                    <li>The framework leverages a short history of self-generated, task-agnostic interactions to understand 'how the system operates' rather than 'what task to perform'.</li>
+                    
+                    <li>Enables adaptation to novel configurations (e.g., altered camera viewpoints, robot morphologies) without requiring parameter updates or data-intensive fine-tuning.</li>
+                    
+                    <li>Extensive experiments in both simulation and real-world robot platforms demonstrate that ICWM significantly outperforms standard VLA baselines on novel camera viewpoints.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers should explore integrating ICWM principles into their VLA models to enhance generalization capabilities in robotics.</li>
+                    
+                    <li>Robotics companies and startups should investigate adopting ICWM to reduce deployment costs and increase the adaptability of their robotic systems in varied environments.</li>
+                    
+                    <li>Software engineers developing robotic control systems should study the methodology of using task-agnostic interactions for in-context system identification to build more robust and flexible agents.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2606.26025" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
             
         </section>
 
         <section id="categories">
             <h2>By Category</h2>
             
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Software Engineering</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Setting Up Local Coding Agents with Open-Weight LLMs</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">This article provides a comprehensive tutorial on how to build a production-ready local coding agent stack using open-weight Large Language Models (LLMs) like Qwen3.6, served via Ollama, and integrated with coding harnesses. It highlights the benefits of this approach, including enhanced privacy, better cost control, and the ability to assess performance, positioning it as a viable alternative to proprietary cloud AI services.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.22</span>
+                        
+                        <a href="https://magazine.sebastianraschka.com/p/using-local-coding-agents" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
             
-            <p style="color: var(--text-muted); font-style: italic;">No categorized insights available.</p>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">In-Context World Modeling for Robotic Control</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">This article introduces In-Context World Modeling (ICWM), a novel framework designed to enable robot policies to adapt to new and unfamiliar configurations. ICWM achieves this by allowing robots to infer system variables through self-generated interactions, thereby eliminating the need for extensive parameter updates or fine-tuning.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.22</span>
+                        
+                        <a href="https://huggingface.co/papers/2606.26025" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
             
         </section>
 
