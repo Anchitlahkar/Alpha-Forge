@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-02</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-03</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,337 +209,344 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">CausalMix: Optimizing LLM Data Mixtures with Causal Inference for Dynamic Adaptation</h3>
+                    <h3 class="card-title">Program-as-Weights: A Programming Paradigm for Fuzzy Functions</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 2026-07-01</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    CausalMix offers a novel, efficient, and interpretable approach to a critical challenge in Large Language Model (LLM) training: adapting to shifting data distributions without expensive retraining. By framing data mixture optimization as a causal inference problem, it enables dynamic adjustment of data mixtures, leading to improved model performance and scalability. This is crucial for reducing the operational costs and accelerating the development and deployment of advanced AI systems, making LLMs more robust and adaptable in real-world scenarios.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    CausalMix uses causal inference to dynamically optimize data mixtures for LLM training, adapting to changing data distributions without costly retraining, improving performance and offering interpretability.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Addresses the limitation of current LLM data mixing methods that assume static data distributions, which necessitates costly retraining when underlying data pools shift.</li>
-                    
-                    <li>Proposes CausalMix, a framework that casts data mixture optimization as a causal inference problem.</li>
-                    
-                    <li>Formulates statistical features of the data pool as covariates and the domain mixture as the treatment to estimate the Conditional Average Treatment Effect (CATE).</li>
-                    
-                    <li>Enables dynamic inference of state-dependent optimal data mixtures, allowing LLMs to adapt to shifting data distributions without requiring retraining from scratch.</li>
-                    
-                    <li>Demonstrated consistent performance improvements across multiple downstream tasks, outperforming baselines like RegMix.</li>
-                    
-                    <li>Provides an interpretable framework for understanding the learned mixing strategies through the CATE Interpreter.</li>
-                    
-                    <li>Validated on Qwen2.5-0.5B (512 runs) and successfully extrapolated to train a 7B model with an 800K data pool, also generalized to long chain-of-thought data on Qwen3-4B-Base.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>AI researchers and practitioners involved in LLM training should investigate integrating causal inference techniques like CausalMix into their data preparation and mixing pipelines to enhance adaptability and reduce retraining costs.</li>
-                    
-                    <li>MLOps engineers and platform developers should explore tools and frameworks that support dynamic and interpretable data mixture optimization based on causal models for more efficient LLM deployment.</li>
-                    
-                    <li>Organizations developing or deploying LLMs should evaluate the potential cost savings and performance improvements offered by adaptive data mixing strategies to improve model robustness and scalability.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2607.01104" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 July 1, 2024</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This article introduces a significant advancement in Vision-Language Models (VLMs) by proposing a novel framework, Perceive-to-Reason (P2R), that explicitly decouples visual perception from reasoning. This approach substantially improves performance on challenging fine-grained visual reasoning tasks, especially with high-resolution images where small cues are critical. It offers a more robust and accurate method for AI systems to interpret complex visual information, with broad implications for various applications requiring detailed visual understanding.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    A new AI framework, Perceive-to-Reason (P2R), decouples perception and reasoning in vision-language models through a two-stage process and a novel reinforcement learning strategy, significantly boosting performance on fine-grained visual reasoning tasks, particularly with high-resolution images.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Introduces Perceive-to-Reason (P2R), a unified framework that separates visual perception from reasoning in vision-language models.</li>
-                    
-                    <li>P2R operates as a two-stage process: a 'Perceiver' localizes question-relevant evidence, and a 'Reasoner' answers based on the annotated image and cropped regions.</li>
-                    
-                    <li>Addresses the challenge of fine-grained visual reasoning where small but critical visual cues are often buried in high-resolution images.</li>
-                    
-                    <li>Proposes Perception-Reasoning Alternating GRPO (PRA-GRPO), a role-aware reinforcement learning strategy for training, which uses only final-answer supervision without requiring bounding box annotations.</li>
-                    
-                    <li>Built on Qwen3-VL-Instruct models, P2R consistently improves performance across model scales, achieving significant gains on benchmarks like V-Star (93.2%), HR-Bench-4K (81.9%), and HR-Bench-8K (80.5%).</li>
-                    
-                    <li>The benefits of P2R extend beyond high-resolution benchmarks to broader multimodal reasoning tasks.</li>
-                    
-                    <li>Code, pre-trained models (P2R-2B, P2R-4B, P2R-8B), and a dataset (P2R-10k) are publicly available on Hugging Face and GitHub.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Review the Perceive-to-Reason paper for a deeper understanding of the P2R framework and PRA-GRPO training strategy.</li>
-                    
-                    <li>Explore the provided GitHub repository (ZJU-REAL/Perceive-to-Reason) to examine the code implementation and potentially contribute.</li>
-                    
-                    <li>Experiment with the publicly available P2R models (hongxingli/P2R-2B/4B/8B) on fine-grained visual reasoning tasks relevant to specific applications.</li>
-                    
-                    <li>Consider integrating the principles of decoupling perception and reasoning into future vision-language model architectures or training pipelines.</li>
-                    
-                    <li>Utilize the P2R-10k dataset for benchmarking or further research in fine-grained visual reasoning.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2607.01191" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Quantum Reconstruction and Phenomenology per the Relativity Principle</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">Quantum Physics</span>
                         <span class="badge badge-score">Signal: 9.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Thu, 02 Jul 2026 00:00:00 -0400</span>
+                    <span>📅 July 2, 2024</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper introduces a novel programming paradigm, Program-as-Weights (PAW), that significantly enhances the efficiency, locality, and reproducibility of deploying AI-powered 'fuzzy functions'. By compiling natural-language specifications into compact, locally-executable neural artifacts, PAW drastically reduces inference memory and latency compared to traditional LLM API calls. This reframes foundation models from per-input problem solvers to 'tool builders', enabling a new class of cost-effective and performant AI applications that can run offline, even on consumer hardware.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Program-as-Weights (PAW) is a new programming paradigm that compiles natural-language function descriptions into small, efficient neural programs for local execution, matching large LLM performance with 1/50th memory usage and faster inference, making AI functions cheap and reproducible.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Introduces 'fuzzy-function programming' and 'Program-as-Weights (PAW)' to address everyday programming tasks that are difficult for rule-based systems and costly for LLM APIs.</li>
+                    
+                    <li>PAW compiles natural-language specifications into compact, locally-executable neural artifacts.</li>
+                    
+                    <li>The system uses a 4B compiler (PAW) trained on a new 10M-example dataset called FuzzyBench, and a lightweight 0.6B Qwen3 interpreter.</li>
+                    
+                    <li>Achieves performance comparable to direct prompting of Qwen3-32B, but with roughly one fiftieth of the inference memory and faster execution (30 tokens/s on a MacBook M3).</li>
+                    
+                    <li>Reframes the foundation model from a per-input problem solver into a 'tool builder', producing small, reusable artifacts for cheap, offline function calls after initial compilation.</li>
+                    
+                    <li>Provides a Python library for easy compilation and local execution of these fuzzy functions.</li>
+                    
+                    <li>Demonstrates applicability with examples like 'Alien Taboo', 'Avatar Director', and 'Website Helper'.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Explore the Program-as-Weights project page and GitHub repository for implementation details and code examples.</li>
+                    
+                    <li>Experiment with the `programasweights` Python library to compile and deploy fuzzy functions locally.</li>
+                    
+                    <li>Review the FuzzyBench dataset for potential use in training or evaluating similar models.</li>
+                    
+                    <li>Consider integrating PAW into applications requiring efficient, local, and reproducible AI-driven 'fuzzy' logic, especially for tasks currently outsourced to expensive LLM APIs.</li>
+                    
+                    <li>Read the agent guide at `programasweights.com/AGENTS.md` to understand how to use PAW with coding agents.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.02512" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling (MrFlow)</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 9.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 2024-07-02</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This article introduces MrFlow, a significant advancement in accelerating text-to-image diffusion models. By offering up to a 25x speedup without requiring any additional training or runtime modifications, it drastically reduces the computational cost and time associated with generating high-quality images. This makes generative AI more practical, accessible, and cost-effective for real-world applications, potentially enabling new use cases and improving user experience for products built on diffusion models.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    MrFlow is a training-free, multi-resolution strategy that accelerates text-to-image diffusion models by up to 25x. It uses a staged low-to-high-resolution pipeline, combining low-res generation with pixel-space super-resolution and noise injection, to achieve significant speedup while maintaining high image quality and avoiding common artifacts.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>MrFlow accelerates text-to-image diffusion models by combining low-resolution generation with pixel-space super-resolution and noise injection.</li>
+                    
+                    <li>It is a 'training-free' method, meaning it requires no additional training or runtime modifications to existing pretrained models.</li>
+                    
+                    <li>Achieves up to 10x end-to-end acceleration on its own, significantly surpassing other training-free methods.</li>
+                    
+                    <li>Can be orthogonally combined with pretrained timestep distillation strategies to achieve an even higher generation acceleration of up to 25x.</li>
+                    
+                    <li>The method employs a staged low-to-high-resolution pipeline: rapid low-resolution structure generation, pixel-space super-resolution using a lightweight GAN-based model, low-strength noise injection, and high-resolution detail refinement.</li>
+                    
+                    <li>It maintains high image quality, keeping OneIG within a 1% gap relative to unaccelerated generation, and addresses blurring or artifacts seen in previous multi-resolution approaches.</li>
+                    
+                    <li>Applicable to pretrained flow-matching models and demonstrated on FLUX.1-dev and Qwen-Image.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Investigate MrFlow for potential integration into existing or new generative AI pipelines to reduce inference costs and latency.</li>
+                    
+                    <li>Evaluate the performance and quality trade-offs of MrFlow, especially when combined with timestep distillation, for specific text-to-image applications.</li>
+                    
+                    <li>Consider the implications of such training-free acceleration methods on the economic viability and scalability of generative AI services and products.</li>
+                    
+                    <li>Explore the applicability of MrFlow's staged sampling approach to other generative model architectures or modalities beyond text-to-image.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.01642" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Morphing into Hybrid Attention Models</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 2026-07-03</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper introduces FlashMorph, an efficient and effective method for optimizing Transformer models by intelligently selecting a hybrid of full and linear attention layers. This significantly improves long-context efficiency and performance while reducing the cost of model optimization, making large language models more practical and cost-effective for real-world applications.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    FlashMorph is a new method that efficiently determines the optimal mix of full and linear attention layers in Transformer models, leading to better long-context performance and reduced optimization costs compared to existing heuristic approaches.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Hybrid attention models improve long-context efficiency in Transformers by combining full-attention and linear-attention layers.</li>
+                    
+                    <li>Existing layer selection methods are often heuristic, treating layer importance in isolation and overlooking interdependent effects.</li>
+                    
+                    <li>FlashMorph formulates hybrid layer selection as a budget-constrained subset optimization problem.</li>
+                    
+                    <li>It constructs a 'morphable model' with both full and linear attention branches, then optimizes layerwise gates using synthetic long-context retrieval data and linearization regularization.</li>
+                    
+                    <li>FlashMorph discovers more effective hybrid configurations, preserves strong long-context recall and general benchmark performance, and substantially reduces layer selection cost.</li>
+                    
+                    <li>The method involves freezing model weights during gate optimization, followed by logits distillation and long-context finetuning.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Investigate FlashMorph as a potential optimization technique for deploying or fine-tuning large language models requiring long-context capabilities.</li>
+                    
+                    <li>Benchmark FlashMorph's efficiency and performance gains against current layer selection strategies in specific LLM applications.</li>
+                    
+                    <li>Explore the feasibility of integrating FlashMorph's methodology into existing MLOps pipelines for Transformer model optimization.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2606.30562" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">AgenticDataBench: A Comprehensive Benchmark for Data Agents</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 2</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This benchmark is critical for the advancement of LLM-based data agents, providing a standardized and rigorous way to evaluate their performance across diverse, real-world data science tasks. It enables developers and researchers to identify strengths and weaknesses, fostering innovation and more reliable automation of data science workflows, which is a rapidly growing area in AI and software engineering.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    AgenticDataBench is a new comprehensive benchmark featuring 344 tasks, 433 skills, and 27.3GB of data across 15 domains, designed to rigorously evaluate LLM-based data agents for automating real-world data science workflows.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Introduces AgenticDataBench, a comprehensive benchmark for evaluating LLM-based data agents.</li>
+                    
+                    <li>Addresses the critical gap in the field for rigorous, fine-grained evaluation of data agents across diverse scenarios.</li>
+                    
+                    <li>Comprises 344 tasks, 433 data science skills, 97 datasets, and 27.3GB of data.</li>
+                    
+                    <li>Spans 15 diverse domains, including 5 real-world B2B use cases from a leading fintech company.</li>
+                    
+                    <li>Tasks are structured around reusable data science skills, which are core operational patterns extracted from large-scale task solutions on Stack Overflow.</li>
+                    
+                    <li>Combines curated real-world tasks with systematically generated tasks using an LLM-based approach to ensure broad coverage and minimal redundancy.</li>
+                    
+                    <li>Enables both overall task success evaluation and fine-grained skill-level performance analysis.</li>
+                    
+                    <li>The benchmark and an open-sourced testbed are available for evaluating state-of-the-art data agents.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers and developers working on LLM-based data agents should utilize AgenticDataBench for evaluating and comparing their models.</li>
+                    
+                    <li>Data scientists and MLOps engineers can explore the benchmark to understand the current capabilities and limitations of automated data science workflows.</li>
+                    
+                    <li>Consider contributing to or extending the AgenticDataBench framework to cover additional domains, data types, or data science skills.</li>
+                    
+                    <li>Review the associated GitHub repository and project page for detailed implementation, data access, and usage instructions.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.01647" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Noisy quantum circuit simulation with the tensor jump method</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Fri, 03 Jul 2026 00:00:00 -0400</span>
                     <span>🌐 Source: arXiv quant-ph</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This article proposes a significant theoretical unification in fundamental physics, arguing that the relativity principle, combined with Planck's radiation law, fundamentally necessitates quantum discreteness. This approach aims to complete the Quantum Reconstruction Program, providing a unified explanation for both relativistic phenomena (like time dilation) and quantum phenomena (like superposition and entanglement). If validated, it could profoundly deepen our understanding of the foundational principles governing reality and the very nature of quantum mechanics, which is crucial for the long-term theoretical advancement of fields like quantum computing.
+                    This article introduces a significant advancement in the classical simulation of noisy quantum circuits, a critical bottleneck in the development and validation of quantum computing. By enabling more accurate and scalable simulations of realistic hardware noise, it provides essential tools for benchmarking quantum hardware, validating quantum algorithms, and developing effective error-mitigation strategies, thereby accelerating progress in the field.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    A theoretical paper proposing that the relativity principle, combined with Planck's law, fundamentally explains quantum discreteness, superposition, and entanglement, thereby unifying the foundations of quantum mechanics and special relativity and challenging relational interpretations of QM.
+                    Researchers developed a new variance-aware tensor network method combining the tensor jump method with MPS evolution to accurately and scalably simulate noisy quantum circuits, significantly reducing variance and improving efficiency on systems up to 127 qubits, even with complex correlated noise.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>The paper completes the Quantum Reconstruction Program (QRP) by deriving quantum mechanics' (QM) 'discreteness' requirement axiomatically.</li>
+                    <li>Introduces a variance-aware tensor network framework for classical simulation of noisy quantum circuits.</li>
                     
-                    <li>It posits that the 'discreteness' requirement is necessitated by the relativity principle and Planck's radiation law.</li>
+                    <li>Combines the tensor jump method with local TDVP gate evolution on Matrix Product States (MPS) and sparse Pauli-Lindblad noise models.</li>
                     
-                    <li>An analogy is drawn with special relativity, where the light postulate is necessitated by the relativity principle and Maxwell's equations.</li>
+                    <li>Supports complex, correlated multi-qubit Lindblad noise, including long-range operators and direct simulation of crosstalk.</li>
                     
-                    <li>The relativity principle is identified as the fundamental explanation for both relativistic effects (time dilation, length contraction) and quantum phenomena (superposition, entanglement).</li>
+                    <li>Develops two unbiased variance-aware unravelings (analog unitary-mixture and projector-jump) that reduce Monte Carlo variance and bond-dimension growth.</li>
                     
-                    <li>Phenomenologically, the relativity principle is defined as 'the equality of all perspectives'.</li>
-                    
-                    <li>Quantum entanglement is interpreted as evidence for a comprehensive, coherent integration of different subjective experiences, rather than a fragmented reality or a need to abandon objective models, thus challenging relational interpretations of QM.</li>
+                    <li>Demonstrates accurate and scalable simulation on a 25-qubit noisy XY quench and IBM's 127-qubit kicked-Ising benchmark, outperforming standard baselines.</li>
                     
                 </ul>
                 
 
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Quantum software developers should explore integrating this tensor jump method into their simulation tools for more efficient and accurate noisy circuit analysis.</li>
+                    
+                    <li>Quantum hardware researchers can leverage this advanced simulation technique for better benchmarking and understanding of noise effects on their experimental devices.</li>
+                    
+                    <li>Quantum algorithm designers can utilize these improved noisy simulations to validate their algorithms and test error mitigation strategies more effectively under realistic conditions.</li>
+                    
+                </ul>
                 
 
                 <div class="card-footer">
                     <span>Processed Category: Quantum</span>
                     
-                    <a href="https://arxiv.org/abs/2607.00045" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Domain Arithmetic (DART): One-Shot Adaptation for Vision-Language-Action Models</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 July 1, 2026</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This research significantly advances the field of embodied AI and robotics by enabling Vision-Language-Action (VLA) models to adapt to new environments (e.g., different robots, camera setups) with just a single demonstration. This drastically reduces the costly and time-consuming data collection and training burden, making the deployment of intelligent robotic systems more practical, efficient, and scalable for real-world applications.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    A new method called Domain ARiThmetic (DART) allows Vision-Language-Action (VLA) models to adapt to environmental changes (like different robots or camera views) using only a single demonstration, significantly cutting down on data collection and training costs through weight vector arithmetic and subspace alignment.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Vision-Language-Action (VLA) models often fail under environmental shifts (e.g., camera pose changes, different robot embodiments like Panda to UR5e).</li>
-                    
-                    <li>Traditional VLA adaptation to new environments requires training on multiple, costly demonstrations for each task.</li>
-                    
-                    <li>Domain ARiThmetic (DART) is an analogy-based method that enables one-shot VLA adaptation under environmental shifts.</li>
-                    
-                    <li>DART uses weight vector arithmetic with domain-specific information addition to achieve efficient adaptation.</li>
-                    
-                    <li>It isolates domain-specific information by performing subspace alignment between singular components in weight vectors to filter out noise.</li>
-                    
-                    <li>DART requires only a single demonstration, significantly reducing data curation and training burdens.</li>
-                    
-                    <li>In both simulated and real-world experiments, DART outperforms existing VLA adaptation methods in one-shot scenarios across diverse visual and embodiment shifts.</li>
-                    
-                    <li>The paper has been accepted at ECCV 2026, and code is available on GitHub.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>AI researchers should explore applying DART's principles of weight vector arithmetic and subspace alignment to other few-shot or zero-shot learning challenges in different AI domains.</li>
-                    
-                    <li>Robotics engineers and developers should investigate integrating DART or similar one-shot adaptation techniques into their VLA model deployment pipelines to reduce operational costs and accelerate system rollout.</li>
-                    
-                    <li>Investors and startups in the embodied AI and robotics sectors should monitor advancements in one-shot adaptation, as these technologies can create significant competitive advantages by lowering data and development barriers.</li>
-                    
-                    <li>Review the provided GitHub repository (https://github.com/snumprlab/dart) to understand the implementation details and potential for extension or integration into existing projects.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2607.00666" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">TurboServe: Efficient and Economical Serving for Streaming Video Generation</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Infrastructure</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Jun 17</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    TurboServe addresses a critical bottleneck in the deployment of streaming video generation AI models by providing a specialized serving system. This innovation significantly reduces operational costs and improves user experience by lowering latency, making real-time, interactive video generation more practical and economically viable for businesses and developers in the rapidly growing AI content creation space.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    TurboServe is the first specialized serving system for streaming video generation, tackling unique challenges like session state management and dynamic resource allocation. It uses integrated scheduling, autoscaling, and migration to reduce worst-case latency by 37.5% and GPU operating costs by 37.2% on average, with its code publicly available.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>TurboServe is the first serving system specifically designed for streaming video generation workloads, which involve long-lived sessions and chunk-by-chunk progressive video generation.</li>
-                    
-                    <li>It addresses key challenges: session state management, dynamic resource allocation, session duration heterogeneity, and temporal user-demand fluctuations.</li>
-                    
-                    <li>The system formulates serving as an online scheduling problem, coordinating session placement and GPU provisioning.</li>
-                    
-                    <li>Its closed-loop scheduling algorithm combines a migration-aware placement controller (rebalancing sessions to reduce latency) with a load-driven autoscaling controller (adapting GPU budget for cost efficiency).</li>
-                    
-                    <li>Key implementations include coalesced chunk processing for batching, GPU-CPU offloading for session suspension/resumption, and NCCL-based GPU-GPU migration for online rebalancing.</li>
-                    
-                    <li>Evaluated on real-world production traces from Shengshu Technology across various model sizes and GPU clusters (up to 64 NVIDIA B300 GPUs).</li>
-                    
-                    <li>Achieves significant performance improvements: 37.5% reduction in worst-case per-chunk latency and 37.2% reduction in total GPU operating cost on average.</li>
-                    
-                    <li>The code for TurboServe is publicly available on GitHub (https://github.com/shengshu-ai/TurboServe).</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Investigate TurboServe's open-source implementation for potential integration into existing or new streaming video generation pipelines.</li>
-                    
-                    <li>Analyze the scheduling and resource management techniques employed by TurboServe for applicability to other stateful, real-time AI serving workloads.</li>
-                    
-                    <li>Consider the economic implications of TurboServe's cost reductions for cloud providers and startups offering video generation services.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2606.19271" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://arxiv.org/abs/2607.01323" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -554,66 +561,61 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">CausalMix: Optimizing LLM Data Mixtures with Causal Inference for Dynamic Adaptation</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">CausalMix uses causal inference to dynamically optimize data mixtures for LLM training, adapting to changing data distributions without costly retraining, improving performance and offering interpretability.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Program-as-Weights: A Programming Paradigm for Fuzzy Functions</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Program-as-Weights (PAW) is a new programming paradigm that compiles natural-language function descriptions into small, efficient neural programs for local execution, matching large LLM performance with 1/50th memory usage and faster inference, making AI functions cheap and reproducible.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.38</span>
+                        <span>Score: 9.07</span>
                         
-                        <a href="https://huggingface.co/papers/2607.01104" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.02512" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new AI framework, Perceive-to-Reason (P2R), decouples perception and reasoning in vision-language models through a two-stage process and a novel reinforcement learning strategy, significantly boosting performance on fine-grained visual reasoning tasks, particularly with high-resolution images.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling (MrFlow)</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">MrFlow is a training-free, multi-resolution strategy that accelerates text-to-image diffusion models by up to 25x. It uses a staged low-to-high-resolution pipeline, combining low-res generation with pixel-space super-resolution and noise injection, to achieve significant speedup while maintaining high image quality and avoiding common artifacts.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.38</span>
+                        <span>Score: 8.93</span>
                         
-                        <a href="https://huggingface.co/papers/2607.01191" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.01642" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Domain Arithmetic (DART): One-Shot Adaptation for Vision-Language-Action Models</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new method called Domain ARiThmetic (DART) allows Vision-Language-Action (VLA) models to adapt to environmental changes (like different robots or camera views) using only a single demonstration, significantly cutting down on data collection and training costs through weight vector arithmetic and subspace alignment.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Morphing into Hybrid Attention Models</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">FlashMorph is a new method that efficiently determines the optimal mix of full and linear attention layers in Transformer models, leading to better long-context performance and reduced optimization costs compared to existing heuristic approaches.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.96</span>
+                        <span>Score: 8.38</span>
                         
-                        <a href="https://huggingface.co/papers/2607.00666" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2606.30562" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">AgenticDataBench: A Comprehensive Benchmark for Data Agents</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">AgenticDataBench is a new comprehensive benchmark featuring 344 tasks, 433 skills, and 27.3GB of data across 15 domains, designed to rigorously evaluate LLM-based data agents for automating real-world data science workflows.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.3</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.01647" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
             </div>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Physics</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Quantum Reconstruction and Phenomenology per the Relativity Principle</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A theoretical paper proposing that the relativity principle, combined with Planck's law, fundamentally explains quantum discreteness, superposition, and entanglement, thereby unifying the foundations of quantum mechanics and special relativity and challenging relational interpretations of QM.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Noisy quantum circuit simulation with the tensor jump method</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers developed a new variance-aware tensor network method combining the tensor jump method with MPS evolution to accurately and scalably simulate noisy quantum circuits, significantly reducing variance and improving efficiency on systems up to 127 qubits, even with complex correlated noise.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.18</span>
+                        <span>Score: 8.29</span>
                         
-                        <a href="https://arxiv.org/abs/2607.00045" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Infrastructure</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">TurboServe: Efficient and Economical Serving for Streaming Video Generation</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">TurboServe is the first specialized serving system for streaming video generation, tackling unique challenges like session state management and dynamic resource allocation. It uses integrated scheduling, autoscaling, and migration to reduce worst-case latency by 37.5% and GPU operating costs by 37.2% on average, with its code publicly available.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.62</span>
-                        
-                        <a href="https://huggingface.co/papers/2606.19271" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://arxiv.org/abs/2607.01323" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
