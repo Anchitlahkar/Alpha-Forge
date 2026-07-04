@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-03</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-04</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,218 +209,10 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Program-as-Weights: A Programming Paradigm for Fuzzy Functions</h3>
+                    <h3 class="card-title">EvoPolicyGym Benchmark for Autonomous Policy Evolution</h3>
                     <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 9.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 July 2, 2024</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This paper introduces a novel programming paradigm, Program-as-Weights (PAW), that significantly enhances the efficiency, locality, and reproducibility of deploying AI-powered 'fuzzy functions'. By compiling natural-language specifications into compact, locally-executable neural artifacts, PAW drastically reduces inference memory and latency compared to traditional LLM API calls. This reframes foundation models from per-input problem solvers to 'tool builders', enabling a new class of cost-effective and performant AI applications that can run offline, even on consumer hardware.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Program-as-Weights (PAW) is a new programming paradigm that compiles natural-language function descriptions into small, efficient neural programs for local execution, matching large LLM performance with 1/50th memory usage and faster inference, making AI functions cheap and reproducible.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Introduces 'fuzzy-function programming' and 'Program-as-Weights (PAW)' to address everyday programming tasks that are difficult for rule-based systems and costly for LLM APIs.</li>
-                    
-                    <li>PAW compiles natural-language specifications into compact, locally-executable neural artifacts.</li>
-                    
-                    <li>The system uses a 4B compiler (PAW) trained on a new 10M-example dataset called FuzzyBench, and a lightweight 0.6B Qwen3 interpreter.</li>
-                    
-                    <li>Achieves performance comparable to direct prompting of Qwen3-32B, but with roughly one fiftieth of the inference memory and faster execution (30 tokens/s on a MacBook M3).</li>
-                    
-                    <li>Reframes the foundation model from a per-input problem solver into a 'tool builder', producing small, reusable artifacts for cheap, offline function calls after initial compilation.</li>
-                    
-                    <li>Provides a Python library for easy compilation and local execution of these fuzzy functions.</li>
-                    
-                    <li>Demonstrates applicability with examples like 'Alien Taboo', 'Avatar Director', and 'Website Helper'.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Explore the Program-as-Weights project page and GitHub repository for implementation details and code examples.</li>
-                    
-                    <li>Experiment with the `programasweights` Python library to compile and deploy fuzzy functions locally.</li>
-                    
-                    <li>Review the FuzzyBench dataset for potential use in training or evaluating similar models.</li>
-                    
-                    <li>Consider integrating PAW into applications requiring efficient, local, and reproducible AI-driven 'fuzzy' logic, especially for tasks currently outsourced to expensive LLM APIs.</li>
-                    
-                    <li>Read the agent guide at `programasweights.com/AGENTS.md` to understand how to use PAW with coding agents.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2607.02512" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling (MrFlow)</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 9.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 2024-07-02</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This article introduces MrFlow, a significant advancement in accelerating text-to-image diffusion models. By offering up to a 25x speedup without requiring any additional training or runtime modifications, it drastically reduces the computational cost and time associated with generating high-quality images. This makes generative AI more practical, accessible, and cost-effective for real-world applications, potentially enabling new use cases and improving user experience for products built on diffusion models.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    MrFlow is a training-free, multi-resolution strategy that accelerates text-to-image diffusion models by up to 25x. It uses a staged low-to-high-resolution pipeline, combining low-res generation with pixel-space super-resolution and noise injection, to achieve significant speedup while maintaining high image quality and avoiding common artifacts.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>MrFlow accelerates text-to-image diffusion models by combining low-resolution generation with pixel-space super-resolution and noise injection.</li>
-                    
-                    <li>It is a 'training-free' method, meaning it requires no additional training or runtime modifications to existing pretrained models.</li>
-                    
-                    <li>Achieves up to 10x end-to-end acceleration on its own, significantly surpassing other training-free methods.</li>
-                    
-                    <li>Can be orthogonally combined with pretrained timestep distillation strategies to achieve an even higher generation acceleration of up to 25x.</li>
-                    
-                    <li>The method employs a staged low-to-high-resolution pipeline: rapid low-resolution structure generation, pixel-space super-resolution using a lightweight GAN-based model, low-strength noise injection, and high-resolution detail refinement.</li>
-                    
-                    <li>It maintains high image quality, keeping OneIG within a 1% gap relative to unaccelerated generation, and addresses blurring or artifacts seen in previous multi-resolution approaches.</li>
-                    
-                    <li>Applicable to pretrained flow-matching models and demonstrated on FLUX.1-dev and Qwen-Image.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Investigate MrFlow for potential integration into existing or new generative AI pipelines to reduce inference costs and latency.</li>
-                    
-                    <li>Evaluate the performance and quality trade-offs of MrFlow, especially when combined with timestep distillation, for specific text-to-image applications.</li>
-                    
-                    <li>Consider the implications of such training-free acceleration methods on the economic viability and scalability of generative AI services and products.</li>
-                    
-                    <li>Explore the applicability of MrFlow's staged sampling approach to other generative model architectures or modalities beyond text-to-image.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2607.01642" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Morphing into Hybrid Attention Models</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 2026-07-03</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This paper introduces FlashMorph, an efficient and effective method for optimizing Transformer models by intelligently selecting a hybrid of full and linear attention layers. This significantly improves long-context efficiency and performance while reducing the cost of model optimization, making large language models more practical and cost-effective for real-world applications.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    FlashMorph is a new method that efficiently determines the optimal mix of full and linear attention layers in Transformer models, leading to better long-context performance and reduced optimization costs compared to existing heuristic approaches.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Hybrid attention models improve long-context efficiency in Transformers by combining full-attention and linear-attention layers.</li>
-                    
-                    <li>Existing layer selection methods are often heuristic, treating layer importance in isolation and overlooking interdependent effects.</li>
-                    
-                    <li>FlashMorph formulates hybrid layer selection as a budget-constrained subset optimization problem.</li>
-                    
-                    <li>It constructs a 'morphable model' with both full and linear attention branches, then optimizes layerwise gates using synthetic long-context retrieval data and linearization regularization.</li>
-                    
-                    <li>FlashMorph discovers more effective hybrid configurations, preserves strong long-context recall and general benchmark performance, and substantially reduces layer selection cost.</li>
-                    
-                    <li>The method involves freezing model weights during gate optimization, followed by logits distillation and long-context finetuning.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Investigate FlashMorph as a potential optimization technique for deploying or fine-tuning large language models requiring long-context capabilities.</li>
-                    
-                    <li>Benchmark FlashMorph's efficiency and performance gains against current layer selection strategies in specific LLM applications.</li>
-                    
-                    <li>Explore the feasibility of integrating FlashMorph's methodology into existing MLOps pipelines for Transformer model optimization.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2606.30562" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">AgenticDataBench: A Comprehensive Benchmark for Data Agents</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
+                        <span class="badge badge-category">AI/Machine Learning</span>
+                        <span class="badge badge-score">Signal: 7.0</span>
                     </div>
                 </div>
                 
@@ -432,34 +224,30 @@
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This benchmark is critical for the advancement of LLM-based data agents, providing a standardized and rigorous way to evaluate their performance across diverse, real-world data science tasks. It enables developers and researchers to identify strengths and weaknesses, fostering innovation and more reliable automation of data science workflows, which is a rapidly growing area in AI and software engineering.
+                    This paper introduces a crucial new benchmark and evaluation methodology for autonomous agents, addressing a significant gap in current assessment practices. By focusing on 'Autonomous Policy Evolution' and providing trajectory-level diagnostics, EvoPolicyGym allows researchers to understand not just an agent's final performance, but *how* it iteratively improves its policies under budget constraints. This is vital for developing more robust, adaptable, and truly intelligent AI systems, moving beyond simple task completion to evaluate the learning and refinement process itself.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    AgenticDataBench is a new comprehensive benchmark featuring 344 tasks, 433 skills, and 27.3GB of data across 15 domains, designed to rigorously evaluate LLM-based data agents for automating real-world data science workflows.
+                    EvoPolicyGym is introduced as a new benchmark designed to evaluate how autonomous agents iteratively improve executable policies within interactive reinforcement learning (RL) environments. Research using EvoPolicyGym indicates that successful policy evolution necessitates task-specific mechanisms and refinement constrained by feedback, with GPT-5.5 demonstrating the highest performance among tested agents.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Introduces AgenticDataBench, a comprehensive benchmark for evaluating LLM-based data agents.</li>
+                    <li>Introduces EvoPolicyGym, a new benchmark for evaluating 'Autonomous Policy Evolution' (APE) in interactive environments.</li>
                     
-                    <li>Addresses the critical gap in the field for rigorous, fine-grained evaluation of data agents across diverse scenarios.</li>
+                    <li>APE is a controlled evaluation setting where a harness-model agent repeatedly edits an executable policy system under a fixed interaction budget.</li>
                     
-                    <li>Comprises 344 tasks, 433 data science skills, 97 datasets, and 27.3GB of data.</li>
+                    <li>The benchmark is built from compact interactive Reinforcement Learning (RL) environments.</li>
                     
-                    <li>Spans 15 diverse domains, including 5 real-world B2B use cases from a leading fintech company.</li>
+                    <li>GPT-5.5 achieved the strongest aggregate rank score and top-two performance across all 16 environments in the EvoPolicyGym suite.</li>
                     
-                    <li>Tasks are structured around reusable data science skills, which are core operational patterns extracted from large-scale task solutions on Stack Overflow.</li>
+                    <li>Key insight: Strong autonomous policy evolution depends on discovering task-appropriate mechanisms and refining policies under bounded feedback, rather than just isolated task wins.</li>
                     
-                    <li>Combines curated real-world tasks with systematically generated tasks using an LLM-based approach to ensure broad coverage and minimal redundancy.</li>
-                    
-                    <li>Enables both overall task success evaluation and fine-grained skill-level performance analysis.</li>
-                    
-                    <li>The benchmark and an open-sourced testbed are available for evaluating state-of-the-art data agents.</li>
+                    <li>EvoPolicyGym provides trajectory-level diagnostics to analyze how agents allocate budget and convert feedback into parametric tuning.</li>
                     
                 </ul>
                 
@@ -468,13 +256,11 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>AI researchers and developers working on LLM-based data agents should utilize AgenticDataBench for evaluating and comparing their models.</li>
+                    <li>AI researchers and developers working on autonomous agents should explore EvoPolicyGym as a standard for evaluating policy evolution capabilities.</li>
                     
-                    <li>Data scientists and MLOps engineers can explore the benchmark to understand the current capabilities and limitations of automated data science workflows.</li>
+                    <li>Investigate the specific 'task-appropriate mechanisms' identified by EvoPolicyGym that contribute to successful policy refinement.</li>
                     
-                    <li>Consider contributing to or extending the AgenticDataBench framework to cover additional domains, data types, or data science skills.</li>
-                    
-                    <li>Review the associated GitHub repository and project page for detailed implementation, data access, and usage instructions.</li>
+                    <li>Consider how current LLM architectures can be further optimized for iterative policy editing and feedback-constrained learning within fixed budgets.</li>
                     
                 </ul>
                 
@@ -482,50 +268,52 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.01647" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2607.02440" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Noisy quantum circuit simulation with the tensor jump method</h3>
+                    <h3 class="card-title">MicroStrategy's Bitcoin Accumulation Strategy</h3>
                     <div class="badges">
-                        <span class="badge badge-category">Quantum Computing</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
+                        <span class="badge badge-category">Finance</span>
+                        <span class="badge badge-score">Signal: 7.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Fri, 03 Jul 2026 00:00:00 -0400</span>
-                    <span>🌐 Source: arXiv quant-ph</span>
+                    <span>📅 Fri, 03 Jul 2026 16:38:39 GMT</span>
+                    <span>🌐 Source: Net Interest</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This article introduces a significant advancement in the classical simulation of noisy quantum circuits, a critical bottleneck in the development and validation of quantum computing. By enabling more accurate and scalable simulations of realistic hardware noise, it provides essential tools for benchmarking quantum hardware, validating quantum algorithms, and developing effective error-mitigation strategies, thereby accelerating progress in the field.
+                    This article provides a detailed case study of how a single corporate entity, Strategy (likely MicroStrategy), significantly impacts the Bitcoin market through aggressive accumulation and innovative, potentially unsustainable, financial engineering. It highlights the risks and dynamics of concentrated bets on volatile assets, the shift in investor capital towards 'hot' sectors like AI, and the implications of such large-scale corporate strategies on market flows and asset prices. For investors, it offers a critical look at a high-profile investment strategy.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Researchers developed a new variance-aware tensor network method combining the tensor jump method with MPS evolution to accurately and scalably simulate noisy quantum circuits, significantly reducing variance and improving efficiency on systems up to 127 qubits, even with complex correlated noise.
+                    Michael Saylor's company, Strategy (likely MicroStrategy), has aggressively acquired 4% of the total Bitcoin supply, funding these purchases through a new senior security called 'Stretch.' This strategy accounts for 70% of net digital-asset flows this year, raising concerns about its sustainability and market impact, especially as Bitcoin's price is down significantly and investor capital shifts towards AI and SpaceX.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Introduces a variance-aware tensor network framework for classical simulation of noisy quantum circuits.</li>
+                    <li>Bitcoin is down nearly 30% this year, having lost half its value since its peak of $126,000 last October.</li>
                     
-                    <li>Combines the tensor jump method with local TDVP gate evolution on Matrix Product States (MPS) and sparse Pauli-Lindblad noise models.</li>
+                    <li>Michael Saylor's company, Strategy, is the largest corporate owner of Bitcoin, holding 847,363 BTC (4% of total supply, 6% of active circulation).</li>
                     
-                    <li>Supports complex, correlated multi-qubit Lindblad noise, including long-range operators and direct simulation of crosstalk.</li>
+                    <li>Strategy purchased 174,863 Bitcoin for $13.7 billion this year, representing 70% of estimated net digital-asset flows year-to-date.</li>
                     
-                    <li>Develops two unbiased variance-aware unravelings (analog unitary-mixture and projector-jump) that reduce Monte Carlo variance and bond-dimension growth.</li>
+                    <li>Saylor attributes Bitcoin's headwinds to the lingering Gulf War, tight monetary policy, and capital flowing into 'AI trade' and 'SpaceX deal'.</li>
                     
-                    <li>Demonstrates accurate and scalable simulation on a 25-qubit noisy XY quench and IBM's 127-qubit kicked-Ising benchmark, outperforming standard baselines.</li>
+                    <li>Strategy funds its Bitcoin purchases through a new security called 'Stretch,' which ranks senior to common equity and pays a variable dividend, aiming to maintain a $100 par price.</li>
+                    
+                    <li>$10.5 billion of 'Stretch' has been issued on Nasdaq, alongside $5.0 billion of other preferred stock, raising concerns about the sustainability of this credit strategy.</li>
                     
                 </ul>
                 
@@ -534,19 +322,21 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Quantum software developers should explore integrating this tensor jump method into their simulation tools for more efficient and accurate noisy circuit analysis.</li>
+                    <li>Monitor the financial health and funding strategies of companies with highly concentrated asset holdings, especially in volatile markets.</li>
                     
-                    <li>Quantum hardware researchers can leverage this advanced simulation technique for better benchmarking and understanding of noise effects on their experimental devices.</li>
+                    <li>Analyze the impact of large institutional players on market liquidity and price discovery in niche or emerging asset classes.</li>
                     
-                    <li>Quantum algorithm designers can utilize these improved noisy simulations to validate their algorithms and test error mitigation strategies more effectively under realistic conditions.</li>
+                    <li>Evaluate the sustainability and risks associated with complex financial engineering instruments used to fund speculative asset purchases.</li>
+                    
+                    <li>Observe capital flow trends between different investment sectors (e.g., crypto vs. AI/SpaceX) to identify shifting market sentiment and 'hot' investment themes.</li>
                     
                 </ul>
                 
 
                 <div class="card-footer">
-                    <span>Processed Category: Quantum</span>
+                    <span>Processed Category: Finance</span>
                     
-                    <a href="https://arxiv.org/abs/2607.01323" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://www.netinterest.co/p/stretch-marks" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -557,65 +347,32 @@
         <section id="categories">
             <h2>By Category</h2>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/Machine Learning</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Program-as-Weights: A Programming Paradigm for Fuzzy Functions</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Program-as-Weights (PAW) is a new programming paradigm that compiles natural-language function descriptions into small, efficient neural programs for local execution, matching large LLM performance with 1/50th memory usage and faster inference, making AI functions cheap and reproducible.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">EvoPolicyGym Benchmark for Autonomous Policy Evolution</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">EvoPolicyGym is introduced as a new benchmark designed to evaluate how autonomous agents iteratively improve executable policies within interactive reinforcement learning (RL) environments. Research using EvoPolicyGym indicates that successful policy evolution necessitates task-specific mechanisms and refinement constrained by feedback, with GPT-5.5 demonstrating the highest performance among tested agents.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 9.07</span>
+                        <span>Score: 6.92</span>
                         
-                        <a href="https://huggingface.co/papers/2607.02512" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling (MrFlow)</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">MrFlow is a training-free, multi-resolution strategy that accelerates text-to-image diffusion models by up to 25x. It uses a staged low-to-high-resolution pipeline, combining low-res generation with pixel-space super-resolution and noise injection, to achieve significant speedup while maintaining high image quality and avoiding common artifacts.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.93</span>
-                        
-                        <a href="https://huggingface.co/papers/2607.01642" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Morphing into Hybrid Attention Models</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">FlashMorph is a new method that efficiently determines the optimal mix of full and linear attention layers in Transformer models, leading to better long-context performance and reduced optimization costs compared to existing heuristic approaches.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.38</span>
-                        
-                        <a href="https://huggingface.co/papers/2606.30562" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">AgenticDataBench: A Comprehensive Benchmark for Data Agents</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">AgenticDataBench is a new comprehensive benchmark featuring 344 tasks, 433 skills, and 27.3GB of data across 15 domains, designed to rigorously evaluate LLM-based data agents for automating real-world data science workflows.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.3</span>
-                        
-                        <a href="https://huggingface.co/papers/2607.01647" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.02440" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
             </div>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Finance</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Noisy quantum circuit simulation with the tensor jump method</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers developed a new variance-aware tensor network method combining the tensor jump method with MPS evolution to accurately and scalably simulate noisy quantum circuits, significantly reducing variance and improving efficiency on systems up to 127 qubits, even with complex correlated noise.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">MicroStrategy's Bitcoin Accumulation Strategy</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Michael Saylor's company, Strategy (likely MicroStrategy), has aggressively acquired 4% of the total Bitcoin supply, funding these purchases through a new senior security called 'Stretch.' This strategy accounts for 70% of net digital-asset flows this year, raising concerns about its sustainability and market impact, especially as Bitcoin's price is down significantly and investor capital shifts towards AI and SpaceX.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.29</span>
+                        <span>Score: 6.85</span>
                         
-                        <a href="https://arxiv.org/abs/2607.01323" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://www.netinterest.co/p/stretch-marks" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
