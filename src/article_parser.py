@@ -18,16 +18,19 @@ def parse_and_analyze(article: dict, processed_urls: set) -> dict | None:
     print(f"🔍 Analyzing: {article['title'][:60]}...", end=" ", flush=True)
     
     insight = extract_insights(
-        text, 
-        article["link"], 
-        article_source_name=article["source_name"], 
-        article_title=article["title"], 
+        text,
+        article["link"],
+        article_source_name=article["source_name"],
+        article_title=article["title"],
         article_published=article.get("published", "")
     )
-    
-    processed_urls.add(article["link"])
-    
+
     if insight:
+        # Only mark as processed once analysis actually succeeds, so a Gemini
+        # failure (e.g. quota exhaustion) doesn't permanently blacklist an
+        # article that was never really analyzed. Leaving it unmarked lets a
+        # future run retry it instead of skipping it as "already processed".
+        processed_urls.add(article["link"])
         if not insight.get("source_url"):
             insight["source_url"] = article["link"]
         if not insight.get("source_name"):
