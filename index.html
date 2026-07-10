@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-09</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-10</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,257 +209,45 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence (LingBot-Video)</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.5</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 July 8, 2024</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This paper introduces LingBot-Video, a groundbreaking open-source Mixture-of-Experts (MoE) video pretraining framework specifically designed for embodied intelligence. It addresses a critical domain mismatch in existing video generative models by focusing on physical realism, computational efficiency, and task completion rather than just visual fidelity. By combining an efficient MoE architecture, specialized robot-oriented data augmentation, and a novel multi-dimensional reward system, LingBot-Video significantly advances the capabilities of AI models for robotics and physical actuation, paving the way for more intelligent and capable autonomous systems.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    LingBot-Video is an open-source, MoE-based video pretraining framework tailored for embodied intelligence, utilizing robot-oriented data and a multi-dimensional reward system to achieve physical rationality and task completion, bridging digital creativity with physical actuation.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>LingBot-Video is a DiT-based video pretraining paradigm specifically designed for embodied intelligence, overcoming the limitations of general video generative models focused on content creation.</li>
-                    
-                    <li>It adopts a Mixture-of-Experts (MoE) architecture to achieve a superior trade-off between modeling capacity and inference efficiency, scaled from scratch.</li>
-                    
-                    <li>A novel data profiling engine augments standard internet videos with extensive robot-oriented footage (manipulation, navigation, egocentric perspectives) to instill an intrinsic understanding of actions and world dynamics.</li>
-                    
-                    <li>A multi-dimensional reward system is developed to enforce alignment with physical rationality and task completion, moving beyond traditional criteria like aesthetics or motion consistency.</li>
-                    
-                    <li>LingBot-Video is presented as the inaugural large-scale, open-source MoE video foundation model, aiming to bridge the gap between digital creativity and physical actuation in robotics.</li>
-                    
-                    <li>Comprehensive evaluations validate its performance and efficiency as a video foundation model for embodied AI applications.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Review the LingBot-Video project page and GitHub repository to understand the implementation details and explore potential applications in embodied AI or robotics projects.</li>
-                    
-                    <li>Investigate the effectiveness of MoE architectures for other large-scale foundation models where efficiency and scalability are critical concerns.</li>
-                    
-                    <li>Explore the methodologies for creating specialized, domain-specific datasets and multi-dimensional reward systems for training AI models in niche applications like robotics.</li>
-                    
-                    <li>Consider how this open-source foundation model could be leveraged by startups or researchers working on embodied AI, robot control, or advanced simulation environments.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2607.07675" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.5</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 July 7, 2024</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    RoboDojo addresses a critical gap in the evaluation of generalist robot manipulation policies by providing a unified, comprehensive, and reproducible benchmark that spans both simulation and real-world environments. This standardization and breadth of evaluation dimensions (generalization, memory, precision, long-horizon, open-vocabulary) are crucial for accelerating research and development in robotics, enabling fair comparison of policies, and fostering progress towards more capable and adaptable robots.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    RoboDojo is a new unified benchmark for evaluating generalist robot manipulation policies, featuring 42 simulation tasks and 18 real-world tasks. It offers comprehensive evaluation across diverse capabilities, scalable simulation, reproducible real-world testing via remote access, and a public leaderboard to track policy performance.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Existing benchmarks for generalist robot manipulation policies are limited, often relying on simple, short-horizon, or skill-narrow tasks, and are typically confined to either simulation or real-world settings.</li>
-                    
-                    <li>RoboDojo introduces a unified sim-and-real benchmark designed for comprehensive evaluation of generalist robot manipulation policies.</li>
-                    
-                    <li>It includes 42 simulation tasks that evaluate five key dimensions: generalization, memory, precision, long-horizon execution, and open-vocabulary instruction following.</li>
-                    
-                    <li>It features 18 real-world tasks that expose policies to challenging physical deployment conditions, ensuring practical relevance.</li>
-                    
-                    <li>The benchmark supports scalable evaluation through heterogeneous parallel simulation in Isaac Sim and provides RoboDojo-RealEval for reproducible real-world evaluations with remote cloud access and standardized hardware.</li>
-                    
-                    <li>Integration with XPolicyLab allows policies to be integrated once and evaluated across both simulation and real-world settings with minimal adaptation.</li>
-                    
-                    <li>The project has evaluated 30 policies, establishing a public leaderboard and providing systematic analysis of current policy performance.</li>
-                    
-                    <li>All components, including the benchmark code and XPolicyLab, are open-source and accessible via a dedicated website and GitHub repositories.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>AI researchers and robotics developers should explore RoboDojo and XPolicyLab for benchmarking their generalist robot manipulation policies.</li>
-                    
-                    <li>Robotics startups can leverage RoboDojo's unified sim-and-real evaluation to validate and improve their robot control systems.</li>
-                    
-                    <li>Investors interested in the robotics and AI space should monitor the RoboDojo leaderboard for insights into leading policy performance and potential investment opportunities.</li>
-                    
-                    <li>Software engineers can contribute to or utilize the open-source RoboDojo and XPolicyLab frameworks for developing and testing advanced robotic systems.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2607.04434" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">WildCity: A Real-World City-Scale Testbed for AI Rendering, Simulation, and Spatial Intelligence</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Jul 7</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    WildCity provides a groundbreaking, large-scale, real-world multimodal dataset and a corresponding closed-loop simulator. This addresses a critical data gap that has previously hindered the development of AI systems capable of human-like spatial reasoning and navigation in complex, dynamic urban environments. It is a foundational resource that will accelerate research in autonomous systems, urban digital twins, embodied AI, and advanced rendering, pushing the boundaries of AI's ability to interact with and understand the physical world at scale.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    WildCity is a new large-scale, real-world multimodal dataset and simulator, collected by autonomous fleets, designed to enable AI systems to perceive, reason, and navigate complex urban environments at city scales, bridging a significant data gap in AI research.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>WildCity introduces a novel, large-scale multimodal dataset specifically for urban navigation and spatial representation research.</li>
-                    
-                    <li>It addresses the critical lack of city-scale data, which has been a major challenge for developing AI systems with human-like cognitive capabilities in urban environments.</li>
-                    
-                    <li>The dataset comprises 18 real-world trajectories, each averaging 83.7 kilometers, collected by autonomous fleets in complex urban settings.</li>
-                    
-                    <li>It captures core real-world perception challenges such as dynamic objects, lighting variations, and imperfect camera poses.</li>
-                    
-                    <li>WildCity includes an urban-tailored reconstruction baseline and converts reconstructed environments into a closed-loop simulator.</li>
-                    
-                    <li>The project systematically analyzes key challenges for creating simulation-ready urban digital twins: scalability, extrapolation, and uncertainty.</li>
-                    
-                    <li>The ultimate goal is to catalyze progress in city-scale rendering, perception, memory, and spatial reasoning for AI.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Explore the WildCity dataset and simulator for potential applications in AI research, particularly in autonomous driving, robotics, and urban planning.</li>
-                    
-                    <li>Investigate the project page and GitHub repository (if available) for detailed information, data access, and implementation examples.</li>
-                    
-                    <li>Consider how the challenges identified (scalability, extrapolation, uncertainty) can inform future research and development efforts in large-scale AI and digital twin technologies.</li>
-                    
-                    <li>Evaluate the potential of this testbed for developing and benchmarking new AI models for perception and spatial intelligence in complex real-world scenarios.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2607.06838" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Localized Thermometry for Superconducting Qubits using Integrated Dayem Bridges</h3>
+                    <h3 class="card-title">Observation of coherent flux-charge interaction in a gate-tunable fluxonium</h3>
                     <div class="badges">
                         <span class="badge badge-category">Quantum Computing</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
+                        <span class="badge badge-score">Signal: 8.5</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Thu, 09 Jul 2026 00:00:00 -0400</span>
+                    <span>📅 Fri, 10 Jul 2026 00:00:00 -0400</span>
                     <span>🌐 Source: arXiv quant-ph</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This research introduces a simple, non-invasive, and scalable method for accurately measuring on-chip temperatures in superconducting quantum circuits. This is crucial for understanding and mitigating decoherence mechanisms, which are a major hurdle in developing stable and high-performance quantum computers. By providing better diagnostics, it accelerates the development and optimization of quantum hardware.
+                    This research introduces a novel and critical circuit primitive – coherent flux-charge coupling – for superconducting quantum circuits. By enabling direct interaction between conjugate variables (flux and charge), it significantly broadens the design toolbox for quantum processors. This breakthrough opens direct routes to developing more advanced functionalities like non-reciprocity, protected quantum modes, and unconventional readout schemes, which are crucial for building more robust and powerful quantum computers.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Researchers developed a new, integrated on-chip thermometer using superconducting Dayem bridges for transmon qubits, allowing accurate, local temperature measurement without complex protocols, which is vital for diagnosing and improving qubit performance and mitigating decoherence.
+                    Researchers demonstrated a new coherent flux-charge coupling in a gate-tunable fluxonium, a fundamental advance for superconducting circuits that enables novel quantum computing functionalities like protected modes and unconventional readout.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Accurate on-chip temperature knowledge is essential for optimizing superconducting qubit performance, but direct millikelvin thermometry is challenging.</li>
+                    <li>Demonstrated coherent flux-charge coupling in a hybrid superconducting-semiconductor fluxonium.</li>
                     
-                    <li>Existing methods using qubits as thermometers are complex, require specialized protocols, and limit practicality for routine diagnostics.</li>
+                    <li>This coupling is a novel 'circuit primitive' that addresses a critical missing component in superconducting circuits.</li>
                     
-                    <li>The new method integrates superconducting Dayem bridges directly onto the same chip as transmon qubits.</li>
+                    <li>Unlike elementary couplings (charge-charge, flux-flux), it directly couples conjugate variables (flux and charge).</li>
                     
-                    <li>Temperature is determined by extracting the critical current of the Dayem bridge from I-V measurements, providing a local, quantitative measure.</li>
+                    <li>Achieved using a voltage-tunable Josephson junction with parametrically modulated critical current.</li>
                     
-                    <li>The Dayem bridge thermometry is simple, non-invasive, scalable, and does not require microwave calibration or qubit-specific control sequences.</li>
+                    <li>Enables direct routes to non-reciprocity, protected modes, and unconventional readout in quantum circuits.</li>
                     
-                    <li>The method was validated by simultaneous measurements with qubit excited-state population, showing agreement, and correlated with qubit energy relaxation and dephasing times.</li>
-                    
-                    <li>This approach is highly useful for diagnosing temperature-dependent decoherence mechanisms and for general cryogenic hardware development in superconducting quantum circuits.</li>
+                    <li>The coupling scales linearly with driving amplitude while maintaining first-order insensitivity to gate voltage.</li>
                     
                 </ul>
                 
@@ -468,11 +256,11 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Quantum hardware developers should investigate integrating Dayem bridges into their superconducting qubit chip designs for enhanced on-chip diagnostics and performance optimization.</li>
+                    <li>Monitor further developments in superconducting circuit design and fluxonium-based qubit architectures.</li>
                     
-                    <li>Researchers studying qubit decoherence should consider utilizing this localized thermometry method to better understand temperature-dependent effects.</li>
+                    <li>Assess the potential impact of this new coupling on quantum error correction and fault-tolerant quantum computing.</li>
                     
-                    <li>Semiconductor foundries involved in quantum chip fabrication should explore the compatibility and integration processes for Dayem bridge structures.</li>
+                    <li>Investigate research groups and startups focusing on novel superconducting circuit primitives and their integration into quantum processors.</li>
                     
                 </ul>
                 
@@ -480,52 +268,54 @@
                 <div class="card-footer">
                     <span>Processed Category: Quantum</span>
                     
-                    <a href="https://arxiv.org/abs/2607.06670" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://arxiv.org/abs/2607.07798" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Localized Control of Large Ion Crystals in Penning Traps using Spatial Light Modulators</h3>
+                    <h3 class="card-title">Decoherence as a Source of Topology in Quantum Systems</h3>
                     <div class="badges">
                         <span class="badge badge-category">Quantum Computing</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
+                        <span class="badge badge-score">Signal: 8.5</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Thu, 09 Jul 2026 00:00:00 -0400</span>
+                    <span>📅 2026-07-10T00:00:00-04:00</span>
                     <span>🌐 Source: arXiv quant-ph</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This research presents a significant technical advancement in trapped-ion quantum computing, addressing the critical challenge of achieving localized, coherent control over individual ions within large crystals. By demonstrating a method to overcome the rapid rotation of ion crystals using spatial light modulators, it paves the way for more powerful quantum simulators and scalable, fault-tolerant quantum computers, which are essential for the future development of the field.
+                    This research fundamentally challenges the conventional view of decoherence as solely an obstacle in quantum systems. By demonstrating that correlated quantum noise can induce topological phases, it opens up entirely new paradigms for understanding, designing, and potentially stabilizing quantum technologies. This could lead to novel approaches for quantum error correction, the development of robust quantum materials, and a deeper understanding of open many-body systems, directly impacting the future of quantum computing and related fields.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Researchers successfully used an ultraviolet spatial light modulator (SLM) to achieve localized, coherent control of over 100 ions in a Penning trap, overcoming the challenge of rapid ion rotation and enabling a path towards individual ion addressing for quantum computing.
+                    Contrary to conventional wisdom, new research shows that quantum decoherence, specifically correlated noise, can *induce* topological phases in interacting quantum systems, leading to phenomena like asymmetric diffusion and offering a new route to topology beyond existing paradigms.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Penning ion traps are quantum platforms that have primarily used global control, limiting their power for quantum simulation.</li>
+                    <li>Decoherence, traditionally seen as detrimental, can actively induce topological phenomena in quantum systems.</li>
                     
-                    <li>Localized control is crucial for increasing platform power but is technically challenging due to the rapid rotation of ion crystals.</li>
+                    <li>This effect is demonstrated in a lattice system subject to environment-induced dephasing, where noise-averaged dynamics realize a topological phase.</li>
                     
-                    <li>An ultraviolet-compatible spatial light modulator (SLM) was used to imprint programmable, co-rotating AC Stark shift patterns.</li>
+                    <li>The topological phase is characterized by a winding number and the non-Hermitian skin effect.</li>
                     
-                    <li>The technique demonstrated localized coherent control of single plane crystals containing greater than 100 ions.</li>
+                    <li>Correlated stochastic noise leads to asymmetric diffusion, whose direction is topologically fixed and reversible only via a topological phase transition.</li>
                     
-                    <li>The method is validated by good agreement between measured ion qubit populations and calculations.</li>
+                    <li>The phenomenon is purely interaction-induced, distinguishing it from previous studies on free-particle systems.</li>
                     
-                    <li>This approach provides a path for parallelizable, coherent individual ion addressing in Penning traps using higher format SLMs.</li>
+                    <li>It is a genuinely open-system phenomenon without an effective Hamiltonian description, yet the model remains analytically tractable.</li>
+                    
+                    <li>Establishes correlated quantum noise as a novel pathway to topology in open many-body systems, expanding beyond free-particle and non-Hermitian Hamiltonian frameworks.</li>
                     
                 </ul>
                 
@@ -534,11 +324,11 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Monitor advancements in spatial light modulator (SLM) technology, particularly those compatible with UV wavelengths, for potential applications in quantum hardware.</li>
+                    <li>Monitor future research exploring experimental realizations of decoherence-induced topological phases.</li>
                     
-                    <li>Evaluate investment opportunities in startups or companies focused on trapped-ion quantum computing architectures, as this development de-risks a key technical challenge.</li>
+                    <li>Investigate potential applications of this concept in quantum error correction or robust quantum device design.</li>
                     
-                    <li>Investigate the potential for adapting similar localized control techniques to other quantum computing platforms or experimental setups requiring precise, dynamic control of quantum systems.</li>
+                    <li>Explore how these findings might influence theoretical models for simulating open quantum systems and quantum materials.</li>
                     
                 </ul>
                 
@@ -546,7 +336,213 @@
                 <div class="card-footer">
                     <span>Processed Category: Quantum</span>
                     
-                    <a href="https://arxiv.org/abs/2607.06654" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://arxiv.org/abs/2607.07801" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Why Can't I Open My Drawer? Mitigating Object-Driven Shortcuts in Zero-Shot Compositional Action Recognition</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 2, 2024</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper addresses a critical challenge in AI models: their tendency to rely on 'shortcuts' rather than true understanding, particularly in compositional tasks like recognizing actions. By identifying and mitigating object-driven shortcuts in zero-shot compositional action recognition, the research contributes to building more robust, generalizable, and trustworthy AI systems that can better understand complex real-world scenarios, moving beyond superficial correlations to deeper temporal and compositional reasoning.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    This paper introduces RCORE, a method to mitigate 'object-driven shortcuts' in Zero-Shot Compositional Action Recognition (ZS-CAR). These shortcuts cause models to incorrectly predict verbs by relying on frequently co-occurring objects rather than temporal evidence. RCORE uses co-occurrence prior regularization and temporal order regularization to improve compositional generalization by forcing models to learn more robust, temporally-grounded verb representations.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Zero-Shot Compositional Action Recognition (ZS-CAR) models often fail due to 'object-driven shortcuts,' where they predict verbs based on the most common object association in training data, rather than actual temporal evidence.</li>
+                    
+                    <li>This 'verb-collapse phenomenon' leads to poor generalization to unseen verb-object combinations (e.g., seeing 'Open Window' and 'Close Drawer' but failing on 'Open Drawer').</li>
+                    
+                    <li>The root causes identified are sparse compositional supervision and learning asymmetry between verbs (harder) and objects (easier).</li>
+                    
+                    <li>The paper proposes RCORE (Robust COmpositional REpresentations) to address these shortcuts.</li>
+                    
+                    <li>RCORE includes Co-occurrence Prior Regularization (CPR) to add supervision for unseen compositions and regularize against frequent co-occurrence priors.</li>
+                    
+                    <li>RCORE also includes Temporal Order Regularization for Composition (TORC) to enforce temporal-order sensitivity, leading to more temporally grounded verb representations.</li>
+                    
+                    <li>Diagnostic metrics are introduced to quantify how much models overfit to co-occurrence statistics.</li>
+                    
+                    <li>RCORE empirically reduces shortcut diagnostics and consistently improves compositional generalization across Sth-com and EK100-com benchmarks.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers working on video understanding or compositional generalization should investigate integrating RCORE's principles (co-occurrence prior regularization, temporal order regularization) into their model architectures.</li>
+                    
+                    <li>Developers of AI systems requiring robust action recognition in novel scenarios should be aware of object-driven shortcuts and consider diagnostic tools to evaluate their models' generalization capabilities.</li>
+                    
+                    <li>When designing datasets for compositional tasks, consider strategies to mitigate sparse compositional supervision and verb-object learning asymmetry to prevent shortcut learning.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2601.16211" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Vidu S1: A Real-Time Interactive Video Generation Model</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI/Generative AI</span>
+                        <span class="badge badge-score">Signal: 9.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 3</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    Vidu S1 represents a significant leap in real-time interactive video generation, making high-quality, voice-controlled digital character animation accessible on consumer hardware. This democratizes advanced generative AI capabilities, opening doors for new applications in content creation, virtual experiences, gaming, and interactive media, potentially disrupting existing workflows and fostering innovation in AI-driven products and services.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Vidu S1 is a real-time, voice-controlled interactive video generation model that produces infinite-length, high-quality (540p at 42 FPS) video on consumer GPUs, enabling personalized digital character animation.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Vidu S1 is a real-time interactive video generation model supporting voice control of digital characters.</li>
+                    
+                    <li>It generates infinite-length video without blurring, drift, or visual distortion.</li>
+                    
+                    <li>Achieves 540p resolution at up to 42 FPS on regular consumer GPUs, leveraging TurboDiffusion and TurboServe.</li>
+                    
+                    <li>Users can upload custom images of real people, anime, and pets, and choose different voice tones for personalized experiences.</li>
+                    
+                    <li>Experiments show Vidu S1 achieves best performance across all test metrics while fully meeting real-time inference requirements.</li>
+                    
+                    <li>An online demo and API platform are available for immediate use and integration.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Explore the Vidu S1 online demo (vidu.com/vidu-stream) to experience its real-time interactive capabilities firsthand.</li>
+                    
+                    <li>Investigate the underlying TurboDiffusion and TurboServe technologies for insights into efficient real-time AI model design and deployment.</li>
+                    
+                    <li>Consider potential applications for real-time, voice-controlled video generation in areas like virtual assistants, gaming, interactive storytelling, or personalized marketing.</li>
+                    
+                    <li>Monitor the generative AI landscape for further advancements in real-time, consumer-grade video synthesis and interactive AI models.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.03118" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Video-Oasis: Rethinking Evaluation of Video Understanding</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 2</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This article is crucial for the field of AI research, particularly in video understanding and Video-LLMs. It exposes fundamental flaws in current evaluation methodologies, revealing that many state-of-the-art models might not possess genuine visual understanding but rather exploit linguistic or knowledge-based shortcuts. By providing a diagnostic suite (Video-Oasis) and demonstrating significant capability gaps, it offers a critical foundation for developing more robust benchmarks and truly capable video AI models, thereby guiding future research and development efforts in a more meaningful direction.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Video-Oasis, a new diagnostic suite, reveals that 55% of existing video understanding benchmarks can be solved without visual input, exposing that current state-of-the-art models perform poorly on true video-native challenges and highlighting the urgent need for more rigorous evaluation criteria for Video-LLMs.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Many existing video understanding benchmarks are flawed, with 55% of samples solvable without requiring visual input or temporal context.</li>
+                    
+                    <li>Current Video-LLM benchmark performance often stems from linguistic reasoning or knowledge priors, not true visual perception.</li>
+                    
+                    <li>Video-Oasis is introduced as a sustainable diagnostic suite to systematically audit and identify these 'shortcuts' in existing benchmarks.</li>
+                    
+                    <li>After filtering out shortcut-solvable samples, state-of-the-art models perform only marginally above random guessing on the remaining 'video-native challenges'.</li>
+                    
+                    <li>The work aims to provide a practical foundation for constructing rigorous video benchmarks and evaluating future Video-LLMs.</li>
+                    
+                    <li>The code for Video-Oasis is publicly available on GitHub.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers and developers should critically re-evaluate the benchmarks used for video understanding models, utilizing diagnostic tools like Video-Oasis.</li>
+                    
+                    <li>Future Video-LLM development should prioritize genuine visual perception and temporal reasoning capabilities, rather than optimizing for existing flawed benchmarks.</li>
+                    
+                    <li>Benchmark creators should design new evaluation datasets that specifically require visual and temporal input, making it harder for models to exploit linguistic or knowledge-based shortcuts.</li>
+                    
+                    <li>Investors and startups in the AI space focusing on video understanding should scrutinize claims of model performance, ensuring they are based on robust, video-native evaluations.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2603.29616" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -557,65 +553,70 @@
         <section id="categories">
             <h2>By Category</h2>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence (LingBot-Video)</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">LingBot-Video is an open-source, MoE-based video pretraining framework tailored for embodied intelligence, utilizing robot-oriented data and a multi-dimensional reward system to achieve physical rationality and task completion, bridging digital creativity with physical actuation.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Observation of coherent flux-charge interaction in a gate-tunable fluxonium</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers demonstrated a new coherent flux-charge coupling in a gate-tunable fluxonium, a fundamental advance for superconducting circuits that enables novel quantum computing functionalities like protected modes and unconventional readout.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.57</span>
+                        <span>Score: 8.65</span>
                         
-                        <a href="https://huggingface.co/papers/2607.07675" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://arxiv.org/abs/2607.07798" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">RoboDojo is a new unified benchmark for evaluating generalist robot manipulation policies, featuring 42 simulation tasks and 18 real-world tasks. It offers comprehensive evaluation across diverse capabilities, scalable simulation, reproducible real-world testing via remote access, and a public leaderboard to track policy performance.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Decoherence as a Source of Topology in Quantum Systems</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Contrary to conventional wisdom, new research shows that quantum decoherence, specifically correlated noise, can *induce* topological phases in interacting quantum systems, leading to phenomena like asymmetric diffusion and offering a new route to topology beyond existing paradigms.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.57</span>
+                        <span>Score: 8.5</span>
                         
-                        <a href="https://huggingface.co/papers/2607.04434" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">WildCity: A Real-World City-Scale Testbed for AI Rendering, Simulation, and Spatial Intelligence</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">WildCity is a new large-scale, real-world multimodal dataset and simulator, collected by autonomous fleets, designed to enable AI systems to perceive, reason, and navigate complex urban environments at city scales, bridging a significant data gap in AI research.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.3</span>
-                        
-                        <a href="https://huggingface.co/papers/2607.06838" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://arxiv.org/abs/2607.07801" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
             </div>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Localized Thermometry for Superconducting Qubits using Integrated Dayem Bridges</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers developed a new, integrated on-chip thermometer using superconducting Dayem bridges for transmon qubits, allowing accurate, local temperature measurement without complex protocols, which is vital for diagnosing and improving qubit performance and mitigating decoherence.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Why Can't I Open My Drawer? Mitigating Object-Driven Shortcuts in Zero-Shot Compositional Action Recognition</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">This paper introduces RCORE, a method to mitigate 'object-driven shortcuts' in Zero-Shot Compositional Action Recognition (ZS-CAR). These shortcuts cause models to incorrectly predict verbs by relying on frequently co-occurring objects rather than temporal evidence. RCORE uses co-occurrence prior regularization and temporal order regularization to improve compositional generalization by forcing models to learn more robust, temporally-grounded verb representations.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.3</span>
+                        <span>Score: 8.45</span>
                         
-                        <a href="https://arxiv.org/abs/2607.06670" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2601.16211" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Localized Control of Large Ion Crystals in Penning Traps using Spatial Light Modulators</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers successfully used an ultraviolet spatial light modulator (SLM) to achieve localized, coherent control of over 100 ions in a Penning trap, overcoming the challenge of rapid ion rotation and enabling a path towards individual ion addressing for quantum computing.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Video-Oasis: Rethinking Evaluation of Video Understanding</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Video-Oasis, a new diagnostic suite, reveals that 55% of existing video understanding benchmarks can be solved without visual input, exposing that current state-of-the-art models perform poorly on true video-native challenges and highlighting the urgent need for more rigorous evaluation criteria for Video-LLMs.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.22</span>
+                        <span>Score: 8.3</span>
                         
-                        <a href="https://arxiv.org/abs/2607.06654" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2603.29616" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/Generative AI</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Vidu S1: A Real-Time Interactive Video Generation Model</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Vidu S1 is a real-time, voice-controlled interactive video generation model that produces infinite-length, high-quality (540p at 42 FPS) video on consumer GPUs, enabling personalized digital character animation.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.32</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.03118" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
