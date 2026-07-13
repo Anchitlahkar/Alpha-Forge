@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-12</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-13</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -207,16 +207,419 @@
         <section id="top">
             <h2>Today's Top Insights</h2>
             
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">GenCeption: Video Generation Models as General-Purpose Vision Learners</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 9.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 2024-07-10</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research proposes a paradigm shift in computer vision, akin to the foundation model revolution in Natural Language Processing (NLP). By demonstrating that large-scale text-to-video generation can serve as a highly data-efficient pre-training paradigm for general-purpose vision models, it paves the way for more robust, scalable, and versatile AI systems capable of understanding the physical world. Its ability to achieve state-of-the-art performance across diverse tasks with significantly less data and generalize from synthetic to real-world scenarios has profound implications for AI development, deployment, and the future of visual intelligence.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A new model, GenCeption, demonstrates that pre-training on large-scale text-to-video generation enables general-purpose computer vision models to achieve state-of-the-art performance across various tasks with exceptional data efficiency and strong generalization, suggesting a foundational shift for visual AI.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>The paper contends that large-scale text-to-video generation can serve as a strong pre-training paradigm for general-purpose computer vision, analogous to next-token prediction in NLP.</li>
+                    
+                    <li>Introduces GenCeption, a model that leverages a pre-trained video generative diffusion backbone to define a feed-forward perception model.</li>
+                    
+                    <li>GenCeption achieves state-of-the-art performance across a diverse suite of vision tasks, including depth, surface normal, camera pose estimation, expression-referring segmentation, and 3D keypoint prediction.</li>
+                    
+                    <li>It often matches or surpasses specialized models (e.g., DepthAnything3, SAM3) and outperforms alternative pre-training paradigms (e.g., V-JEPA, VideoMAE).</li>
+                    
+                    <li>Exhibits exceptional data efficiency, achieving comparable performance with leading models using 7 to 500 times less training data.</li>
+                    
+                    <li>Demonstrates intriguing emergent behaviors, such as generalizing from synthetic human videos to real-world footage and out-of-distribution object categories (animals, robots).</li>
+                    
+                    <li>The findings suggest that video generation is not merely a synthesis tool but a foundational path toward generalist vision intelligence for the physical world.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers should further explore and expand the applications of video generative pre-training for various computer vision tasks and modalities.</li>
+                    
+                    <li>Software engineers developing vision-based AI systems should investigate integrating or fine-tuning models based on this paradigm to leverage its data efficiency and generalization capabilities.</li>
+                    
+                    <li>Investors and startups in the AI sector should monitor advancements in generalist vision models and consider opportunities arising from their broad applicability and reduced data requirements.</li>
+                    
+                    <li>Evaluate the potential for leveraging synthetic data generation as a more prominent training source for real-world vision applications, given the demonstrated generalization capabilities.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.09024" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
             
-            <p style="color: var(--text-muted); font-style: italic;">No insights available for today.</p>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Scalable Visual Pretraining for Language Intelligence</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 10</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper challenges the long-standing default assumption that large language models must be trained on text-only representations. It demonstrates that incorporating visual cues from documents (like figures, equations, and page layouts) through unsupervised visual pretraining consistently outperforms text-only approaches, offering a more efficient and scalable pathway to advanced language intelligence. This could lead to a paradigm shift in how foundation models are built, enabling them to understand and reason with information more comprehensively.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A new paper demonstrates that training language models directly on visual documents, leveraging visual cues like figures and layouts, consistently outperforms traditional text-only pretraining, offering a scalable path to more intelligent AI.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Current large foundation models are predominantly trained on text corpora, often discarding rich visual information present in sources like documents and webpages.</li>
+                    
+                    <li>Visual representations (figures, equations, page layouts) convey significant knowledge that cannot be fully captured by text alone.</li>
+                    
+                    <li>The paper challenges the assumption of text-only pretraining for language models.</li>
+                    
+                    <li>It introduces and systematically studies unsupervised visual pretraining paradigms that directly leverage visual documents without text extraction.</li>
+                    
+                    <li>Visual pretraining consistently outperforms text-only pretraining on the same underlying corpora across multiple backbones and benchmarks.</li>
+                    
+                    <li>This approach provides an efficient and scalable pathway to developing more capable language intelligence in foundation models.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers should explore integrating unsupervised visual pretraining into their multimodal model development workflows.</li>
+                    
+                    <li>Software engineers building AI systems should consider designing data pipelines and model architectures that can process and leverage visual document information directly.</li>
+                    
+                    <li>Startups and product developers in the AI space could investigate building applications that benefit from enhanced visual-language understanding, potentially gaining a competitive edge.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.09657" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Long-Horizon-Terminal-Bench Benchmark Introduction</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 9</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper introduces a crucial new benchmark, Long-Horizon-Terminal-Bench (LHTB), that addresses a significant limitation in current AI agent evaluation: the ability to handle complex, multi-step, long-duration tasks with nuanced progress tracking. By revealing that even frontier AI models achieve very low success rates on these tasks, LHTB provides a clear and challenging direction for future AI research and development, pushing the boundaries of what autonomous agents can achieve in real-world-like scenarios.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Researchers have introduced Long-Horizon-Terminal-Bench (LHTB), a new benchmark comprising 46 complex, long-horizon tasks with dense reward-based grading, designed to test AI agents' capabilities beyond simple, short-term problems. Evaluations show that even the strongest frontier AI models struggle significantly, achieving a mean perfect pass rate of only 1.7%, highlighting substantial room for improvement in long-horizon planning, context management, and iterative debugging for AI agents.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Existing AI agent benchmarks primarily focus on short, simple tasks with sparse (final outcome only) rewards, providing an incomplete picture of agent capabilities.</li>
+                    
+                    <li>Long-Horizon-Terminal-Bench (LHTB) is a new benchmark featuring 46 long-horizon tasks across nine categories, including software engineering, scientific computing, and multimodal analysis.</li>
+                    
+                    <li>LHTB introduces dense reward-based grading by decomposing tasks into fine-grained subtasks, allowing for intermediate rewards and partial credit to evaluate progress on open-ended workflows.</li>
+                    
+                    <li>Tasks in LHTB typically require hundreds of episodes and minutes to hours of execution, stressing long-horizon planning, long-context management, and iterative debugging.</li>
+                    
+                    <li>Evaluation of 15 frontier models on LHTB shows very low performance, with the strongest model achieving only a 10.9% perfect pass rate and the mean pass rate across models being 1.7% (for perfect reward).</li>
+                    
+                    <li>The results indicate significant headroom for improvement in current AI agents' ability to handle complex, multi-step problems.</li>
+                    
+                    <li>LHTB is released to support future progress in the development of long-horizon terminal agents.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers should utilize Long-Horizon-Terminal-Bench to rigorously evaluate and improve their AI agent models, specifically focusing on enhancing long-horizon planning, context management, and iterative debugging capabilities.</li>
+                    
+                    <li>Developers of AI agents should analyze the failure modes identified by LHTB to pinpoint and address weaknesses in their agent architectures and training methodologies.</li>
+                    
+                    <li>Organizations and startups developing AI agent solutions should consider integrating LHTB into their development and testing pipelines to ensure their agents can handle complex, real-world tasks effectively.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.08964" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">ReChannel: Pixel-Space Dense Prediction with Text-to-Image Models</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 9</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research introduces a highly efficient and effective method, 'ReChannel,' to adapt powerful pre-trained text-to-image diffusion models for a wide array of dense prediction tasks in computer vision. By rethinking the output interface to directly produce task-native pixel fields instead of RGB images, it achieves state-of-the-art results with minimal additional parameters and significantly faster inference. This advancement makes sophisticated AI perception more practical, accessible, and performant for real-world applications.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Researchers developed 'ReChannel,' a novel method to adapt text-to-image diffusion models for dense prediction tasks by directly mapping internal tokens to task-specific pixel outputs, achieving state-of-the-art results with fewer parameters and faster inference than previous generative approaches.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Large-scale text-to-image diffusion transformers (DiT) can be effectively adapted for dense prediction tasks by re-purposing their internal structure.</li>
+                    
+                    <li>The proposed 'ReChannel' method maps each DiT token directly to a fixed output patch carrying task-native quantities (e.g., depth, masks) in pixel space, rather than generating RGB images.</li>
+                    
+                    <li>This approach avoids the overhead of encoding/decoding through a VAE latent space for target generation, which is common in existing methods.</li>
+                    
+                    <li>ReChannel utilizes minimal additional parameters (around 33K) and adapts frozen DiT models with task LoRA.</li>
+                    
+                    <li>It achieves new state-of-the-art results on trimap-free matting, KITTI depth, and referring segmentation, while remaining competitive on normals, saliency, and pose.</li>
+                    
+                    <li>The method is significantly faster (2.48x) and more accurate than previous edit-plus-latent-decode counterparts in a matched setting.</li>
+                    
+                    <li>The work demonstrates that generative pretraining can benefit dense perception without inheriting its full generative output interface, leading to more efficient and accurate solutions.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Investigate the 'ReChannel' method for potential integration into existing computer vision pipelines requiring dense prediction, especially where efficiency and accuracy are critical.</li>
+                    
+                    <li>Explore applying this 'pixel-space dense prediction' paradigm to other pre-trained generative models or novel computer vision tasks beyond those tested in the paper.</li>
+                    
+                    <li>Review the associated GitHub repository (if available) for implementation details and practical guidance on deploying this technique.</li>
+                    
+                    <li>Consider the implications of this approach for developing more lightweight and performant AI applications, particularly for edge devices or real-time systems.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.06553" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Universal Constraint on Quantum Superpositions</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum Physics</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Mon, 13 Jul 2026 00:00:00 -0400</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper identifies a previously overlooked universal physical constraint on creating quantum spatial superpositions of massive particles. This constraint, arising from momentum conservation and the quantum nature of the experimental apparatus, directly impacts the feasibility and interpretation of experiments in quantum mechanics, quantum gravity, and quantum sensing. It provides crucial guidance for designing future quantum experiments and understanding fundamental limitations in achieving robust quantum coherence, particularly relevant for advanced quantum technologies and the development of quantum computing hardware that relies on manipulating complex quantum states.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A new universal constraint, stemming from momentum conservation and the quantum recoil of the preparation apparatus, limits the coherence of spatial superpositions of massive particles, impacting quantum experiments and technologies.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Preparing massive particles in coherent spatial superpositions is a central objective in modern quantum science.</li>
+                    
+                    <li>A new universal constraint is identified, arising from momentum conservation and the quantum nature of the preparation apparatus, distinct from environmental decoherence.</li>
+                    
+                    <li>Any protocol creating a spatial superposition necessarily entangles the particle with the apparatus's center-of-mass, causing recoil displacement.</li>
+                    
+                    <li>This recoil reduces particle coherence if the apparatus is not included as part of the quantum system.</li>
+                    
+                    <li>Preserving coherence requires the apparatus's recoil displacement to be smaller than its center-of-mass coherence length, leading to a quantitative bound on its temperature and anchoring rigidity.</li>
+                    
+                    <li>The constraint is surprisingly strong, even for heavy macroscopic apparatuses and particles well below the Planck mass.</li>
+                    
+                    <li>These findings have significant implications for current matter-wave interferometry experiments, proposals for gravitationally mediated entanglement, and tests of quantum mechanics near the Planck scale.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Researchers designing quantum superposition experiments should explicitly account for apparatus recoil and its impact on coherence, adjusting experimental designs accordingly.</li>
+                    
+                    <li>Experimentalists should consider apparatus temperature and the rigidity of its anchoring to the laboratory frame as critical parameters for maintaining coherence in matter-wave interferometry and similar experiments.</li>
+                    
+                    <li>The quantum computing community should be aware of these fundamental physical limits when developing hardware for complex quantum states, especially those involving massive particles or large spatial separations.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2607.08819" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
             
         </section>
 
         <section id="categories">
             <h2>By Category</h2>
             
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">GenCeption: Video Generation Models as General-Purpose Vision Learners</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new model, GenCeption, demonstrates that pre-training on large-scale text-to-video generation enables general-purpose computer vision models to achieve state-of-the-art performance across various tasks with exceptional data efficiency and strong generalization, suggesting a foundational shift for visual AI.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 9.0</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.09024" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Scalable Visual Pretraining for Language Intelligence</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new paper demonstrates that training language models directly on visual documents, leveraging visual cues like figures and layouts, consistently outperforms traditional text-only pretraining, offering a scalable path to more intelligent AI.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.3</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.09657" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Long-Horizon-Terminal-Bench Benchmark Introduction</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers have introduced Long-Horizon-Terminal-Bench (LHTB), a new benchmark comprising 46 complex, long-horizon tasks with dense reward-based grading, designed to test AI agents' capabilities beyond simple, short-term problems. Evaluations show that even the strongest frontier AI models struggle significantly, achieving a mean perfect pass rate of only 1.7%, highlighting substantial room for improvement in long-horizon planning, context management, and iterative debugging for AI agents.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.22</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.08964" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">ReChannel: Pixel-Space Dense Prediction with Text-to-Image Models</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers developed 'ReChannel,' a novel method to adapt text-to-image diffusion models for dense prediction tasks by directly mapping internal tokens to task-specific pixel outputs, achieving state-of-the-art results with fewer parameters and faster inference than previous generative approaches.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.22</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.06553" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
             
-            <p style="color: var(--text-muted); font-style: italic;">No categorized insights available.</p>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Physics</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Universal Constraint on Quantum Superpositions</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new universal constraint, stemming from momentum conservation and the quantum recoil of the preparation apparatus, limits the coherence of spatial superpositions of massive particles, impacting quantum experiments and technologies.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 7.55</span>
+                        
+                        <a href="https://arxiv.org/abs/2607.08819" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
             
         </section>
 
