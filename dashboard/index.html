@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-18</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-19</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,45 +209,47 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">VideoChat3 Open Video MLLM for Video Understanding</h3>
+                    <h3 class="card-title">Controlling Reasoning Effort in LLMs</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 7.5</span>
+                        <span class="badge badge-score">Signal: 7.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Jul 16</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
+                    <span>📅 Sat, 18 Jul 2026 11:16:09 GMT</span>
+                    <span>🌐 Source: Ahead of AI</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    VideoChat3 significantly advances the field of video understanding by providing a fully open, efficient, and generalist multimodal large language model (MLLM). Its focus on addressing generalization, computational efficiency, and transparency (full openness) makes it a crucial development for both academic research and practical applications, fostering community-driven innovation in video AI.
+                    This article is crucial for anyone working with or investing in LLMs, as it demystifies how modern models like GPT-5.6 offer varying 'reasoning effort' levels. Understanding these mechanisms allows for more efficient and effective use of LLMs, balancing computational cost, latency, and answer quality. It highlights the evolution from always-on verbose reasoning to controllable, nuanced reasoning modes, which is vital for practical application development and strategic decision-making in the AI space.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    VideoChat3 is a new, fully open, efficient, and generalist video MLLM that outperforms prior open-source models in video understanding across diverse scenarios (general, long-form, streaming) with fewer parameters and higher efficiency, thanks to novel architectural designs and curated datasets.
+                    The article explains how LLMs learn and offer different 'reasoning effort' modes, from basic on/off switches to multi-level settings. It covers training methods like RLVR, the role of cosmetic `<think>` tokens, and how system prompts or tokenizer settings enable these controls, directly impacting response length, quality, and computational cost.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>VideoChat3 is a fully open, efficient, and generalist video-centric Multimodal Large Language Model (MLLM).</li>
+                    <li>Reasoning models output intermediate step-by-step 'reasoning traces' to solve problems, differing from conventional LLMs that provide direct answers.</li>
                     
-                    <li>It addresses key limitations of existing open-source video MLLMs: poor generalization across video types, high computational demands, and lack of full transparency (training code, strategy, datasets).</li>
+                    <li>DeepSeek-R1 popularized Reinforcement Learning with Verifiable Rewards (RLVR) for training reasoning models, using verifiable data (math, code) for reward signals (0/1 correctness).</li>
                     
-                    <li>Efficiency is achieved through novel designs: Inflated 3D Vision Transformer (I3D-ViT) and Adaptive Frame Resolution for Streaming Video Perception, reducing processing costs.</li>
+                    <li>Models can learn to self-correct ('Aha' moments) even when only the final answer's correctness is rewarded during training, not the intermediate reasoning trace itself.</li>
                     
-                    <li>Effectiveness and generalization are improved by a scalable video data synthesis pipeline that curates three diverse, high-quality training datasets (VideoChat3-Academic2M, VideoChat3-LV116K, VideoChat3-OL617K) covering various video scenarios.</li>
+                    <li>Inference scaling (e.g., self-consistency, self-refinement) improves performance by spending more compute during usage, often in addition to reasoning training.</li>
                     
-                    <li>Experiments show VideoChat3 surpasses prior open-source models with equal or larger parameter counts, achieving superior performance with only 4 billion parameters and higher efficiency across multiple benchmarks.</li>
+                    <li>Cosmetic `<think>` tokens are used to delimit reasoning traces for UI purposes and are encouraged via formatting rewards, but are not essential for the model's reasoning ability.</li>
                     
-                    <li>The 'fully open' nature means all key components, including models, code, and datasets, are available, promoting reproducibility and community development.</li>
+                    <li>Modern LLMs (e.g., Qwen3, GPT-5.6) offer 'reasoning mode' on/off switches or multiple 'reasoning effort' settings, allowing users to control verbosity, quality, and compute.</li>
+                    
+                    <li>These effort settings are often implemented by prepending specific instructions (e.g., 'Reasoning effort: low/medium/high') to the system prompt or via tokenizer settings, directly correlating with response length and accuracy.</li>
                     
                 </ul>
                 
@@ -256,13 +258,13 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Explore the VideoChat3 model and its associated datasets on Hugging Face for potential integration into video analysis or multimodal AI projects.</li>
+                    <li>Experiment with different reasoning effort settings in LLM APIs (e.g., GPT-5.6) to understand their impact on response quality, latency, and token usage for specific tasks.</li>
                     
-                    <li>Investigate the technical details of I3D-ViT and Adaptive Frame Resolution for optimizing other video processing or MLLM architectures.</li>
+                    <li>For developers, consider how to integrate reasoning effort controls into applications to optimize user experience and operational costs.</li>
                     
-                    <li>Consider leveraging VideoChat3's open-source components to build or enhance video-centric AI applications, especially for startups in the video analytics space.</li>
+                    <li>Stay informed about ongoing research into incorporating intermediate reasoning traces directly into LLM training signals for potentially more robust reasoning capabilities.</li>
                     
-                    <li>Evaluate the practical performance and efficiency of VideoChat3 for specific real-world video understanding tasks, such as content moderation, surveillance, or media analysis.</li>
+                    <li>If training custom LLMs, explore RLVR techniques and the 'Thinking Mode Fusion' approach to enable controllable reasoning behaviors.</li>
                     
                 </ul>
                 
@@ -270,279 +272,7 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.14935" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Stratechery's Weekly Tech Summary (IBM, OpenAI, Netflix Business)</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">Technology Business Strategy</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Fri, 17 Jul 2026 17:00:00 +0000</span>
-                    <span>🌐 Source: Stratechery</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This article highlights critical shifts in the tech industry, from the potential obsolescence of legacy enterprise systems due to AI to the aggressive expansion and legal challenges of leading AI companies, and the strategic struggles of established media giants. These trends have significant implications for technology development, investment, and market dynamics across multiple sectors.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Stratechery's weekly summary covers IBM's historic stock drop due to AI's threat to its mainframe business, OpenAI's legal battles with Apple, its revamped ChatGPT app, and new hardware ambitions (an ambient speaker with robotic components), and Netflix's ongoing struggles with content strategy and stock performance, reflecting major shifts in the tech landscape.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>IBM's stock experienced its worst day in history, driven by faltering mainframe sales and the concern that AI's ability to port essential backend programs will permanently erode this core business.</li>
-                    
-                    <li>OpenAI is facing a lawsuit from Apple over trade secrets, though the article suggests it's 'more smoke than fire,' while also revamping its ChatGPT app for Mac and reportedly developing an ambient speaker with robotic components, signaling a move into hardware.</li>
-                    
-                    <li>Netflix is struggling, having abandoned plans to acquire Warner Bros. Discovery, experiencing further stock hits, and facing questions about its content strategy and attempts to mimic YouTube.</li>
-                    
-                    <li>These events collectively signal significant shifts in enterprise IT (AI's impact on legacy systems), AI development and product strategy (OpenAI's hardware push, legal challenges), and the streaming media landscape.</li>
-                    
-                    <li>The article is a summary of Stratechery's weekly content, providing analysis on these key industry developments.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Monitor IBM's strategic response to the AI-driven threat to its mainframe business and its broader enterprise software strategy.</li>
-                    
-                    <li>Track OpenAI's progress and strategy in hardware development, particularly the ambient speaker with robotic components, and its implications for embodied AI.</li>
-                    
-                    <li>Observe the outcome and implications of the Apple vs. OpenAI lawsuit regarding trade secrets and AI development.</li>
-                    
-                    <li>Analyze Netflix's evolving content and platform strategy, especially its attempts to retain attention and compete with platforms like YouTube.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: Startups</span>
-                    
-                    <a href="https://stratechery.com/2026/mainframes-and-main-characters/" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">LongStraw for Million-Token RL Post-Training</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI/ML Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 2026-07-16</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    LongStraw addresses a critical bottleneck in developing advanced AI agents by enabling Reinforcement Learning (RL) post-training with context lengths exceeding 2 million tokens, a significant leap from the typical 256K. This is achieved under a fixed GPU budget, making it practical for real-world applications and bridging the growing gap between inference and training context capabilities. It allows AI agents to process and learn from much longer trajectories of observations, tool outputs, and prior decisions, which is essential for complex, long-running tasks and more sophisticated AI behaviors.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    LongStraw is a novel execution stack that allows Reinforcement Learning (RL) post-training for large language models to handle over 2 million tokens of context on a fixed GPU budget, by optimizing memory usage through selective autograd and state retention.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Addresses the growing disparity between long inference context lengths (approaching millions of tokens) and shorter RL post-training context lengths (often 256K or less).</li>
-                    
-                    <li>LongStraw is an architecture-aware execution stack designed for million-token RL post-training under a fixed GPU budget, instantiated with Group Relative Policy Optimization (GRPO).</li>
-                    
-                    <li>It achieves memory efficiency by evaluating the shared prompt once without automatic differentiation, retaining only the model-specific state required by later tokens, and replaying short response branches one at a time under autograd.</li>
-                    
-                    <li>This approach reduces the live training graph from the full prompt and response sequence to a single response branch, trading additional replay time for significantly lower GPU memory usage.</li>
-                    
-                    <li>Implemented and validated on two different model families: the hybrid recurrent and full-attention Qwen3.6-27B, and the compressed-attention mixture-of-experts GLM-5.2.</li>
-                    
-                    <li>Demonstrates execution capacity up to 2.1M positions for grouped Qwen scoring and response backward on 8 H20 GPUs, with a stress test reaching 4.46M positions, while adding only 0.21GB of peak memory for increased group size.</li>
-                    
-                    <li>The work establishes execution capacity for long contexts, though the authors note that the captured prompt state is detached and some distributed forward/gradient composition paths remain incomplete, indicating a focus on memory efficiency rather than complete training correctness in these initial experiments.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>AI researchers and practitioners working on long-context RL agents should investigate LongStraw's techniques for memory optimization in their training pipelines.</li>
-                    
-                    <li>Developers of AI agent frameworks should consider integrating or adapting LongStraw's principles to support longer agent trajectories and complex tool use within memory constraints.</li>
-                    
-                    <li>Evaluate the trade-offs between increased replay time and reduced GPU memory for specific RL training workloads and model architectures.</li>
-                    
-                    <li>Explore how LongStraw's approach could be extended to handle unpredictably growing contexts and dynamic agent loops, as suggested by community feedback, for more robust agent development.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2607.14952" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Netflix's In-House LLM Serving Platform</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI/ML Infrastructure</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Fri, 17 Jul 2026 21:32:39 GMT</span>
-                    <span>🌐 Source: Netflix Tech Blog</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    Netflix, a leader in large-scale streaming, sharing its in-house LLM serving architecture provides invaluable practical insights for any organization looking to move beyond hosted APIs to self-host and customize LLMs for production. It highlights real-world challenges and solutions in performance, deployment, and operational robustness, offering a blueprint for building scalable and efficient LLM infrastructure.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Netflix details its in-house LLM serving platform, built on vLLM and Triton, covering architectural decisions, deployment strategies, and solutions for scaling complex features like constrained decoding, offering practical insights for production-grade LLM infrastructure.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Netflix runs a full-stack in-house LLM serving platform, integrated into its existing ML infrastructure rather than a separate silo, to achieve low latency, deep customization, and broad production requirements.</li>
-                    
-                    <li>The platform transitioned from TensorRT-LLM to vLLM as its paved-path inference engine by summer 2025, citing vLLM's ability to load custom models without compilation, extensibility for custom decoding, debuggability, and developer familiarity.</li>
-                    
-                    <li>Integration of vLLM with NVIDIA Triton Inference Server uses Triton's vLLM backend for dynamic I/O tensor spec generation, improving maintainability, but required careful version pinning and a Python backend escape hatch for highly custom models.</li>
-                    
-                    <li>An OpenAI-compatible API frontend was exposed alongside existing gRPC to leverage the broader LLM ecosystem and provide a seamless experimentation-to-production path, requiring a patch to Triton's frontend for `response_format` handling.</li>
-                    
-                    <li>Two deployment strategies are offered: Red-Black for stable interfaces (cheaper) and Versioned for unavoidable breaking I/O schema changes (higher temporary GPU cost), with a recommendation to embed variable configurations into models for Red-Black compatibility.</li>
-                    
-                    <li>Operational challenges addressed include model caching to Amazon FSx for faster cold starts, unifying metrics from vLLM (disk-based) and Triton (HTTP) into a single Prometheus endpoint, and handling embedded vs. standalone Triton configurations.</li>
-                    
-                    <li>Scalable constrained decoding was achieved by migrating from vLLM V0's sequential, CPU-bound per-request processing to V1's batch-level, multi-threaded C++ implementation, which keeps processing time flat with increasing batch size, and required hardening for partial prefills and preemption.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Evaluate vLLM as a core inference engine for in-house LLM serving, especially for custom model architectures or requirements for constrained decoding.</li>
-                    
-                    <li>Consider adopting an OpenAI-compatible API for LLM frontends to enhance ecosystem compatibility and streamline developer workflows from research to production.</li>
-                    
-                    <li>Review and refine deployment strategies for LLMs, planning for potential I/O schema changes and balancing GPU cost with deployment reliability (e.g., Red-Black vs. Versioned).</li>
-                    
-                    <li>Implement robust observability by unifying metrics from various components (e.g., inference engine, server) into a single endpoint for comprehensive monitoring and alerting.</li>
-                    
-                    <li>Investigate batch-level processing and C++ optimization for performance-critical custom logic within LLM inference pipelines to avoid CPU bottlenecks under high concurrency.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: Engineering</span>
-                    
-                    <a href="https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss----2615bd06b42e---4" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">JPMorgan Chase's Complexity and CEO Succession</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">Finance</span>
-                        <span class="badge badge-score">Signal: 6.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Fri, 17 Jul 2026 15:22:26 GMT</span>
-                    <span>🌐 Source: Net Interest</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    The article highlights the extraordinary scale and complexity of modern global financial institutions, exemplified by JPMorgan Chase, and the immense challenges involved in leading and managing them. It underscores the critical importance of leadership qualities and succession planning for entities that have grown to unprecedented sizes, implicitly questioning the long-term manageability of such 'too big' organizations.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Jamie Dimon's impending succession at JPMorgan Chase underscores the bank's unprecedented complexity, with a $5 trillion balance sheet and $63.7 trillion in derivatives, making it the world's most complex bank. The article details the extraordinary qualities required for its next leader to manage such a colossal and rapidly growing institution.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Jamie Dimon, 70, has led JPMorgan Chase for over 20 years, an unparalleled tenure in modern banking.</li>
-                    
-                    <li>JPMorgan's balance sheet has crossed $5 trillion, with $63.7 trillion in notional derivative contracts, ranking it as the most complex bank globally by the Bank for International Settlements.</li>
-                    
-                    <li>Dimon outlined an extensive list of qualities for his successor, emphasizing flexibility, strong management, analytical skills, cultural leadership, curiosity, heart, grit, and work ethic.</li>
-                    
-                    <li>Under Dimon's leadership, JPMorgan's assets grew nearly 5x, its annual report length more than doubled, and headcount almost doubled, illustrating the rapid increase in its operational complexity.</li>
-                    
-                    <li>The article implicitly raises questions about the long-term manageability and succession challenges for financial institutions that have grown to such immense scale.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>For investors: Analyze the leadership, succession plans, and operational complexity of major financial institutions as key factors in investment decisions.</li>
-                    
-                    <li>For business leaders: Reflect on the challenges of managing extreme organizational growth and complexity, and the comprehensive qualities required for effective leadership in such environments.</li>
-                    
-                    <li>For policymakers/regulators: Consider the implications of 'too big to manage' institutions on financial stability and the efficacy of oversight mechanisms.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: Finance</span>
-                    
-                    <a href="https://www.netinterest.co/p/too-big-to-succeed" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -557,76 +287,12 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">VideoChat3 Open Video MLLM for Video Understanding</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">VideoChat3 is a new, fully open, efficient, and generalist video MLLM that outperforms prior open-source models in video understanding across diverse scenarios (general, long-form, streaming) with fewer parameters and higher efficiency, thanks to novel architectural designs and curated datasets.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Controlling Reasoning Effort in LLMs</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">The article explains how LLMs learn and offer different 'reasoning effort' modes, from basic on/off switches to multi-level settings. It covers training methods like RLVR, the role of cosmetic `<think>` tokens, and how system prompts or tokenizer settings enable these controls, directly impacting response length, quality, and computational cost.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.65</span>
+                        <span>Score: 7.38</span>
                         
-                        <a href="https://huggingface.co/papers/2607.14935" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Technology Business Strategy</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Stratechery's Weekly Tech Summary (IBM, OpenAI, Netflix Business)</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Stratechery's weekly summary covers IBM's historic stock drop due to AI's threat to its mainframe business, OpenAI's legal battles with Apple, its revamped ChatGPT app, and new hardware ambitions (an ambient speaker with robotic components), and Netflix's ongoing struggles with content strategy and stock performance, reflecting major shifts in the tech landscape.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.62</span>
-                        
-                        <a href="https://stratechery.com/2026/mainframes-and-main-characters/" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/ML Research</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">LongStraw for Million-Token RL Post-Training</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">LongStraw is a novel execution stack that allows Reinforcement Learning (RL) post-training for large language models to handle over 2 million tokens of context on a fixed GPU budget, by optimizing memory usage through selective autograd and state retention.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.47</span>
-                        
-                        <a href="https://huggingface.co/papers/2607.14952" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/ML Infrastructure</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Netflix's In-House LLM Serving Platform</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Netflix details its in-house LLM serving platform, built on vLLM and Triton, covering architectural decisions, deployment strategies, and solutions for scaling complex features like constrained decoding, offering practical insights for production-grade LLM infrastructure.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.14</span>
-                        
-                        <a href="https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss----2615bd06b42e---4" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Finance</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">JPMorgan Chase's Complexity and CEO Succession</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Jamie Dimon's impending succession at JPMorgan Chase underscores the bank's unprecedented complexity, with a $5 trillion balance sheet and $63.7 trillion in derivatives, making it the world's most complex bank. The article details the extraordinary qualities required for its next leader to manage such a colossal and rapidly growing institution.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 6.0</span>
-                        
-                        <a href="https://www.netinterest.co/p/too-big-to-succeed" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
