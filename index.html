@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-19</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-20</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,47 +209,49 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Controlling Reasoning Effort in LLMs</h3>
+                    <h3 class="card-title">Structure-Agnostic Unitary Learning and Hamiltonian Identification</h3>
                     <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 7.0</span>
+                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-score">Signal: 9.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Sat, 18 Jul 2026 11:16:09 GMT</span>
-                    <span>🌐 Source: Ahead of AI</span>
+                    <span>📅 Mon, 20 Jul 2026 00:00:00 -0400</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This article is crucial for anyone working with or investing in LLMs, as it demystifies how modern models like GPT-5.6 offer varying 'reasoning effort' levels. Understanding these mechanisms allows for more efficient and effective use of LLMs, balancing computational cost, latency, and answer quality. It highlights the evolution from always-on verbose reasoning to controllable, nuanced reasoning modes, which is vital for practical application development and strategic decision-making in the AI space.
+                    This research presents a significant advancement in quantum system characterization and control. By enabling the learning of unknown quantum unitaries and the identification of underlying Hamiltonians without prior structural assumptions, it simplifies a complex challenge in quantum computing. This is crucial for developing more robust quantum hardware, validating quantum gates, and improving quantum simulations, ultimately accelerating the path towards fault-tolerant quantum computers.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    The article explains how LLMs learn and offer different 'reasoning effort' modes, from basic on/off switches to multi-level settings. It covers training methods like RLVR, the role of cosmetic `<think>` tokens, and how system prompts or tokenizer settings enable these controls, directly impacting response length, quality, and computational cost.
+                    Researchers have developed a variational algorithm capable of learning unknown quantum operations (unitaries) and identifying their underlying dynamics (Hamiltonians) solely from observable measurements, without requiring prior knowledge of the system's structure. This method achieves high fidelity even in the presence of noise, utilizing a novel optimizer and training curriculum.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Reasoning models output intermediate step-by-step 'reasoning traces' to solve problems, differing from conventional LLMs that provide direct answers.</li>
+                    <li>A variational algorithm is introduced for learning unknown quantum unitaries from time-series observable measurements.</li>
                     
-                    <li>DeepSeek-R1 popularized Reinforcement Learning with Verifiable Rewards (RLVR) for training reasoning models, using verifiable data (math, code) for reward signals (0/1 correctness).</li>
+                    <li>The method is 'structure-agnostic,' meaning it requires no prior assumptions about the target unitary's internal structure.</li>
                     
-                    <li>Models can learn to self-correct ('Aha' moments) even when only the final answer's correctness is rewarded during training, not the intermediate reasoning trace itself.</li>
+                    <li>It separates the problem: a hardware-efficient circuit learns the unitary, and Hamiltonian identification follows via classical post-processing (matrix logarithm).</li>
                     
-                    <li>Inference scaling (e.g., self-consistency, self-refinement) improves performance by spending more compute during usage, often in addition to reasoning training.</li>
+                    <li>Experiments demonstrate high accuracy: noiseless learning achieved MSE 1.61e-14 and recovered Hamiltonian coefficients to six decimal places.</li>
                     
-                    <li>Cosmetic `<think>` tokens are used to delimit reasoning traces for UI purposes and are encouraged via formatting rewards, but are not essential for the model's reasoning ability.</li>
+                    <li>Gate-learning experiments successfully fit CNOT, iSWAP, and a Haar-random SU(4) element to process fidelity 1.000000, confirming independence from Trotterisation structure.</li>
                     
-                    <li>Modern LLMs (e.g., Qwen3, GPT-5.6) offer 'reasoning mode' on/off switches or multiple 'reasoning effort' settings, allowing users to control verbosity, quality, and compute.</li>
+                    <li>Quantum deployment on Qiskit Aer with depolarizing noise recovered Ising Hamiltonian terms with errors below 8%.</li>
                     
-                    <li>These effort settings are often implemented by prepending specific instructions (e.g., 'Reasoning effort: low/medium/high') to the system prompt or via tokenizer settings, directly correlating with response length and accuracy.</li>
+                    <li>The algorithm utilizes a novel SPSA-Adam optimizer, combining hardware-efficient two-point gradient estimation with adaptive moment updates.</li>
+                    
+                    <li>A four-stage 'moment-warm curriculum' is employed to convert the global non-convex optimization problem into a sequence of well-posed local ones.</li>
                     
                 </ul>
                 
@@ -258,13 +260,81 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Experiment with different reasoning effort settings in LLM APIs (e.g., GPT-5.6) to understand their impact on response quality, latency, and token usage for specific tasks.</li>
+                    <li>Investigate the 'SPSA-Adam' optimizer and 'moment-warm curriculum' for potential application in other variational quantum algorithms or quantum machine learning tasks.</li>
                     
-                    <li>For developers, consider how to integrate reasoning effort controls into applications to optimize user experience and operational costs.</li>
+                    <li>Explore the implications of structure-agnostic unitary learning for advanced quantum error correction schemes and quantum hardware benchmarking.</li>
                     
-                    <li>Stay informed about ongoing research into incorporating intermediate reasoning traces directly into LLM training signals for potentially more robust reasoning capabilities.</li>
+                    <li>Consider how this method could be integrated into quantum software development kits to automate and improve the characterization and calibration of quantum gates and devices.</li>
                     
-                    <li>If training custom LLMs, explore RLVR techniques and the 'Thinking Mode Fusion' approach to enable controllable reasoning behaviors.</li>
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2607.15316" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">RecGPT-V3 Technical Report: Advancing LLM-based Recommender Systems</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 July 17, 2026</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This article matters because it presents RecGPT-V3, a significant advancement in applying Large Language Models (LLMs) to industrial-scale recommender systems. It addresses critical challenges of efficiency, latency, and precise item grounding that hinder the real-world deployment of LLM-based recommenders. By introducing innovations like a Memory Hub, hybrid-modal reasoning, and latent intent reasoning, RecGPT-V3 achieves substantial improvements in user experience and commercial metrics (e.g., +3.97% GMV) while drastically cutting serving resource consumption (-52.4%) on a massive platform like Taobao. This demonstrates a practical path for LLMs to become the 'intelligent brain' of highly efficient and effective recommendation engines.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    RecGPT-V3 is a new LLM-based recommender system, successfully deployed on Taobao, that addresses efficiency and precision issues found in previous versions. It incorporates a Memory Hub for stateful user understanding, a hybrid-modal model for precise item grounding via Semantic IDs, and Latent Intent Reasoning for efficient and interpretable recommendations. These innovations have led to significant online gains (e.g., +3.97% GMV) and a 52.4% reduction in serving resources.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>RecGPT-V3 is the latest iteration of an LLM-based recommender system deployed on Taobao, building on RecGPT-V1 and V2's success in moving beyond co-occurrence patterns to user intent understanding.</li>
+                    
+                    <li>It addresses three key challenges of previous versions: stateless behavior modeling (computational waste), a tag-to-item information bottleneck (lossy channel), and inefficient explicit reasoning (high latency/compute).</li>
+                    
+                    <li>RecGPT-V3 introduces a **Memory Hub** that maintains structured, continually evolving user memory, distilling long-horizon behavior and cutting user-modeling computation by 55.8%.</li>
+                    
+                    <li>A **Hybrid-modal Foundation Model** allows the LLM to jointly reason over natural language (for open-world knowledge) and Semantic IDs (SIDs) for concrete item grounding, creating a high-bandwidth channel to the item space.</li>
+                    
+                    <li>**Latent Intent Reasoning** internalizes verbose rationales into compact, learnable latent tokens, reducing output token cost by 200x and achieving a 3.46x end-to-end inference speedup, while still being decodable into human-readable explanations.</li>
+                    
+                    <li>Deployed in Taobao's "Guess What You Like" feed, RecGPT-V3 achieved consistent gains in large-scale online A/B tests: IPV +1.28%, CTR +1.00%, TC +1.97%, and GMV +3.97%.</li>
+                    
+                    <li>The system also significantly reduced end-to-end serving resource consumption by 52.4%.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI Researchers should investigate stateful memory architectures and hybrid-modal reasoning approaches for other LLM applications to improve efficiency and grounding.</li>
+                    
+                    <li>Software Engineers working on large-scale AI systems should explore latent reasoning techniques to reduce inference costs and latency while maintaining interpretability.</li>
+                    
+                    <li>E-commerce platforms and product managers should consider adopting advanced LLM-based recommender systems that prioritize user intent, efficiency, and explainability for improved commercial outcomes.</li>
+                    
+                    <li>Investors and startups in the AI/ML and e-commerce sectors should note the significant commercial and operational benefits demonstrated by RecGPT-V3 as a benchmark for practical LLM deployment.</li>
                     
                 </ul>
                 
@@ -272,7 +342,211 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2607.15591" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Cura 1T: Specialized Model for Agentic Healthcare</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 15</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper introduces Cura 1T, a specialized Large Language Model (LLM) for healthcare that significantly outperforms leading general-purpose frontier models (like GPT-5.5 and Claude Opus 4.8) on critical healthcare benchmarks. Its novel 'human-gated self-evolution loop' training methodology offers a blueprint for developing highly accurate, reliable, and agentic AI systems in high-stakes domains, moving beyond the limitations of generic LLMs. This represents a substantial step forward for practical, trustworthy AI in medicine.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Cura 1T is a specialized large language model (LLM) tailored for healthcare applications. It was trained using a human-gated self-evolution loop (recursive self-improvement) and has achieved state-of-the-art performance on 5 out of 6 challenging healthcare benchmarks, outperforming leading frontier models while maintaining competitive performance on out-of-domain tasks.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Cura 1T is a healthcare-specialized LLM designed to handle high-stakes communication, expert reasoning, and workflow execution, including patient consultation, clinical reasoning (text and images), interactive diagnosis, and EHR tool use.</li>
+                    
+                    <li>It is trained through a novel 'human-gated self-evolution loop' (also called Recursive Self-Improvement - RSI), where a training agent iteratively plans capabilities, trains the model, evaluates benchmarks, and refines the data mixture based on observed failures.</li>
+                    
+                    <li>This data-centered approach uses targeted synthetic and curated examples to improve the model without degrading other capabilities, a common challenge in LLM fine-tuning.</li>
+                    
+                    <li>Cura 1T ranks at or near the top among frontier baselines across the healthcare evaluation suite, leading models like GPT-5.5 and Claude Opus 4.8 on 5 of 6 hardest healthcare benchmarks (e.g., HealthBench Hard, MedXpertQA-Text, AgentClinic).</li>
+                    
+                    <li>The model also remains competitive on out-of-domain reasoning and general agentic benchmarks, demonstrating robust performance beyond its specialized domain.</li>
+                    
+                    <li>The research highlights the effectiveness of specialized, iteratively improved models over general-purpose LLMs for critical, complex domains like healthcare.</li>
+                    
+                    <li>The authors include 'actAVA AI', suggesting a commercial entity behind the development.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Investigate the 'human-gated self-evolution loop' (RSI) training methodology for potential application in other domain-specific AI projects requiring high accuracy and reliability.</li>
+                    
+                    <li>Monitor actAVA AI and similar startups focusing on specialized agentic AI in regulated industries for potential investment or partnership opportunities.</li>
+                    
+                    <li>Analyze the specific healthcare benchmarks used (e.g., HealthBench, MedXpertQA, AgentClinic, MedAgentBench-v2) to understand best practices for evaluating domain-specific LLMs.</li>
+                    
+                    <li>Explore the architectural and data curation strategies employed by Cura 1T to inform the development of future specialized AI agents in healthcare or other critical sectors.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.15314" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Impact of Generative AI on Code Review Quality</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Software Engineering</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 14</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research provides crucial empirical evidence on how integrating Generative AI (LLMs and AI agents) into code review processes affects both efficiency and quality. It highlights that while AI agents can significantly speed up review decisions, these efficiency gains do not automatically translate into improved code quality. This is vital for software development teams, AI tool developers, and organizations looking to adopt AI-supported workflows, guiding them to design processes that leverage AI for speed without compromising the integrity of the software.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A comprehensive study analyzing over 1 million GitHub pull requests revealed that the use of AI agents in code review leads to faster decision-making, particularly when initiating reviews or involving multiple agents. However, these efficiency gains do not consistently translate into improved review quality, underscoring the importance of carefully designing human-AI collaboration strategies.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>The study analyzed 1.02 million pull requests from 207 GitHub projects, examining the transition from human-centric to LLM-assisted and agentic code review.</li>
+                    
+                    <li>Three AI reviewer adoption practices were identified: Gradual AI Adoption, Rapid LLM Adoption, and Rapid AI Agent Adoption.</li>
+                    
+                    <li>Agent-involved collaboration patterns, particularly reviews initiated by AI agents or involving multiple AI agents, are associated with faster review decisions.</li>
+                    
+                    <li>Crucially, these observed efficiency gains (faster review decisions) do not consistently translate into better review quality.</li>
+                    
+                    <li>Human-AI collaboration patterns become the strongest explanatory factor for review efficiency once LLM and AI agent reviewers participate.</li>
+                    
+                    <li>The findings offer empirical guidance for designing AI-supported code review processes that aim to improve efficiency without weakening review quality.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Software development teams should explore integrating AI agents into their code review workflows to potentially accelerate review cycles, focusing on specific tasks where AI can initiate or contribute efficiently.</li>
+                    
+                    <li>Organizations adopting AI for code review must implement robust quality assurance checks to ensure that efficiency gains do not come at the expense of code quality, potentially by focusing human reviewers on critical aspects.</li>
+                    
+                    <li>AI tool developers should design AI-supported code review tools that facilitate effective human-AI collaboration, emphasizing interfaces and features that allow humans to easily oversee and refine AI-generated feedback.</li>
+                    
+                    <li>Researchers and practitioners should further investigate specific collaboration patterns between humans and AI agents that lead to both improved efficiency and quality in code review.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.13196" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Nuclear Quantum Battery Concept</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Mon, 20 Jul 2026 00:00:00 -0400</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research proposes a novel theoretical pathway to overcome critical limitations (low energy density, short retention time) in current quantum batteries by leveraging collective nuclear excitations. This could be a significant step towards developing more robust, high-capacity energy storage solutions for future quantum computing devices and other quantum technologies, potentially enabling their practical realization and scaling.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Researchers have proposed a theoretical concept for a nuclear quantum battery that achieves high-density charging through the collective excitation of $^{57}$Fe nuclei within an X-ray waveguide. This approach demonstrates a theoretical pathway to superlinear charging and high energy density, addressing key limitations of existing quantum battery designs.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Proposes a novel 'nuclear quantum battery' concept to overcome limitations of current electronic/molecular quantum batteries (low energy density, short retention).</li>
+                    
+                    <li>Utilizes collective excitation of $^{57}$Fe nuclei embedded in a planar hard X-ray waveguide.</li>
+                    
+                    <li>Introduces a self-consistent waveform-engineering protocol to inhibit local radiative decay and promote absorption into high-lying collective nuclear excitation manifolds.</li>
+                    
+                    <li>Demonstrates an enhanced excitation cross-section leading to superlinear charging, with maximum energy density scaling approximately as $n \sqrt{n}$ (where $n$ is nuclear density).</li>
+                    
+                    <li>The proposed mechanism offers a route to high-energy-density quantum charging using contemporary X-ray sources and waveguide architectures.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Monitor experimental validation and further theoretical developments in nuclear quantum battery technology.</li>
+                    
+                    <li>Evaluate the potential impact of high-density quantum energy storage on the design and capabilities of future quantum computing hardware.</li>
+                    
+                    <li>Investigate material science and engineering challenges associated with embedding nuclei in waveguides and hard X-ray manipulation.</li>
+                    
+                    <li>Assess long-term investment opportunities in quantum energy solutions and advanced quantum materials.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2607.15319" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -283,16 +557,70 @@
         <section id="categories">
             <h2>By Category</h2>
             
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Structure-Agnostic Unitary Learning and Hamiltonian Identification</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers have developed a variational algorithm capable of learning unknown quantum operations (unitaries) and identifying their underlying dynamics (Hamiltonians) solely from observable measurements, without requiring prior knowledge of the system's structure. This method achieves high fidelity even in the presence of noise, utilizing a novel optimizer and training curriculum.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 9.07</span>
+                        
+                        <a href="https://arxiv.org/abs/2607.15316" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Nuclear Quantum Battery Concept</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers have proposed a theoretical concept for a nuclear quantum battery that achieves high-density charging through the collective excitation of $^{57}$Fe nuclei within an X-ray waveguide. This approach demonstrates a theoretical pathway to superlinear charging and high energy density, addressing key limitations of existing quantum battery designs.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.15</span>
+                        
+                        <a href="https://arxiv.org/abs/2607.15319" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
             <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Controlling Reasoning Effort in LLMs</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">The article explains how LLMs learn and offer different 'reasoning effort' modes, from basic on/off switches to multi-level settings. It covers training methods like RLVR, the role of cosmetic `<think>` tokens, and how system prompts or tokenizer settings enable these controls, directly impacting response length, quality, and computational cost.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">RecGPT-V3 Technical Report: Advancing LLM-based Recommender Systems</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">RecGPT-V3 is a new LLM-based recommender system, successfully deployed on Taobao, that addresses efficiency and precision issues found in previous versions. It incorporates a Memory Hub for stateful user understanding, a hybrid-modal model for precise item grounding via Semantic IDs, and Latent Intent Reasoning for efficient and interpretable recommendations. These innovations have led to significant online gains (e.g., +3.97% GMV) and a 52.4% reduction in serving resources.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.38</span>
+                        <span>Score: 8.42</span>
                         
-                        <a href="https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.15591" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Cura 1T: Specialized Model for Agentic Healthcare</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Cura 1T is a specialized large language model (LLM) tailored for healthcare applications. It was trained using a human-gated self-evolution loop (recursive self-improvement) and has achieved state-of-the-art performance on 5 out of 6 challenging healthcare benchmarks, outperforming leading frontier models while maintaining competitive performance on out-of-domain tasks.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.3</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.15314" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Software Engineering</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Impact of Generative AI on Code Review Quality</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A comprehensive study analyzing over 1 million GitHub pull requests revealed that the use of AI agents in code review leads to faster decision-making, particularly when initiating reviews or involving multiple agents. However, these efficiency gains do not consistently translate into improved review quality, underscoring the importance of carefully designing human-AI collaboration strategies.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.22</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.13196" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
