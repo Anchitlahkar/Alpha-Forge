@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-20</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-21</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,49 +209,51 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Structure-Agnostic Unitary Learning and Hamiltonian Identification</h3>
+                    <h3 class="card-title">Who’s Afraid of Chinese Models? (The Return of Marginal Costs in AI)</h3>
                     <div class="badges">
-                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-category">Technology Strategy & Economics</span>
                         <span class="badge badge-score">Signal: 9.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Mon, 20 Jul 2026 00:00:00 -0400</span>
-                    <span>🌐 Source: arXiv quant-ph</span>
+                    <span>📅 Mon, 20 Jul 2026 11:00:08 +0000</span>
+                    <span>🌐 Source: Stratechery</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This research presents a significant advancement in quantum system characterization and control. By enabling the learning of unknown quantum unitaries and the identification of underlying Hamiltonians without prior structural assumptions, it simplifies a complex challenge in quantum computing. This is crucial for developing more robust quantum hardware, validating quantum gates, and improving quantum simulations, ultimately accelerating the path towards fault-tolerant quantum computers.
+                    This article fundamentally re-frames the economics of Artificial Intelligence, arguing that unlike traditional software, AI models have significant marginal costs (COGS) associated with inference. It posits that as AI intelligence becomes a commodity for many tasks, profitability will hinge on superior cost structures rather than just model capabilities or 'free' open-weight models. This shift has profound implications for competition, investment, and strategic positioning for companies across the AI value chain, from chip manufacturers to model developers and application builders.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Researchers have developed a variational algorithm capable of learning unknown quantum operations (unitaries) and identifying their underlying dynamics (Hamiltonians) solely from observable measurements, without requiring prior knowledge of the system's structure. This method achieves high fidelity even in the presence of noise, utilizing a novel optimizer and training curriculum.
+                    The article argues that AI, unlike traditional software, has significant marginal costs for inference, making 'free' open-weight models misleading. As AI intelligence commoditizes, superior cost structures will drive profitability. Current high prices for frontier models are due to compute shortages, not necessarily Chinese models being cheaper. Frontier labs are shifting to volume-driven inference, leveraging data for model improvement, and integrating up the stack to differentiate.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>A variational algorithm is introduced for learning unknown quantum unitaries from time-series observable measurements.</li>
+                    <li>AI inference has significant marginal costs (COGS), unlike traditional software with zero marginal costs, meaning 'free' open-weight models are not free to serve.</li>
                     
-                    <li>The method is 'structure-agnostic,' meaning it requires no prior assumptions about the target unitary's internal structure.</li>
+                    <li>Tokens are not a commodity; intelligence derived from tokens is. Different models have varying token efficiency to achieve the same intelligence, impacting COGS.</li>
                     
-                    <li>It separates the problem: a hardware-efficient circuit learns the unitary, and Hamiltonian identification follows via classical post-processing (matrix logarithm).</li>
+                    <li>As intelligence for many tasks becomes a commodity, profitability will be determined by superior cost structures (model footprint, inference/memory/serving/token efficiency), not just charging higher prices.</li>
                     
-                    <li>Experiments demonstrate high accuracy: noiseless learning achieved MSE 1.61e-14 and recovered Hamiltonian coefficients to six decimal places.</li>
+                    <li>Current high margins for frontier AI labs (e.g., Anthropic, OpenAI) are largely due to demand exceeding supply and compute shortages, creating a price umbrella.</li>
                     
-                    <li>Gate-learning experiments successfully fit CNOT, iSWAP, and a Haar-random SU(4) element to process fidelity 1.000000, confirming independence from Trotterisation structure.</li>
+                    <li>The 'panic' over Chinese open-weight models like Kimi K3 is economically overblown; their perceived cheapness is likely due to the market's current supply constraints, not inherently lower marginal serving costs.</li>
                     
-                    <li>Quantum deployment on Qiskit Aer with depolarizing noise recovered Ising Hamiltonian terms with errors below 8%.</li>
+                    <li>Frontier labs are shifting their financial modeling from training-cost dominance to inference-volume-driven revenue, aiming to 'make it up in volume' with lower prices once compute supply increases.</li>
                     
-                    <li>The algorithm utilizes a novel SPSA-Adam optimizer, combining hardware-efficient two-point gradient estimation with adaptive moment updates.</li>
+                    <li>Running inference generates data that improves future models, incentivizing frontier labs to lower prices and increase usage to gather more data.</li>
                     
-                    <li>A four-stage 'moment-warm curriculum' is employed to convert the global non-convex optimization problem into a sequence of well-posed local ones.</li>
+                    <li>Differentiation for frontier labs will come from integrating up the customer experience, while software companies can resist encroachment by accessing competitive models.</li>
+                    
+                    <li>The ideological stance of some frontier labs (e.g., Anthropic's belief in its own trustworthiness) also plays a role in their reaction to open-weight alternatives.</li>
                     
                 </ul>
                 
@@ -260,26 +262,30 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Investigate the 'SPSA-Adam' optimizer and 'moment-warm curriculum' for potential application in other variational quantum algorithms or quantum machine learning tasks.</li>
+                    <li>For AI developers and startups: Focus on optimizing inference cost structures and token efficiency as much as model capability, anticipating intelligence becoming a commodity.</li>
                     
-                    <li>Explore the implications of structure-agnostic unitary learning for advanced quantum error correction schemes and quantum hardware benchmarking.</li>
+                    <li>For investors: Evaluate AI companies based on their long-term cost advantages and ability to scale inference efficiently, rather than just current model performance or R&D spend.</li>
                     
-                    <li>Consider how this method could be integrated into quantum software development kits to automate and improve the characterization and calibration of quantum gates and devices.</li>
+                    <li>For software companies: Assess strategies for integrating AI, considering whether to build in-house models, leverage frontier models, or utilize open-weight alternatives based on cost and differentiation needs.</li>
+                    
+                    <li>For semiconductor companies: Continue to innovate on inference efficiency and cost-per-token, as this will be a critical competitive battleground for AI hardware.</li>
+                    
+                    <li>For policymakers: Understand the economic implications of AI's cost structure and commodity dynamics when considering regulations or industrial policies related to AI competition.</li>
                     
                 </ul>
                 
 
                 <div class="card-footer">
-                    <span>Processed Category: Quantum</span>
+                    <span>Processed Category: Startups</span>
                     
-                    <a href="https://arxiv.org/abs/2607.15316" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://stratechery.com/2026/whos-afraid-of-chinese-models/" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">RecGPT-V3 Technical Report: Advancing LLM-based Recommender Systems</h3>
+                    <h3 class="card-title">LLM-as-a-Coach: Experiential Learning for Non-Verifiable Tasks</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
                         <span class="badge badge-score">Signal: 8.0</span>
@@ -287,39 +293,43 @@
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 July 17, 2026</span>
+                    <span>📅 July 20</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This article matters because it presents RecGPT-V3, a significant advancement in applying Large Language Models (LLMs) to industrial-scale recommender systems. It addresses critical challenges of efficiency, latency, and precise item grounding that hinder the real-world deployment of LLM-based recommenders. By introducing innovations like a Memory Hub, hybrid-modal reasoning, and latent intent reasoning, RecGPT-V3 achieves substantial improvements in user experience and commercial metrics (e.g., +3.97% GMV) while drastically cutting serving resource consumption (-52.4%) on a massive platform like Taobao. This demonstrates a practical path for LLMs to become the 'intelligent brain' of highly efficient and effective recommendation engines.
+                    This paper introduces a significant advancement in training Large Language Models (LLMs) for complex, open-ended tasks where traditional scalar rewards fall short. By replacing scalar feedback with rich, textual 'experiential knowledge' from an 'LLM-as-a-Coach,' the method enables more nuanced learning, better generalization, and mitigation of reward hacking. This can lead to more capable, robust, and reliable LLMs, broadening their applicability in real-world scenarios and improving the development of AI systems.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    RecGPT-V3 is a new LLM-based recommender system, successfully deployed on Taobao, that addresses efficiency and precision issues found in previous versions. It incorporates a Memory Hub for stateful user understanding, a hybrid-modal model for precise item grounding via Semantic IDs, and Latent Intent Reasoning for efficient and interpretable recommendations. These innovations have led to significant online gains (e.g., +3.97% GMV) and a 52.4% reduction in serving resources.
+                    A new method called Experiential Learning (EL) uses an 'LLM-as-a-Coach' to provide rich, textual feedback instead of scalar rewards for training LLMs on open-ended, non-verifiable tasks. This approach consistently outperforms traditional Reinforcement Learning, leading to better generalization and reduced reward hacking.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>RecGPT-V3 is the latest iteration of an LLM-based recommender system deployed on Taobao, building on RecGPT-V1 and V2's success in moving beyond co-occurrence patterns to user intent understanding.</li>
+                    <li>Traditional Reinforcement Learning (RL) for LLMs on open-ended tasks compresses rich textual feedback into scalar rewards, leading to loss of information and conflating responses of distinct quality.</li>
                     
-                    <li>It addresses three key challenges of previous versions: stateless behavior modeling (computational waste), a tag-to-item information bottleneck (lossy channel), and inefficient explicit reasoning (high latency/compute).</li>
+                    <li>The paper proposes Experiential Learning (EL), which repurposes an 'LLM-as-a-Judge' into an 'LLM-as-a-Coach'.</li>
                     
-                    <li>RecGPT-V3 introduces a **Memory Hub** that maintains structured, continually evolving user memory, distilling long-horizon behavior and cutting user-modeling computation by 55.8%.</li>
+                    <li>The LLM-as-a-Coach distills assessments of on-policy responses into 'transferable experiential knowledge'.</li>
                     
-                    <li>A **Hybrid-modal Foundation Model** allows the LLM to jointly reason over natural language (for open-world knowledge) and Semantic IDs (SIDs) for concrete item grounding, creating a high-bandwidth channel to the item space.</li>
+                    <li>This experiential knowledge conditions a teacher model and is internalized by the policy through on-policy context distillation.</li>
                     
-                    <li>**Latent Intent Reasoning** internalizes verbose rationales into compact, learnable latent tokens, reducing output token cost by 200x and achieving a 3.46x end-to-end inference speedup, while still being decodable into human-readable explanations.</li>
+                    <li>EL provides a higher-bandwidth feedback channel, offering dense supervision and preserving fine-grained preferences among high-quality responses.</li>
                     
-                    <li>Deployed in Taobao's "Guess What You Like" feed, RecGPT-V3 achieved consistent gains in large-scale online A/B tests: IPV +1.28%, CTR +1.00%, TC +1.97%, and GMV +3.97%.</li>
+                    <li>EL consistently outperforms rubric-based RL on held-out and unseen open-ended tasks across two policy families.</li>
                     
-                    <li>The system also significantly reduced end-to-end serving resource consumption by 52.4%.</li>
+                    <li>The method demonstrates better generalization beyond the training distribution and effectively mitigates reward hacking.</li>
+                    
+                    <li>Experiential knowledge is established as a richer and more generalizable learning signal for post-training on non-verifiable tasks.</li>
+                    
+                    <li>The research was conducted by Microsoft Research.</li>
                     
                 </ul>
                 
@@ -328,13 +338,13 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>AI Researchers should investigate stateful memory architectures and hybrid-modal reasoning approaches for other LLM applications to improve efficiency and grounding.</li>
+                    <li>Investigate the 'LLM-as-a-Coach' methodology for potential integration into current LLM fine-tuning and alignment pipelines, especially for subjective tasks.</li>
                     
-                    <li>Software Engineers working on large-scale AI systems should explore latent reasoning techniques to reduce inference costs and latency while maintaining interpretability.</li>
+                    <li>Monitor the release of the associated code at `https://aka.ms/el-code` to explore practical implementation details and benchmarks.</li>
                     
-                    <li>E-commerce platforms and product managers should consider adopting advanced LLM-based recommender systems that prioritize user intent, efficiency, and explainability for improved commercial outcomes.</li>
+                    <li>Evaluate the concept of 'experiential knowledge' as a feedback mechanism for custom LLM applications where human feedback is difficult or costly to scale.</li>
                     
-                    <li>Investors and startups in the AI/ML and e-commerce sectors should note the significant commercial and operational benefits demonstrated by RecGPT-V3 as a benchmark for practical LLM deployment.</li>
+                    <li>Consider how this approach could mitigate known issues like reward hacking and improve generalization in existing Reinforcement Learning from Human Feedback (RLHF) systems.</li>
                     
                 </ul>
                 
@@ -342,14 +352,14 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.15591" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2607.18110" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Cura 1T: Specialized Model for Agentic Healthcare</h3>
+                    <h3 class="card-title">ReflectWorld-MM: An Entity-Oriented Multimodal Memory System for Open-Ended Video Streams</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
                         <span class="badge badge-score">Signal: 8.0</span>
@@ -357,39 +367,35 @@
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Jul 15</span>
+                    <span>📅 2024-07-14</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper introduces Cura 1T, a specialized Large Language Model (LLM) for healthcare that significantly outperforms leading general-purpose frontier models (like GPT-5.5 and Claude Opus 4.8) on critical healthcare benchmarks. Its novel 'human-gated self-evolution loop' training methodology offers a blueprint for developing highly accurate, reliable, and agentic AI systems in high-stakes domains, moving beyond the limitations of generic LLMs. This represents a substantial step forward for practical, trustworthy AI in medicine.
+                    This paper addresses a critical limitation in developing truly intelligent, continuously learning AI agents: the ability to maintain and reason over long-term, entity-oriented memory from open-ended video streams. By mimicking human memory structures, ReflectWorld-MM enables agents to build a persistent understanding of their environment, tracking entities and events over extended periods. This is crucial for advanced AI applications like personal assistants, robotics, and continuous surveillance, representing a significant step towards more robust and capable AI.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Cura 1T is a specialized large language model (LLM) tailored for healthcare applications. It was trained using a human-gated self-evolution loop (recursive self-improvement) and has achieved state-of-the-art performance on 5 out of 6 challenging healthcare benchmarks, outperforming leading frontier models while maintaining competitive performance on out-of-domain tasks.
+                    ReflectWorld-MM is a new AI system that provides agents with a human-like, entity-oriented long-term memory for continuous video streams, outperforming existing methods and enabling AI to persistently remember and reason about what it sees in the real world.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Cura 1T is a healthcare-specialized LLM designed to handle high-stakes communication, expert reasoning, and workflow execution, including patient consultation, clinical reasoning (text and images), interactive diagnosis, and EHR tool use.</li>
+                    <li>Addresses the challenge of long-term, entity-oriented memory for AI agents processing open-ended video streams, a limitation of existing frame-based memory systems.</li>
                     
-                    <li>It is trained through a novel 'human-gated self-evolution loop' (also called Recursive Self-Improvement - RSI), where a training agent iteratively plans capabilities, trains the model, evaluates benchmarks, and refines the data mixture based on observed failures.</li>
+                    <li>Proposes ReflectWorld-MM, a novel system with a hierarchical memory structure inspired by human memory theory, comprising multi-scale episodic, evolving entity-centric semantic, and procedural memory.</li>
                     
-                    <li>This data-centered approach uses targeted synthetic and curated examples to improve the model without degrading other capabilities, a common challenge in LLM fine-tuning.</li>
+                    <li>Organizes memory around persistent entities rather than just video frames, allowing agents to track 'who and what reappears over time' and build a 'persistent visual experience'.</li>
                     
-                    <li>Cura 1T ranks at or near the top among frontier baselines across the healthcare evaluation suite, leading models like GPT-5.5 and Claude Opus 4.8 on 5 of 6 hardest healthcare benchmarks (e.g., HealthBench Hard, MedXpertQA-Text, AgentClinic).</li>
+                    <li>Consists of three main parts: a perception front-end for entity-resolved observations, the hierarchical long-term memory, and a real-world realization for arbitrary stream ingestion and integration with off-the-shelf assistants.</li>
                     
-                    <li>The model also remains competitive on out-of-domain reasoning and general agentic benchmarks, demonstrating robust performance beyond its specialized domain.</li>
-                    
-                    <li>The research highlights the effectiveness of specialized, iteratively improved models over general-purpose LLMs for critical, complex domains like healthcare.</li>
-                    
-                    <li>The authors include 'actAVA AI', suggesting a commercial entity behind the development.</li>
+                    <li>Achieves state-of-the-art accuracy across six long-video and lifelong-memory benchmarks, outperforming strong memory agents and a frontier model.</li>
                     
                 </ul>
                 
@@ -398,13 +404,11 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Investigate the 'human-gated self-evolution loop' (RSI) training methodology for potential application in other domain-specific AI projects requiring high accuracy and reliability.</li>
+                    <li>AI researchers focusing on memory systems and multimodal agents should delve into ReflectWorld-MM's architecture and evaluation methods to inform future research directions.</li>
                     
-                    <li>Monitor actAVA AI and similar startups focusing on specialized agentic AI in regulated industries for potential investment or partnership opportunities.</li>
+                    <li>Software engineers and developers building AI assistants or applications requiring continuous video understanding should explore the practical implementation and integration potential of entity-oriented memory systems like ReflectWorld-MM.</li>
                     
-                    <li>Analyze the specific healthcare benchmarks used (e.g., HealthBench, MedXpertQA, AgentClinic, MedAgentBench-v2) to understand best practices for evaluating domain-specific LLMs.</li>
-                    
-                    <li>Explore the architectural and data curation strategies employed by Cura 1T to inform the development of future specialized AI agents in healthcare or other critical sectors.</li>
+                    <li>Startups and companies in the AI space should monitor the development and potential commercialization of such advanced memory systems for competitive advantage in areas like robotics, smart surveillance, and personal AI.</li>
                     
                 </ul>
                 
@@ -412,52 +416,52 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.15314" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2607.09759" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Impact of Generative AI on Code Review Quality</h3>
+                    <h3 class="card-title">RynnBrain 1.1: A More Capable and Generalizable Embodied Foundation Model for Robotics</h3>
                     <div class="badges">
-                        <span class="badge badge-category">Software Engineering</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
+                        <span class="badge badge-category">AI / Robotics</span>
+                        <span class="badge badge-score">Signal: 8.5</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Jul 14</span>
+                    <span>📅 Jul 21, 2024</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This research provides crucial empirical evidence on how integrating Generative AI (LLMs and AI agents) into code review processes affects both efficiency and quality. It highlights that while AI agents can significantly speed up review decisions, these efficiency gains do not automatically translate into improved code quality. This is vital for software development teams, AI tool developers, and organizations looking to adopt AI-supported workflows, guiding them to design processes that leverage AI for speed without compromising the integrity of the software.
+                    RynnBrain 1.1 represents a significant advancement in embodied AI, offering a family of foundation models that enable robots to better perceive, reason, localize, plan, and manipulate objects in the real world. Its ability to generalize across multiple robot embodiments and outperform existing models on benchmarks and real-robot tasks could accelerate the development and deployment of more intelligent and versatile robotic systems, impacting various industries from manufacturing to service robotics.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    A comprehensive study analyzing over 1 million GitHub pull requests revealed that the use of AI agents in code review leads to faster decision-making, particularly when initiating reviews or involving multiple agents. However, these efficiency gains do not consistently translate into improved review quality, underscoring the importance of carefully designing human-AI collaboration strategies.
+                    RynnBrain 1.1 is a new family of embodied foundation models (2B, 9B, 122B-A10B parameters) developed by DAMO Academy, which significantly improves robot perception, spatial reasoning, localization, planning, and manipulation. It introduces contact-point prediction and native 3D grounding, and its RynnBrain-VLA variant, deployed on real robots, outperforms other generalist vision-language-action models.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>The study analyzed 1.02 million pull requests from 207 GitHub projects, examining the transition from human-centric to LLM-assisted and agentic code review.</li>
+                    <li>RynnBrain 1.1 is a family of embodied foundation models available in 2B, 9B, and 122B-A10B parameter scales.</li>
                     
-                    <li>Three AI reviewer adoption practices were identified: Gradual AI Adoption, Rapid LLM Adoption, and Rapid AI Agent Adoption.</li>
+                    <li>It is trained with a unified spatio-temporal and physically grounded framework, supporting embodied perception, spatial reasoning, localization, and planning.</li>
                     
-                    <li>Agent-involved collaboration patterns, particularly reviews initiated by AI agents or involving multiple AI agents, are associated with faster review decisions.</li>
+                    <li>Key improvements over RynnBrain 1.0 include contact-point prediction across the model family and native 3D grounding for the 2B and 9B models, enhancing robot manipulation capabilities.</li>
                     
-                    <li>Crucially, these observed efficiency gains (faster review decisions) do not consistently translate into better review quality.</li>
+                    <li>RynnBrain-VLA, a vision-language-action variant, features a unified cross-embodiment action space and embodiment-specific masking, successfully deployed on Unitree G1, Astribot-S1, and Tianji-Wuji robots.</li>
                     
-                    <li>Human-AI collaboration patterns become the strongest explanatory factor for review efficiency once LLM and AI agent reviewers participate.</li>
+                    <li>The 122B-A10B model achieves state-of-the-art performance, outperforming all evaluated proprietary and open-source models on benchmarks like VSI-Bench, MMSI, and RefSpatial-Bench.</li>
                     
-                    <li>The findings offer empirical guidance for designing AI-supported code review processes that aim to improve efficiency without weakening review quality.</li>
+                    <li>Real-robot experiments demonstrate that RynnBrain-initialized policies surpass Qwen-based and other generalist VLAs in process scores and success rates, especially with joint multi-task and multi-embodiment training.</li>
                     
                 </ul>
                 
@@ -466,13 +470,13 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Software development teams should explore integrating AI agents into their code review workflows to potentially accelerate review cycles, focusing on specific tasks where AI can initiate or contribute efficiently.</li>
+                    <li>Review the full paper on arXiv for detailed methodology and experimental results.</li>
                     
-                    <li>Organizations adopting AI for code review must implement robust quality assurance checks to ensure that efficiency gains do not come at the expense of code quality, potentially by focusing human reviewers on critical aspects.</li>
+                    <li>Explore the RynnBrain GitHub repository (github.com/alibaba-damo-academy/RynnBrain) for potential code, models, or datasets.</li>
                     
-                    <li>AI tool developers should design AI-supported code review tools that facilitate effective human-AI collaboration, emphasizing interfaces and features that allow humans to easily oversee and refine AI-generated feedback.</li>
+                    <li>Consider how these advancements in embodied foundation models could be integrated into future robotics projects or research.</li>
                     
-                    <li>Researchers and practitioners should further investigate specific collaboration patterns between humans and AI agents that lead to both improved efficiency and quality in code review.</li>
+                    <li>Monitor future developments from DAMO Academy in the field of embodied AI and robotics.</li>
                     
                 </ul>
                 
@@ -480,50 +484,54 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.13196" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2607.17977" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Nuclear Quantum Battery Concept</h3>
+                    <h3 class="card-title">QR-SPPS: Quantum-Native Retail Supply Chain Risk Simulation via VQE, ADAPT-VQE Counterfactual Policy Ranking, and DOS-QPE Boltzmann Tail Risk Quantification</h3>
                     <div class="badges">
-                        <span class="badge badge-category">Quantum Computing</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
+                        <span class="badge badge-category">Quantum Computing Application</span>
+                        <span class="badge badge-score">Signal: 8.5</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Mon, 20 Jul 2026 00:00:00 -0400</span>
+                    <span>📅 Tue, 21 Jul 2026 00:00:00 -0400</span>
                     <span>🌐 Source: arXiv quant-ph</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This research proposes a novel theoretical pathway to overcome critical limitations (low energy density, short retention time) in current quantum batteries by leveraging collective nuclear excitations. This could be a significant step towards developing more robust, high-capacity energy storage solutions for future quantum computing devices and other quantum technologies, potentially enabling their practical realization and scaling.
+                    This article presents a significant advancement in applying quantum computing to a critical real-world problem: retail supply chain risk management. By developing a quantum-native framework (QR-SPPS) that integrates advanced quantum algorithms (VQE, ADAPT-VQE, DOS-QPE), it demonstrates a scalable approach to identify and mitigate correlated cascade failures that classical models systematically underestimate. This has profound implications for improving supply chain resilience, optimizing crisis interventions, and quantifying systemic risk, potentially offering a competitive edge for businesses and a new frontier for quantum software development and investment.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Researchers have proposed a theoretical concept for a nuclear quantum battery that achieves high-density charging through the collective excitation of $^{57}$Fe nuclei within an X-ray waveguide. This approach demonstrates a theoretical pathway to superlinear charging and high energy density, addressing key limitations of existing quantum battery designs.
+                    A new quantum framework, QR-SPPS, uses VQE, ADAPT-VQE, and DOS-QPE on a 40-qubit system to simulate and optimize retail supply chain risks, outperforming classical methods by identifying correlated cascade failures and ranking crisis policies, while also quantifying tail risk.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Proposes a novel 'nuclear quantum battery' concept to overcome limitations of current electronic/molecular quantum batteries (low energy density, short retention).</li>
+                    <li>QR-SPPS is a quantum-native framework designed for retail supply chain risk analysis, addressing limitations of classical models in handling correlated failures.</li>
                     
-                    <li>Utilizes collective excitation of $^{57}$Fe nuclei embedded in a planar hard X-ray waveguide.</li>
+                    <li>It maps a 40-node, four-tier supply network to a 40-qubit Ising Hamiltonian to represent supplier dependencies.</li>
                     
-                    <li>Introduces a self-consistent waveform-engineering protocol to inhibit local radiative decay and promote absorption into high-lying collective nuclear excitation manifolds.</li>
+                    <li>Variational Quantum Eigensolver (VQE) computes the stress ground state, revealing entangled cascade failures that differ significantly from classical Monte Carlo predictions.</li>
                     
-                    <li>Demonstrates an enhanced excitation cross-section leading to superlinear charging, with maximum energy density scaling approximately as $n \sqrt{n}$ (where $n$ is nuclear density).</li>
+                    <li>ADAPT-VQE gradient screening is introduced for efficient counterfactual policy evaluation, enabling real-time ranking of crisis interventions.</li>
                     
-                    <li>The proposed mechanism offers a route to high-energy-density quantum charging using contemporary X-ray sources and waveguide architectures.</li>
+                    <li>Density-of-States Quantum Phase Estimation (DOS-QPE) reconstructs the eigenspectrum to estimate Boltzmann-weighted catastrophe probabilities, providing a quantum-native tail-risk metric compatible with Value-at-Risk.</li>
+                    
+                    <li>The framework demonstrates scalable quantum algorithms for correlated stress propagation, policy optimization, and systemic risk quantification.</li>
+                    
+                    <li>It highlights the exponential computational barriers faced by classical simulation for industrial-scale supply chain problems.</li>
                     
                 </ul>
                 
@@ -532,13 +540,13 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Monitor experimental validation and further theoretical developments in nuclear quantum battery technology.</li>
+                    <li>Monitor the progress and commercialization of quantum computing solutions for supply chain optimization and risk management.</li>
                     
-                    <li>Evaluate the potential impact of high-density quantum energy storage on the design and capabilities of future quantum computing hardware.</li>
+                    <li>Evaluate potential investment opportunities in quantum software companies focusing on enterprise applications like logistics and financial risk.</li>
                     
-                    <li>Investigate material science and engineering challenges associated with embedding nuclei in waveguides and hard X-ray manipulation.</li>
+                    <li>For supply chain professionals, begin exploring the long-term strategic implications of quantum-enhanced risk modeling for resilience and competitive advantage.</li>
                     
-                    <li>Assess long-term investment opportunities in quantum energy solutions and advanced quantum materials.</li>
+                    <li>For quantum computing researchers and software engineers, investigate further scaling challenges and hardware-agnostic implementations of such complex algorithmic frameworks.</li>
                     
                 </ul>
                 
@@ -546,7 +554,7 @@
                 <div class="card-footer">
                     <span>Processed Category: Quantum</span>
                     
-                    <a href="https://arxiv.org/abs/2607.15319" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://arxiv.org/abs/2607.16275" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -557,27 +565,16 @@
         <section id="categories">
             <h2>By Category</h2>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Technology Strategy & Economics</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Structure-Agnostic Unitary Learning and Hamiltonian Identification</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers have developed a variational algorithm capable of learning unknown quantum operations (unitaries) and identifying their underlying dynamics (Hamiltonians) solely from observable measurements, without requiring prior knowledge of the system's structure. This method achieves high fidelity even in the presence of noise, utilizing a novel optimizer and training curriculum.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Who’s Afraid of Chinese Models? (The Return of Marginal Costs in AI)</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">The article argues that AI, unlike traditional software, has significant marginal costs for inference, making 'free' open-weight models misleading. As AI intelligence commoditizes, superior cost structures will drive profitability. Current high prices for frontier models are due to compute shortages, not necessarily Chinese models being cheaper. Frontier labs are shifting to volume-driven inference, leveraging data for model improvement, and integrating up the stack to differentiate.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 9.07</span>
+                        <span>Score: 8.4</span>
                         
-                        <a href="https://arxiv.org/abs/2607.15316" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Nuclear Quantum Battery Concept</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers have proposed a theoretical concept for a nuclear quantum battery that achieves high-density charging through the collective excitation of $^{57}$Fe nuclei within an X-ray waveguide. This approach demonstrates a theoretical pathway to superlinear charging and high energy density, addressing key limitations of existing quantum battery designs.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.15</span>
-                        
-                        <a href="https://arxiv.org/abs/2607.15319" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://stratechery.com/2026/whos-afraid-of-chinese-models/" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
@@ -588,39 +585,55 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">RecGPT-V3 Technical Report: Advancing LLM-based Recommender Systems</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">RecGPT-V3 is a new LLM-based recommender system, successfully deployed on Taobao, that addresses efficiency and precision issues found in previous versions. It incorporates a Memory Hub for stateful user understanding, a hybrid-modal model for precise item grounding via Semantic IDs, and Latent Intent Reasoning for efficient and interpretable recommendations. These innovations have led to significant online gains (e.g., +3.97% GMV) and a 52.4% reduction in serving resources.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">LLM-as-a-Coach: Experiential Learning for Non-Verifiable Tasks</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new method called Experiential Learning (EL) uses an 'LLM-as-a-Coach' to provide rich, textual feedback instead of scalar rewards for training LLMs on open-ended, non-verifiable tasks. This approach consistently outperforms traditional Reinforcement Learning, leading to better generalization and reduced reward hacking.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.42</span>
+                        <span>Score: 8.27</span>
                         
-                        <a href="https://huggingface.co/papers/2607.15591" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.18110" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Cura 1T: Specialized Model for Agentic Healthcare</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Cura 1T is a specialized large language model (LLM) tailored for healthcare applications. It was trained using a human-gated self-evolution loop (recursive self-improvement) and has achieved state-of-the-art performance on 5 out of 6 challenging healthcare benchmarks, outperforming leading frontier models while maintaining competitive performance on out-of-domain tasks.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">ReflectWorld-MM: An Entity-Oriented Multimodal Memory System for Open-Ended Video Streams</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">ReflectWorld-MM is a new AI system that provides agents with a human-like, entity-oriented long-term memory for continuous video streams, outperforming existing methods and enabling AI to persistently remember and reason about what it sees in the real world.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.3</span>
+                        <span>Score: 8.22</span>
                         
-                        <a href="https://huggingface.co/papers/2607.15314" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.09759" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
             </div>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Software Engineering</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI / Robotics</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Impact of Generative AI on Code Review Quality</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A comprehensive study analyzing over 1 million GitHub pull requests revealed that the use of AI agents in code review leads to faster decision-making, particularly when initiating reviews or involving multiple agents. However, these efficiency gains do not consistently translate into improved review quality, underscoring the importance of carefully designing human-AI collaboration strategies.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">RynnBrain 1.1: A More Capable and Generalizable Embodied Foundation Model for Robotics</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">RynnBrain 1.1 is a new family of embodied foundation models (2B, 9B, 122B-A10B parameters) developed by DAMO Academy, which significantly improves robot perception, spatial reasoning, localization, planning, and manipulation. It introduces contact-point prediction and native 3D grounding, and its RynnBrain-VLA variant, deployed on real robots, outperforms other generalist vision-language-action models.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.22</span>
+                        <span>Score: 7.9</span>
                         
-                        <a href="https://huggingface.co/papers/2607.13196" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.17977" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing Application</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">QR-SPPS: Quantum-Native Retail Supply Chain Risk Simulation via VQE, ADAPT-VQE Counterfactual Policy Ranking, and DOS-QPE Boltzmann Tail Risk Quantification</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new quantum framework, QR-SPPS, uses VQE, ADAPT-VQE, and DOS-QPE on a 40-qubit system to simulate and optimize retail supply chain risks, outperforming classical methods by identifying correlated cascade failures and ranking crisis policies, while also quantifying tail risk.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 7.87</span>
+                        
+                        <a href="https://arxiv.org/abs/2607.16275" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
