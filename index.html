@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-22</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-23</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,10 +209,78 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">AlayaWorld: Interactive Long-Horizon World Modeling AI</h3>
+                    <h3 class="card-title">Riemannian Isometric Policy Optimization for LLM RL</h3>
                     <div class="badges">
-                        <span class="badge badge-category">AI / Generative Models</span>
+                        <span class="badge badge-category">AI Research</span>
                         <span class="badge badge-score">Signal: 9.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 11, 2026</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper addresses a fundamental, decade-old theoretical flaw in PPO-Clip, a widely used reinforcement learning algorithm, particularly in the context of Large Language Models (LLMs). By identifying and correcting a geometric mismatch in how policy discrepancies are measured, it proposes a new method (RIPO) that significantly improves LLM training stability and performance. This advancement can lead to more robust, capable, and efficiently trained LLMs, impacting the development and deployment of advanced AI systems.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A new Reinforcement Learning (RL) algorithm, Riemannian Isometric Policy Optimization (RIPO), has been introduced to address a fundamental flaw in PPO-Clip's Euclidean policy updates by utilizing Riemannian geometry. This approach prevents 'exploration collapse' in LLMs, resulting in more stable training and up to a 60% performance improvement on benchmarks, setting a new state-of-the-art for LLM RL.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Reinforcement Learning (RL) is crucial for enhancing LLM reasoning capabilities, but PPO-Clip, a dominant RL algorithm, suffers from 'exploration collapse'.</li>
+                    
+                    <li>The paper identifies the core flaw in PPO-Clip: it implicitly uses a Euclidean metric for policy discrepancy, which is theoretically inconsistent with the intrinsic geometry of the policy Riemannian manifold.</li>
+                    
+                    <li>This geometric mismatch causes overly conservative updates in low-probability regions and aggressive updates in high-probability regions, leading to exploration collapse.</li>
+                    
+                    <li>The proposed solution, Riemannian Isometric Policy Optimization (RIPO), guarantees isometric policy updates on the Riemannian manifold, effectively balancing exploration and exploitation.</li>
+                    
+                    <li>RIPO achieves a favorable bias-variance trade-off, which stabilizes the optimization process.</li>
+                    
+                    <li>Extensive experiments demonstrate that RIPO significantly outperforms existing LLM RL algorithms across seven competition-level benchmarks, showing up to a 60% improvement over GRPO on AIME24.</li>
+                    
+                    <li>RIPO dynamically aligns trust regions with local geometry, establishing new state-of-the-art (SOTA) performance in LLM RL.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers should investigate RIPO as a potential successor or enhancement to PPO-Clip for various RL tasks, especially in LLM fine-tuning and alignment.</li>
+                    
+                    <li>Software engineers working on LLM development should explore integrating RIPO into their training pipelines to improve model performance and stability.</li>
+                    
+                    <li>Investors and startups in the AI space should monitor the adoption and impact of geometrically-aware RL methods like RIPO, as they could signify a new wave of performance improvements in LLMs and related AI applications.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.10169" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Rubric-Oriented Document Set Selection for LLMs</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
                     </div>
                 </div>
                 
@@ -224,34 +292,34 @@
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    AlayaWorld represents a significant leap in generative AI, enabling the instant creation of interactive, consistent, and continuously evolving virtual worlds from simple user inputs. This technology has the potential to revolutionize labor-intensive traditional video game development, accelerate metaverse creation, and provide more dynamic environments for AI agent training, making virtual content generation far more accessible and efficient.
+                    This paper introduces a critical advancement for Retrieval-Augmented Generation (RAG) systems and AI agents by addressing the limitations of traditional relevance-centric document retrieval. By proposing a framework and method that considers inter-document interactions (redundancy, conflict, complementarity) and uses rubric-based evaluation, it significantly improves the quality and efficiency of document sets provided to LLMs, leading to superior downstream generation performance. This is crucial for the development of more sophisticated and reliable AI applications.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    AlayaWorld is an advanced 15B video diffusion transformer AI model capable of generating interactive, long-horizon virtual worlds at 24fps (540p/720p) from text, image, or video inputs. It demonstrates state-of-the-art performance in spatiotemporal consistency and long-term generation, while drastically reducing inference steps from approximately 30 to 4 per chunk, and is offered as an open-source foundation for future research.
+                    A new paper introduces `SetwiseEvalKit`, a benchmark designed to evaluate document sets for LLMs by considering inter-document interactions. Alongside this, `Rubric4Setwise` is presented as a training-free method that leverages rubrics to select optimal document sets, significantly outperforming existing rerankers and achieving state-of-the-art downstream generation with fewer resources by moving beyond simple relevance-centric retrieval.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>AlayaWorld is an interactive long-horizon video world model that generates virtual environments instantly from user inputs (text, image, video), contrasting with labor-intensive traditional game development.</li>
+                    <li>Existing search result evaluation systems for LLMs and AI agents are limited by focusing only on individual document relevance (e.g., nDCG), ignoring crucial inter-document interactions like redundancy, conflict, and complementarity.</li>
                     
-                    <li>It addresses key challenges: interaction, persistent spatiotemporal consistency, stable long-horizon generation, and efficient response.</li>
+                    <li>The quality of document sets directly determines the upper bound of downstream generation performance for LLMs.</li>
                     
-                    <li>The model is built on a 15B video diffusion transformer, generating 24-fps video at 540p and 720p resolutions.</li>
+                    <li>A new 'evaluate-diagnose-optimize' framework is proposed to address these limitations.</li>
                     
-                    <li>It uses a bounded visual context combining a persistent sink frame, compressed temporal history, geometry-aligned spatial memory, and recent-frame conditioning to maintain consistency.</li>
+                    <li>`SetwiseEvalKit` is introduced as a novel, three-level, nine-dimension document set evaluation benchmark, comprising approximately 28,000 high-quality evaluation rubrics for both short-form and long-form scenarios.</li>
                     
-                    <li>Long-term drift is reduced by training with corrupted histories and prediction residuals from its own roll-outs.</li>
+                    <li>Evaluation of 12 existing rerankers using `SetwiseEvalKit` revealed that even the best methods achieve no more than 45% coverage, and cross-document coordination dimensions are universally weak.</li>
                     
-                    <li>A novel discrete autoregressive distillation formulation reduces inference from approximately 30 sampling steps to just four steps per chunk, significantly improving efficiency.</li>
+                    <li>`Rubric4Setwise` is a novel, training-free method that converts rubric-based evaluation criteria into effective document set selection signals.</li>
                     
-                    <li>AlayaWorld achieves the best performance on the iWorld-Bench benchmark for long-horizon generation.</li>
+                    <li>`Rubric4Setwise` achieves state-of-the-art downstream generation performance with fewer documents and search rounds, maintaining top results across both short-form and long-form scenarios.</li>
                     
-                    <li>Conceived as a full-stack, open-source, and long-term project, it aims to be an extensible foundation for future research in interactive video world models.</li>
+                    <li>The research validates the effectiveness of closing the loop from evaluation to optimization in document set selection for LLMs.</li>
                     
                 </ul>
                 
@@ -260,15 +328,11 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Explore the AlayaWorld project page and GitHub repository for technical details, code, and potential applications.</li>
+                    <li>Explore integrating `SetwiseEvalKit` as a more comprehensive evaluation benchmark for RAG systems and document retrieval components in AI applications.</li>
                     
-                    <li>Investigate the iWorld-Bench benchmark to understand the metrics and challenges in long-horizon world generation.</li>
+                    <li>Investigate implementing `Rubric4Setwise` or similar rubric-oriented document set selection strategies in RAG pipelines to improve the quality and efficiency of LLM inputs.</li>
                     
-                    <li>Consider how this technology could be integrated into existing game development pipelines or used to create novel interactive experiences.</li>
-                    
-                    <li>Monitor the development of similar interactive world models and their potential impact on the metaverse and AI training environments.</li>
-                    
-                    <li>For investors, evaluate companies focusing on generative AI for content creation, virtual worlds, and interactive media, as this technology could be a significant enabler.</li>
+                    <li>Conduct further research into inter-document interactions (redundancy, conflict, complementarity) to develop even more sophisticated retrieval and ranking algorithms for AI agents.</li>
                     
                 </ul>
                 
@@ -276,126 +340,52 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.18367" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2607.19747" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Mage-Flow AI Model for Image Generation and Editing</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI/Machine Learning</span>
-                        <span class="badge badge-score">Signal: 8.5</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Jul 21</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    Mage-Flow significantly advances the field of generative AI by demonstrating that state-of-the-art image generation and editing can be achieved with a compact 4B-parameter model family, rather than relying on models with tens of billions of parameters. Its innovations in tokenizer design, native-resolution processing, and system-level optimizations drastically improve training throughput and inference latency, making high-resolution image tasks practical for interactive use and more accessible to a wider range of developers and organizations with limited compute budgets. This efficiency can accelerate AI development, reduce operational costs, and enable new applications in creative industries.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Mage-Flow is a new, compact 4B-parameter generative AI model designed for efficient text-to-image generation and instruction-based image editing. It achieves competitive performance with larger models through a lightweight VAE, a native-resolution diffusion transformer, and system-level optimizations, resulting in 2.5x faster training and sub-second high-resolution inference on a single A100 GPU.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Mage-Flow is a compact 4B-scale generative stack for efficient text-to-image generation and instruction-based image editing, developed by Microsoft.</li>
-                    
-                    <li>It achieves state-of-the-art competitive quality by careful tokenizer–backbone–system co-design, rather than scaling to tens of billions of parameters (e.g., outperforming 20B and 32B models).</li>
-                    
-                    <li>The stack consists of two co-designed components: Mage-VAE (a lightweight, high-fidelity latent tokenizer with one-step diffusion-style encoding/decoding) and a Native-Resolution Multimodal Diffusion Transformer (NR-MMDiT) trained with rectified flow matching.</li>
-                    
-                    <li>Mage-VAE reduces tokenization cost by more than an order of magnitude and uses ~12x / ~22x fewer encode / decode MACs per pixel compared to other VAEs, removing it as a high-resolution bottleneck.</li>
-                    
-                    <li>System-level optimizations, including native-resolution packing (FlashAttention var-len + per-sample 2D RoPE) and fused CUDA kernels, improve end-to-end training throughput by approximately 2.5 times (MFU from ~33% to ~77%).</li>
-                    
-                    <li>It supports flexible-resolution training and inference, generating images from 512x512 to 2048x2048 on any aspect ratio, including extreme 4:1.</li>
-                    
-                    <li>The model family includes Base, RL-aligned, and 4-step Turbo variants for both generation and editing, with Turbo variants enabling interactive latency.</li>
-                    
-                    <li>Mage-Flow-Turbo generates a 1024x1024 image in 0.59 seconds, and Mage-Flow-Edit-Turbo edits an image in 1.02 seconds on a single NVIDIA A100 GPU, with a small memory footprint (~18-20 GB).</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Explore the Mage-Flow models on Hugging Face (microsoft/Mage-Flow, microsoft/Mage-Flow-Turbo, etc.) to test their generation and editing capabilities.</li>
-                    
-                    <li>Review the associated arXiv paper (2607.19064) and GitHub repository for deeper technical insights into the Mage-VAE, NR-MMDiT, and system optimizations.</li>
-                    
-                    <li>Consider integrating Mage-Flow or its techniques into projects requiring efficient, high-quality image generation or editing, especially where compute resources are a constraint.</li>
-                    
-                    <li>For software engineers, study the system-level co-design and CUDA kernel fusion techniques for potential application in other high-performance computing contexts.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2607.19064" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Staleness-Adaptive Trust Region (SAT) for Asynchronous Reinforcement Learning</h3>
+                    <h3 class="card-title">Anchor-Align for Generalizable VLA Finetuning</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 7.0</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Jul 21, 2024</span>
+                    <span>📅 Jul 15</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This research addresses a critical stability issue in asynchronous reinforcement learning (RL), which is crucial for scaling RL to complex, large-scale problems, including potentially large language models. By introducing the Staleness-Adaptive Trust Region (SAT), it provides a more robust and efficient way to train RL agents, leading to better performance and stability in real-world applications where data staleness is inherent.
+                    This research addresses a critical limitation in training generalizable robot policies: the degradation of pretrained vision-language representations during finetuning. By proposing Anchor-Align, it enables robots to perform significantly better in novel or varied environments, which is a major step towards more capable, robust, and autonomous robotic systems. This advancement is crucial for the practical deployment of AI in real-world robotics.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    A novel method, Staleness-Adaptive Trust Region (SAT), has been introduced to stabilize asynchronous reinforcement learning. SAT adaptively controls policy updates based on data staleness, significantly enhancing performance and reliability in large-scale AI training environments.
+                    Anchor-Align is a novel finetuning method for Vision-Language-Action (VLA) models that aims to prevent representation drift and enhance language-action alignment. It achieves this by distilling representations from a frozen VLM and jointly training language and discrete action predictions, leading to significantly improved generalization and real-robot success rates for robotic manipulation tasks, particularly in out-of-distribution scenarios.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Asynchronous Reinforcement Learning (RL) improves throughput but suffers from 'staleness' (policy lag, engine delays), leading to training instability and approximation errors.</li>
+                    <li>Standard behavior cloning (BC) finetuning of Vision-Language Models (VLMs) for Vision-Language-Action (VLA) policies causes 'representation drift,' overwriting pretrained representations vital for generalization.</li>
                     
-                    <li>Existing methods like PPO clipping are insufficient to control updates from highly stale data, leaving them weakly constrained.</li>
+                    <li>Co-training with web image-text data, a common remedy, fails to prevent language-action misalignment in VLAs.</li>
                     
-                    <li>The paper introduces the Staleness-Adaptive Trust Region (SAT), which uses a detached sampled log-ratio as a practical staleness proxy.</li>
+                    <li>Anchor-Align is proposed, augmenting BC with two objectives: Vision-Language Anchoring (distilling layer-wise representations from a frozen VLM copy) and Language-Action Alignment (converting action targets to discrete motion-direction labels and jointly training language and action on the same observation).</li>
                     
-                    <li>SAT identifies high-mismatch tails within batches and adaptively contracts the PPO interval for these stale updates, enforcing more conservative changes.</li>
+                    <li>The method significantly improves real-robot success rates on a physical xArm7 robot (e.g., from 28% to 54% and 37% to 60%) across two VLA architectures, particularly under unseen spatial rearrangements, semantic perturbations, and cluttered scenes.</li>
                     
-                    <li>The method is theoretically proven to provide local interval containment and pointwise pessimism relative to PPO.</li>
+                    <li>In simulation, Anchor-Align demonstrates consistent improvements in out-of-distribution (OOD) perturbations, perceptual robustness, and long-horizon control across benchmarks like LIBERO-PRO, LIBERO-Plus, and CALVIN.</li>
                     
-                    <li>Empirical evaluation on a decoupled asynchronous RL setup built on Qwen3-30B-A3B-Base shows SAT-GSPO w/R3 achieving superior performance (best observed AIME24 avg@8) compared to baselines.</li>
-                    
-                    <li>The research demonstrates that aligning clip intervals with staleness heterogeneity effectively stabilizes asynchronous RL, making large-scale training more robust.</li>
+                    <li>The research suggests that preserving pretrained representations and achieving effective action learning are not mutually exclusive, but can be harmonized for better VLA performance.</li>
                     
                 </ul>
                 
@@ -404,11 +394,11 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>AI researchers should investigate integrating SAT into existing asynchronous RL frameworks or exploring its applicability to other domains where data staleness is a significant challenge.</li>
+                    <li>AI researchers in embodied AI and robotics should investigate integrating Anchor-Align or similar representation anchoring and alignment techniques into their VLA model finetuning pipelines.</li>
                     
-                    <li>ML engineers and practitioners deploying large-scale asynchronous RL systems should consider implementing or adopting SAT to improve training stability, performance, and reliability.</li>
+                    <li>Robotics engineers and developers working on manipulation tasks should consider evaluating Anchor-Align for improving the generalization capabilities and robustness of their deployed robotic systems.</li>
                     
-                    <li>AI product developers should evaluate the potential benefits of SAT for products relying on asynchronous RL, especially those with high throughput requirements and complex environments.</li>
+                    <li>Developers of Vision-Language Models (VLMs) could explore applying the principles of representation anchoring to other downstream tasks to prevent catastrophic forgetting or representation drift during finetuning.</li>
                     
                 </ul>
                 
@@ -416,54 +406,52 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.18722" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2607.13429" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">DataFlow-Harness: LLM-Guided Platform for Editable Data Pipelines</h3>
+                    <h3 class="card-title">SLAI T-Rex: DeepSeek-V4 Optimization on Ascend SuperPOD</h3>
                     <div class="badges">
-                        <span class="badge badge-category">AI/ML Engineering</span>
+                        <span class="badge badge-category">AI Research</span>
                         <span class="badge badge-score">Signal: 8.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Jul 22</span>
+                    <span>📅 Jul 23, 2024</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper introduces DataFlow-Harness, a platform that significantly improves the practical utility of LLM agents for data processing. By enabling LLMs to construct editable, platform-native data pipelines (DAGs) rather than just free-form scripts, it bridges a critical 'NL2Pipeline gap'. This leads to more reliable, cost-effective, and maintainable data engineering workflows, making LLM agents a more viable tool for production environments. It represents a key step in operationalizing AI-driven code generation for complex tasks.
+                    This work is significant because it demonstrates a successful full-stack optimization strategy for training trillion-parameter Mixture-of-Experts (MoE) models on Huawei's Ascend NPUs, a major alternative to NVIDIA GPUs. It achieves substantial efficiency gains (2.93x MFU improvement) and produces domain-specialized models (for Operations Research) that outperform leading general-purpose models like GPT-5.4-Mini on specific complex reasoning tasks. This showcases the potential of non-GPU hardware for large-scale AI and provides a pathway for developing highly efficient, specialized AI systems, fostering hardware diversity and advanced reasoning capabilities.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    DataFlow-Harness is a new platform that leverages LLM agents to construct editable, platform-native data pipelines (DAGs) rather than raw scripts. This approach achieves a 93.3% pass rate on data engineering tasks, while significantly cutting costs (72.5%) and latency (49.9%) compared to traditional LLM code generation methods.
+                    Researchers have significantly optimized the full-parameter post-training of trillion-parameter DeepSeek-V4 MoE models on Huawei's Ascend SuperPODs, achieving a 2.93x efficiency boost. This optimized infrastructure was then used to develop a specialized model for Operations Research tasks that reportedly outperforms GPT-5.4-Mini.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Addresses the 'NL2Pipeline gap' where LLM coding agents produce scripts that are not automatically materialized as persistent, editable platform artifacts.</li>
+                    <li>Addresses significant system-level challenges (memory, communication, kernel execution) in full-parameter post-training of trillion-parameter-scale MoE models.</li>
                     
-                    <li>DataFlow-Harness guides LLM agents to construct platform-native Directed Acyclic Graphs (DAGs) through typed, incremental mutations.</li>
+                    <li>Presents an end-to-end hierarchical optimization framework, SLAI T-Rex, specifically for DeepSeek-V4 models on Huawei's Ascend NPU SuperPOD.</li>
                     
-                    <li>Comprises DataFlow-Skills for procedural guidance, a Model Context Protocol (MCP) layer exposing live operator registry and pipeline state, and DataFlow-WebUI for conversational authoring synchronized with a visual DAG editor.</li>
+                    <li>Achieved 34.22% Model FLOPs Utilization (MFU), representing a 2.93x improvement over the open-source baseline recipe while maintaining training stability.</li>
                     
-                    <li>Achieves a 93.3% end-to-end pass rate on a 12-task data-engineering benchmark.</li>
+                    <li>Developed a CPT (Continual Pre-Training) and SFT (Supervised Fine-Tuning) workflow for complex Operations Research (OR) tasks, utilizing a specialized dataset of 10K solver-verified synthetic optimization documents.</li>
                     
-                    <li>Reduces monetary cost by 72.5% and generation latency by 49.9% compared to Vanilla Claude Code.</li>
+                    <li>The specialized DeepSeek-V4-Flash model achieved the highest average zero-shot Pass@1 score (71.81%) on OR tasks, outperforming GPT-5.4-Mini by 3.98 percentage points and the base DeepSeek-V4-Flash by 11.27 percentage points.</li>
                     
-                    <li>Maintains reliability close to script-generation baselines while offering lower construction cost and latency.</li>
-                    
-                    <li>Demonstrates that live platform grounding can produce persistent, editable workflow artifacts with high reliability and efficiency.</li>
+                    <li>Demonstrates a full-stack pathway from efficient large-model training on alternative hardware (Ascend) to domain-specialized AI for complex mathematical modeling and reasoning.</li>
                     
                 </ul>
                 
@@ -472,13 +460,15 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Explore the DataFlow-Harness platform and its components (DataFlow-Skills, MCP, DataFlow-WebUI) for potential application in data engineering workflows.</li>
+                    <li>AI researchers should investigate the hierarchical optimization techniques for MoE models on non-GPU architectures to improve efficiency and explore specialized applications.</li>
                     
-                    <li>Consider adopting the principles of 'live platform grounding' and 'typed, incremental mutations' when designing LLM agent-based code generation tools for production systems.</li>
+                    <li>Software engineers involved in distributed AI training should study the system-level challenges and solutions presented for optimizing performance on Ascend NPUs.</li>
                     
-                    <li>Benchmark existing LLM-powered data pipeline generation tools against the metrics (pass rate, cost, latency) presented by DataFlow-Harness.</li>
+                    <li>Semiconductor companies and developers should note the performance achieved on Ascend NPUs as a benchmark for alternative AI hardware capabilities and market potential.</li>
                     
-                    <li>Investigate how similar grounding techniques could be applied to other domains where LLM agents generate complex, structured artifacts.</li>
+                    <li>Companies developing specialized AI solutions should consider full-stack optimization on specific hardware for domain-specific tasks, particularly for complex reasoning like Operations Research.</li>
+                    
+                    <li>Investors should monitor the development and adoption of Huawei's Ascend ecosystem as a potential competitor to NVIDIA in the AI hardware space, given the demonstrated performance gains.</li>
                     
                 </ul>
                 
@@ -486,54 +476,52 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.16617" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2607.20145" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">SciForma: AI Framework for Structure-Faithful Scientific Diagram Generation</h3>
+                    <h3 class="card-title">Quantum Resonance-Enhanced Quantum Battery Performance</h3>
                     <div class="badges">
-                        <span class="badge badge-category">AI/ML</span>
+                        <span class="badge badge-category">Quantum Computing</span>
                         <span class="badge badge-score">Signal: 8.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 July 20, 2024</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
+                    <span>📅 Thu, 23 Jul 2026 00:00:00 -0400</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This research significantly advances the field of generative AI by enabling the creation of highly accurate and structurally faithful scientific diagrams. This is crucial for clear scientific communication, where even minor errors in diagrams can invalidate research logic. By outperforming existing open-source models and even proprietary solutions like GPT-Image-1.5, SciForma brings AI-generated scientific content closer to professional standards, potentially accelerating research, education, and scientific publishing workflows.
+                    This research demonstrates a fundamental mechanism, quantum resonance, to significantly improve the performance of quantum batteries. By showing that charging power increases linearly with time and efficiency remains near unity at resonance, it provides a crucial pathway for developing more effective energy storage solutions for future quantum technologies. This has broad implications for the practical realization of quantum computational resources and advancements in quantum thermodynamics, potentially accelerating the development and scalability of quantum computers and other quantum devices.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    SciForma is a new AI framework designed to generate scientific methodology diagrams with high structural fidelity, ensuring correctness across components, arrows, and text. It introduces Multi-Dimensional Conjunctive Preference Optimization (M-DPO) and surpasses all open-source baselines and GPT-Image-1.5, with its code and data slated for open-source release.
+                    Research indicates that quantum resonance can dramatically enhance the performance of quantum batteries, leading to a linear increase in charging power and near-unity efficiency. This universal mechanism holds significant implications for advancements in quantum energy storage and computation.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Current open-source models struggle with structural fidelity in scientific diagrams, where errors in components, directional relations, or text can invalidate the entire figure.</li>
+                    <li>Quantum resonance, occurring when the ratio of intrinsic system frequency to driving frequency is a rational number, can serve as a powerful resource for quantum batteries.</li>
                     
-                    <li>SciForma addresses this by decomposing diagram quality into three structural axes: Component, Arrow, and Text, guided by a structural inventory.</li>
+                    <li>Modeling batteries as free rotors charged via a kicked protocol, it's shown analytically and numerically that at resonance, charging power increases linearly with time.</li>
                     
-                    <li>It introduces Multi-Dimensional Conjunctive Preference Optimization (M-DPO) for post-training, which enforces simultaneous correctness across all axes and adaptively routes gradients to the most deficient dimension.</li>
+                    <li>Efficiency (extractable stored energy) remains near unity at resonance, despite strong entanglement generation.</li>
                     
-                    <li>SciForma utilizes curated datasets: SciFormaData-700K for structured training and SciFormaBench-2K for logic-verified evaluation.</li>
+                    <li>This enhanced performance persists at higher-order resonances and is demonstrated to be universal across different models, including the interacting kicked top model.</li>
                     
-                    <li>The framework also enables iterative editing at inference time to correct residual errors using the structural inventory.</li>
+                    <li>The experimental realization of this mechanism is noted as feasible.</li>
                     
-                    <li>SciForma-9B significantly outperforms all open-source baselines and GPT-Image-1.5 on both SciFormaBench-2K and AIBench, achieving near proprietary-level structural fidelity.</li>
-                    
-                    <li>The code and data for SciForma will be made publicly available on GitHub.</li>
+                    <li>Resonant charging has significant implications for energy storage, quantum computational resources, and quantum thermodynamics.</li>
                     
                 </ul>
                 
@@ -542,21 +530,19 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Explore the SciForma GitHub repository (when available) to understand the implementation of M-DPO and the structural inventory approach.</li>
+                    <li>Monitor further research on experimental implementations of quantum resonance-enhanced quantum batteries.</li>
                     
-                    <li>Investigate potential applications of SciForma's methodology for other domains requiring high-fidelity, structured visual generation beyond scientific diagrams.</li>
+                    <li>Evaluate the potential impact of improved quantum battery technology on the scalability and practical deployment of quantum computing hardware.</li>
                     
-                    <li>Consider how the M-DPO technique could be adapted or applied to improve structural correctness in other generative AI tasks, especially those with conjunctive correctness criteria.</li>
-                    
-                    <li>For researchers in scientific communication or AI, evaluate SciFormaBench-2K and SciFormaData-700K for future research and benchmarking.</li>
+                    <li>Explore the implications of this mechanism for other quantum thermodynamic processes and quantum metrology applications.</li>
                     
                 </ul>
                 
 
                 <div class="card-footer">
-                    <span>Processed Category: AI</span>
+                    <span>Processed Category: Quantum</span>
                     
-                    <a href="https://huggingface.co/papers/2607.18091" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://arxiv.org/abs/2607.19477" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -567,80 +553,65 @@
         <section id="categories">
             <h2>By Category</h2>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI / Generative Models</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">AlayaWorld: Interactive Long-Horizon World Modeling AI</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">AlayaWorld is an advanced 15B video diffusion transformer AI model capable of generating interactive, long-horizon virtual worlds at 24fps (540p/720p) from text, image, or video inputs. It demonstrates state-of-the-art performance in spatiotemporal consistency and long-term generation, while drastically reducing inference steps from approximately 30 to 4 per chunk, and is offered as an open-source foundation for future research.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.32</span>
-                        
-                        <a href="https://huggingface.co/papers/2607.18367" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/Machine Learning</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Mage-Flow AI Model for Image Generation and Editing</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Mage-Flow is a new, compact 4B-parameter generative AI model designed for efficient text-to-image generation and instruction-based image editing. It achieves competitive performance with larger models through a lightweight VAE, a native-resolution diffusion transformer, and system-level optimizations, resulting in 2.5x faster training and sub-second high-resolution inference on a single A100 GPU.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.9</span>
-                        
-                        <a href="https://huggingface.co/papers/2607.19064" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
             <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Staleness-Adaptive Trust Region (SAT) for Asynchronous Reinforcement Learning</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A novel method, Staleness-Adaptive Trust Region (SAT), has been introduced to stabilize asynchronous reinforcement learning. SAT adaptively controls policy updates based on data staleness, significantly enhancing performance and reliability in large-scale AI training environments.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Riemannian Isometric Policy Optimization for LLM RL</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new Reinforcement Learning (RL) algorithm, Riemannian Isometric Policy Optimization (RIPO), has been introduced to address a fundamental flaw in PPO-Clip's Euclidean policy updates by utilizing Riemannian geometry. This approach prevents 'exploration collapse' in LLMs, resulting in more stable training and up to a 60% performance improvement on benchmarks, setting a new state-of-the-art for LLM RL.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.6</span>
+                        <span>Score: 9.0</span>
                         
-                        <a href="https://huggingface.co/papers/2607.18722" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.10169" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Rubric-Oriented Document Set Selection for LLMs</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new paper introduces `SetwiseEvalKit`, a benchmark designed to evaluate document sets for LLMs by considering inter-document interactions. Alongside this, `Rubric4Setwise` is presented as a training-free method that leverages rubrics to select optimal document sets, significantly outperforming existing rerankers and achieving state-of-the-art downstream generation with fewer resources by moving beyond simple relevance-centric retrieval.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.3</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.19747" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Anchor-Align for Generalizable VLA Finetuning</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Anchor-Align is a novel finetuning method for Vision-Language-Action (VLA) models that aims to prevent representation drift and enhance language-action alignment. It achieves this by distilling representations from a frozen VLM and jointly training language and discrete action predictions, leading to significantly improved generalization and real-robot success rates for robotic manipulation tasks, particularly in out-of-distribution scenarios.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.3</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.13429" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">SLAI T-Rex: DeepSeek-V4 Optimization on Ascend SuperPOD</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers have significantly optimized the full-parameter post-training of trillion-parameter DeepSeek-V4 MoE models on Huawei's Ascend SuperPODs, achieving a 2.93x efficiency boost. This optimized infrastructure was then used to develop a specialized model for Operations Research tasks that reportedly outperforms GPT-5.4-Mini.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.22</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.20145" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
             </div>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/ML Engineering</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">DataFlow-Harness: LLM-Guided Platform for Editable Data Pipelines</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">DataFlow-Harness is a new platform that leverages LLM agents to construct editable, platform-native data pipelines (DAGs) rather than raw scripts. This approach achieves a 93.3% pass rate on data engineering tasks, while significantly cutting costs (72.5%) and latency (49.9%) compared to traditional LLM code generation methods.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Quantum Resonance-Enhanced Quantum Battery Performance</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Research indicates that quantum resonance can dramatically enhance the performance of quantum batteries, leading to a linear increase in charging power and near-unity efficiency. This universal mechanism holds significant implications for advancements in quantum energy storage and computation.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.55</span>
+                        <span>Score: 8.15</span>
                         
-                        <a href="https://huggingface.co/papers/2607.16617" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/ML</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">SciForma: AI Framework for Structure-Faithful Scientific Diagram Generation</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">SciForma is a new AI framework designed to generate scientific methodology diagrams with high structural fidelity, ensuring correctness across components, arrows, and text. It introduces Multi-Dimensional Conjunctive Preference Optimization (M-DPO) and surpasses all open-source baselines and GPT-Image-1.5, with its code and data slated for open-source release.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.52</span>
-                        
-                        <a href="https://huggingface.co/papers/2607.18091" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://arxiv.org/abs/2607.19477" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
