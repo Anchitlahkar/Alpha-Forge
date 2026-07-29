@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-28</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-07-29</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,119 +209,47 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Fully-Quantum Walks Achieve Sixth-Degree Speedup, Shattering Quadratic Limit and Accelerating Practical Quantum Advantage</h3>
+                    <h3 class="card-title">Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory</h3>
                     <div class="badges">
-                        <span class="badge badge-category">Quantum Computing Research</span>
+                        <span class="badge badge-category">AI Research</span>
                         <span class="badge badge-score">Signal: 9.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 2026-07-28T00:00:00-04:00</span>
-                    <span>🌐 Source: arXiv quant-ph</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This research introduces a groundbreaking quantum algorithm that significantly surpasses previous theoretical limits for quantum walks, achieving a sixth-degree polynomial speedup over classical methods. Crucially, it dramatically reduces the estimated time to achieve practical quantum advantage for a specific problem from millennia to less than a day, making quantum computing applications much more tangible and immediate. This breakthrough has profound implications for the feasibility and timeline of quantum computing's real-world impact.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    New 'fully-quantum Metropolis walks' achieve a sixth-degree polynomial speedup for sampling Ising models, exceeding the assumed quadratic limit. This reduces the estimated time for practical quantum advantage from thousands of years to under a day, marking a major step towards practical quantum computing.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Introduces a new class of 'fully-quantum Metropolis walks' where both proposal and acceptance steps are intrinsically quantum, using Hamiltonian simulation.</li>
-                    
-                    <li>Targets the problem of sampling from low-temperature Gibbs distributions of classical dense Ising models.</li>
-                    
-                    <li>Achieves a total sixth-degree polynomial queries speedup compared to the best classical walk, significantly outperforming previous quantum walks.</li>
-                    
-                    <li>Demonstrates that speedups beyond the widely assumed quadratic limit are possible within the quantum walk formalism.</li>
-                    
-                    <li>Fault-tolerant compilation reduces the runtime crossover for practical advantage from approximately 10^3 years to less than one day under identical hardware assumptions.</li>
-                    
-                    <li>Identifies fully-quantum Markov chains as a promising route toward practical quantum advantage.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Monitor the development and experimental validation of fully-quantum Metropolis walks and their applications in quantum machine learning and optimization.</li>
-                    
-                    <li>Evaluate the implications of this 'beyond quadratic' speedup for the overall quantum computing roadmap and investment opportunities in quantum software and algorithms.</li>
-                    
-                    <li>Investigate how the concept of quantum-native proposal mechanisms could be extended to other quantum algorithms and computational problems.</li>
-                    
-                    <li>Assess the potential impact on industries reliant on complex sampling problems, such as materials science, drug discovery, and financial modeling.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: Quantum</span>
-                    
-                    <a href="https://arxiv.org/abs/2607.22818" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">StateAct: Program State, before Pixels, for Long-Horizon Computer-Use Agents</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI/ML</span>
-                        <span class="badge badge-score">Signal: 9.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 2026-07-24</span>
+                    <span>📅 2024-07-27</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper introduces a paradigm shift in computer-use agent design by prioritizing direct interaction with underlying program state (files, backends, DOM) over pixel-based visual perception. This approach leads to significantly more effective, robust, and cost-efficient AI agents capable of handling long-horizon tasks, shifting the bottleneck from perception to reasoning.
+                    This paper identifies and quantifies a critical, often overlooked, 'implicit-association blind spot' in current AI agent memory systems. It highlights that while agents may perfectly store and recall direct facts, they systematically fail to apply relevant world knowledge when the connection is not explicitly present in the query. This 'false promise' of memory can lead to significant failures in real-world AI applications, making the proposed InMind benchmark crucial for developing more robust and human-like AI agents.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    StateAct is a new AI agent architecture that uses code to directly interact with program state, rather than relying primarily on screen pixels, resulting in significantly improved performance (e.g., 20.6% to 26.9% binary success on OSWorld 2.0) and ~9x lower costs for long-horizon computer tasks.
+                    Current AI agent memory systems suffer from an 'implicit-association blind spot,' failing to retrieve and apply relevant world knowledge when queries lack surface-level similarity to stored facts. The InMind benchmark reveals state-of-the-art systems perform poorly on such indirect queries, indicating a fundamental flaw in query-conditioned retrieval interfaces, not just a lack of stored knowledge.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Traditional computer-use agents primarily rely on visual perception (screenshots), which is a lossy representation of the true underlying program state.</li>
+                    <li>Current AI agent long-term memory systems are 'retrieve-only,' assuming query-memory resemblance, leading to an 'implicit-association blind spot.'</li>
                     
-                    <li>StateAct proposes a 'code-first, multi-agent harness' that interacts directly with program state using code as its primary interface.</li>
+                    <li>This blind spot means agents fail to connect seemingly unrelated facts via world knowledge (e.g., tree-nut allergy and macarons, lilies and cats).</li>
                     
-                    <li>A dedicated GUI subagent is invoked only for truly visual subgoals, accounting for a small fraction (1.1%) of main-agent steps.</li>
+                    <li>Agents can perfectly answer direct questions about stored facts but fail to apply them in indirect, context-dependent scenarios, creating a 'false promise' of memory.</li>
                     
-                    <li>Direct access to program state also enables robust verification, allowing an independent 'finish gate' to double-check results for structural failures.</li>
+                    <li>The paper introduces InMind, a 125-task, expert-verified benchmark to measure this blind spot across ten life domains.</li>
                     
-                    <li>The main agent manages long-horizon tasks by handing subgoals to fresh subagents, maintaining focused context.</li>
+                    <li>Benchmarking six state-of-the-art memory systems (vector, graph, agentic) shows they achieve at most 14.4% recall on indirect queries, compared to 84.0% when the memory is explicitly provided in context.</li>
                     
-                    <li>StateAct significantly boosts performance on OSWorld 2.0 for Claude Opus 4.8, increasing binary success from 20.6% to 26.9% and partial success from 54.8% to 61.6%.</li>
+                    <li>The failure is primarily located in the 'query-conditioned interface itself,' suggesting the problem is not merely about storing facts or lacking bridging knowledge, but about how facts are routed and made visible.</li>
                     
-                    <li>This method achieves approximately 9x lower cost per task (~$7.8 vs ~$72/task) due to reduced token usage (224K -> 100K tokens).</li>
-                    
-                    <li>The approach generalizes well, improving performance across five benchmarks and with different models, including a smaller 31B SFR-CUA model.</li>
-                    
-                    <li>The core insight is that grounding action, verification, and memory in program state shifts the main bottleneck from perception to reasoning in computer-use agents.</li>
+                    <li>The core challenge is to move beyond retrieve-only memory to systems that can determine 'what information must remain available because it could matter in ways the current query does not reveal?'</li>
                     
                 </ul>
                 
@@ -330,13 +258,13 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>AI researchers should investigate integrating state-grounding techniques into their agent architectures to develop more capable and efficient AI agents.</li>
+                    <li>AI researchers should focus on developing novel memory architectures that can proactively surface implicitly associated knowledge, rather than relying solely on query-driven retrieval.</li>
                     
-                    <li>Software engineers building automation tools or AI agents should consider adopting a code-first, state-interaction paradigm to enhance robustness and reduce operational costs.</li>
+                    <li>Developers building AI agents and RAG systems should integrate diagnostic tools like InMind to test for implicit-association blind spots and design more robust memory management strategies.</li>
                     
-                    <li>Investors should identify startups and companies leveraging state-based interaction for AI agents, as this approach offers significant competitive advantages in performance and cost efficiency.</li>
+                    <li>Evaluate existing AI agent applications for potential risks arising from this blind spot, especially in critical domains like health, finance, or safety.</li>
                     
-                    <li>Developers of large language models (LLMs) for agentic applications could prioritize improving reasoning capabilities, as this research suggests perception becomes less of a bottleneck with state-grounding.</li>
+                    <li>Explore 'routing' mechanisms that keep important, context-shaping facts visible to the agent, even when not directly queried.</li>
                     
                 </ul>
                 
@@ -344,157 +272,17 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.22798" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2607.24368" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents</h3>
+                    <h3 class="card-title">Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Jul 26</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    JarvisHub addresses a critical limitation in current generative AI by providing an open-source, canvas-native framework for long-horizon, multimodal creative projects. It enables AI agents to collaborate with humans in an iterative, inspectable, and recoverable manner, moving beyond single-step asset generation towards completing entire projects. This fosters more sophisticated human-AI creative workflows and accelerates research and development in agentic AI.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    JarvisHub is an open-source framework that uses an editable canvas as a shared workspace for AI agents and humans to collaborate on complex, multimodal creative projects, enabling agents to plan, generate, revise, and organize over long horizons with full inspectability and recoverability.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Current generative AI tools are limited to single-step generation, discard intermediate context, and lack support for complex, iterative creative workflows.</li>
-                    
-                    <li>JarvisHub introduces a 'canvas-native' approach where an editable canvas serves as the agent's external memory, action space, and shared project state.</li>
-                    
-                    <li>It supports long-horizon multimodal creation (images, videos, websites, presentations) by representing artifacts, dependencies, versions, and feedback as typed canvas nodes and links.</li>
-                    
-                    <li>The framework enables human-steerable creative automation, allowing users to inspect, guide, and intervene in the agent's progressive planning, generation, and revision processes.</li>
-                    
-                    <li>Key benefits include persistent context ('Canvas as Memory'), inspectability, recoverability from failures (fix specific nodes), and support for entire project completion rather than isolated outputs.</li>
-                    
-                    <li>JarvisHub is open-source and showcases three representative use cases: narrative media generation, interactive web development, and presentation creation.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Explore the JarvisHub GitHub repository to understand its architecture and potential for building advanced creative AI applications.</li>
-                    
-                    <li>Investigate how JarvisHub's canvas-native approach could be integrated into existing creative software or AI development pipelines for more robust human-AI collaboration.</li>
-                    
-                    <li>Consider developing new multimodal creative agents or applications that leverage the JarvisHub framework for long-horizon project completion.</li>
-                    
-                    <li>For investors and startups, monitor the adoption and impact of open-source agentic frameworks like JarvisHub on the creative technology and AI agent markets.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2607.23588" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Jul 27</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This research provides a crucial method for democratizing advanced AI capabilities by enabling open-source LLMs to learn sophisticated reasoning strategies from powerful proprietary models more effectively. It addresses a fundamental challenge in knowledge distillation for agentic AI, potentially accelerating the development and deployment of more capable and reliable open-source AI agents for complex, knowledge-intensive tasks.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Researchers introduce Multi-Agent Protocol Distillation (MAPD), a novel framework that uses a structured JSON protocol to effectively distill complex reasoning capabilities from powerful proprietary LLMs into open-source models for agentic search. This method significantly improves performance on QA benchmarks and mitigates common distillation issues like style drift, making open-source agents more capable.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Agentic search, which combines large language models (LLMs) with retrieval for knowledge-intensive tasks, suffers from sparse supervision when optimized with outcome-based reinforcement learning (RL).</li>
-                    
-                    <li>Knowledge distillation from advanced proprietary models is a promising approach for denser guidance, but conventional methods (logit-matching, raw natural language imitation) are ineffective due to hidden logits, mismatched tokenizers, and the transfer of superficial stylistic artifacts rather than core reasoning.</li>
-                    
-                    <li>The paper proposes Multi-Agent Protocol Distillation (MAPD), a joint distillation and RL framework designed to bridge this 'distribution gap' and address heterogeneous distillation problems.</li>
-                    
-                    <li>MAPD utilizes a structured, style-normalized JSON protocol as an intermediate representation, generated by an offline multi-agent system (MAS).</li>
-                    
-                    <li>This MAS decomposes queries, retrieves evidence, repairs failed searches, and converts the exploration trace into a JSON protocol containing the task type, reasoning plan, and extractive grounding facts.</li>
-                    
-                    <li>During training, this dense protocol signal is provided to a privileged branch of the student policy, complementing the sparse RL objective.</li>
-                    
-                    <li>Extensive evaluations across seven QA benchmarks demonstrate that MAPD consistently outperforms competitive distillation and RL methods, achieving average success rates of 39.4% on Qwen3-1.7B and 44.4% on Qwen3-4B.</li>
-                    
-                    <li>The framework generalizes robustly across diverse proprietary teacher models and effectively mitigates student policy issues like style drift and verbosity degeneration.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Investigate MAPD as a potential method for fine-tuning open-source LLMs to enhance their agentic capabilities for specific knowledge-intensive applications.</li>
-                    
-                    <li>Explore the feasibility and tooling required to implement the offline multi-agent system for generating structured reasoning protocols from proprietary model interactions.</li>
-                    
-                    <li>Consider how the protocol-based distillation approach could be adapted or extended to other complex AI tasks beyond agentic search, where structured reasoning is critical.</li>
-                    
-                    <li>Monitor the adoption and further development of MAPD or similar structured distillation techniques within the open-source AI community for potential integration into AI development workflows.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2607.24280" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Data Pyramid for Embodied Manipulation: A Unified Taxonomy for Embodied AI Data</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 7.0</span>
+                        <span class="badge badge-score">Signal: 8.5</span>
                     </div>
                 </div>
                 
@@ -506,28 +294,30 @@
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper provides a crucial organizational framework, the 'Embodied Data Pyramid,' for understanding and managing the diverse and fragmented data ecosystem required for training embodied AI models. By categorizing data sources and analyzing their trade-offs, it offers a roadmap for developing next-generation embodied foundation models, which is essential for advancing robotics and intelligent agents.
+                    Mage-VL addresses a critical limitation of current Vision-Language Models (VLMs) – their inefficiency in real-time streaming perception tasks. By introducing a novel codec-native approach and a highly efficient tokenizer, it enables significantly faster and more resource-efficient multimodal understanding, paving the way for practical real-time AI applications in areas like robotics, interactive AI, and video analysis.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    A paper introducing the 'Embodied Data Pyramid,' a unified taxonomy that organizes five complementary data sources for embodied AI (real-robot, UMI, egocentric/exocentric, simulation, general vision-language data). It analyzes how current embodied foundation models utilize these sources and outlines key open challenges for future research.
+                    Microsoft's Mage-VL is a new multimodal foundation model designed for efficient, real-time streaming perception. It uses a custom codec-native tokenizer (Mage-ViT) to reduce visual token consumption by over 75% and achieves up to 3.5x inference speedup, outperforming larger models on video understanding and spatial reasoning tasks.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Embodied AI requires unique interaction data (perception, physical states, actions) that differs from general multimodal foundation models.</li>
+                    <li>Mage-VL tackles Moravec's paradox in VLMs, improving efficiency for simple streaming perception tasks where traditional models struggle.</li>
                     
-                    <li>The 'Embodied Data Pyramid' is proposed as a unified taxonomy for organizing five complementary data sources: Real-Robot Data, UMI Data, Egocentric & Exocentric Data, Simulation Data, and General Vision-Language Data.</li>
+                    <li>Its core innovation is Mage-ViT, a custom tokenizer that selectively encodes dynamic, entropy-rich regions using motion vectors and residual energy, reducing visual token consumption by over 75%.</li>
                     
-                    <li>The pyramid organizes data based on the tension between scalability and robot alignment, and characterizes each source by data quality, diversity, reusability, and physical fidelity.</li>
+                    <li>Mage-ViT, despite being trained on significantly less data (560M images, 100M video frames), matches or outperforms flagship encoders trained on billions of image-text pairs.</li>
                     
-                    <li>The paper analyzes how recent Embodied Brain Models, Vision-Language-Action Models (VLAs), and World-Action Models (WAMs) combine these heterogeneous data sources in their pretraining recipes.</li>
+                    <li>The model employs a bio-inspired dual-system architecture (lightweight System 1 event gate and causal System 2 decoder) for proactive streaming perception.</li>
                     
-                    <li>Six open challenges are identified: building large-scale tactile datasets, collecting failure and recovery data, developing scalable data-collection pipelines, aligning actions across embodiments, leveraging egocentric data for dexterous manipulation, and designing principled data recipes for robot learning.</li>
+                    <li>Mage-VL-4B demonstrates strong gains in video understanding and 2D/3D spatial reasoning, achieving up to a 3.5x wall-clock inference speedup compared to baselines like Qwen3-VL-4B and Phi-4-reasoning-vision.</li>
+                    
+                    <li>The research provides seven key empirical findings covering aspects like pre-training data efficiency, variable-resolution scaling, codec system acceleration, and AI4AI data pipelines.</li>
                     
                 </ul>
                 
@@ -536,13 +326,13 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Researchers and practitioners in embodied AI should utilize the 'Embodied Data Pyramid' taxonomy to systematically categorize and evaluate data sources for their projects.</li>
+                    <li>Explore Mage-VL's architecture and code (available on GitHub) for potential integration into real-time multimodal AI projects.</li>
                     
-                    <li>When designing embodied AI systems, consider the trade-offs between data scalability and robot alignment as outlined in the pyramid's framework.</li>
+                    <li>Investigate the 'codec-native' approach and Mage-ViT's selective tokenization for optimizing visual data processing in other AI models.</li>
                     
-                    <li>Focus research and development efforts on addressing the identified open challenges, particularly in areas like tactile data collection, failure recovery data, and cross-embodiment action alignment.</li>
+                    <li>Consider the implications of 'AI4AI data pipelines' and 'Zero-Vision SFT for multimodal RL' for future research and development in AI training and reinforcement learning.</li>
                     
-                    <li>Explore principled methods for mixing and aligning diverse data sources to optimize the training of embodied foundation models.</li>
+                    <li>Monitor the adoption and further advancements of efficient streaming multimodal models for applications requiring low-latency perception.</li>
                     
                 </ul>
                 
@@ -550,7 +340,207 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.24744" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2607.24904" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 28</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research significantly lowers the barrier to entry for developing and deploying robotic manipulation policies. By enabling effective training and deployment with high-fidelity, robot-free data, it drastically reduces the cost, time, and complexity associated with real-robot data collection, accelerating progress in automation and robotics. The open-sourcing of a large, high-quality dataset further empowers the robot learning community.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    HiFi-UMI introduces a novel, portable system for collecting high-fidelity, robot-free human demonstration data that, for the first time, allows training and direct deployment of robotic manipulation policies without any real-robot post-training data, matching or exceeding teleoperation baselines. It also open-sources a 2,000-hour dataset.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>The paper addresses the bottleneck of scarce high-fidelity and scalable data for learning deployable manipulation policies.</li>
+                    
+                    <li>HiFi-UMI is a portable, robot-free data-production system designed for high trajectory accuracy (3mm end-effector accuracy), precise synchronization (<40 μs), and ultra-wide field of view sensing.</li>
+                    
+                    <li>It demonstrates 'zero-robot post-training,' meaning policies trained solely on HiFi-UMI demonstrations can be directly deployed on a real robot, matching in-domain teleoperation performance across various backbones.</li>
+                    
+                    <li>The strongest policy achieved 85% success on a precision insertion task, even when no HiFi-UMI data was collected in the evaluation scene.</li>
+                    
+                    <li>Pre-training on 4,000 hours of HiFi-UMI data reduced action error on unseen tasks by 41% and improved real-robot success by 18.1 percentage points.</li>
+                    
+                    <li>The project open-sources HiFi-UMI-2K, a dataset comprising 2,000 hours (482K+ demonstrations) of microsecond-synchronized, ultra-wide-FoV demonstrations, automatically reconstructed and validated.</li>
+                    
+                    <li>The key takeaway is that sufficiently high-fidelity and action-aligned robot-free data can support direct policy deployment, not just pre-training.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Explore the HiFi-UMI-2K dataset for potential use in new robot learning projects or benchmarks.</li>
+                    
+                    <li>Investigate the technical design of the HiFi-UMI data collection system for inspiration in developing more efficient and accurate data acquisition methods for robotics.</li>
+                    
+                    <li>Consider the implications of 'zero-robot post-training' for the economic models and development timelines of robotics startups and automation companies.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.25895" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 28</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research addresses a significant and costly bottleneck in modern design workflows by enabling the conversion of static raster images into fully editable design files. Its innovative agentic AI framework with 'graceful verification' offers a robust solution, potentially revolutionizing design automation, improving efficiency for designers and developers, and opening new avenues for AI-powered creative tools.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    ReDesign is an AI agentic framework that converts raster images into editable design files (recovering typography, vector geometry, colors, grouping, and layer order) by decomposing them using specialized tools and a novel 'graceful verification' process, achieving superior visual fidelity and editability compared to existing methods.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Solves the challenging problem of recovering editable design structures from raster images, a common bottleneck in design workflows.</li>
+                    
+                    <li>Introduces ReDesign, an agentic AI framework that builds an editable layer hierarchy by intelligently selecting and composing specialized tools across different modalities.</li>
+                    
+                    <li>Features 'graceful verification' at each expansion step, providing local feedback (accept, prune, retry) to prevent error accumulation and ensure reliable output.</li>
+                    
+                    <li>Developed the Figma Edit Replay Benchmark, a new dataset consisting of 909 Figma files and 14,796 controlled edit instructions, to evaluate editability at scale.</li>
+                    
+                    <li>Achieves strong visual fidelity and the highest editability across layout, color, and text edits, outperforming layered decomposition baselines and serial tool-use pipelines.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Explore the ReDesign project page and GitHub repository to understand the technical implementation and potential for integration into design tools.</li>
+                    
+                    <li>Investigate the Figma Edit Replay Benchmark for use in evaluating other design automation or image-to-design conversion models.</li>
+                    
+                    <li>Consider the implications of agentic AI frameworks with robust error handling ('graceful verification') for other complex, multi-step AI tasks in software engineering or creative industries.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.25565" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Quantum Circuits Proposed for Detecting the Elusive Unruh Effect</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Wed, 29 Jul 2026 00:00:00 -0400</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research proposes a concrete, experimentally feasible method using existing quantum hardware (superconducting fluxonium circuits) to detect the elusive timelike Unruh effect. This could lead to the first experimental verification of a fundamental prediction of quantum field theory and open new avenues for using engineered quantum systems to explore foundational physics. It represents a significant advancement in applying quantum technologies beyond computation to fundamental scientific discovery.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A new method using superconducting fluxonium circuits is proposed to detect the timelike Unruh effect, offering a three-order-of-magnitude sensitivity enhancement and a realistic platform for experimentally probing fundamental quantum fields.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>The Unruh effect, where an accelerating observer perceives vacuum as a thermal bath, is experimentally challenging to detect directly.</li>
+                    
+                    <li>The 'timelike Unruh effect,' arising from entanglement of massless fields, offers a more feasible detection route.</li>
+                    
+                    <li>The proposed detector utilizes superconducting fluxonium circuits, which naturally provide the required two quasi-degenerate ground states and a tunable excited state (an effective Λ-system).</li>
+                    
+                    <li>By modulating the excited-state transition frequency, the detector accumulates a geometric phase associated with the timelike Unruh effect.</li>
+                    
+                    <li>Open-system simulations predict a ~10% shift in ground-state population within 530 ns.</li>
+                    
+                    <li>This method offers a three-order-of-magnitude sensitivity enhancement compared to traditional two-level Unruh-DeWitt detectors.</li>
+                    
+                    <li>The work establishes a realistic quantum-circuit platform for experimentally probing fundamental quantum fields.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Monitor experimental progress in detecting the Unruh effect using superconducting quantum circuits.</li>
+                    
+                    <li>Investigate the specific design and fabrication challenges of fluxonium circuits for high-precision quantum sensing applications.</li>
+                    
+                    <li>Explore potential implications of verifying the Unruh effect for quantum gravity or quantum information theory.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2607.24836" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -561,70 +551,65 @@
         <section id="categories">
             <h2>By Category</h2>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing Research</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Fully-Quantum Walks Achieve Sixth-Degree Speedup, Shattering Quadratic Limit and Accelerating Practical Quantum Advantage</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">New 'fully-quantum Metropolis walks' achieve a sixth-degree polynomial speedup for sampling Ising models, exceeding the assumed quadratic limit. This reduces the estimated time for practical quantum advantage from thousands of years to under a day, marking a major step towards practical quantum computing.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.37</span>
-                        
-                        <a href="https://arxiv.org/abs/2607.22818" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/ML</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">StateAct: Program State, before Pixels, for Long-Horizon Computer-Use Agents</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">StateAct is a new AI agent architecture that uses code to directly interact with program state, rather than relying primarily on screen pixels, resulting in significantly improved performance (e.g., 20.6% to 26.9% binary success on OSWorld 2.0) and ~9x lower costs for long-horizon computer tasks.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.32</span>
-                        
-                        <a href="https://huggingface.co/papers/2607.22798" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
             <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">JarvisHub is an open-source framework that uses an editable canvas as a shared workspace for AI agents and humans to collaborate on complex, multimodal creative projects, enabling agents to plan, generate, revise, and organize over long horizons with full inspectability and recoverability.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Current AI agent memory systems suffer from an 'implicit-association blind spot,' failing to retrieve and apply relevant world knowledge when queries lack surface-level similarity to stored facts. The InMind benchmark reveals state-of-the-art systems perform poorly on such indirect queries, indicating a fundamental flaw in query-conditioned retrieval interfaces, not just a lack of stored knowledge.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.0</span>
+                        <span>Score: 9.07</span>
                         
-                        <a href="https://huggingface.co/papers/2607.23588" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.24368" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers introduce Multi-Agent Protocol Distillation (MAPD), a novel framework that uses a structured JSON protocol to effectively distill complex reasoning capabilities from powerful proprietary LLMs into open-source models for agentic search. This method significantly improves performance on QA benchmarks and mitigates common distillation issues like style drift, making open-source agents more capable.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Microsoft's Mage-VL is a new multimodal foundation model designed for efficient, real-time streaming perception. It uses a custom codec-native tokenizer (Mage-ViT) to reduce visual token consumption by over 75% and achieves up to 3.5x inference speedup, outperforming larger models on video understanding and spatial reasoning tasks.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.82</span>
+                        <span>Score: 8.65</span>
                         
-                        <a href="https://huggingface.co/papers/2607.24280" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.24904" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Data Pyramid for Embodied Manipulation: A Unified Taxonomy for Embodied AI Data</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A paper introducing the 'Embodied Data Pyramid,' a unified taxonomy that organizes five complementary data sources for embodied AI (real-robot, UMI, egocentric/exocentric, simulation, general vision-language data). It analyzes how current embodied foundation models utilize these sources and outlines key open challenges for future research.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">HiFi-UMI introduces a novel, portable system for collecting high-fidelity, robot-free human demonstration data that, for the first time, allows training and direct deployment of robotic manipulation policies without any real-robot post-training data, matching or exceeding teleoperation baselines. It also open-sources a 2,000-hour dataset.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.52</span>
+                        <span>Score: 8.3</span>
                         
-                        <a href="https://huggingface.co/papers/2607.24744" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.25895" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">ReDesign is an AI agentic framework that converts raster images into editable design files (recovering typography, vector geometry, colors, grouping, and layer order) by decomposing them using specialized tools and a novel 'graceful verification' process, achieving superior visual fidelity and editability compared to existing methods.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.22</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.25565" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Quantum Circuits Proposed for Detecting the Elusive Unruh Effect</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new method using superconducting fluxonium circuits is proposed to detect the timelike Unruh effect, offering a three-order-of-magnitude sensitivity enhancement and a realistic platform for experimentally probing fundamental quantum fields.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.22</span>
+                        
+                        <a href="https://arxiv.org/abs/2607.24836" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
