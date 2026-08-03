@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-02</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-03</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -207,16 +207,422 @@
         <section id="top">
             <h2>Today's Top Insights</h2>
             
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Scaling Properties of Text Conditioning in Visual Generation</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.5</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 July 31, 2026</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper uncovers crucial empirical scaling properties for text conditioning in visual generation, revealing that the effectiveness of prompts scales not with token count, but with the 'structuredness' of the language. This fundamental insight provides a new theoretical and practical framework for optimizing prompt engineering and training generative AI models, leading to significantly improved performance in visual generation tasks. Understanding these scaling laws is vital for advancing the capabilities and efficiency of text-to-image models.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A study reveals that diffusion loss in visual generation scales with the 'structured language' within prompts, rather than just token count. By quantifying structured language using GPG and ED metrics, researchers developed a system that leverages these scaling properties to create structured prompts and train a prompter, outperforming open-weight models and matching strong closed-weight models.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>The study empirically investigates scaling properties of text conditioning in visual generation, a previously under-measured area.</li>
+                    
+                    <li>Contrary to expectations that diffusion loss doesn't scale with natural language token count, it's found that converged diffusion loss scales with the *amount of structured language* in the prompt.</li>
+                    
+                    <li>Two metrics, GPG (white-box likelihood) and ED (black-box attribute), were adapted to quantify structured language.</li>
+                    
+                    <li>Converged diffusion loss decreases approximately linearly with GPG and follows a power law with ED.</li>
+                    
+                    <li>These scaling properties guided improvements in 'diffusability' (via structured prompts with semantic/geometric annotations) and 'promptability' (via a trained prompter using supervised fine-tuning, cold-start, and verifier-gated on-policy distillation).</li>
+                    
+                    <li>The resulting system significantly outperforms all evaluated open-weight models and matches or surpasses the strongest closed-weight models on various compositional, reasoning, and world-knowledge benchmarks.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers should investigate the 'structured language' concept further and explore new ways to quantify and integrate it into prompt design and model architectures.</li>
+                    
+                    <li>Developers of generative AI models should consider incorporating structured prompting techniques and prompter training methods based on these scaling properties to enhance model performance.</li>
+                    
+                    <li>Practitioners in prompt engineering should experiment with adding semantic and geometric annotations or other forms of structured language to their prompts for visual generation tasks.</li>
+                    
+                    <li>Evaluate existing prompt engineering tools and workflows against the insights from this paper to identify areas for improvement in leveraging structured language.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.29679" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
             
-            <p style="color: var(--text-muted); font-style: italic;">No insights available for today.</p>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">RLSVR: Self-Verifiable Rewards for LLM Self-Improvement</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Jul 26</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper addresses a critical bottleneck in Large Language Model (LLM) development: the difficulty and cost of generating reliable reward signals for open-ended tasks. By introducing RLSVR and the concept of 'task transformation' to create self-verifiable environments, it enables more scalable, efficient, and less biased LLM self-improvement. This expands the applicability of powerful reinforcement learning techniques beyond inherently verifiable domains, potentially leading to more capable and versatile LLMs for a wider range of real-world applications.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A new method called RLSVR (Reinforcement Learning with Self-Verifiable Rewards) enables automatic reward generation for open-ended LLM tasks by transforming them into self-verifiable proxy environments, leading to improved LLM performance on both open-ended and reasoning tasks.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Reinforcement Learning with Verifiable Rewards (RLVR) has advanced LLMs for reasoning tasks (math, coding) but is limited to domains where correctness can be deterministically verified.</li>
+                    
+                    <li>Open-ended tasks (e.g., text summarization, creative writing) typically rely on human preferences, reward models, or LLM-based judges, introducing bias, bottlenecks, and high inference costs.</li>
+                    
+                    <li>RLSVR (Reinforcement Learning with Self-Verifiable Rewards) is proposed as a task-transformation-based training paradigm to extend RLVR to open-ended tasks.</li>
+                    
+                    <li>RLSVR transforms open-ended tasks into 'verifiable proxy environments' where internal rules and interaction outcomes automatically generate reward signals.</li>
+                    
+                    <li>SpyRL, a multi-agent self-play environment inspired by 'Who Is the Spy?', is an instantiation of RLSVR, where predetermined spy identities provide fully verifiable rewards.</li>
+                    
+                    <li>Experiments show SpyRL outperforms existing self-improvement methods on non-verifiable tasks and yields consistent gains on verifiable reasoning tasks.</li>
+                    
+                    <li>The research demonstrates that task transformation can extend scalable RLVR-based self-improvement beyond inherently verifiable domains, making LLM training more efficient and robust.</li>
+                    
+                    <li>Models and code for SpyRL have been open-sourced on GitHub.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Investigate the RLSVR/SpyRL methodology for potential integration into LLM fine-tuning pipelines, especially for applications involving creative writing, summarization, or other open-ended tasks.</li>
+                    
+                    <li>Explore the general principle of 'task transformation' to generate self-supervision or verifiable rewards in other complex AI problems beyond LLMs.</li>
+                    
+                    <li>Review the released GitHub repository (github.com/wangqinsi1/SpyRL) to understand the practical implementation details and adapt it for specific use cases.</li>
+                    
+                    <li>Assess the potential cost savings and performance improvements by reducing reliance on human labeling or expensive reward models for open-ended LLM evaluation and training.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.23802" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">N_0-VTLA: Scaling Vision-Tactile-Language-Action Model</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI/Robotics</span>
+                        <span class="badge badge-score">Signal: 9.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 July 26</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper introduces N_0-VTLA, a pioneering vision-tactile-language-action (VTLA) foundation model that significantly advances robotic manipulation capabilities. By integrating tactile perception at scale and introducing an innovative offline reinforcement learning method (ALTER), it enables robots to perform fine-grained, contact-rich tasks with unprecedented success rates. This is crucial for developing more dexterous and adaptable robots for real-world applications, pushing the boundaries of embodied AI and multimodal learning.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    N_0-VTLA is a groundbreaking vision-tactile-language-action (VTLA) foundation model, the first to be pre-trained on extensive tactile data (NeoData). It demonstrates exceptional performance in fine-grained, contact-rich robotic manipulation and significantly improves offline policies using ALTER, achieving higher success rates in both real-robot and simulation tasks compared to existing baselines.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>N_0-VTLA is a Vision-Tactile-Language-Action (VTLA) foundation model designed for fine-grained, contact-rich manipulation and offline policy improvement.</li>
+                    
+                    <li>It is the first VTLA model pre-trained on large-scale tactile data, utilizing a dataset called NeoData.</li>
+                    
+                    <li>The training recipe includes visuo-tactile pre-training, staged tactile-pathway integration for fine motion adjustments, and ALTER for offline policy improvement.</li>
+                    
+                    <li>ALTER is an advantage-conditioned offline reinforcement learning method that converts relative progress into binary advantage labels for policy training on fixed deployment data.</li>
+                    
+                    <li>N_0-VTLA significantly outperforms strong baselines, winning all nine real-robot NeoReal tasks and achieving 63.8% mean success on a 20-task simulation suite (vs. 44.0% for baseline).</li>
+                    
+                    <li>With ALTER, policies achieve 75-95% success on challenging long-horizon real-robot tasks, including deformable object manipulation.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Researchers in AI and robotics should investigate N_0-VTLA's architecture and training methodology, particularly the integration of tactile data and the ALTER method, for their own projects.</li>
+                    
+                    <li>Software engineers developing robotic control systems or multimodal AI models should consider how to incorporate tactile sensing and similar offline learning techniques.</li>
+                    
+                    <li>Startups in the robotics and automation space should evaluate the potential of tactile-driven manipulation for their products and explore the feasibility of deploying such models.</li>
+                    
+                    <li>Investors interested in advanced AI and robotics should monitor companies and research groups working on multimodal foundation models and dexterous manipulation.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2607.23782" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Experimental Demonstration of a Measurement-Feedback Quantum Information Engine</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 2026-08-03</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research represents a significant experimental breakthrough in quantum thermodynamics. By demonstrating a quantum information engine that uses measurement and feedback as an energy source, it challenges fundamental limits of efficiency (exceeding the Otto limit) and overcomes the traditional efficiency-power trade-off. This opens new avenues for understanding and harnessing quantum mechanics for energy conversion, potentially influencing future quantum technologies and the design of highly efficient quantum devices.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Researchers have experimentally demonstrated a quantum information engine using trapped ions. This engine utilizes measurement-feedback as a nonthermal energy source, achieving efficiencies beyond the Otto limit and simultaneously high efficiency and power by leveraging quantum inner friction.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>An innovative measurement-feedback quantum information engine model was experimentally demonstrated using a trapped 40Ca+ ion system.</li>
+                    
+                    <li>Projective measurement replaces the hot reservoir, acting as a nonthermal energy source, with feedback control steering the system.</li>
+                    
+                    <li>The engine converges to a stable operating regime with a fully resolved energetic balance from arbitrary initial states.</li>
+                    
+                    <li>Measurement-induced coherence and quantum inner friction can be tuned to enhance engine efficiency beyond the traditional Otto limit.</li>
+                    
+                    <li>Quantum inner friction can break the traditional efficiency-power trade-off, allowing for synchronous achievement of high efficiency and large power.</li>
+                    
+                    <li>The experiment establishes a route toward information-to-work quantum engines, converting finite-time irreversibility into performance-enhancing resources.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Monitor further developments in quantum thermodynamics and quantum engine research for potential applications in quantum computing or energy-efficient quantum systems.</li>
+                    
+                    <li>Investigate how the principles of measurement-feedback and information-to-work conversion could be applied to improve control or energy management in quantum computing architectures.</li>
+                    
+                    <li>Explore the theoretical implications of breaking the efficiency-power trade-off in other quantum systems or future quantum technologies.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2607.28702" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Exponentially Large Coherence via Cascaded Amplifiers</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 2026-08-03T00:00:00-04:00</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This theoretical proposal offers a novel and potentially more practical pathway to achieve unprecedented levels of photon coherence, a fundamental resource for advancing quantum computing, quantum communication, and other quantum technologies. By achieving exponential scaling with conventional components, it could significantly accelerate the development of more robust and powerful quantum systems.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Researchers propose a new theoretical method that uses cascaded linear amplifiers to achieve exponentially large photon coherence. This approach surpasses current limits and could enable more powerful quantum technologies using conventional components.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Standard laser beams have limited photon coherence (at most 8μ²).</li>
+                    
+                    <li>Quantum-engineered lasers, though unrealized, are projected to have coherence scaling as μ⁴ and require unconventional mechanisms.</li>
+                    
+                    <li>The paper proposes using cascaded linear amplifiers with conventional couplings to increase coherence.</li>
+                    
+                    <li>This approach can theoretically achieve coherence scaling exponentially in μ (total source excitation number).</li>
+                    
+                    <li>Two amplifiers are sufficient to surpass the standard μ² scaling.</li>
+                    
+                    <li>The exponential scaling is achieved by dropping the requirement on the beam's standard statistical properties.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Researchers in quantum optics should explore experimental validation of cascaded amplifier designs for high coherence.</li>
+                    
+                    <li>Quantum hardware developers should consider the implications of exponentially increased coherence for qubit design, quantum communication protocols, and quantum sensing applications.</li>
+                    
+                    <li>Investors and startups in the quantum technology sector should monitor advancements in high-coherence light sources as potential enablers for next-generation quantum devices.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2607.28716" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
             
         </section>
 
         <section id="categories">
             <h2>By Category</h2>
             
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Scaling Properties of Text Conditioning in Visual Generation</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A study reveals that diffusion loss in visual generation scales with the 'structured language' within prompts, rather than just token count. By quantifying structured language using GPG and ED metrics, researchers developed a system that leverages these scaling properties to create structured prompts and train a prompter, outperforming open-weight models and matching strong closed-weight models.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.57</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.29679" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">RLSVR: Self-Verifiable Rewards for LLM Self-Improvement</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new method called RLSVR (Reinforcement Learning with Self-Verifiable Rewards) enables automatic reward generation for open-ended LLM tasks by transforming them into self-verifiable proxy environments, leading to improved LLM performance on both open-ended and reasoning tasks.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.3</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.23802" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
             
-            <p style="color: var(--text-muted); font-style: italic;">No categorized insights available.</p>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/Robotics</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">N_0-VTLA: Scaling Vision-Tactile-Language-Action Model</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">N_0-VTLA is a groundbreaking vision-tactile-language-action (VTLA) foundation model, the first to be pre-trained on extensive tactile data (NeoData). It demonstrates exceptional performance in fine-grained, contact-rich robotic manipulation and significantly improves offline policies using ALTER, achieving higher success rates in both real-robot and simulation tasks compared to existing baselines.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.25</span>
+                        
+                        <a href="https://huggingface.co/papers/2607.23782" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Experimental Demonstration of a Measurement-Feedback Quantum Information Engine</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers have experimentally demonstrated a quantum information engine using trapped ions. This engine utilizes measurement-feedback as a nonthermal energy source, achieving efficiencies beyond the Otto limit and simultaneously high efficiency and power by leveraging quantum inner friction.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.22</span>
+                        
+                        <a href="https://arxiv.org/abs/2607.28702" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Exponentially Large Coherence via Cascaded Amplifiers</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers propose a new theoretical method that uses cascaded linear amplifiers to achieve exponentially large photon coherence. This approach surpasses current limits and could enable more powerful quantum technologies using conventional components.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.22</span>
+                        
+                        <a href="https://arxiv.org/abs/2607.28716" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
             
         </section>
 
