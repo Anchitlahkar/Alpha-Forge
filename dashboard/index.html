@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-03</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-04</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,7 +209,7 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Scaling Properties of Text Conditioning in Visual Generation</h3>
+                    <h3 class="card-title">ByteDance's SwanTale AI Model</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
                         <span class="badge badge-score">Signal: 8.5</span>
@@ -217,37 +217,39 @@
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 July 31, 2026</span>
+                    <span>📅 Aug 3</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper uncovers crucial empirical scaling properties for text conditioning in visual generation, revealing that the effectiveness of prompts scales not with token count, but with the 'structuredness' of the language. This fundamental insight provides a new theoretical and practical framework for optimizing prompt engineering and training generative AI models, leading to significantly improved performance in visual generation tasks. Understanding these scaling laws is vital for advancing the capabilities and efficiency of text-to-image models.
+                    This paper introduces SwanTale, a significant advancement in multi-speaker speech and audio generation. It addresses critical needs in media production by enabling creators to generate diverse voices and acoustic scenes with natural language instructions or reference audio, even without prior recordings. This capability streamlines content creation workflows for animation, audio drama, movies, games, and podcasts, potentially lowering production barriers and fostering new forms of expressive digital content.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    A study reveals that diffusion loss in visual generation scales with the 'structured language' within prompts, rather than just token count. By quantifying structured language using GPG and ED metrics, researchers developed a system that leverages these scaling properties to create structured prompts and train a prompter, outperforming open-weight models and matching strong closed-weight models.
+                    ByteDance's SwanTale is a new AI model designed for unified multi-speaker speech and audio generation, supporting both instruction-based and zero-shot tasks. It utilizes a novel data preparation method (SwanData-Caption) and a unique model architecture (SwanVAE, Unified MoE) to achieve high-quality, expressive audio generation, outperforming existing methods.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>The study empirically investigates scaling properties of text conditioning in visual generation, a previously under-measured area.</li>
+                    <li>SwanTale is a unified multi-speaker expressive speech and audio generation model developed by ByteDance.</li>
                     
-                    <li>Contrary to expectations that diffusion loss doesn't scale with natural language token count, it's found that converged diffusion loss scales with the *amount of structured language* in the prompt.</li>
+                    <li>It supports two key tasks: 'instruct tasks' (generating audio from natural language descriptions of environment, speaker style, and content) and 'zero-shot tasks' (generating audio using reference audio and content).</li>
                     
-                    <li>Two metrics, GPG (white-box likelihood) and ED (black-box attribute), were adapted to quantify structured language.</li>
+                    <li>The system includes SwanData-Caption, a data preparation method that cleans raw audio, adds synthetic coverage, and annotates multi-level captions.</li>
                     
-                    <li>Converged diffusion loss decreases approximately linearly with GPG and follows a power law with ED.</li>
+                    <li>SwanTale's model architecture incorporates SwanVAE for high-quality multi-audio-modality generation, reward-conditioned quality control, Engram conditioning, and Unified MoE for multi-task modeling.</li>
                     
-                    <li>These scaling properties guided improvements in 'diffusability' (via structured prompts with semantic/geometric annotations) and 'promptability' (via a trained prompter using supervised fine-tuning, cold-start, and verifier-gated on-policy distillation).</li>
+                    <li>It utilizes curriculum learning and GRPO post-training to progressively enhance its capabilities.</li>
                     
-                    <li>The resulting system significantly outperforms all evaluated open-weight models and matches or surpasses the strongest closed-weight models on various compositional, reasoning, and world-knowledge benchmarks.</li>
+                    <li>Experimental results demonstrate SwanTale's superior performance across multiple zero-shot and instruct metrics, achieving the best expressiveness scores and supporting complex multi-speaker audio generation.</li>
+                    
+                    <li>The technology has broad applications in animation dubbing, audio drama, movies, advertising, games, podcasts, and short-video production.</li>
                     
                 </ul>
                 
@@ -256,13 +258,13 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>AI researchers should investigate the 'structured language' concept further and explore new ways to quantify and integrate it into prompt design and model architectures.</li>
+                    <li>Explore the SwanTale project page and demos (https://swanai-gc.github.io/#swantale) to understand its capabilities firsthand.</li>
                     
-                    <li>Developers of generative AI models should consider incorporating structured prompting techniques and prompter training methods based on these scaling properties to enhance model performance.</li>
+                    <li>Researchers in AI audio generation should review the paper's methodologies (SwanData-Caption, SwanVAE, Unified MoE, GRPO) for potential integration or inspiration in their own work.</li>
                     
-                    <li>Practitioners in prompt engineering should experiment with adding semantic and geometric annotations or other forms of structured language to their prompts for visual generation tasks.</li>
+                    <li>Software engineers and developers in media production or content creation should consider how such advanced multi-speaker audio generation tools could be integrated into their platforms or workflows.</li>
                     
-                    <li>Evaluate existing prompt engineering tools and workflows against the insights from this paper to identify areas for improvement in leveraging structured language.</li>
+                    <li>Investors and startup founders should monitor the development and adoption of advanced AI audio generation technologies like SwanTale, as they represent significant opportunities for innovation and market disruption in the creative industries.</li>
                     
                 </ul>
                 
@@ -270,14 +272,80 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.29679" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.02023" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">RLSVR: Self-Verifiable Rewards for LLM Self-Improvement</h3>
+                    <h3 class="card-title">Symmetry-initialized Quantum Gibbs Sampling</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 2026-08-04T00:00:00-04:00</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This article presents a significant theoretical advancement in quantum computing, specifically addressing the critical challenge of slow mixing times in quantum Gibbs samplers. By introducing a method based on representation theory to correctly initialize these samplers, it promises a 'fundamental, asymptotic acceleration' of mixing time. This could dramatically improve the efficiency and practicality of quantum algorithms used in simulation, optimization, and quantum machine learning, making them viable for more complex problems.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A new theoretical framework utilizes representation theory to significantly accelerate quantum Gibbs sampling. By correctly initializing based on a measurable 'asymmetry,' it achieves asymptotic acceleration and a cascade of mixing-time improvements, particularly for non-Abelian symmetries.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Correct initialization, determined by representation theory, can asymptotically accelerate the mixing time of quantum Gibbs samplers, especially when the bottleneck is a weakly broken symmetry.</li>
+                    
+                    <li>The bottleneck eigenvector for weakly broken symmetries is identified as the symmetry charge, which is otherwise exponentially expensive to determine.</li>
+                    
+                    <li>For non-Abelian groups, the optimal initialization target is the group-averaging asymmetry.</li>
+                    
+                    <li>Projecting out this asymmetry requires a G-invariant input; partial, subgroup-invariant inputs produce a 'cascade' of mixing-time speedups indexed by the subgroup lattice.</li>
+                    
+                    <li>The asymmetry is a directly measurable initialization target, and the results have been verified analytically and numerically in an SU(2) Davies sampler.</li>
+                    
+                    <li>This method provides fundamental speedups, with relaxation rates scaling linearly with the symmetry-breaking parameter, and is provably superior to merely matching first moments.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Quantum algorithm researchers should investigate implementing asymmetry-initialized Gibbs sampling in quantum simulation and optimization tasks to leverage the promised asymptotic speedups.</li>
+                    
+                    <li>Quantum software engineers and library developers should monitor the practical implications and potential for integrating these initialization techniques into future quantum programming frameworks.</li>
+                    
+                    <li>Researchers in quantum machine learning should explore how faster quantum Gibbs sampling can enhance the training and performance of quantum Boltzmann machines and other generative models.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2608.00055" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">SWE-Touch Benchmark for Coding Agents</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
                         <span class="badge badge-score">Signal: 8.0</span>
@@ -285,41 +353,41 @@
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Jul 26</span>
+                    <span>📅 Aug 3</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper addresses a critical bottleneck in Large Language Model (LLM) development: the difficulty and cost of generating reliable reward signals for open-ended tasks. By introducing RLSVR and the concept of 'task transformation' to create self-verifiable environments, it enables more scalable, efficient, and less biased LLM self-improvement. This expands the applicability of powerful reinforcement learning techniques beyond inherently verifiable domains, potentially leading to more capable and versatile LLMs for a wider range of real-world applications.
+                    This paper introduces a critical new benchmark, SWE-Touch, that exposes a significant gap in current coding agent capabilities: their inability to effectively operate in shared workspaces where human users make concurrent code changes. It highlights that strong autonomous performance does not translate to robust collaborative behavior, revealing key areas for future AI research and development in software engineering tools. This directly impacts the practical utility and adoption of AI coding assistants.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    A new method called RLSVR (Reinforcement Learning with Self-Verifiable Rewards) enables automatic reward generation for open-ended LLM tasks by transforming them into self-verifiable proxy environments, leading to improved LLM performance on both open-ended and reasoning tasks.
+                    SWE-Touch is a new benchmark designed to stress-test AI coding agents by introducing plausible, task-conflicting user edits into the codebase during an ongoing task. The benchmark revealed that most agents, particularly open-source ones, experienced a significant performance degradation (average 7.7 percentage points drop) when faced with these 'Counter-Edits,' often failing to detect or reconcile the changes. Only top proprietary models like Claude Opus 4.8 and GPT 5.5 showed strong resilience, highlighting a major challenge for AI in collaborative software development.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Reinforcement Learning with Verifiable Rewards (RLVR) has advanced LLMs for reasoning tasks (math, coding) but is limited to domains where correctness can be deterministically verified.</li>
+                    <li>Existing coding agent benchmarks typically evaluate agents working in isolation on static codebases, which doesn't reflect real-world collaborative development.</li>
                     
-                    <li>Open-ended tasks (e.g., text summarization, creative writing) typically rely on human preferences, reward models, or LLM-based judges, introducing bias, bottlenecks, and high inference costs.</li>
+                    <li>Analysis of SWE-chat data shows 59% of sessions involve user-authored repository changes during an agent's task.</li>
                     
-                    <li>RLSVR (Reinforcement Learning with Self-Verifiable Rewards) is proposed as a task-transformation-based training paradigm to extend RLVR to open-ended tasks.</li>
+                    <li>SWE-Touch is a new framework that introduces 'Counter-Edits' – plausible, task-conflicting user code changes injected with contextual messages – to evaluate agents in a shared workspace.</li>
                     
-                    <li>RLSVR transforms open-ended tasks into 'verifiable proxy environments' where internal rules and interaction outcomes automatically generate reward signals.</li>
+                    <li>Evaluating nine coding models (including frontier models) on SWE-bench Verified and longer-horizon tasks, SWE-Touch found an average 7.7 percentage point drop in resolve rate due to Counter-Edits.</li>
                     
-                    <li>SpyRL, a multi-agent self-play environment inspired by 'Who Is the Spy?', is an instantiation of RLSVR, where predetermined spy identities provide fully verifiable rewards.</li>
+                    <li>63.3% of failed runs resulted from agents simply retaining the user's conflicting code untouched.</li>
                     
-                    <li>Experiments show SpyRL outperforms existing self-improvement methods on non-verifiable tasks and yields consistent gains on verifiable reasoning tasks.</li>
+                    <li>Proprietary models like Claude Opus 4.8 and GPT 5.5 showed strong resilience, while many open-source models degraded substantially (up to 16.5 points).</li>
                     
-                    <li>The research demonstrates that task transformation can extend scalable RLVR-based self-improvement beyond inherently verifiable domains, making LLM training more efficient and robust.</li>
+                    <li>The performance degradation is primarily driven by the code edit itself, not the accompanying user message.</li>
                     
-                    <li>Models and code for SpyRL have been open-sourced on GitHub.</li>
+                    <li>Findings suggest that current coding agents lack the state awareness and adaptive behavior needed for effective shared-workspace collaboration, specifically in detecting changes, reconciling conflicts, and re-validating affected behavior.</li>
                     
                 </ul>
                 
@@ -328,13 +396,13 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Investigate the RLSVR/SpyRL methodology for potential integration into LLM fine-tuning pipelines, especially for applications involving creative writing, summarization, or other open-ended tasks.</li>
+                    <li>AI researchers should focus on developing coding agents with improved workspace awareness, conflict detection, and reconciliation capabilities.</li>
                     
-                    <li>Explore the general principle of 'task transformation' to generate self-supervision or verifiable rewards in other complex AI problems beyond LLMs.</li>
+                    <li>Developers of AI coding tools should integrate SWE-Touch or similar methodologies into their evaluation pipelines to ensure robustness in collaborative environments.</li>
                     
-                    <li>Review the released GitHub repository (github.com/wangqinsi1/SpyRL) to understand the practical implementation details and adapt it for specific use cases.</li>
+                    <li>Companies investing in or building AI-powered software development tools should prioritize models that demonstrate resilience to dynamic codebases and human intervention.</li>
                     
-                    <li>Assess the potential cost savings and performance improvements by reducing reliance on human labeling or expensive reward models for open-ended LLM evaluation and training.</li>
+                    <li>Software engineers adopting AI coding assistants should be aware of these limitations and understand that current tools may struggle with concurrent human edits.</li>
                     
                 </ul>
                 
@@ -342,52 +410,52 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.23802" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.02499" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">N_0-VTLA: Scaling Vision-Tactile-Language-Action Model</h3>
+                    <h3 class="card-title">WCM for Vision-Language-Action Reinforcement Learning</h3>
                     <div class="badges">
-                        <span class="badge badge-category">AI/Robotics</span>
-                        <span class="badge badge-score">Signal: 9.0</span>
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 July 26</span>
+                    <span>📅 Jul 31</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper introduces N_0-VTLA, a pioneering vision-tactile-language-action (VTLA) foundation model that significantly advances robotic manipulation capabilities. By integrating tactile perception at scale and introducing an innovative offline reinforcement learning method (ALTER), it enables robots to perform fine-grained, contact-rich tasks with unprecedented success rates. This is crucial for developing more dexterous and adaptable robots for real-world applications, pushing the boundaries of embodied AI and multimodal learning.
+                    This paper introduces a novel approach to address a critical limitation in Vision-Language-Action (VLA) reinforcement learning for robotics: effectively handling partial observability and temporal dynamics. By unifying world modeling with critic learning, WCM significantly improves the ability of AI agents to understand and predict environmental evolution, leading to more robust and generalizable robotic manipulation.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    N_0-VTLA is a groundbreaking vision-tactile-language-action (VTLA) foundation model, the first to be pre-trained on extensive tactile data (NeoData). It demonstrates exceptional performance in fine-grained, contact-rich robotic manipulation and significantly improves offline policies using ALTER, achieving higher success rates in both real-robot and simulation tasks compared to existing baselines.
+                    WCM (World Critic Model) is a new AI model that improves robotic manipulation by explicitly training its 'critic' to predict future states and values. This overcomes the limitations of single-frame observations and better handles temporal dynamics in complex, partially observable environments.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>N_0-VTLA is a Vision-Tactile-Language-Action (VTLA) foundation model designed for fine-grained, contact-rich manipulation and offline policy improvement.</li>
+                    <li>Existing VLA RL critic models struggle with partial observability in robotic manipulation due to reliance on single-frame observations or weak history supervision.</li>
                     
-                    <li>It is the first VTLA model pre-trained on large-scale tactile data, utilizing a dataset called NeoData.</li>
+                    <li>The World Critic Model (WCM) addresses this by jointly predicting future latent states and estimating values using a lightweight LeJEPA architecture.</li>
                     
-                    <li>The training recipe includes visuo-tactile pre-training, staged tactile-pathway integration for fine motion adjustments, and ALTER for offline policy improvement.</li>
+                    <li>WCM explicitly trains the critic's representation to capture temporal dynamics, unifying world modeling with critic learning.</li>
                     
-                    <li>ALTER is an advantage-conditioned offline reinforcement learning method that converts relative progress into binary advantage labels for policy training on fixed deployment data.</li>
+                    <li>It achieves state-of-the-art performance on 149 tasks across four benchmarks, demonstrating strong generalization capabilities.</li>
                     
-                    <li>N_0-VTLA significantly outperforms strong baselines, winning all nine real-robot NeoReal tasks and achieving 63.8% mean success on a 20-task simulation suite (vs. 44.0% for baseline).</li>
+                    <li>WCM is compatible with state-of-the-art VLA backbones and integrates seamlessly into both on-policy and off-policy training pipelines.</li>
                     
-                    <li>With ALTER, policies achieve 75-95% success on challenging long-horizon real-robot tasks, including deformable object manipulation.</li>
+                    <li>Validated on seven real-world manipulation tasks, confirming stable deployment.</li>
                     
                 </ul>
                 
@@ -396,13 +464,11 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Researchers in AI and robotics should investigate N_0-VTLA's architecture and training methodology, particularly the integration of tactile data and the ALTER method, for their own projects.</li>
+                    <li>Researchers in AI and robotics should investigate integrating WCM's principles into their VLA reinforcement learning architectures for improved performance in partially observable environments.</li>
                     
-                    <li>Software engineers developing robotic control systems or multimodal AI models should consider how to incorporate tactile sensing and similar offline learning techniques.</li>
+                    <li>Developers of robotic systems should explore WCM as a potential upgrade for their manipulation control policies, especially for tasks requiring complex temporal understanding.</li>
                     
-                    <li>Startups in the robotics and automation space should evaluate the potential of tactile-driven manipulation for their products and explore the feasibility of deploying such models.</li>
-                    
-                    <li>Investors interested in advanced AI and robotics should monitor companies and research groups working on multimodal foundation models and dexterous manipulation.</li>
+                    <li>Review the project page and GitHub repository for implementation details and potential contributions to the open-source community.</li>
                     
                 </ul>
                 
@@ -410,52 +476,54 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2607.23782" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2607.29613" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Experimental Demonstration of a Measurement-Feedback Quantum Information Engine</h3>
+                    <h3 class="card-title">UEmbed Multimodal Embedding Model</h3>
                     <div class="badges">
-                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-category">AI/ML Research</span>
                         <span class="badge badge-score">Signal: 8.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 2026-08-03</span>
-                    <span>🌐 Source: arXiv quant-ph</span>
+                    <span>📅 Aug 3</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This research represents a significant experimental breakthrough in quantum thermodynamics. By demonstrating a quantum information engine that uses measurement and feedback as an energy source, it challenges fundamental limits of efficiency (exceeding the Otto limit) and overcomes the traditional efficiency-power trade-off. This opens new avenues for understanding and harnessing quantum mechanics for energy conversion, potentially influencing future quantum technologies and the design of highly efficient quantum devices.
+                    UEmbed introduces a significant advancement in multimodal retrieval by unifying sparse lexical and dense semantic embeddings within a single decoder-only model. This 'new paradigm' simplifies the architecture, improves efficiency, and achieves competitive performance, making it highly relevant for developing more effective and efficient AI search systems, RAG applications, and agentic AI.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Researchers have experimentally demonstrated a quantum information engine using trapped ions. This engine utilizes measurement-feedback as a nonthermal energy source, achieving efficiencies beyond the Otto limit and simultaneously high efficiency and power by leveraging quantum inner friction.
+                    UEmbed is a novel decoder-only multimodal embedding model capable of generating both sparse lexical and dense semantic representations in a single forward pass. This approach addresses limitations of prior encoder-style methods and demonstrates strong performance on various benchmarks.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>An innovative measurement-feedback quantum information engine model was experimentally demonstrated using a trapped 40Ca+ ion system.</li>
+                    <li>UEmbed is a decoder-only multimodal embedding model that unifies the generation of sparse lexical and dense semantic representations.</li>
                     
-                    <li>Projective measurement replaces the hot reservoir, acting as a nonthermal energy source, with feedback control steering the system.</li>
+                    <li>It addresses limitations of existing Learned Sparse Retrieval (LSR) models, which are typically encoder-style and require auxiliary cross-modal modules for multimodal settings.</li>
                     
-                    <li>The engine converges to a stable operating regime with a fully resolved energetic balance from arbitrary initial states.</li>
+                    <li>The model appends learnable special tokens to the input and partitions the vocabulary, with each token's causal hidden state predicting sparse weights over its assigned subset.</li>
                     
-                    <li>Measurement-induced coherence and quantum inner friction can be tuned to enhance engine efficiency beyond the traditional Otto limit.</li>
+                    <li>UEmbed-9B achieves competitive results, reaching 71.8 (dense) and 71.0 (sparse) on MMEB-v2, outperforming other publicly available multimodal embedding models.</li>
                     
-                    <li>Quantum inner friction can break the traditional efficiency-power trade-off, allowing for synchronous achievement of high efficiency and large power.</li>
+                    <li>It also remains competitive with strong dense and sparse baselines on the BEIR benchmark.</li>
                     
-                    <li>The experiment establishes a route toward information-to-work quantum engines, converting finite-time irreversibility into performance-enhancing resources.</li>
+                    <li>The authors demonstrate its practical utility across effectiveness, efficiency, and agentic applications.</li>
+                    
+                    <li>Models are released at 2B, 4B, and 9B scales by Alibaba-NLP.</li>
                     
                 </ul>
                 
@@ -464,85 +532,19 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Monitor further developments in quantum thermodynamics and quantum engine research for potential applications in quantum computing or energy-efficient quantum systems.</li>
+                    <li>Explore UEmbed models (2B, 4B, 9B) for multimodal retrieval and RAG applications to leverage unified sparse and dense embeddings.</li>
                     
-                    <li>Investigate how the principles of measurement-feedback and information-to-work conversion could be applied to improve control or energy management in quantum computing architectures.</li>
+                    <li>Investigate the decoder-only architecture for potential efficiency gains and simplified model deployment in AI systems.</li>
                     
-                    <li>Explore the theoretical implications of breaking the efficiency-power trade-off in other quantum systems or future quantum technologies.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: Quantum</span>
-                    
-                    <a href="https://arxiv.org/abs/2607.28702" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Exponentially Large Coherence via Cascaded Amplifiers</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">Quantum Computing</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 2026-08-03T00:00:00-04:00</span>
-                    <span>🌐 Source: arXiv quant-ph</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This theoretical proposal offers a novel and potentially more practical pathway to achieve unprecedented levels of photon coherence, a fundamental resource for advancing quantum computing, quantum communication, and other quantum technologies. By achieving exponential scaling with conventional components, it could significantly accelerate the development of more robust and powerful quantum systems.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Researchers propose a new theoretical method that uses cascaded linear amplifiers to achieve exponentially large photon coherence. This approach surpasses current limits and could enable more powerful quantum technologies using conventional components.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Standard laser beams have limited photon coherence (at most 8μ²).</li>
-                    
-                    <li>Quantum-engineered lasers, though unrealized, are projected to have coherence scaling as μ⁴ and require unconventional mechanisms.</li>
-                    
-                    <li>The paper proposes using cascaded linear amplifiers with conventional couplings to increase coherence.</li>
-                    
-                    <li>This approach can theoretically achieve coherence scaling exponentially in μ (total source excitation number).</li>
-                    
-                    <li>Two amplifiers are sufficient to surpass the standard μ² scaling.</li>
-                    
-                    <li>The exponential scaling is achieved by dropping the requirement on the beam's standard statistical properties.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Researchers in quantum optics should explore experimental validation of cascaded amplifier designs for high coherence.</li>
-                    
-                    <li>Quantum hardware developers should consider the implications of exponentially increased coherence for qubit design, quantum communication protocols, and quantum sensing applications.</li>
-                    
-                    <li>Investors and startups in the quantum technology sector should monitor advancements in high-coherence light sources as potential enablers for next-generation quantum devices.</li>
+                    <li>Benchmark UEmbed against current state-of-the-art sparse and dense retrieval methods in specific use cases to assess its performance and resource requirements.</li>
                     
                 </ul>
                 
 
                 <div class="card-footer">
-                    <span>Processed Category: Quantum</span>
+                    <span>Processed Category: AI</span>
                     
-                    <a href="https://arxiv.org/abs/2607.28716" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.02583" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -557,39 +559,34 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Scaling Properties of Text Conditioning in Visual Generation</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A study reveals that diffusion loss in visual generation scales with the 'structured language' within prompts, rather than just token count. By quantifying structured language using GPG and ED metrics, researchers developed a system that leverages these scaling properties to create structured prompts and train a prompter, outperforming open-weight models and matching strong closed-weight models.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">ByteDance's SwanTale AI Model</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">ByteDance's SwanTale is a new AI model designed for unified multi-speaker speech and audio generation, supporting both instruction-based and zero-shot tasks. It utilizes a novel data preparation method (SwanData-Caption) and a unique model architecture (SwanVAE, Unified MoE) to achieve high-quality, expressive audio generation, outperforming existing methods.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.57</span>
+                        <span>Score: 8.65</span>
                         
-                        <a href="https://huggingface.co/papers/2607.29679" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.02023" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">RLSVR: Self-Verifiable Rewards for LLM Self-Improvement</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new method called RLSVR (Reinforcement Learning with Self-Verifiable Rewards) enables automatic reward generation for open-ended LLM tasks by transforming them into self-verifiable proxy environments, leading to improved LLM performance on both open-ended and reasoning tasks.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">SWE-Touch Benchmark for Coding Agents</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">SWE-Touch is a new benchmark designed to stress-test AI coding agents by introducing plausible, task-conflicting user edits into the codebase during an ongoing task. The benchmark revealed that most agents, particularly open-source ones, experienced a significant performance degradation (average 7.7 percentage points drop) when faced with these 'Counter-Edits,' often failing to detect or reconcile the changes. Only top proprietary models like Claude Opus 4.8 and GPT 5.5 showed strong resilience, highlighting a major challenge for AI in collaborative software development.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
                         <span>Score: 8.3</span>
                         
-                        <a href="https://huggingface.co/papers/2607.23802" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.02499" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
-            </div>
-            
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/Robotics</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">N_0-VTLA: Scaling Vision-Tactile-Language-Action Model</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">N_0-VTLA is a groundbreaking vision-tactile-language-action (VTLA) foundation model, the first to be pre-trained on extensive tactile data (NeoData). It demonstrates exceptional performance in fine-grained, contact-rich robotic manipulation and significantly improves offline policies using ALTER, achieving higher success rates in both real-robot and simulation tasks compared to existing baselines.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">WCM for Vision-Language-Action Reinforcement Learning</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">WCM (World Critic Model) is a new AI model that improves robotic manipulation by explicitly training its 'critic' to predict future states and values. This overcomes the limitations of single-frame observations and better handles temporal dynamics in complex, partially observable environments.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.25</span>
+                        <span>Score: 8.0</span>
                         
-                        <a href="https://huggingface.co/papers/2607.23782" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.29613" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
@@ -600,23 +597,28 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Experimental Demonstration of a Measurement-Feedback Quantum Information Engine</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers have experimentally demonstrated a quantum information engine using trapped ions. This engine utilizes measurement-feedback as a nonthermal energy source, achieving efficiencies beyond the Otto limit and simultaneously high efficiency and power by leveraging quantum inner friction.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Symmetry-initialized Quantum Gibbs Sampling</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new theoretical framework utilizes representation theory to significantly accelerate quantum Gibbs sampling. By correctly initializing based on a measurable 'asymmetry,' it achieves asymptotic acceleration and a cascade of mixing-time improvements, particularly for non-Abelian symmetries.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.22</span>
+                        <span>Score: 8.38</span>
                         
-                        <a href="https://arxiv.org/abs/2607.28702" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://arxiv.org/abs/2608.00055" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
+            </div>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/ML Research</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Exponentially Large Coherence via Cascaded Amplifiers</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers propose a new theoretical method that uses cascaded linear amplifiers to achieve exponentially large photon coherence. This approach surpasses current limits and could enable more powerful quantum technologies using conventional components.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">UEmbed Multimodal Embedding Model</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">UEmbed is a novel decoder-only multimodal embedding model capable of generating both sparse lexical and dense semantic representations in a single forward pass. This approach addresses limitations of prior encoder-style methods and demonstrates strong performance on various benchmarks.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.22</span>
+                        <span>Score: 7.62</span>
                         
-                        <a href="https://arxiv.org/abs/2607.28716" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.02583" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
