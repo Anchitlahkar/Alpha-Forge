@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-05</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-06</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,7 +209,7 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Knowledge-Geometry Decoupling: Refreshable Pretrained Transfer for Streaming Recommendation</h3>
+                    <h3 class="card-title">Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
                         <span class="badge badge-score">Signal: 9.0</span>
@@ -217,41 +217,37 @@
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Aug 3</span>
+                    <span>📅 Aug 5</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper introduces a novel and highly effective method (KGD) for building and maintaining high-performance streaming recommendation systems in dynamic environments. By decoupling behavioral knowledge from task-specific geometry, it solves critical challenges like behavioral distribution drift and continuous model refreshing without invalidating downstream adaptations. Its successful deployment in Shopee, yielding significant increases in GMV and advertising revenue, demonstrates its substantial practical value and impact on real-world e-commerce platforms.
+                    This paper provides fundamental insights and practical recipes for building more effective and efficient multimodal AI foundation models. It clarifies how different modalities interact, how to promote synergy, and the critical importance of early unification, potentially reducing computational costs significantly. The discovery of 'vision laziness' and the ability to achieve strong performance with only 5% of the compute budget are particularly impactful for the advancement and accessibility of large AI models.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    A new method called Knowledge-Geometry Decoupling (KGD) improves streaming recommendation systems by separating behavioral knowledge from task-specific geometry, allowing continuous model updates without interference. It shows 4-12% performance gains on benchmarks and significantly boosts GMV and ad revenue in a live Shopee deployment.
+                    A Meta AI paper systematically explores multimodal pretraining, revealing key insights into knowledge flow, modality synergy, the benefits of early unification (and a 'vision laziness' phenomenon), and derives efficient pretraining recipes that achieve strong generative performance with only 5% of the compute budget.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Industrial recommenders face challenges with behavioral distribution drift when using the pretrain-then-transfer paradigm, specifically regarding what knowledge to learn and how to transfer it while continually refreshing the model.</li>
+                    <li>The study provides empirical clarity through a systematic exploration of multimodal pretraining, identifying four key insights.</li>
                     
-                    <li>The proposed Knowledge-Geometry Decoupling (KGD) framework addresses these issues by introducing two main components.</li>
+                    <li>Knowledge Flow: It disentangles how language, visual understanding, and visual generation transfer knowledge across modalities, revealing distinct patterns of influence and asymmetry.</li>
                     
-                    <li>For 'what to learn,' Behavioral Multi-Token Prediction (BMTP) is used to identify and retain only collaboratively or semantically related future items, yielding cleaner and more transferable behavioral knowledge, unlike conventional next-token prediction that can encode spurious transitions.</li>
+                    <li>Synergy vs. Competition: Data 'complexity' largely determines whether modalities are synergistic. Architectural choices like shared attention and normalization with modality-specific feed-forward layers promote synergy.</li>
                     
-                    <li>For 'how to transfer,' KGD assigns pretrained behavioral knowledge to a refreshable encoder and task-specific geometry to a task learner. The task learner reads encoder states via read-only cross-attention and writes task-specific geometry using Anchored Calibration Residual (ACR) orthogonal to the pretrained embedding.</li>
+                    <li>Early Unification: Unifying modalities from the very early stages and training them jointly is more effective than late alignment or sequential training. This process uncovers a 'vision laziness' phenomenon, where delayed integration leads models to rely on language priors.</li>
                     
-                    <li>This decoupled ownership enables continuous knowledge refresh of the encoder without interference from task-specific gradients or invalidating downstream adaptations.</li>
+                    <li>Recipes: The research derives efficient pretraining recipes that achieve strong generative performance using only 5% of the compute budget.</li>
                     
-                    <li>KGD improves over strong pretrain-transfer baselines by 4-12% on eight public benchmarks and sustains its advantage over a 90-day production stream.</li>
-                    
-                    <li>The method has been fully deployed in Shopee, resulting in a 1.75% increase in GMV per user and a 1.53% increase in advertising revenue in a live A/B test on Shopee Homepage Search.</li>
-                    
-                    <li>The core implementation of KGD is open-sourced on GitHub.</li>
+                    <li>These core findings are validated at scale by training multiple 13.5B MoE models on 2T tokens, providing a principled foundation for understanding and scaling multimodal pretraining.</li>
                     
                 </ul>
                 
@@ -260,13 +256,13 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>AI researchers should investigate KGD's principles (BMTP, ACR, knowledge-geometry decoupling) for application in other dynamic transfer learning scenarios beyond recommendation systems.</li>
+                    <li>AI researchers should prioritize early and joint unification strategies in the design of future multimodal foundation models.</li>
                     
-                    <li>Software engineers and ML practitioners building or maintaining large-scale recommendation systems should evaluate KGD for potential deployment to improve performance and maintainability.</li>
+                    <li>Model architects should explore incorporating shared attention and modality-specific feed-forward layers to enhance synergy between different data types.</li>
                     
-                    <li>E-commerce platforms and content providers should consider adopting KGD or similar decoupled architectures to enhance their recommendation engines and drive business metrics like GMV and ad revenue.</li>
+                    <li>Developers should investigate the 'vision laziness' phenomenon further to optimize integration timing and prevent over-reliance on language priors in multimodal models.</li>
                     
-                    <li>Investors in e-commerce or AI-driven platforms should note the significant revenue impact demonstrated by KGD, indicating the value of advanced recommendation technologies.</li>
+                    <li>Organizations and startups should evaluate and implement the derived efficient pretraining recipes to significantly reduce computational costs for developing high-performing multimodal AI.</li>
                     
                 </ul>
                 
@@ -274,52 +270,56 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2608.02738" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.05000" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Curvature as a control field in helicoidal two-body systems</h3>
+                    <h3 class="card-title">ToolArtist: Fully Agentic Image Generation with Unified Multimodal Models</h3>
                     <div class="badges">
-                        <span class="badge badge-category">Quantum Computing</span>
-                        <span class="badge badge-score">Signal: 8.5</span>
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Wed, 05 Aug 2026 00:00:00 -0400</span>
-                    <span>🌐 Source: arXiv quant-ph</span>
+                    <span>📅 Aug 5</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This research introduces a novel paradigm for controlling quantum systems by leveraging the geometry of their confinement. Instead of relying solely on conventional external fields, the shape and curvature of the environment itself become a tunable control mechanism. This could lead to new designs for quantum devices, more robust qubits, and advanced quantum sensors, potentially simplifying control architectures and enabling new functionalities in quantum computing, electronics, and photonics.
+                    ToolArtist represents a significant advancement in generative AI by introducing a fully agentic approach to image generation. It addresses the limitations of current text-to-image models in handling complex, open-world tasks requiring multi-step reasoning and external knowledge. By unifying reasoning, tool use, and native image generation under a single policy, it enables more intelligent and versatile creative AI systems. The release of training data and infrastructure further accelerates research and development in this crucial area, paving the way for more autonomous and capable AI agents.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Researchers propose using engineered geometry and curvature as a tunable control field for quantum systems, demonstrating how it can modify dynamics and spectra, offering a new route for controlling localization and organization in various quantum platforms.
+                    ToolArtist is a new fully agentic image generation model that unifies reasoning, external tool use, and native image generation under a single policy, outperforming previous methods by enabling more complex, open-world creative tasks. It achieves this through post-training a Unified Multimodal Model (UMM) with Supervised Fine-Tuning and Reinforcement Learning (RAD-GRPO).
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Geometry is established as an active, tunable control field for quantum systems, beyond conventional external mechanisms.</li>
+                    <li>Current Text-to-Image (T2I) models struggle with open-world tasks requiring complex semantic understanding, multi-step reasoning, and external knowledge.</li>
                     
-                    <li>A curvature-gauge framework is introduced, demonstrating geometric control over classical trajectories and quantum states.</li>
+                    <li>Existing agentic approaches for image generation either use fixed workflows or only partially control the process, leading to uncoordinated reasoning and tool invocation.</li>
                     
-                    <li>An exact reduced Hamiltonian for a two-body system on a helicoidal surface shows curvature modifies kinetic structure and a projected gauge field reconstructs momentum.</li>
+                    <li>ToolArtist proposes a 'fully agentic' image generation model that dynamically orchestrates reasoning, external tool use (e.g., search), and native image generation within one unified policy.</li>
                     
-                    <li>This 'geometric renormalization' enables controllable transitions between distinct dynamical regimes, including localization and symmetry-breaking bifurcations.</li>
+                    <li>The model is obtained by post-training a Unified Multimodal Model (UMM).</li>
                     
-                    <li>Quantization of the geometry-dependent potential reveals spectral reconstruction, transforming harmonic confinement into quartic critical states.</li>
+                    <li>It utilizes Supervised Fine-Tuning (SFT) with a 'teacher agent' equipped with search and image-generation tools.</li>
                     
-                    <li>Engineered geometry is presented as a general method for controlling localization and spectral organization in quantum, electronic, photonic, and synthetic platforms, making deformation a functional degree of freedom.</li>
+                    <li>Reinforcement Learning (RL) is applied using an agentic infrastructure for UMMs, introducing RAD-GRPO (Reason-Act-Draw GRPO) with complementary intent and quality rewards.</li>
+                    
+                    <li>Experiments show ToolArtist consistently outperforms approaches with fixed pipelines or only partially agent-controlled components.</li>
+                    
+                    <li>The training data and complete post-training infrastructure are released to the public.</li>
                     
                 </ul>
                 
@@ -328,11 +328,223 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Monitor future research on geometric control in quantum systems for practical applications in quantum computing and sensing.</li>
+                    <li>Explore the released training data and post-training infrastructure to implement or experiment with fully agentic image generation models.</li>
                     
-                    <li>Investigate how these theoretical concepts could be applied to specific quantum computing architectures or semiconductor device designs.</li>
+                    <li>Investigate the RAD-GRPO methodology and the use of complementary intent and quality rewards for potential application in other agentic AI tasks.</li>
                     
-                    <li>Explore the potential for integrating geometric control principles into quantum algorithm development or quantum sensing technologies.</li>
+                    <li>Consider integrating agentic capabilities into existing or new generative AI applications to enhance their versatility, reasoning, and ability to handle complex, open-ended creative prompts.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2608.04436" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">The Personalization Mirage: How LLMs Fabricate User Profiles, and Why Self-Monitoring Misleads</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 August 5, 2024</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper reveals a fundamental and pervasive flaw in how personalized LLMs construct user profiles: they frequently fabricate attributes not supported by evidence. Crucially, LLMs are unreliable at self-assessing this 'over-inference,' often reporting low fabrication when they actually produce the most. This 'Self-Monitoring Inversion' has significant implications for the trustworthiness, reliability, and ethical deployment of AI systems designed for personalization, highlighting the critical need for external validation over model self-reports.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    LLMs frequently 'over-infer' user attributes, fabricating details beyond evidence in 35-49% of claims. A 'Self-Monitoring Inversion' means models claiming the least over-inference actually fabricate the most, making self-reported confidence misleading for comparison. External verification is essential for trustworthy personalized LLMs.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Personalized LLMs with persistent memory frequently engage in 'over-inference' (OI), fabricating user attributes that lack evidential support.</li>
+                    
+                    <li>Over-inference is pervasive, affecting 35%-49% of claims across all 12 models evaluated on the new 'MirageBench' benchmark.</li>
+                    
+                    <li>A 'Self-Monitoring Inversion' was discovered: models' self-assessed OI is negatively correlated with their actual, judge-measured OI. Models that report the least fabrication tend to be flagged as fabricating the most.</li>
+                    
+                    <li>Self-reported confidence from LLMs is a misleading signal for comparing the faithfulness of different models in personalization tasks.</li>
+                    
+                    <li>Over-inferred attributes accumulate approximately linearly in multi-turn interactions with little revision.</li>
+                    
+                    <li>The paper introduces 'MirageBench,' a new benchmark for evaluating the faithfulness of personalized LLMs, comprising 150 personas, 6 personalization tasks, and a four-way faithfulness taxonomy.</li>
+                    
+                    <li>External verification, rather than model self-report, is positioned as a more reliable foundation for trustworthy personalization.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Developers building personalized LLM applications should prioritize and implement robust external verification mechanisms for user profiles and inferred attributes.</li>
+                    
+                    <li>Researchers should focus on developing methods to mitigate LLM over-inference and improve their ability to accurately assess their own uncertainty or lack of evidence.</li>
+                    
+                    <li>Evaluators of LLMs should be cautious about relying solely on self-reported confidence or self-audits when comparing models for personalization tasks.</li>
+                    
+                    <li>Companies deploying personalized AI should consider the ethical implications and potential risks of attribute fabrication on user trust and data privacy.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2608.04570" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">When Teachers Mislead: Spurious-Signal-Aware On-Policy Distillation</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 2026-08-04</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research addresses a critical, previously overlooked failure mode in AI model distillation, a technique vital for creating smaller, more efficient models from larger ones. By identifying and mitigating 'spurious signals' from teacher models, SA-OPD improves the reliability and effectiveness of training student models, leading to better performance in practical AI applications across various domains like language and vision.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A new method, SA-OPD, enhances AI model distillation by detecting and filtering out misleading 'spurious signals' from teacher models that are not grounded in the input. This leads to more effective and reliable training for student Large Language Models (LLMs) and Vision-Language Models (VLMs), consistently outperforming existing methods.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>On-Policy Distillation (OPD) transfers capabilities from a large 'teacher' model to a smaller 'student' model by supervising student-sampled trajectories with dense token-level teacher signals.</li>
+                    
+                    <li>A fundamental failure mode in OPD is 'spurious signals': teacher's token-level judgments can be driven by input-agnostic language priors, formatting conventions, or stereotyped reasoning, rather than task-specific evidence.</li>
+                    
+                    <li>These spurious signals can produce large gradients that contribute little to task improvement, leading to harmful updates during distillation.</li>
+                    
+                    <li>The proposed SA-OPD (Spurious-Signal-Aware On-Policy Distillation) framework identifies and filters these misleading token-level supervisions.</li>
+                    
+                    <li>SA-OPD introduces a lightweight 'input-groundedness proxy' to estimate if a distillation signal truly depends on the input, without requiring external labels or auxiliary judges.</li>
+                    
+                    <li>It filters only tokens that exhibit both low input-groundedness and extreme distillation divergence, targeting high-impact spurious updates.</li>
+                    
+                    <li>Extensive experiments on both Large Language Model (LLM) and Vision-Language Model (VLM) settings demonstrate that SA-OPD consistently outperforms Vanilla OPD and competitive selective methods on benchmarks like mathematical reasoning, visual understanding, and visual reasoning.</li>
+                    
+                    <li>The research establishes input-groundedness as a key dimension for effective OPD supervision selection, offering a simple and effective strategy for mitigating spurious updates.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers and practitioners involved in model distillation should investigate and consider integrating input-groundedness checks into their training pipelines.</li>
+                    
+                    <li>Evaluate SA-OPD or similar spurious signal detection techniques when fine-tuning or compressing large language and vision-language models for improved performance and reliability.</li>
+                    
+                    <li>Explore the broader implications of 'spurious signals' and input-agnostic reasoning in other areas of AI model development and evaluation beyond distillation.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2608.03632" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Unifying quantum measurement constructions via a relative-entropy minimum change principle</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Thu, 06 Aug 2026 00:00:00 -0400</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper introduces a significant theoretical framework that unifies various quantum measurement constructions, simplifies the characterization of optimal measurements, and discovers a novel class of 'softmin thermal measurements.' By establishing deep connections between quantum information theory and statistical mechanics, it provides new tools and insights that could advance the design and understanding of quantum systems, particularly in quantum computing, quantum sensing, and quantum information processing.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Researchers propose a relative-entropy minimum change principle to unify quantum measurement theory, characterize optimal measurements, recover known types, and discover a new family ('softmin thermal measurements') with an analogy to thermal states in statistical mechanics.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Introduces a relative-entropy minimum change principle for unifying quantum measurement constructions, extending the classical Bayes reversal channel concept to quantum information theory.</li>
+                    
+                    <li>Provides a closed-form characterization of measurements that are optimal for this principle.</li>
+                    
+                    <li>Establishes a dual formulation involving a single unconstrained Hermitian variable to find these optimal measurements.</li>
+                    
+                    <li>Recovers notable existing measurements, such as pretty good measurements and Fermi-Dirac thermal measurements, within this new unifying framework.</li>
+                    
+                    <li>Discovers a novel family of measurements termed 'softmin thermal measurements.'</li>
+                    
+                    <li>Demonstrates that softmin thermal measurements arise as optimal solutions to entropy-regularized semidefinite optimization problems, analogous to thermal states in statistical mechanics.</li>
+                    
+                    <li>Proves an additivity property for the relative-entropy minimum change principle.</li>
+                    
+                    <li>Investigates the performance of Fermi-Dirac thermal measurements for quantum hypothesis testing.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Study the mathematical framework of the relative-entropy minimum change principle to understand its implications for quantum information theory.</li>
+                    
+                    <li>Evaluate the potential practical applications of 'softmin thermal measurements' in quantum computing, quantum sensing, or quantum communication protocols.</li>
+                    
+                    <li>Explore how this unifying principle could inform the design of more efficient or robust quantum measurement schemes.</li>
+                    
+                    <li>Investigate the deeper theoretical connections between quantum measurements and statistical mechanics highlighted by this work, particularly the analogy between softmin thermal measurements and thermal states.</li>
                     
                 </ul>
                 
@@ -340,215 +552,7 @@
                 <div class="card-footer">
                     <span>Processed Category: Quantum</span>
                     
-                    <a href="https://arxiv.org/abs/2608.02659" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Cloudflare's Initiatives for the Agentic Internet and AI Agents</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">Software Engineering</span>
-                        <span class="badge badge-score">Signal: 8.5</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 2026-08-04T13:00:00Z</span>
-                    <span>🌐 Source: Cloudflare Blog</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This article signals a significant shift in software development paradigms, moving beyond the traditional Software Development Lifecycle (SDLC) to an 'Agent Development Lifecycle' (ADLC) driven by AI. Cloudflare is positioning itself as a key enabler for this transition, providing tools and infrastructure for 'software factories' where AI agents autonomously manage the entire software development process. This has profound implications for how software is built, tested, deployed, and maintained, potentially freeing human engineers for higher-level creative and strategic tasks.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Cloudflare is making a strategic push into the 'agentic Internet' by introducing new tools and frameworks designed to empower AI agents. This includes the 'Agent Development Lifecycle' (ADLC), which aims to enable AI agents to autonomously manage the entire software development process, and 'Cloudflare Wallets,' which will provide AI agents with native payment capabilities and verifiable identity through the x402 protocol, facilitating their autonomous interaction with APIs and content.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>AI's rapid code generation has overwhelmed traditional SDLC processes, creating bottlenecks in validation, deployment, and maintenance.</li>
-                    
-                    <li>Cloudflare proposes the 'Agent Development Lifecycle' (ADLC) as a new paradigm where AI agents manage the full software lifecycle, not just code generation.</li>
-                    
-                    <li>The ADLC aims to enable 'software factories' – agent-driven systems that autonomously build, improve, deploy, and manage software from input to production.</li>
-                    
-                    <li>Cloudflare is releasing new tools to support ADLC, including `@cloudflare/ci` for agent-driven CI/CD, OpenTelemetry traces for local agent observability, and a new platform for observing and improving agents.</li>
-                    
-                    <li>A key requirement for software factories is that all operations must be programmatic (no 'ClickOps'), horizontally scalable (e.g., preview deployments for every agent), and reproducible.</li>
-                    
-                    <li>The ultimate goal is to shift human effort towards tasks requiring inspiration, taste, and judgment, by delegating routine and complex development tasks entirely to agents.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Software engineers and DevOps professionals should explore Cloudflare's new agent development tools and consider how AI agents can be integrated into their CI/CD and observability workflows.</li>
-                    
-                    <li>Organizations should evaluate their current SDLC processes for opportunities to delegate more phases to AI agents, moving towards an ADLC model.</li>
-                    
-                    <li>AI researchers and developers should focus on enhancing agent autonomy, long-term task execution, and robust error handling to support 'software factory' ambitions.</li>
-                    
-                    <li>Investors should monitor Cloudflare and other companies that are building infrastructure and tools for agent-driven software development, as this represents a significant market shift.</li>
-                    
-                    <li>Startups can leverage these new paradigms to build highly efficient development processes or create new tools and services that facilitate the ADLC.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: Engineering</span>
-                    
-                    <a href="https://blog.cloudflare.com/agent-development-lifecycle/" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Aug 4</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This research represents a significant leap in AI-powered video editing, enabling real-time, open-ended manipulation of video content with high fidelity and temporal consistency. It moves beyond traditional offline processing, offering a new paradigm for interactive content creation and potentially democratizing advanced video effects. The ability to run such a complex model (16B parameters) at 30 FPS on a single GPU highlights advancements in model efficiency and hardware utilization, paving the way for new applications in media, entertainment, and communication.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    JoyAI-Video-Edit is a 16B-parameter autoregressive diffusion model that enables real-time, open-ended 720p video editing at 30 FPS on a single Nvidia B200 GPU, outperforming existing streaming editors and competing with strong offline systems by maintaining source fidelity and temporal consistency.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Introduces JoyAI-Video-Edit, a 16B-parameter autoregressive diffusion framework for video editing.</li>
-                    
-                    <li>Achieves real-time, open-ended video editing, meaning it operates without access to future frames or a predefined video duration.</li>
-                    
-                    <li>Delivers 720p video editing at approximately 30 FPS on a single Nvidia B200 GPU.</li>
-                    
-                    <li>Addresses critical challenges in real-time video generation: low-latency causal generation, bounded computational resources, source fidelity, and long-term temporal consistency.</li>
-                    
-                    <li>Employs novel techniques including chunk-wise autoregressive adaptation, Source-Anchored Distribution Matching Distillation (SA-DMD), and Long-Horizon Autoregressive Distillation.</li>
-                    
-                    <li>Substantially outperforms existing streaming video editors and remains competitive with strong offline systems.</li>
-                    
-                    <li>The code for JoyAI-Video-Edit is openly available on GitHub.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Explore the open-source code to understand the implementation details and potential for integration into existing video processing pipelines.</li>
-                    
-                    <li>Investigate the specific distillation and autoregressive adaptation techniques (SA-DMD, Long-Horizon Autoregressive Distillation) for applicability in other real-time generative AI tasks.</li>
-                    
-                    <li>Monitor the development and adoption of this technology in professional and consumer video editing software.</li>
-                    
-                    <li>Assess the implications for hardware requirements and optimization strategies for real-time AI video generation.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2608.03974" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 August 3, 2026</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This article introduces a significant advancement in 3D AI, offering a unified framework for generating, understanding, and editing 3D content from text. By addressing the critical challenge of scarce multimodal 3D data with an 87M-scale corpus and achieving state-of-the-art performance, Hunyuan3D-Buffalo 1.0 has the potential to democratize 3D content creation, accelerate development in areas like the metaverse, gaming, virtual reality, and industrial design, and streamline complex 3D workflows.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Tencent's Hunyuan3D-Buffalo 1.0 is a new unified AI model that can generate, understand, and edit 3D objects from text, trained on an 87M-scale dataset, achieving state-of-the-art performance and simplifying complex 3D content creation.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Hunyuan3D-Buffalo 1.0 is a unified multimodal AI model designed for scalable 3D generation, understanding, and editing.</li>
-                    
-                    <li>It addresses the limitation of scarce multimodal 3D data by constructing an 87M-scale corpus, including 25M understanding samples, 50M text-to-3D pairs, and 12M editing pairs.</li>
-                    
-                    <li>The framework supports text-to-3D generation, instruction-guided 3D editing, text-grounded part generation, and 3D understanding within a single architecture.</li>
-                    
-                    <li>Architecturally, it combines Hunyuan3D-VLM for semantic, structural, and spatial understanding with Hunyuan3D DiT for high-fidelity 3D synthesis.</li>
-                    
-                    <li>The model achieves state-of-the-art or leading performance on text-to-3D generation and 3D editing benchmarks, while also exhibiting strong understanding and part-generation capabilities.</li>
-                    
-                    <li>Experiments demonstrate that unified 3D multimodal training effectively improves both generation and understanding capabilities.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Monitor for potential open-sourcing or API availability of Hunyuan3D-Buffalo 1.0 to explore its practical applications.</li>
-                    
-                    <li>Review the project page and any associated demos to understand the model's capabilities and user experience.</li>
-                    
-                    <li>Investigate the architectural details of Hunyuan3D-VLM and Hunyuan3D DiT for insights into advanced 3D AI model design.</li>
-                    
-                    <li>Consider the implications of unified 3D generation and editing for workflows in gaming, metaverse development, product design, and other content creation industries.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2608.02711" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://arxiv.org/abs/2608.04055" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -563,34 +567,45 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Knowledge-Geometry Decoupling: Refreshable Pretrained Transfer for Streaming Recommendation</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new method called Knowledge-Geometry Decoupling (KGD) improves streaming recommendation systems by separating behavioral knowledge from task-specific geometry, allowing continuous model updates without interference. It shows 4-12% performance gains on benchmarks and significantly boosts GMV and ad revenue in a live Shopee deployment.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A Meta AI paper systematically explores multimodal pretraining, revealing key insights into knowledge flow, modality synergy, the benefits of early unification (and a 'vision laziness' phenomenon), and derives efficient pretraining recipes that achieve strong generative performance with only 5% of the compute budget.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 9.07</span>
+                        <span>Score: 8.73</span>
                         
-                        <a href="https://huggingface.co/papers/2608.02738" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.05000" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">JoyAI-Video-Edit is a 16B-parameter autoregressive diffusion model that enables real-time, open-ended 720p video editing at 30 FPS on a single Nvidia B200 GPU, outperforming existing streaming editors and competing with strong offline systems by maintaining source fidelity and temporal consistency.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">ToolArtist: Fully Agentic Image Generation with Unified Multimodal Models</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">ToolArtist is a new fully agentic image generation model that unifies reasoning, external tool use, and native image generation under a single policy, outperforming previous methods by enabling more complex, open-world creative tasks. It achieves this through post-training a Unified Multimodal Model (UMM) with Supervised Fine-Tuning and Reinforcement Learning (RAD-GRPO).</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
                         <span>Score: 8.38</span>
                         
-                        <a href="https://huggingface.co/papers/2608.03974" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.04436" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Tencent's Hunyuan3D-Buffalo 1.0 is a new unified AI model that can generate, understand, and edit 3D objects from text, trained on an 87M-scale dataset, achieving state-of-the-art performance and simplifying complex 3D content creation.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">The Personalization Mirage: How LLMs Fabricate User Profiles, and Why Self-Monitoring Misleads</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">LLMs frequently 'over-infer' user attributes, fabricating details beyond evidence in 35-49% of claims. A 'Self-Monitoring Inversion' means models claiming the least over-inference actually fabricate the most, making self-reported confidence misleading for comparison. External verification is essential for trustworthy personalized LLMs.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
                         <span>Score: 8.3</span>
                         
-                        <a href="https://huggingface.co/papers/2608.02711" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.04570" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">When Teachers Mislead: Spurious-Signal-Aware On-Policy Distillation</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new method, SA-OPD, enhances AI model distillation by detecting and filtering out misleading 'spurious signals' from teacher models that are not grounded in the input. This leads to more effective and reliable training for student Large Language Models (LLMs) and Vision-Language Models (VLMs), consistently outperforming existing methods.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.3</span>
+                        
+                        <a href="https://huggingface.co/papers/2608.03632" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
@@ -601,28 +616,12 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Curvature as a control field in helicoidal two-body systems</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers propose using engineered geometry and curvature as a tunable control field for quantum systems, demonstrating how it can modify dynamics and spectra, offering a new route for controlling localization and organization in various quantum platforms.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Unifying quantum measurement constructions via a relative-entropy minimum change principle</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers propose a relative-entropy minimum change principle to unify quantum measurement theory, characterize optimal measurements, recover known types, and discover a new family ('softmin thermal measurements') with an analogy to thermal states in statistical mechanics.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.65</span>
+                        <span>Score: 8.15</span>
                         
-                        <a href="https://arxiv.org/abs/2608.02659" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Software Engineering</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Cloudflare's Initiatives for the Agentic Internet and AI Agents</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Cloudflare is making a strategic push into the 'agentic Internet' by introducing new tools and frameworks designed to empower AI agents. This includes the 'Agent Development Lifecycle' (ADLC), which aims to enable AI agents to autonomously manage the entire software development process, and 'Cloudflare Wallets,' which will provide AI agents with native payment capabilities and verifiable identity through the x402 protocol, facilitating their autonomous interaction with APIs and content.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.57</span>
-                        
-                        <a href="https://blog.cloudflare.com/agent-development-lifecycle/" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://arxiv.org/abs/2608.04055" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
