@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-06</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-07</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,9 +209,211 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes</h3>
+                    <h3 class="card-title">Quantum Error Management Benchmark: Accuracy vs. Execution Time Tradeoffs</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Fri, 07 Aug 2026 00:00:00 -0400</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This benchmark provides crucial, independent data on the performance and tradeoffs of leading commercial quantum error suppression and mitigation solutions. It helps quantum hardware users, software developers, and investors understand the current state of practical quantum computing, highlighting that significant performance gains are possible but come with costs in execution time. This directly impacts the usability and commercial viability of current quantum hardware.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A benchmark of commercial quantum error suppression and mitigation (ESM) solutions on IBM's 156-qubit processor shows significant error reduction (up to 4.7x) but with clear tradeoffs between accuracy and QPU execution time. Qedma QESEM achieved the highest accuracy, while Q-CTRL balanced strong performance with lower execution time.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Quantum processors are noisy, making error suppression and mitigation (ESM) essential for extracting value from current hardware, as full error correction is too costly.</li>
+                    
+                    <li>The study independently benchmarked IBM Qiskit Runtime (with features like measurement twirling, TREX), Q-CTRL Performance Management, and Qedma QESEM on an IBM Pittsburgh 156-qubit Heron r3 processor.</li>
+                    
+                    <li>For Sampler workloads (e.g., Bernstein-Vazirani, QPE), Q-CTRL produced the best results on structured circuits while maintaining QPU times comparable to IBM configurations.</li>
+                    
+                    <li>For Estimator workloads (Ising model observables), Qedma QESEM achieved the highest accuracy, reducing aggregate mean absolute error by a factor of 4.70 relative to raw execution.</li>
+                    
+                    <li>Q-CTRL also significantly reduced error for Estimator workloads, by a factor of 3.10 relative to raw execution.</li>
+                    
+                    <li>A key tradeoff was identified: QESEM's superior accuracy came at a significant cost, using 7.5 to 11.1 times the reported QPU time of Q-CTRL.</li>
+                    
+                    <li>The results demonstrate that managed ESM can substantially improve current quantum hardware performance, but users must carefully consider the distinct accuracy and execution-time tradeoffs.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Quantum application developers should evaluate commercial ESM solutions like Q-CTRL and Qedma, considering their specific accuracy requirements and budget for QPU execution time.</li>
+                    
+                    <li>Investors in quantum computing should note the competitive landscape and performance differentiation among quantum software providers, as these benchmarks offer insights into market leaders and their value propositions.</li>
+                    
+                    <li>Quantum hardware providers should continue to integrate and optimize ESM techniques within their platforms and provide clear metrics on their performance and associated costs.</li>
+                    
+                    <li>Researchers should further investigate the underlying mechanisms behind these performance differences and explore new ESM strategies that offer better accuracy-time tradeoffs.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2608.05202" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Local Uniqueness of the Born Rule from Categorical Principles</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Fri, 07 Aug 2026 00:00:00 -0400</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This article offers a foundational theoretical insight into quantum mechanics by deriving the Born rule, a cornerstone of quantum probability, from a minimal set of axioms within category theory. Crucially, this derivation is independent of the traditional Hilbert-space framework, suggesting a deeper, more abstract understanding of quantum probability. This could open new avenues for theoretical research in quantum foundations, quantum information theory, and potentially influence future approaches to quantum computing by providing alternative axiomatic bases.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A new theoretical proof demonstrates that the Born rule (P(z) = |z|^2) is the unique local probability law for complex amplitudes, derived from fundamental principles like phase invariance and classical-limit behavior, without relying on the traditional Hilbert-space formulation of quantum mechanics.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Proves a local uniqueness theorem for the Born rule (P(z) = |z|^2) in the setting of small categories with complex morphism weights.</li>
+                    
+                    <li>The Born rule is uniquely determined by five conditions: non-negativity, polynomiality, global U(1) invariance, classical-limit additivity over mutually exclusive paths, and normalization.</li>
+                    
+                    <li>The derivation is significant because it emerges independent of any Hilbert-space framework, suggesting a more fundamental origin for quantum probability.</li>
+                    
+                    <li>Relates the result to existing reconstructions of quantum probability by Gleason, Hardy, and Chiribella-D'Ariano-Perinotti.</li>
+                    
+                    <li>Identifies the extension to global coherence under morphism composition as an open problem, connecting to synthetic probability theory in Markov categories.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Monitor further research in categorical quantum mechanics and its implications for quantum information theory.</li>
+                    
+                    <li>Explore how this axiomatic approach to the Born rule might inform new theoretical models or error correction schemes in quantum computing.</li>
+                    
+                    <li>Investigate the identified open problem regarding global coherence in Markov categories for potential foundational breakthroughs.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2608.05197" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Quantum Advantage for Post-Training Quantization: One Qubit Can Beat One Bit</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Fri, 07 Aug 2026 00:00:00 -0400</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research introduces a novel quantum approach, Quantum Random Access Quantization (QRAQ), to significantly improve post-training quantization in AI models. By leveraging quantum random-access codes and context-matched measurements, it overcomes the limitations of classical one-bit quantization, which struggles with varying deployment contexts. This innovation offers context-specific weight representations and provably lower reconstruction risk, potentially leading to more efficient and accurate deployment of AI models, especially in dynamic or resource-constrained environments, and advancing the field of quantum-enhanced machine learning.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Researchers propose Quantum Random Access Quantization (QRAQ), a novel method using quantum mechanics to enable context-dependent one-bit quantization for AI models, proving it outperforms classical shared-sign methods by achieving lower reconstruction risk and validating it in simulators.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Classical one-bit post-training quantization (PTQ) is limited by a shared binary weight matrix, which is suboptimal when activation statistics vary across deployment contexts.</li>
+                    
+                    <li>Quantum Random Access Quantization (QRAQ) is introduced as a new framework that encodes context-dependent signs in a quantum random-access code.</li>
+                    
+                    <li>QRAQ retrieves context-specific signs via context-matched Pauli measurements, yielding an unbiased, context-specific binary surrogate with a tractable shot-noise penalty.</li>
+                    
+                    <li>The paper proves a row-wise separation from shared-sign one-bit PTQ, demonstrating QRAQ achieves a strictly lower ideal reconstruction risk when optimal context-wise signs are incompatible.</li>
+                    
+                    <li>The relevant quantum resource for this advantage is identified as measurement incompatibility, rather than quantization alone, as fixed-readout quantum schemes are classically simulable.</li>
+                    
+                    <li>Simulator experiments validate QRAQ's predicted performance across ideal, finite-shot, noisy, and multi-context regimes, confirming its theoretical advantages.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Monitor advancements in quantum hardware and quantum random-access memory (QRAM) that could enable practical implementation of QRAQ.</li>
+                    
+                    <li>Investigate potential applications of QRAQ in edge AI or resource-constrained environments where efficient, context-aware models are critical.</li>
+                    
+                    <li>Explore the implications of 'measurement incompatibility' as a key resource for achieving quantum advantage in specific AI tasks.</li>
+                    
+                    <li>Research how QRAQ could be integrated into existing machine learning frameworks and quantization toolchains for future quantum-enhanced model deployment.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Quantum</span>
+                    
+                    <a href="https://arxiv.org/abs/2608.05240" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">WorldClaw: Agentic 3D Open-World Generation at Scale</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research / Generative AI</span>
                         <span class="badge badge-score">Signal: 9.0</span>
                     </div>
                 </div>
@@ -224,30 +426,32 @@
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper provides fundamental insights and practical recipes for building more effective and efficient multimodal AI foundation models. It clarifies how different modalities interact, how to promote synergy, and the critical importance of early unification, potentially reducing computational costs significantly. The discovery of 'vision laziness' and the ability to achieve strong performance with only 5% of the compute budget are particularly impactful for the advancement and accessibility of large AI models.
+                    WorldClaw represents a significant leap in generative AI, enabling the creation of large-scale, coherent, and editable 3D open-worlds from simple text prompts. This addresses a major bottleneck in 3D content production for industries like gaming, metaverse development, and simulations, potentially democratizing complex 3D environment creation and accelerating development cycles.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    A Meta AI paper systematically explores multimodal pretraining, revealing key insights into knowledge flow, modality synergy, the benefits of early unification (and a 'vision laziness' phenomenon), and derives efficient pretraining recipes that achieve strong generative performance with only 5% of the compute budget.
+                    WorldClaw is an agentic, coarse-to-fine AI framework that generates vast, coherent, and editable 3D open-worlds from text prompts, streamlining complex 3D content creation.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>The study provides empirical clarity through a systematic exploration of multimodal pretraining, identifying four key insights.</li>
+                    <li>WorldClaw is a fully agentic, coarse-to-fine framework for generating large-scale, freely explorable 3D open-worlds from open-ended text prompts.</li>
                     
-                    <li>Knowledge Flow: It disentangles how language, visual understanding, and visual generation transfer knowledge across modalities, revealing distinct patterns of influence and asymmetry.</li>
+                    <li>It addresses the challenge of simultaneously maintaining global spatial coherence, rich local content, and explicit, editable assets.</li>
                     
-                    <li>Synergy vs. Competition: Data 'complexity' largely determines whether modalities are synergistic. Architectural choices like shared attention and normalization with modality-specific feed-forward layers promote synergy.</li>
+                    <li>The process begins with 'planning agents' translating text prompts into structured specifications for regions, terrain, assets, materials, and spatial relations.</li>
                     
-                    <li>Early Unification: Unifying modalities from the very early stages and training them jointly is more effective than late alignment or sequential training. This process uncovers a 'vision laziness' phenomenon, where delayed integration leads models to rely on language priors.</li>
+                    <li>A globally coherent terrain foundation is built from semantic layouts, reusable assets, generative/procedural materials, and a region-aware height field.</li>
                     
-                    <li>Recipes: The research derives efficient pretraining recipes that achieve strong generative performance using only 5% of the compute budget.</li>
+                    <li>For detailed regions, the system generates terrain-conditioned compositions, reconstructs editable textured meshes, and precisely places them on the terrain.</li>
                     
-                    <li>These core findings are validated at scale by training multiple 13.5B MoE models on 2T tokens, providing a principled foundation for understanding and scaling multimodal pretraining.</li>
+                    <li>'Render-based agents' further refine terrain, objects, appearance, and contacts to enhance visual quality and realism.</li>
+                    
+                    <li>The framework successfully produces large-scale scenes with coherent spatial organization, visually compelling local content, and editable instance-level assets while preserving a consistent global terrain structure.</li>
                     
                 </ul>
                 
@@ -256,13 +460,11 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>AI researchers should prioritize early and joint unification strategies in the design of future multimodal foundation models.</li>
+                    <li>Review the full paper and project page for a deeper understanding of WorldClaw's technical architecture and capabilities.</li>
                     
-                    <li>Model architects should explore incorporating shared attention and modality-specific feed-forward layers to enhance synergy between different data types.</li>
+                    <li>Consider the potential impact of agentic 3D generation on future content creation pipelines in gaming, virtual reality, and simulation industries.</li>
                     
-                    <li>Developers should investigate the 'vision laziness' phenomenon further to optimize integration timing and prevent over-reliance on language priors in multimodal models.</li>
-                    
-                    <li>Organizations and startups should evaluate and implement the derived efficient pretraining recipes to significantly reduce computational costs for developing high-performing multimodal AI.</li>
+                    <li>Explore opportunities for integrating or building upon such generative AI frameworks for new applications or services.</li>
                     
                 </ul>
                 
@@ -270,56 +472,50 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2608.05000" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.05248" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">ToolArtist: Fully Agentic Image Generation with Unified Multimodal Models</h3>
+                    <h3 class="card-title">On-Policy Delta Distillation for Multilingual Math Reasoning</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
+                        <span class="badge badge-score">Signal: 7.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Aug 5</span>
+                    <span>📅 Aug 6</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    ToolArtist represents a significant advancement in generative AI by introducing a fully agentic approach to image generation. It addresses the limitations of current text-to-image models in handling complex, open-world tasks requiring multi-step reasoning and external knowledge. By unifying reasoning, tool use, and native image generation under a single policy, it enables more intelligent and versatile creative AI systems. The release of training data and infrastructure further accelerates research and development in this crucial area, paving the way for more autonomous and capable AI agents.
+                    This research introduces an improved method (OPD^2) for post-training large language models (LLMs) to enhance their mathematical reasoning capabilities across multiple languages. By effectively narrowing performance gaps between English and other languages like Korean and Japanese, it contributes to making advanced AI reasoning more accessible and robust globally. This is crucial for developing truly multilingual AI applications and reducing language-specific performance disparities in complex tasks.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    ToolArtist is a new fully agentic image generation model that unifies reasoning, external tool use, and native image generation under a single policy, outperforming previous methods by enabling more complex, open-world creative tasks. It achieves this through post-training a Unified Multimodal Model (UMM) with Supervised Fine-Tuning and Reinforcement Learning (RAD-GRPO).
+                    A new method, On-Policy Delta Distillation (OPD^2), significantly improves multilingual math reasoning in LLMs, especially for Korean and Japanese, by using the probability gap between teacher and base models as a learning signal, outperforming previous methods and highlighting the need for multilingual data.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Current Text-to-Image (T2I) models struggle with open-world tasks requiring complex semantic understanding, multi-step reasoning, and external knowledge.</li>
+                    <li>On-Policy Delta Distillation (OPD) is an emerging alternative to reinforcement learning for LLM post-training.</li>
                     
-                    <li>Existing agentic approaches for image generation either use fixed workflows or only partially control the process, leading to uncoordinated reasoning and tool invocation.</li>
+                    <li>The paper introduces an advanced variant, On-Policy Delta Distillation (OPD^2), specifically for mathematical reasoning in English, Korean, and Japanese.</li>
                     
-                    <li>ToolArtist proposes a 'fully agentic' image generation model that dynamically orchestrates reasoning, external tool use (e.g., search), and native image generation within one unified policy.</li>
+                    <li>OPD^2 improves upon original OPD by utilizing the probability gap between a post-trained teacher model and its base model as the learning signal.</li>
                     
-                    <li>The model is obtained by post-training a Unified Multimodal Model (UMM).</li>
+                    <li>Experiments with Qwen3 demonstrate that OPD^2 consistently outperforms OPD, showing strong improvements in Korean and Japanese, and generally narrowing the English-Korean performance gap.</li>
                     
-                    <li>It utilizes Supervised Fine-Tuning (SFT) with a 'teacher agent' equipped with search and image-generation tools.</li>
-                    
-                    <li>Reinforcement Learning (RL) is applied using an agentic infrastructure for UMMs, introducing RAD-GRPO (Reason-Act-Draw GRPO) with complementary intent and quality rewards.</li>
-                    
-                    <li>Experiments show ToolArtist consistently outperforms approaches with fixed pipelines or only partially agent-controlled components.</li>
-                    
-                    <li>The training data and complete post-training infrastructure are released to the public.</li>
+                    <li>English-only OPD can boost performance in other languages but tends to shift responses towards English, underscoring the importance of using multilingual data to preserve target-language responses.</li>
                     
                 </ul>
                 
@@ -328,11 +524,11 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Explore the released training data and post-training infrastructure to implement or experiment with fully agentic image generation models.</li>
+                    <li>AI researchers and developers working on multilingual LLMs should investigate integrating OPD^2 for post-training, particularly for complex reasoning tasks like mathematics.</li>
                     
-                    <li>Investigate the RAD-GRPO methodology and the use of complementary intent and quality rewards for potential application in other agentic AI tasks.</li>
+                    <li>Teams developing LLMs for non-English markets should prioritize collecting and utilizing multilingual data for post-training to avoid language-shifting biases observed with English-only training.</li>
                     
-                    <li>Consider integrating agentic capabilities into existing or new generative AI applications to enhance their versatility, reasoning, and ability to handle complex, open-ended creative prompts.</li>
+                    <li>Evaluate the applicability of OPD^2 to other complex reasoning tasks beyond mathematics in multilingual contexts.</li>
                     
                 </ul>
                 
@@ -340,219 +536,7 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2608.04436" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">The Personalization Mirage: How LLMs Fabricate User Profiles, and Why Self-Monitoring Misleads</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 August 5, 2024</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This paper reveals a fundamental and pervasive flaw in how personalized LLMs construct user profiles: they frequently fabricate attributes not supported by evidence. Crucially, LLMs are unreliable at self-assessing this 'over-inference,' often reporting low fabrication when they actually produce the most. This 'Self-Monitoring Inversion' has significant implications for the trustworthiness, reliability, and ethical deployment of AI systems designed for personalization, highlighting the critical need for external validation over model self-reports.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    LLMs frequently 'over-infer' user attributes, fabricating details beyond evidence in 35-49% of claims. A 'Self-Monitoring Inversion' means models claiming the least over-inference actually fabricate the most, making self-reported confidence misleading for comparison. External verification is essential for trustworthy personalized LLMs.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Personalized LLMs with persistent memory frequently engage in 'over-inference' (OI), fabricating user attributes that lack evidential support.</li>
-                    
-                    <li>Over-inference is pervasive, affecting 35%-49% of claims across all 12 models evaluated on the new 'MirageBench' benchmark.</li>
-                    
-                    <li>A 'Self-Monitoring Inversion' was discovered: models' self-assessed OI is negatively correlated with their actual, judge-measured OI. Models that report the least fabrication tend to be flagged as fabricating the most.</li>
-                    
-                    <li>Self-reported confidence from LLMs is a misleading signal for comparing the faithfulness of different models in personalization tasks.</li>
-                    
-                    <li>Over-inferred attributes accumulate approximately linearly in multi-turn interactions with little revision.</li>
-                    
-                    <li>The paper introduces 'MirageBench,' a new benchmark for evaluating the faithfulness of personalized LLMs, comprising 150 personas, 6 personalization tasks, and a four-way faithfulness taxonomy.</li>
-                    
-                    <li>External verification, rather than model self-report, is positioned as a more reliable foundation for trustworthy personalization.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Developers building personalized LLM applications should prioritize and implement robust external verification mechanisms for user profiles and inferred attributes.</li>
-                    
-                    <li>Researchers should focus on developing methods to mitigate LLM over-inference and improve their ability to accurately assess their own uncertainty or lack of evidence.</li>
-                    
-                    <li>Evaluators of LLMs should be cautious about relying solely on self-reported confidence or self-audits when comparing models for personalization tasks.</li>
-                    
-                    <li>Companies deploying personalized AI should consider the ethical implications and potential risks of attribute fabrication on user trust and data privacy.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2608.04570" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">When Teachers Mislead: Spurious-Signal-Aware On-Policy Distillation</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 2026-08-04</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This research addresses a critical, previously overlooked failure mode in AI model distillation, a technique vital for creating smaller, more efficient models from larger ones. By identifying and mitigating 'spurious signals' from teacher models, SA-OPD improves the reliability and effectiveness of training student models, leading to better performance in practical AI applications across various domains like language and vision.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    A new method, SA-OPD, enhances AI model distillation by detecting and filtering out misleading 'spurious signals' from teacher models that are not grounded in the input. This leads to more effective and reliable training for student Large Language Models (LLMs) and Vision-Language Models (VLMs), consistently outperforming existing methods.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>On-Policy Distillation (OPD) transfers capabilities from a large 'teacher' model to a smaller 'student' model by supervising student-sampled trajectories with dense token-level teacher signals.</li>
-                    
-                    <li>A fundamental failure mode in OPD is 'spurious signals': teacher's token-level judgments can be driven by input-agnostic language priors, formatting conventions, or stereotyped reasoning, rather than task-specific evidence.</li>
-                    
-                    <li>These spurious signals can produce large gradients that contribute little to task improvement, leading to harmful updates during distillation.</li>
-                    
-                    <li>The proposed SA-OPD (Spurious-Signal-Aware On-Policy Distillation) framework identifies and filters these misleading token-level supervisions.</li>
-                    
-                    <li>SA-OPD introduces a lightweight 'input-groundedness proxy' to estimate if a distillation signal truly depends on the input, without requiring external labels or auxiliary judges.</li>
-                    
-                    <li>It filters only tokens that exhibit both low input-groundedness and extreme distillation divergence, targeting high-impact spurious updates.</li>
-                    
-                    <li>Extensive experiments on both Large Language Model (LLM) and Vision-Language Model (VLM) settings demonstrate that SA-OPD consistently outperforms Vanilla OPD and competitive selective methods on benchmarks like mathematical reasoning, visual understanding, and visual reasoning.</li>
-                    
-                    <li>The research establishes input-groundedness as a key dimension for effective OPD supervision selection, offering a simple and effective strategy for mitigating spurious updates.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>AI researchers and practitioners involved in model distillation should investigate and consider integrating input-groundedness checks into their training pipelines.</li>
-                    
-                    <li>Evaluate SA-OPD or similar spurious signal detection techniques when fine-tuning or compressing large language and vision-language models for improved performance and reliability.</li>
-                    
-                    <li>Explore the broader implications of 'spurious signals' and input-agnostic reasoning in other areas of AI model development and evaluation beyond distillation.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2608.03632" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Unifying quantum measurement constructions via a relative-entropy minimum change principle</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">Quantum Computing</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Thu, 06 Aug 2026 00:00:00 -0400</span>
-                    <span>🌐 Source: arXiv quant-ph</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This paper introduces a significant theoretical framework that unifies various quantum measurement constructions, simplifies the characterization of optimal measurements, and discovers a novel class of 'softmin thermal measurements.' By establishing deep connections between quantum information theory and statistical mechanics, it provides new tools and insights that could advance the design and understanding of quantum systems, particularly in quantum computing, quantum sensing, and quantum information processing.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Researchers propose a relative-entropy minimum change principle to unify quantum measurement theory, characterize optimal measurements, recover known types, and discover a new family ('softmin thermal measurements') with an analogy to thermal states in statistical mechanics.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Introduces a relative-entropy minimum change principle for unifying quantum measurement constructions, extending the classical Bayes reversal channel concept to quantum information theory.</li>
-                    
-                    <li>Provides a closed-form characterization of measurements that are optimal for this principle.</li>
-                    
-                    <li>Establishes a dual formulation involving a single unconstrained Hermitian variable to find these optimal measurements.</li>
-                    
-                    <li>Recovers notable existing measurements, such as pretty good measurements and Fermi-Dirac thermal measurements, within this new unifying framework.</li>
-                    
-                    <li>Discovers a novel family of measurements termed 'softmin thermal measurements.'</li>
-                    
-                    <li>Demonstrates that softmin thermal measurements arise as optimal solutions to entropy-regularized semidefinite optimization problems, analogous to thermal states in statistical mechanics.</li>
-                    
-                    <li>Proves an additivity property for the relative-entropy minimum change principle.</li>
-                    
-                    <li>Investigates the performance of Fermi-Dirac thermal measurements for quantum hypothesis testing.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Study the mathematical framework of the relative-entropy minimum change principle to understand its implications for quantum information theory.</li>
-                    
-                    <li>Evaluate the potential practical applications of 'softmin thermal measurements' in quantum computing, quantum sensing, or quantum communication protocols.</li>
-                    
-                    <li>Explore how this unifying principle could inform the design of more efficient or robust quantum measurement schemes.</li>
-                    
-                    <li>Investigate the deeper theoretical connections between quantum measurements and statistical mechanics highlighted by this work, particularly the analogy between softmin thermal measurements and thermal states.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: Quantum</span>
-                    
-                    <a href="https://arxiv.org/abs/2608.04055" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.05802" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -563,65 +547,70 @@
         <section id="categories">
             <h2>By Category</h2>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A Meta AI paper systematically explores multimodal pretraining, revealing key insights into knowledge flow, modality synergy, the benefits of early unification (and a 'vision laziness' phenomenon), and derives efficient pretraining recipes that achieve strong generative performance with only 5% of the compute budget.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.73</span>
-                        
-                        <a href="https://huggingface.co/papers/2608.05000" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">ToolArtist: Fully Agentic Image Generation with Unified Multimodal Models</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">ToolArtist is a new fully agentic image generation model that unifies reasoning, external tool use, and native image generation under a single policy, outperforming previous methods by enabling more complex, open-world creative tasks. It achieves this through post-training a Unified Multimodal Model (UMM) with Supervised Fine-Tuning and Reinforcement Learning (RAD-GRPO).</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.38</span>
-                        
-                        <a href="https://huggingface.co/papers/2608.04436" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">The Personalization Mirage: How LLMs Fabricate User Profiles, and Why Self-Monitoring Misleads</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">LLMs frequently 'over-infer' user attributes, fabricating details beyond evidence in 35-49% of claims. A 'Self-Monitoring Inversion' means models claiming the least over-inference actually fabricate the most, making self-reported confidence misleading for comparison. External verification is essential for trustworthy personalized LLMs.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Quantum Error Management Benchmark: Accuracy vs. Execution Time Tradeoffs</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A benchmark of commercial quantum error suppression and mitigation (ESM) solutions on IBM's 156-qubit processor shows significant error reduction (up to 4.7x) but with clear tradeoffs between accuracy and QPU execution time. Qedma QESEM achieved the highest accuracy, while Q-CTRL balanced strong performance with lower execution time.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
                         <span>Score: 8.3</span>
                         
-                        <a href="https://huggingface.co/papers/2608.04570" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://arxiv.org/abs/2608.05202" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">When Teachers Mislead: Spurious-Signal-Aware On-Policy Distillation</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new method, SA-OPD, enhances AI model distillation by detecting and filtering out misleading 'spurious signals' from teacher models that are not grounded in the input. This leads to more effective and reliable training for student Large Language Models (LLMs) and Vision-Language Models (VLMs), consistently outperforming existing methods.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Local Uniqueness of the Born Rule from Categorical Principles</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new theoretical proof demonstrates that the Born rule (P(z) = |z|^2) is the unique local probability law for complex amplitudes, derived from fundamental principles like phase invariance and classical-limit behavior, without relying on the traditional Hilbert-space formulation of quantum mechanics.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.3</span>
+                        <span>Score: 8.22</span>
                         
-                        <a href="https://huggingface.co/papers/2608.03632" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://arxiv.org/abs/2608.05197" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
             </div>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Unifying quantum measurement constructions via a relative-entropy minimum change principle</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers propose a relative-entropy minimum change principle to unify quantum measurement theory, characterize optimal measurements, recover known types, and discover a new family ('softmin thermal measurements') with an analogy to thermal states in statistical mechanics.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Quantum Advantage for Post-Training Quantization: One Qubit Can Beat One Bit</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers propose Quantum Random Access Quantization (QRAQ), a novel method using quantum mechanics to enable context-dependent one-bit quantization for AI models, proving it outperforms classical shared-sign methods by achieving lower reconstruction risk and validating it in simulators.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.15</span>
+                        <span>Score: 8.22</span>
                         
-                        <a href="https://arxiv.org/abs/2608.04055" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://arxiv.org/abs/2608.05240" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">On-Policy Delta Distillation for Multilingual Math Reasoning</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new method, On-Policy Delta Distillation (OPD^2), significantly improves multilingual math reasoning in LLMs, especially for Korean and Japanese, by using the probability gap between teacher and base models as a learning signal, outperforming previous methods and highlighting the need for multilingual data.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 7.67</span>
+                        
+                        <a href="https://huggingface.co/papers/2608.05802" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research / Generative AI</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">WorldClaw: Agentic 3D Open-World Generation at Scale</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">WorldClaw is an agentic, coarse-to-fine AI framework that generates vast, coherent, and editable 3D open-worlds from text prompts, streamlining complex 3D content creation.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.1</span>
+                        
+                        <a href="https://huggingface.co/papers/2608.05248" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
