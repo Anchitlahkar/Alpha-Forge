@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-07</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-08</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,249 +209,49 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Quantum Error Management Benchmark: Accuracy vs. Execution Time Tradeoffs</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">Quantum Computing</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Fri, 07 Aug 2026 00:00:00 -0400</span>
-                    <span>🌐 Source: arXiv quant-ph</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This benchmark provides crucial, independent data on the performance and tradeoffs of leading commercial quantum error suppression and mitigation solutions. It helps quantum hardware users, software developers, and investors understand the current state of practical quantum computing, highlighting that significant performance gains are possible but come with costs in execution time. This directly impacts the usability and commercial viability of current quantum hardware.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    A benchmark of commercial quantum error suppression and mitigation (ESM) solutions on IBM's 156-qubit processor shows significant error reduction (up to 4.7x) but with clear tradeoffs between accuracy and QPU execution time. Qedma QESEM achieved the highest accuracy, while Q-CTRL balanced strong performance with lower execution time.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Quantum processors are noisy, making error suppression and mitigation (ESM) essential for extracting value from current hardware, as full error correction is too costly.</li>
-                    
-                    <li>The study independently benchmarked IBM Qiskit Runtime (with features like measurement twirling, TREX), Q-CTRL Performance Management, and Qedma QESEM on an IBM Pittsburgh 156-qubit Heron r3 processor.</li>
-                    
-                    <li>For Sampler workloads (e.g., Bernstein-Vazirani, QPE), Q-CTRL produced the best results on structured circuits while maintaining QPU times comparable to IBM configurations.</li>
-                    
-                    <li>For Estimator workloads (Ising model observables), Qedma QESEM achieved the highest accuracy, reducing aggregate mean absolute error by a factor of 4.70 relative to raw execution.</li>
-                    
-                    <li>Q-CTRL also significantly reduced error for Estimator workloads, by a factor of 3.10 relative to raw execution.</li>
-                    
-                    <li>A key tradeoff was identified: QESEM's superior accuracy came at a significant cost, using 7.5 to 11.1 times the reported QPU time of Q-CTRL.</li>
-                    
-                    <li>The results demonstrate that managed ESM can substantially improve current quantum hardware performance, but users must carefully consider the distinct accuracy and execution-time tradeoffs.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Quantum application developers should evaluate commercial ESM solutions like Q-CTRL and Qedma, considering their specific accuracy requirements and budget for QPU execution time.</li>
-                    
-                    <li>Investors in quantum computing should note the competitive landscape and performance differentiation among quantum software providers, as these benchmarks offer insights into market leaders and their value propositions.</li>
-                    
-                    <li>Quantum hardware providers should continue to integrate and optimize ESM techniques within their platforms and provide clear metrics on their performance and associated costs.</li>
-                    
-                    <li>Researchers should further investigate the underlying mechanisms behind these performance differences and explore new ESM strategies that offer better accuracy-time tradeoffs.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: Quantum</span>
-                    
-                    <a href="https://arxiv.org/abs/2608.05202" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Local Uniqueness of the Born Rule from Categorical Principles</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">Quantum Computing</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Fri, 07 Aug 2026 00:00:00 -0400</span>
-                    <span>🌐 Source: arXiv quant-ph</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This article offers a foundational theoretical insight into quantum mechanics by deriving the Born rule, a cornerstone of quantum probability, from a minimal set of axioms within category theory. Crucially, this derivation is independent of the traditional Hilbert-space framework, suggesting a deeper, more abstract understanding of quantum probability. This could open new avenues for theoretical research in quantum foundations, quantum information theory, and potentially influence future approaches to quantum computing by providing alternative axiomatic bases.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    A new theoretical proof demonstrates that the Born rule (P(z) = |z|^2) is the unique local probability law for complex amplitudes, derived from fundamental principles like phase invariance and classical-limit behavior, without relying on the traditional Hilbert-space formulation of quantum mechanics.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Proves a local uniqueness theorem for the Born rule (P(z) = |z|^2) in the setting of small categories with complex morphism weights.</li>
-                    
-                    <li>The Born rule is uniquely determined by five conditions: non-negativity, polynomiality, global U(1) invariance, classical-limit additivity over mutually exclusive paths, and normalization.</li>
-                    
-                    <li>The derivation is significant because it emerges independent of any Hilbert-space framework, suggesting a more fundamental origin for quantum probability.</li>
-                    
-                    <li>Relates the result to existing reconstructions of quantum probability by Gleason, Hardy, and Chiribella-D'Ariano-Perinotti.</li>
-                    
-                    <li>Identifies the extension to global coherence under morphism composition as an open problem, connecting to synthetic probability theory in Markov categories.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Monitor further research in categorical quantum mechanics and its implications for quantum information theory.</li>
-                    
-                    <li>Explore how this axiomatic approach to the Born rule might inform new theoretical models or error correction schemes in quantum computing.</li>
-                    
-                    <li>Investigate the identified open problem regarding global coherence in Markov categories for potential foundational breakthroughs.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: Quantum</span>
-                    
-                    <a href="https://arxiv.org/abs/2608.05197" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Quantum Advantage for Post-Training Quantization: One Qubit Can Beat One Bit</h3>
+                    <h3 class="card-title">OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Fri, 07 Aug 2026 00:00:00 -0400</span>
-                    <span>🌐 Source: arXiv quant-ph</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This research introduces a novel quantum approach, Quantum Random Access Quantization (QRAQ), to significantly improve post-training quantization in AI models. By leveraging quantum random-access codes and context-matched measurements, it overcomes the limitations of classical one-bit quantization, which struggles with varying deployment contexts. This innovation offers context-specific weight representations and provably lower reconstruction risk, potentially leading to more efficient and accurate deployment of AI models, especially in dynamic or resource-constrained environments, and advancing the field of quantum-enhanced machine learning.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Researchers propose Quantum Random Access Quantization (QRAQ), a novel method using quantum mechanics to enable context-dependent one-bit quantization for AI models, proving it outperforms classical shared-sign methods by achieving lower reconstruction risk and validating it in simulators.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Classical one-bit post-training quantization (PTQ) is limited by a shared binary weight matrix, which is suboptimal when activation statistics vary across deployment contexts.</li>
-                    
-                    <li>Quantum Random Access Quantization (QRAQ) is introduced as a new framework that encodes context-dependent signs in a quantum random-access code.</li>
-                    
-                    <li>QRAQ retrieves context-specific signs via context-matched Pauli measurements, yielding an unbiased, context-specific binary surrogate with a tractable shot-noise penalty.</li>
-                    
-                    <li>The paper proves a row-wise separation from shared-sign one-bit PTQ, demonstrating QRAQ achieves a strictly lower ideal reconstruction risk when optimal context-wise signs are incompatible.</li>
-                    
-                    <li>The relevant quantum resource for this advantage is identified as measurement incompatibility, rather than quantization alone, as fixed-readout quantum schemes are classically simulable.</li>
-                    
-                    <li>Simulator experiments validate QRAQ's predicted performance across ideal, finite-shot, noisy, and multi-context regimes, confirming its theoretical advantages.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Monitor advancements in quantum hardware and quantum random-access memory (QRAM) that could enable practical implementation of QRAQ.</li>
-                    
-                    <li>Investigate potential applications of QRAQ in edge AI or resource-constrained environments where efficient, context-aware models are critical.</li>
-                    
-                    <li>Explore the implications of 'measurement incompatibility' as a key resource for achieving quantum advantage in specific AI tasks.</li>
-                    
-                    <li>Research how QRAQ could be integrated into existing machine learning frameworks and quantization toolchains for future quantum-enhanced model deployment.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: Quantum</span>
-                    
-                    <a href="https://arxiv.org/abs/2608.05240" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">WorldClaw: Agentic 3D Open-World Generation at Scale</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research / Generative AI</span>
                         <span class="badge badge-score">Signal: 9.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Aug 5</span>
+                    <span>📅 Jul 30</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    WorldClaw represents a significant leap in generative AI, enabling the creation of large-scale, coherent, and editable 3D open-worlds from simple text prompts. This addresses a major bottleneck in 3D content production for industries like gaming, metaverse development, and simulations, potentially democratizing complex 3D environment creation and accelerating development cycles.
+                    This paper addresses a critical, previously unexamined challenge in reliably evaluating Computer-Using Agents (CUAs) and their reward models. By introducing a standardized, human-gold benchmark (OSReward) and open-source, cost-effective reward models (OS-Shepherd), it provides essential tools for the reliable development, evaluation, and scaling of AI agents. It highlights significant biases and cost issues with existing VLM judges, offering a practical solution that can accelerate progress in agentic AI.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    WorldClaw is an agentic, coarse-to-fine AI framework that generates vast, coherent, and editable 3D open-worlds from text prompts, streamlining complex 3D content creation.
+                    The OSReward paper introduces a benchmark to systematically evaluate Vision-Language Model (VLM) judges for Computer-Using Agents (CUAs), revealing current models are biased and expensive. It then releases OS-Shepherd, open-source reward models (9B/35B) and a large annotated corpus (OS-Shepherd-100K) that provide reliable, low-cost reward signals, matching commercial judges at significantly reduced cost.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>WorldClaw is a fully agentic, coarse-to-fine framework for generating large-scale, freely explorable 3D open-worlds from open-ended text prompts.</li>
+                    <li>Computer-Using Agents (CUAs) are rapidly advancing, and verifying their task fulfillment is crucial for evaluation, data curation, and reinforcement learning.</li>
                     
-                    <li>It addresses the challenge of simultaneously maintaining global spatial coherence, rich local content, and explicit, editable assets.</li>
+                    <li>Vision-Language Models (VLMs) are increasingly used as judges for CUA trajectories, but their reliability has been largely unexamined.</li>
                     
-                    <li>The process begins with 'planning agents' translating text prompts into structured specifications for regions, terrain, assets, materials, and spatial relations.</li>
+                    <li>OSReward is introduced as a realistic, high-quality benchmark to systematically evaluate VLM judges on CUA trajectories, including OSReward-Hard for challenging cases and OSReward-Multi for fine-grained scoring.</li>
                     
-                    <li>A globally coherent terrain foundation is built from semantic layouts, reusable assets, generative/procedural materials, and a region-aware height field.</li>
+                    <li>Comprehensive evaluation of seven state-of-the-art VLM judges reveals a systematic 'leniency bias,' where they often mislabel failed runs as successes.</li>
                     
-                    <li>For detailed regions, the system generates terrain-conditioned compositions, reconstructs editable textured meshes, and precisely places them on the terrain.</li>
+                    <li>Reliable VLM judges are currently too expensive for large-scale use, while affordable open models lack sufficient reliability.</li>
                     
-                    <li>'Render-based agents' further refine terrain, objects, appearance, and contacts to enhance visual quality and realism.</li>
+                    <li>To address this gap, the paper releases OS-Shepherd-100K, the largest reasoning-annotated corpus of CUA trajectory judgments.</li>
                     
-                    <li>The framework successfully produces large-scale scenes with coherent spatial organization, visually compelling local content, and editable instance-level assets while preserving a consistent global terrain structure.</li>
+                    <li>OS-Shepherd (9B and 35B) are open-weight reward models trained on this corpus, providing low-cost, stable, and reliable reward signals that match commercial judges at 30-60% lower cost.</li>
+                    
+                    <li>All code, benchmark, dataset, and model checkpoints are open-sourced for the community.</li>
                     
                 </ul>
                 
@@ -460,11 +260,15 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Review the full paper and project page for a deeper understanding of WorldClaw's technical architecture and capabilities.</li>
+                    <li>AI researchers should review the OSReward benchmark for evaluating their own Computer-Using Agents and reward models.</li>
                     
-                    <li>Consider the potential impact of agentic 3D generation on future content creation pipelines in gaming, virtual reality, and simulation industries.</li>
+                    <li>Software engineers developing AI agents should consider integrating OS-Shepherd models for cost-effective and reliable reward signal generation.</li>
                     
-                    <li>Explore opportunities for integrating or building upon such generative AI frameworks for new applications or services.</li>
+                    <li>Developers and researchers can utilize the OS-Shepherd-100K dataset to train or fine-tune their own CUA reward models.</li>
+                    
+                    <li>Startups in the AI agent space should investigate the cost-efficiency and reliability benefits of OS-Shepherd compared to commercial alternatives.</li>
+                    
+                    <li>Investors interested in AI infrastructure and agent development should note the importance of robust evaluation frameworks and cost-effective reward models for scaling AI agent technologies.</li>
                     
                 </ul>
                 
@@ -472,50 +276,54 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2608.05248" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2607.28609" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">On-Policy Delta Distillation for Multilingual Math Reasoning</h3>
+                    <h3 class="card-title">How and Why Netflix Built a Real-Time Distributed Graph: Part 3 — Querying the graph with gRPC execution API</h3>
                     <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 7.0</span>
+                        <span class="badge badge-category">Software Engineering</span>
+                        <span class="badge badge-score">Signal: 9.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Aug 6</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
+                    <span>📅 Fri, 07 Aug 2026 16:01:02 GMT</span>
+                    <span>🌐 Source: Netflix Tech Blog</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This research introduces an improved method (OPD^2) for post-training large language models (LLMs) to enhance their mathematical reasoning capabilities across multiple languages. By effectively narrowing performance gaps between English and other languages like Korean and Japanese, it contributes to making advanced AI reasoning more accessible and robust globally. This is crucial for developing truly multilingual AI applications and reducing language-specific performance disparities in complex tasks.
+                    This article provides a deep dive into how Netflix engineered a highly scalable, low-latency query layer for its Real-Time Distributed Graph (RDG), handling billions of nodes and edges. It showcases practical solutions to complex distributed systems challenges, offering valuable insights into architectural trade-offs, performance optimization techniques (like breadth-first traversal, async-first execution, and selective caching), and the use of gRPC for efficient API communication. For anyone building or managing large-scale data systems, especially graph databases, this is a masterclass in robust, real-world engineering.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    A new method, On-Policy Delta Distillation (OPD^2), significantly improves multilingual math reasoning in LLMs, especially for Korean and Japanese, by using the probability gap between teacher and base models as a learning signal, outperforming previous methods and highlighting the need for multilingual data.
+                    Netflix details the design of its real-time distributed graph's query layer, emphasizing breadth-first traversal, async-first execution, selective caching, and gRPC to achieve sub-100ms latency for diverse queries across billions of nodes and edges.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>On-Policy Delta Distillation (OPD) is an emerging alternative to reinforcement learning for LLM post-training.</li>
+                    <li>Netflix's Real-Time Distributed Graph (RDG) requires a fast, flexible serving layer to query billions of nodes and edges with sub-100ms latency.</li>
                     
-                    <li>The paper introduces an advanced variant, On-Policy Delta Distillation (OPD^2), specifically for mathematical reasoning in English, Korean, and Japanese.</li>
+                    <li>Query patterns vary widely, from 'shallow-wide' (high fan-out, e.g., devices used by an account) to 'deep-narrow' (multi-hop traversals, e.g., viewing history across profiles).</li>
                     
-                    <li>OPD^2 improves upon original OPD by utilizing the probability gap between a post-trained teacher model and its base model as the learning signal.</li>
+                    <li>Key design choices include breadth-first traversal (for parallel execution in distributed systems), async-first execution (using few threads for high concurrency), selective caching (EVCache for stable, frequently accessed data), opt-in enrichments (client-specified external data), and eventual consistency.</li>
                     
-                    <li>Experiments with Qwen3 demonstrate that OPD^2 consistently outperforms OPD, showing strong improvements in Korean and Japanese, and generally narrowing the English-Korean performance gap.</li>
+                    <li>The architecture comprises a Graph Query Service (gRPC entry, execution engine), a Storage Abstraction Layer (KVDAL interface, streaming, caching), and an Enrichment Layer (external metadata fetching).</li>
                     
-                    <li>English-only OPD can boost performance in other languages but tends to shift responses towards English, underscoring the importance of using multilingual data to preserve target-language responses.</li>
+                    <li>Query execution involves interpreting the request upfront to prevent over-fetching, efficient storage lookups, breadth-first level-by-level traversal, parallelizing operations safely, smart filtering, and leveraging caching for repeat queries.</li>
+                    
+                    <li>gRPC is used as the API for querying the graph, enabling efficient communication and structured requests.</li>
+                    
+                    <li>The system is designed to handle tens of thousands of queries per second while maintaining strict latency targets.</li>
                     
                 </ul>
                 
@@ -524,11 +332,85 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>AI researchers and developers working on multilingual LLMs should investigate integrating OPD^2 for post-training, particularly for complex reasoning tasks like mathematics.</li>
+                    <li>Evaluate breadth-first traversal as a strategy for optimizing multi-hop queries in distributed graph systems to reduce sequential network overhead.</li>
                     
-                    <li>Teams developing LLMs for non-English markets should prioritize collecting and utilizing multilingual data for post-training to avoid language-shifting biases observed with English-only training.</li>
+                    <li>Consider an async-first execution model for I/O-bound services to maximize concurrency with a minimal thread footprint.</li>
                     
-                    <li>Evaluate the applicability of OPD^2 to other complex reasoning tasks beyond mathematics in multilingual contexts.</li>
+                    <li>Implement selective caching strategies, carefully tuning TTLs and scope, to balance performance gains with data freshness requirements.</li>
+                    
+                    <li>Design APIs (e.g., using gRPC) with explicit control over data enrichment to avoid unnecessary overhead for clients.</li>
+                    
+                    <li>Analyze your system's query patterns (shallow-wide vs. deep-narrow) to inform architectural decisions for your serving layer.</li>
+                    
+                    <li>Explore the use of a Storage Abstraction Layer to decouple your query engine from underlying data storage technologies.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Engineering</span>
+                    
+                    <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?source=rss----2615bd06b42e---4" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">GST-Bench: Can VLMs Develop Global Spatial Awareness from Video?</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 7.5</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 August 6</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper introduces a crucial benchmark and dataset (GST-Bench and GST-Train) that exposes a significant limitation in current Video-Language Models (VLMs): their inability to develop global spatial awareness from continuous, long-horizon video streams. This capability is fundamental for the advancement of embodied agents, robotics, and autonomous systems. By highlighting this gap and providing tools for evaluation and training, the research directly guides future efforts to build more intelligent and spatially aware AI.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    A new benchmark, GST-Bench, reveals that state-of-the-art Video-Language Models (VLMs) significantly lack global spatial awareness from continuous video, performing far below human levels. The research introduces a dataset and benchmark to evaluate this critical capability, which is essential for embodied AI, and provides a training dataset (GST-Train) to facilitate future research.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Existing VLM benchmarks primarily focus on local spatial perception, neglecting global spatial awareness from continuous, long-horizon video streams.</li>
+                    
+                    <li>GST-Bench is a novel Video Question Answering (VQA) benchmark designed to evaluate global spatial intelligence in VLMs, requiring models to infer spatial information from novel viewpoints and map egocentric observations to global top-down images.</li>
+                    
+                    <li>The benchmark comprises human-verified questions derived from 6,790 minutes of synthetically generated video.</li>
+                    
+                    <li>Evaluation of 22 state-of-the-art VLMs on GST-Bench reveals a striking performance gap: the strongest zero-shot model achieves only 42.68, significantly lower than the human score of 79.08.</li>
+                    
+                    <li>Models struggle to consolidate long-horizon observations into a globally consistent scene representation, even when demonstrating strong local spatial understanding.</li>
+                    
+                    <li>GST-Train, a complementary dataset, is provided to support and accelerate future research aimed at addressing this challenge in global spatial reasoning for VLMs.</li>
+                    
+                    <li>The research is critical for advancing the capabilities of embodied agents, robotics, and other AI systems requiring a comprehensive understanding of their environment.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers and developers working on Video-Language Models or embodied AI should integrate GST-Bench into their evaluation pipelines to assess and improve global spatial awareness in their models.</li>
+                    
+                    <li>Teams developing AI for robotics or autonomous navigation should explore strategies to enhance their models' ability to build globally consistent scene representations from continuous visual input, leveraging insights from GST-Bench.</li>
+                    
+                    <li>Consider utilizing the GST-Train dataset for fine-tuning or pre-training VLMs to specifically address the identified weaknesses in global spatial reasoning.</li>
                     
                 </ul>
                 
@@ -536,7 +418,147 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2608.05802" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.05747" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Big Tech's AI Investments and Q1 Earnings</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Technology & Business Strategy</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Fri, 07 Aug 2026 17:29:02 +0000</span>
+                    <span>🌐 Source: Stratechery</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This article provides a critical synthesis of how major tech companies are navigating the massive AI investment wave, highlighting the market's differing expectations and the strategic implications for future tech development. It also sheds light on a significant competitive and legal battle between Apple and OpenAI over hardware, which could shape the future of AI product ecosystems.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Major tech companies including Microsoft, Google, Amazon, and Meta are making astronomical investments in AI infrastructure, leading to varied reactions from Wall Street. Microsoft's AI strategy and recent earnings are lauded for their clarity, lower costs, and tangible applications, while Meta's approach faces more scrutiny. Google's earnings suggest a strategic 'Anthropic hedge,' and Amazon's CEO justifies significant capital expenditures by both Amazon and Google, largely driven by AI. Concurrently, Apple is reportedly suing OpenAI over alleged trade secret theft, aiming to hinder OpenAI's hardware division.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Meta, Microsoft, Amazon, and Google are spending 'astronomical amounts' on AI infrastructure.</li>
+                    
+                    <li>Wall Street's reaction to this AI spending differs significantly based on the clarity of vision, potential for immediate monetization, and the cost of the 'frontier' AI development.</li>
+                    
+                    <li>Microsoft's earnings were compelling due to a clear AI strategy, lower costs, and tangible applications.</li>
+                    
+                    <li>Meta's earnings were disappointing, with future AI product promises causing market concern.</li>
+                    
+                    <li>Google's earnings seemed to confirm its 'Anthropic hedge,' and Amazon's capex was justified by Andy Jassy.</li>
+                    
+                    <li>Apple has sued OpenAI, alleging trade secret theft by former Apple employees in OpenAI's hardware division.</li>
+                    
+                    <li>OpenAI has presented evidence to undermine Apple's narrative, asserting that Apple's lawsuit aims to 'kill OpenAI's hardware division'.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Monitor the strategic shifts and earnings reports of major tech companies (Meta, Microsoft, Amazon, Google) to understand their evolving AI investment and monetization strategies.</li>
+                    
+                    <li>Track the legal proceedings between Apple and OpenAI, as the outcome could significantly impact the competitive landscape for AI hardware and software.</li>
+                    
+                    <li>Analyze the market's criteria for evaluating AI-related capital expenditures and the perceived 'clarity of vision' for AI product development.</li>
+                    
+                    <li>Investigate the implications of massive AI infrastructure spending on the semiconductor industry and related supply chains.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Startups</span>
+                    
+                    <a href="https://stratechery.com/2026/earnings-and-learnings/" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Interpretable MEG Decoding of Perceived Speech: Cortical Sources and Stimulus Features</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI/Neuroscience</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 August 2, 2023</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research significantly advances the field of brain-computer interfaces and neuro-AI by developing a more compact, accurate, and, crucially, interpretable model for decoding perceived speech from MEG recordings. It provides direct insights into which cortical sources and specific speech features drive brain activity during speech perception, moving beyond black-box models to offer a deeper understanding of human auditory processing.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Researchers developed a new MEG-to-audio retrieval model that is 20x smaller and equally accurate as prior state-of-the-art systems, while also being highly interpretable. This allows for mapping brain activity to specific cortical sources and identifying key speech features (like silence, intensity, vowels, acoustic onsets) that drive speech perception.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>A redesigned MEG-to-audio retrieval architecture achieves 39.75% Top-1 accuracy among 1005 speech candidates, matching state-of-the-art performance.</li>
+                    
+                    <li>The new model is significantly more compact, using approximately 20 times fewer decoder parameters than previous systems.</li>
+                    
+                    <li>The architecture is designed for interpretability, allowing direct mapping of learned spatial and temporal components to cortical sources.</li>
+                    
+                    <li>Analysis reveals brain activity generators consistent with the known speech-perception network, with left-lateralized branches carrying higher-frequency rhythmic components.</li>
+                    
+                    <li>Through MEG occlusion, the study identifies specific speech features that strongly drive retrieval, including silence, sound intensity, vowels, and acoustic onsets.</li>
+                    
+                    <li>Narrative speech structure carries more recoverable information than random word lists, indicating the importance of coherent speech context.</li>
+                    
+                    <li>The wav2vec target can be compressed to about twelve learned feature dimensions without accuracy loss, demonstrating efficiency in feature representation.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Researchers in AI and neuroscience could explore integrating this interpretable architecture into other brain decoding tasks (e.g., imagined speech, motor intent).</li>
+                    
+                    <li>Software engineers working on neurotech or BCI applications could study the model's design principles for creating more efficient and transparent systems.</li>
+                    
+                    <li>Developers could investigate the potential of using the identified key speech features for more targeted and efficient speech processing or brain-computer interface designs.</li>
+                    
+                    <li>Review the associated GitHub repository for implementation details and potential extensions of the model.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2608.01481" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -547,70 +569,75 @@
         <section id="categories">
             <h2>By Category</h2>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Quantum Error Management Benchmark: Accuracy vs. Execution Time Tradeoffs</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A benchmark of commercial quantum error suppression and mitigation (ESM) solutions on IBM's 156-qubit processor shows significant error reduction (up to 4.7x) but with clear tradeoffs between accuracy and QPU execution time. Qedma QESEM achieved the highest accuracy, while Q-CTRL balanced strong performance with lower execution time.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.3</span>
-                        
-                        <a href="https://arxiv.org/abs/2608.05202" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Local Uniqueness of the Born Rule from Categorical Principles</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new theoretical proof demonstrates that the Born rule (P(z) = |z|^2) is the unique local probability law for complex amplitudes, derived from fundamental principles like phase invariance and classical-limit behavior, without relying on the traditional Hilbert-space formulation of quantum mechanics.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.22</span>
-                        
-                        <a href="https://arxiv.org/abs/2608.05197" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
             <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Quantum Advantage for Post-Training Quantization: One Qubit Can Beat One Bit</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers propose Quantum Random Access Quantization (QRAQ), a novel method using quantum mechanics to enable context-dependent one-bit quantization for AI models, proving it outperforms classical shared-sign methods by achieving lower reconstruction risk and validating it in simulators.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">The OSReward paper introduces a benchmark to systematically evaluate Vision-Language Model (VLM) judges for Computer-Using Agents (CUAs), revealing current models are biased and expensive. It then releases OS-Shepherd, open-source reward models (9B/35B) and a large annotated corpus (OS-Shepherd-100K) that provide reliable, low-cost reward signals, matching commercial judges at significantly reduced cost.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.22</span>
+                        <span>Score: 9.07</span>
                         
-                        <a href="https://arxiv.org/abs/2608.05240" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2607.28609" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">On-Policy Delta Distillation for Multilingual Math Reasoning</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new method, On-Policy Delta Distillation (OPD^2), significantly improves multilingual math reasoning in LLMs, especially for Korean and Japanese, by using the probability gap between teacher and base models as a learning signal, outperforming previous methods and highlighting the need for multilingual data.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">GST-Bench: Can VLMs Develop Global Spatial Awareness from Video?</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new benchmark, GST-Bench, reveals that state-of-the-art Video-Language Models (VLMs) significantly lack global spatial awareness from continuous video, performing far below human levels. The research introduces a dataset and benchmark to evaluate this critical capability, which is essential for embodied AI, and provides a training dataset (GST-Train) to facilitate future research.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.67</span>
+                        <span>Score: 7.8</span>
                         
-                        <a href="https://huggingface.co/papers/2608.05802" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.05747" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
             </div>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research / Generative AI</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Software Engineering</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">WorldClaw: Agentic 3D Open-World Generation at Scale</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">WorldClaw is an agentic, coarse-to-fine AI framework that generates vast, coherent, and editable 3D open-worlds from text prompts, streamlining complex 3D content creation.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">How and Why Netflix Built a Real-Time Distributed Graph: Part 3 — Querying the graph with gRPC execution API</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Netflix details the design of its real-time distributed graph's query layer, emphasizing breadth-first traversal, async-first execution, selective caching, and gRPC to achieve sub-100ms latency for diverse queries across billions of nodes and edges.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.1</span>
+                        <span>Score: 8.85</span>
                         
-                        <a href="https://huggingface.co/papers/2608.05248" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?source=rss----2615bd06b42e---4" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Technology & Business Strategy</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Big Tech's AI Investments and Q1 Earnings</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Major tech companies including Microsoft, Google, Amazon, and Meta are making astronomical investments in AI infrastructure, leading to varied reactions from Wall Street. Microsoft's AI strategy and recent earnings are lauded for their clarity, lower costs, and tangible applications, while Meta's approach faces more scrutiny. Google's earnings suggest a strategic 'Anthropic hedge,' and Amazon's CEO justifies significant capital expenditures by both Amazon and Google, largely driven by AI. Concurrently, Apple is reportedly suing OpenAI over alleged trade secret theft, aiming to hinder OpenAI's hardware division.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 7.65</span>
+                        
+                        <a href="https://stratechery.com/2026/earnings-and-learnings/" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/Neuroscience</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Interpretable MEG Decoding of Perceived Speech: Cortical Sources and Stimulus Features</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers developed a new MEG-to-audio retrieval model that is 20x smaller and equally accurate as prior state-of-the-art systems, while also being highly interpretable. This allows for mapping brain activity to specific cortical sources and identifying key speech features (like silence, intensity, vowels, acoustic onsets) that drive speech perception.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 7.47</span>
+                        
+                        <a href="https://huggingface.co/papers/2608.01481" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
