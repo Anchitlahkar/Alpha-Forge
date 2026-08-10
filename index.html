@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-09</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-10</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -207,16 +207,434 @@
         <section id="top">
             <h2>Today's Top Insights</h2>
             
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">ReASearch: An AI Agent for Self-Optimizing Prompts, Programs, and ML Workflows</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 9.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 August 7, 2023</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper introduces a novel, unified framework called ReASearch where a single AI agent autonomously internalizes complex search policies for optimizing prompts, programs, and ML workflows. This represents a significant shift from traditional explicit controllers, leading to more robust and efficient AI systems that can outperform specialized methods and even human best-known results in various tasks. It pushes the boundary of AI autonomy and self-improvement.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    ReASearch introduces a unified AI agent framework that autonomously optimizes prompts, programs, and machine learning workflows. By internalizing search policies and reasoning, it significantly outperforms specialized optimization systems and can discover solutions superior to prior human best-known results, marking a new paradigm for AI self-optimization.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Traditional optimization systems for prompts, programs, and ML workflows rely on explicit outer-loop controllers (e.g., evolutionary search, bandits).</li>
+                    
+                    <li>ReASearch proposes a fundamentally different approach where a single tool-using agent internalizes the search policy.</li>
+                    
+                    <li>The agent autonomously decides what to evaluate, how to diagnose failures, which edits to make, and when to verify or restart.</li>
+                    
+                    <li>It actively analyzes outcomes, allocates budget, and refines its strategy over long horizons through persistent memory.</li>
+                    
+                    <li>ReASearch uses a shared agent loop and domain-specific tools to optimize prompts, programs, and ML workflows within the same scaffold.</li>
+                    
+                    <li>It achieves significant performance gains (2% to 40%) over strong domain-specific baselines across 14 diverse tasks.</li>
+                    
+                    <li>In some cases, ReASearch discovers solutions that improve upon prior human best-known results.</li>
+                    
+                    <li>Complex search behaviors, typically implemented by explicit controllers, emerge naturally from the agent's reasoning process.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Explore integrating ReASearch's principles into current prompt engineering and ML workflow optimization strategies for enhanced autonomy and performance.</li>
+                    
+                    <li>Investigate the potential of 'internalized search policies' for developing more advanced and self-improving AI agents in various domains.</li>
+                    
+                    <li>Consider how this framework could be adapted for automated code generation, debugging, and software development lifecycle optimization.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2608.06714" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
             
-            <p style="color: var(--text-muted); font-style: italic;">No insights available for today.</p>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">StreamArena and StreamMind: Advancing Agentic Streaming Video Understanding</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Aug 6</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper addresses a critical limitation in the development and evaluation of autonomous multimodal AI agents: their ability to understand and interact with continuous, hour-scale video streams while maintaining long-term memory. By introducing a robust benchmark (StreamArena) and a novel two-tier architecture (StreamMind), it provides essential tools and directions for advancing AI agents beyond short-clip, simplistic evaluations towards real-world, long-horizon applications.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    StreamArena is a new benchmark featuring hour-scale videos and open-ended questions to rigorously evaluate AI agents' continuous, interactive, and long-horizon video understanding, exposing current limitations. To address these, the paper proposes StreamMind, a two-tier architecture that separates real-time interaction from asynchronous long-term memory construction, significantly outperforming existing baselines.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Current evaluations for autonomous multimodal agents are insufficient, relying on brief video clips and multiple-choice formats that allow simple baselines to perform well.</li>
+                    
+                    <li>StreamArena is a new benchmark designed for hour-scale, interactive streaming video understanding, featuring 243 full-length videos (avg. 88.8 minutes) and 3,646 open-ended Q&A pairs.</li>
+                    
+                    <li>The benchmark evaluates four key capabilities: real-time perception, historical retrospection, proactive interaction, and multimodal tool utilization.</li>
+                    
+                    <li>Evaluation across diverse systems using StreamArena reveals a fundamental tension between continuous interaction and long-horizon multimodal comprehension.</li>
+                    
+                    <li>Existing methods struggle with long-term memory (losing distant events, visual evidence, or fine-grained details) or real-time interaction.</li>
+                    
+                    <li>StreamMind is a novel two-tier architecture proposed to address this tension, using independently scheduled frontend workers for latency-critical interaction and backend workers for asynchronous persistent multimodal memory construction and historical recall.</li>
+                    
+                    <li>StreamMind outperforms existing streaming baselines across all four evaluated capabilities and reduces query-to-answer latency by reusing persistent state.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers should utilize the StreamArena benchmark to rigorously test and develop more capable long-horizon video understanding models.</li>
+                    
+                    <li>Developers of AI agents for streaming environments should explore adopting or adapting the StreamMind two-tier architectural pattern to manage the trade-offs between real-time interaction and long-term memory.</li>
+                    
+                    <li>Further research is encouraged to develop new memory mechanisms and multimodal compression techniques that can better preserve fine-grained details over extended periods without sacrificing real-time performance.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2608.05703" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Modular TTT: A Composable Framework for Test-Time Training</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI Research</span>
+                        <span class="badge badge-score">Signal: 7.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 August 7</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This paper introduces a novel modular framework for Test-Time Training (TTT), which simplifies the design, analysis, and systematic exploration of TTT methods. By exposing key components as explicit design dimensions, it provides valuable empirical insights into what makes TTT effective, accelerating research and development in adaptive machine learning models. The findings offer concrete guidance for improving TTT performance, moving beyond hard-coded variants.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Modular TTT is a new framework that rethinks Test-Time Training (TTT) by breaking it down into composable modules. This approach simplifies design and analysis, revealing key insights into effective TTT components such as small learning rates, weight decay, and single-layer nonlinearity, while achieving strong performance comparable to existing methods.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Test-Time Training (TTT) is a method for sequence modeling where model weights are updated by an internal learning rule during inference.</li>
+                    
+                    <li>Existing TTT approaches are typically hard-coded, making it difficult to design new methods or isolate the impact of individual components.</li>
+                    
+                    <li>Modular TTT is proposed as a framework that represents the TTT inner learner as a directed acyclic graph (DAG), exposing components like the fast-weight network, loss function, learning rate, weight decay, and normalization as explicit design dimensions.</li>
+                    
+                    <li>The framework automatically composes primitive-level training rules into full graph-level TTT computations.</li>
+                    
+                    <li>Systematic ablation studies using Modular TTT found that small learning rate initialization, weight decay, and a single-layer nonlinearity improve performance.</li>
+                    
+                    <li>MSE and inner-product losses performed similarly, while deeper fast-weight networks and normalization tended to hurt performance due to excessive activations.</li>
+                    
+                    <li>Residual connections and gating provided minimal measurable benefit in TTT.</li>
+                    
+                    <li>The best variant of Modular TTT achieved performance comparable to Gated DeltaNet when scaled to 410M and 1.45B parameter models trained on 100B tokens.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>AI researchers working on meta-learning or adaptive models should explore using the Modular TTT framework to systematically design and evaluate new Test-Time Training variants.</li>
+                    
+                    <li>ML practitioners implementing TTT should consider incorporating the identified effective components, such as small learning rate initialization and weight decay, and avoid deeper fast-weight networks or excessive normalization.</li>
+                    
+                    <li>Developers of ML frameworks could investigate integrating modular design principles for dynamic or adaptive model components, inspired by Modular TTT's approach.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2608.07110" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">SimWAM: A World-Action Model for Autonomous Driving</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI/Machine Learning</span>
+                        <span class="badge badge-score">Signal: 7.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 August 7</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    SimWAM addresses a critical challenge in end-to-end autonomous driving by significantly reducing the computational cost and latency of World-Action Models (WAMs) during inference. By using video generation purely as a training signal and discarding the video branch post-training, it enables a lightweight, self-contained planner that achieves state-of-the-art performance with lower latency and zero-shot transfer capabilities. This advancement makes WAM-based autonomous driving systems more practical and efficient for real-world deployment, potentially accelerating the development and adoption of safer and more responsive self-driving vehicles.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    SimWAM is a novel World-Action Model designed for end-to-end autonomous driving. It leverages video generation during training to create a lightweight, low-latency planner, demonstrating superior performance and efficiency compared to existing World-Action Models.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>SimWAM is a 'Simple World Action Model' designed for end-to-end autonomous driving.</li>
+                    
+                    <li>It addresses the issue of existing World-Action Models (WAMs) requiring costly future video generation during inference.</li>
+                    
+                    <li>SimWAM uses video generation purely as a training signal, co-training a pretrained video expert and a lightweight action expert.</li>
+                    
+                    <li>An isolated attention mask ensures action prediction is independent of future frames, allowing the video branch to be discarded after training.</li>
+                    
+                    <li>The resulting system is a self-contained planner that directly predicts trajectories with substantially lower latency than state-of-the-art WAM-based planners.</li>
+                    
+                    <li>The modular design allows independent scaling or replacement of the video backbone and action expert without modifying the learning objective or inference pipeline.</li>
+                    
+                    <li>It achieves 91.5 PDMS on NAVSIM, surpasses SOTA WAMs, and demonstrates zero-shot transfer to nuScenes.</li>
+                    
+                    <li>Reinforcement learning is applied to optimize a compositional driving reward beyond trajectory imitation.</li>
+                    
+                    <li>Code and model weights are publicly available on GitHub.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Explore the SimWAM GitHub repository for code and model weights to understand its implementation details.</li>
+                    
+                    <li>Researchers in autonomous driving should consider SimWAM as a strong baseline for efficient WAM-based planning.</li>
+                    
+                    <li>Developers working on real-world autonomous driving systems could investigate integrating SimWAM's approach for improved inference efficiency.</li>
+                    
+                    <li>Monitor future advancements in video generation models, as SimWAM's performance can readily benefit from them.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2608.07468" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">UA-NWM: Uncertainty-Aware World Model for Aerial Image-Goal Navigation</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">AI/Robotics</span>
+                        <span class="badge badge-score">Signal: 7.0</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 August 6, 2026</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    This research significantly advances autonomous drone navigation by introducing a robust method to handle uncertainty in complex outdoor environments. By enabling more reliable and efficient image-goal navigation, it paves the way for practical applications in areas like delivery, inspection, and surveillance, reducing the need for extensive future sampling and improving real-world performance.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Researchers from Tsinghua University developed UA-NWM, an Uncertainty-Aware World Model specifically for aerial image-goal navigation. This model efficiently handles future-state uncertainty in large outdoor environments by formulating trajectory scoring as conditional out-of-distribution detection, leading to more robust and faster drone navigation, validated by real-world experiments.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Addresses the challenge of future-state uncertainty in large-scale outdoor environments for aerial image-goal navigation using UAVs.</li>
+                    
+                    <li>Proposes the Uncertainty-Aware Navigation World Model (UA-NWM), an efficient latent world model.</li>
+                    
+                    <li>Formulates trajectory scoring as conditional out-of-distribution (OOD) detection.</li>
+                    
+                    <li>Represents plausible future states using an uncertainty subspace and decomposes prediction-goal discrepancy into uncertainty-explainable and unexplainable components.</li>
+                    
+                    <li>Utilizes only the unexplainable residual for scoring, enabling robust selection without requiring multiple future samples.</li>
+                    
+                    <li>Demonstrates consistent outperformance of existing navigation world models while maintaining low inference latency.</li>
+                    
+                    <li>Validated through extensive experiments, including real-world UAV deployments, confirming its practical applicability.</li>
+                    
+                    <li>Associated resources including project page, GitHub code, AirGoal-10k dataset, and model checkpoints are publicly available.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Review the project page and GitHub repository for UA-NWM to understand the implementation details and potential for adaptation.</li>
+                    
+                    <li>Explore the AirGoal-10k dataset for opportunities in related research or for training custom aerial navigation models.</li>
+                    
+                    <li>Investigate the application of uncertainty-aware modeling techniques to other domains requiring robust autonomous decision-making under uncertainty, such as autonomous driving or industrial robotics.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: AI</span>
+                    
+                    <a href="https://huggingface.co/papers/2608.05597" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
             
         </section>
 
         <section id="categories">
             <h2>By Category</h2>
             
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">ReASearch: An AI Agent for Self-Optimizing Prompts, Programs, and ML Workflows</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">ReASearch introduces a unified AI agent framework that autonomously optimizes prompts, programs, and machine learning workflows. By internalizing search policies and reasoning, it significantly outperforms specialized optimization systems and can discover solutions superior to prior human best-known results, marking a new paradigm for AI self-optimization.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.7</span>
+                        
+                        <a href="https://huggingface.co/papers/2608.06714" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">StreamArena and StreamMind: Advancing Agentic Streaming Video Understanding</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">StreamArena is a new benchmark featuring hour-scale videos and open-ended questions to rigorously evaluate AI agents' continuous, interactive, and long-horizon video understanding, exposing current limitations. To address these, the paper proposes StreamMind, a two-tier architecture that separates real-time interaction from asynchronous long-term memory construction, significantly outperforming existing baselines.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.3</span>
+                        
+                        <a href="https://huggingface.co/papers/2608.05703" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Modular TTT: A Composable Framework for Test-Time Training</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Modular TTT is a new framework that rethinks Test-Time Training (TTT) by breaking it down into composable modules. This approach simplifies design and analysis, revealing key insights into effective TTT components such as small learning rates, weight decay, and single-layer nonlinearity, while achieving strong performance comparable to existing methods.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 7.6</span>
+                        
+                        <a href="https://huggingface.co/papers/2608.07110" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
             
-            <p style="color: var(--text-muted); font-style: italic;">No categorized insights available.</p>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/Machine Learning</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">SimWAM: A World-Action Model for Autonomous Driving</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">SimWAM is a novel World-Action Model designed for end-to-end autonomous driving. It leverages video generation during training to create a lightweight, low-latency planner, demonstrating superior performance and efficiency compared to existing World-Action Models.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 6.77</span>
+                        
+                        <a href="https://huggingface.co/papers/2608.07468" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/Robotics</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">UA-NWM: Uncertainty-Aware World Model for Aerial Image-Goal Navigation</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers from Tsinghua University developed UA-NWM, an Uncertainty-Aware World Model specifically for aerial image-goal navigation. This model efficiently handles future-state uncertainty in large outdoor environments by formulating trajectory scoring as conditional out-of-distribution detection, leading to more robust and faster drone navigation, validated by real-world experiments.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 6.7</span>
+                        
+                        <a href="https://huggingface.co/papers/2608.05597" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
             
         </section>
 
