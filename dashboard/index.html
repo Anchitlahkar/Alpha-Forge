@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-10</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-11</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,49 +209,47 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">ReASearch: An AI Agent for Self-Optimizing Prompts, Programs, and ML Workflows</h3>
+                    <h3 class="card-title">Quantum Noise Mitigation with Adaptive Zero-Noise Extrapolation: A Contextual Multi-Armed Bandits Approach</h3>
                     <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 9.0</span>
+                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-score">Signal: 8.5</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 August 7, 2023</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
+                    <span>📅 Mon, 10 Aug 2026 00:00:00 -0400</span>
+                    <span>🌐 Source: arXiv quant-ph</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper introduces a novel, unified framework called ReASearch where a single AI agent autonomously internalizes complex search policies for optimizing prompts, programs, and ML workflows. This represents a significant shift from traditional explicit controllers, leading to more robust and efficient AI systems that can outperform specialized methods and even human best-known results in various tasks. It pushes the boundary of AI autonomy and self-improvement.
+                    This research addresses a critical challenge in near-term quantum computing: mitigating dynamic, time-varying noise in Variational Quantum Circuits (VQCs). By introducing an adaptive framework that combines Zero-Noise Extrapolation (ZNE) with Contextual Multi-Armed Bandits (CMAB), it significantly improves the accuracy of quantum computations while substantially reducing computational cost and resource usage. This advancement is crucial for making NISQ devices more practical and reliable, accelerating the development and deployment of quantum applications.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    ReASearch introduces a unified AI agent framework that autonomously optimizes prompts, programs, and machine learning workflows. By internalizing search policies and reasoning, it significantly outperforms specialized optimization systems and can discover solutions superior to prior human best-known results, marking a new paradigm for AI self-optimization.
+                    A novel adaptive framework integrates ZNE with Contextual Multi-Armed Bandits to dynamically mitigate time-varying noise in Variational Quantum Circuits, achieving up to 6.9% higher estimator fidelity and reducing quantum circuit executions by 40%, bytes exchanged by 35%, and end-to-end cost by 30% compared to existing methods.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Traditional optimization systems for prompts, programs, and ML workflows rely on explicit outer-loop controllers (e.g., evolutionary search, bandits).</li>
+                    <li>Near-term quantum computing with Variational Quantum Circuits (VQCs) is severely hindered by dynamic, time-varying noise.</li>
                     
-                    <li>ReASearch proposes a fundamentally different approach where a single tool-using agent internalizes the search policy.</li>
+                    <li>The proposed framework introduces adaptive noise mitigation by integrating Zero-Noise Extrapolation (ZNE) with Contextual Multi-Armed Bandits (CMAB).</li>
                     
-                    <li>The agent autonomously decides what to evaluate, how to diagnose failures, which edits to make, and when to verify or restart.</li>
+                    <li>This approach enables dynamic, context-aware selection of circuit-folding levels based on ansatz parameters and the evolving noise environment.</li>
                     
-                    <li>It actively analyzes outcomes, allocates budget, and refines its strategy over long horizons through persistent memory.</li>
+                    <li>Simulations and experiments on real quantum hardware show that deeper VQCs accumulate more noise, but ZNE can restore fidelity with appropriate folding.</li>
                     
-                    <li>ReASearch uses a shared agent loop and domain-specific tools to optimize prompts, programs, and ML workflows within the same scaffold.</li>
+                    <li>CMAB-guided folding significantly reduces quantum circuit execution round trips (up to 40%), bytes exchanged (up to 35%), and end-to-end cost (up to 30%).</li>
                     
-                    <li>It achieves significant performance gains (2% to 40%) over strong domain-specific baselines across 14 diverse tasks.</li>
+                    <li>The method achieves up to 6.9% higher estimator fidelity compared to fixed-fold and grid-search ZNE.</li>
                     
-                    <li>In some cases, ReASearch discovers solutions that improve upon prior human best-known results.</li>
-                    
-                    <li>Complex search behaviors, typically implemented by explicit controllers, emerge naturally from the agent's reasoning process.</li>
+                    <li>Source code has been publicly released to support reproducibility.</li>
                     
                 </ul>
                 
@@ -260,26 +258,30 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Explore integrating ReASearch's principles into current prompt engineering and ML workflow optimization strategies for enhanced autonomy and performance.</li>
+                    <li>Explore integrating this adaptive ZNE-CMAB framework into existing quantum software development kits (SDKs) or cloud quantum platforms.</li>
                     
-                    <li>Investigate the potential of 'internalized search policies' for developing more advanced and self-improving AI agents in various domains.</li>
+                    <li>Investigate the applicability of this dynamic noise mitigation technique to other quantum error mitigation strategies beyond ZNE.</li>
                     
-                    <li>Consider how this framework could be adapted for automated code generation, debugging, and software development lifecycle optimization.</li>
+                    <li>Analyze the performance of this method on a wider range of VQC architectures and quantum hardware platforms.</li>
+                    
+                    <li>Consider the implications of reduced execution costs and improved fidelity for the economic viability of quantum computing startups and services.</li>
+                    
+                    <li>For AI researchers, study the specific CMAB strategies employed and their potential for optimization or application in other adaptive control problems.</li>
                     
                 </ul>
                 
 
                 <div class="card-footer">
-                    <span>Processed Category: AI</span>
+                    <span>Processed Category: Quantum</span>
                     
-                    <a href="https://huggingface.co/papers/2608.06714" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://arxiv.org/abs/2608.06426" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">StreamArena and StreamMind: Advancing Agentic Streaming Video Understanding</h3>
+                    <h3 class="card-title">SWE-Bench ProMax: Benchmarking Agents on Large-Scale Multilingual Code Refactoring</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
                         <span class="badge badge-score">Signal: 8.0</span>
@@ -287,39 +289,39 @@
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Aug 6</span>
+                    <span>📅 Aug 10</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper addresses a critical limitation in the development and evaluation of autonomous multimodal AI agents: their ability to understand and interact with continuous, hour-scale video streams while maintaining long-term memory. By introducing a robust benchmark (StreamArena) and a novel two-tier architecture (StreamMind), it provides essential tools and directions for advancing AI agents beyond short-clip, simplistic evaluations towards real-world, long-horizon applications.
+                    This article introduces a crucial new benchmark that addresses significant flaws and saturation in existing AI coding agent evaluation methods. By providing a more realistic, challenging, and rigorously curated benchmark for complex, multilingual code refactoring, SWE-Bench ProMax is essential for accurately measuring and driving progress in AI for software engineering.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    StreamArena is a new benchmark featuring hour-scale videos and open-ended questions to rigorously evaluate AI agents' continuous, interactive, and long-horizon video understanding, exposing current limitations. To address these, the paper proposes StreamMind, a two-tier architecture that separates real-time interaction from asynchronous long-term memory construction, significantly outperforming existing baselines.
+                    A new, expert-curated, multilingual benchmark called SWE-Bench ProMax is introduced to rigorously evaluate AI coding agents on large-scale code refactoring tasks, addressing quality issues and saturation of prior benchmarks. Frontier models achieve only a 41.2% resolve rate, indicating a significant challenge.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Current evaluations for autonomous multimodal agents are insufficient, relying on brief video clips and multiple-choice formats that allow simple baselines to perform well.</li>
+                    <li>Existing AI coding agent benchmarks are saturating and suffer from quality issues, including flawed tests (overly narrow or broad) and models reproducing training data.</li>
                     
-                    <li>StreamArena is a new benchmark designed for hour-scale, interactive streaming video understanding, featuring 243 full-length videos (avg. 88.8 minutes) and 3,646 open-ended Q&A pairs.</li>
+                    <li>Code refactoring, a complex task requiring coordinated, behavior-preserving changes across many files, is underserved by current benchmarks.</li>
                     
-                    <li>The benchmark evaluates four key capabilities: real-time perception, historical retrospection, proactive interaction, and multimodal tool utilization.</li>
+                    <li>SWE-Bench ProMax is an expert-curated, multilingual code refactoring benchmark comprising 170 instances drawn from real commits across seven programming languages (Python, Java, TypeScript, Go, C, C++, Rust).</li>
                     
-                    <li>Evaluation across diverse systems using StreamArena reveals a fundamental tension between continuous interaction and long-horizon multimodal comprehension.</li>
+                    <li>The benchmark undergoes rigorous, multi-stage curation to ensure quality, including rewritten issue descriptions for precision and manual review of test suites to remove flaws.</li>
                     
-                    <li>Existing methods struggle with long-term memory (losing distant events, visual evidence, or fine-grained details) or real-time interaction.</li>
+                    <li>Tasks are designed to be challenging and large-scale, averaging 11.4 modified files and 261.6 lines of code per instance, significantly exceeding existing benchmarks.</li>
                     
-                    <li>StreamMind is a novel two-tier architecture proposed to address this tension, using independently scheduled frontend workers for latency-critical interaction and backend workers for asynchronous persistent multimodal memory construction and historical recall.</li>
+                    <li>Experiments show that frontier models achieve only a 41.2% resolve rate on SWE-Bench ProMax, confirming it as a meaningful and unsaturated challenge for current AI coding agents.</li>
                     
-                    <li>StreamMind outperforms existing streaming baselines across all four evaluated capabilities and reduces query-to-answer latency by reusing persistent state.</li>
+                    <li>The benchmark is publicly available on Hugging Face.</li>
                     
                 </ul>
                 
@@ -328,11 +330,11 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>AI researchers should utilize the StreamArena benchmark to rigorously test and develop more capable long-horizon video understanding models.</li>
+                    <li>AI researchers developing coding agents should integrate SWE-Bench ProMax into their evaluation pipelines to test model capabilities on realistic and complex refactoring tasks.</li>
                     
-                    <li>Developers of AI agents for streaming environments should explore adopting or adapting the StreamMind two-tier architectural pattern to manage the trade-offs between real-time interaction and long-term memory.</li>
+                    <li>Software engineering teams exploring AI-assisted development should monitor progress on SWE-Bench ProMax to gauge the maturity and practical applicability of AI agents for complex code changes.</li>
                     
-                    <li>Further research is encouraged to develop new memory mechanisms and multimodal compression techniques that can better preserve fine-grained details over extended periods without sacrificing real-time performance.</li>
+                    <li>Developers of existing code generation or repair benchmarks should review SWE-Bench ProMax's rigorous curation methodology to improve the quality and robustness of their own evaluation datasets.</li>
                     
                 </ul>
                 
@@ -340,56 +342,54 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2608.05703" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.09802" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Modular TTT: A Composable Framework for Test-Time Training</h3>
+                    <h3 class="card-title">Sci-VBench: A New Benchmark for Scientific Video Generation Evaluation</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 7.0</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 August 7</span>
+                    <span>📅 Aug 10</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper introduces a novel modular framework for Test-Time Training (TTT), which simplifies the design, analysis, and systematic exploration of TTT methods. By exposing key components as explicit design dimensions, it provides valuable empirical insights into what makes TTT effective, accelerating research and development in adaptive machine learning models. The findings offer concrete guidance for improving TTT performance, moving beyond hard-coded variants.
+                    This paper introduces a crucial benchmark, Sci-VBench, that pushes the evaluation of AI video generation beyond mere visual plausibility to assess scientific reasoning and knowledge-grounded synthesis. It highlights a significant current limitation in AI models: while they excel at visual realism, they largely fail to accurately model scientific and causal dynamics. This benchmark provides a standardized tool for researchers and developers to measure progress and focus future efforts on building truly intelligent video generation systems, particularly in critical domains like healthcare and engineering.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Modular TTT is a new framework that rethinks Test-Time Training (TTT) by breaking it down into composable modules. This approach simplifies design and analysis, revealing key insights into effective TTT components such as small learning rates, weight decay, and single-layer nonlinearity, while achieving strong performance comparable to existing methods.
+                    Sci-VBench is a new, comprehensive benchmark for evaluating AI video generation models in scientific domains, focusing on knowledge and reasoning rather than just visual quality. It features 1,253 expert-annotated examples and reveals a substantial gap where current models, especially open-source ones, struggle with scientific and causal correctness despite good visual realism.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Test-Time Training (TTT) is a method for sequence modeling where model weights are updated by an internal learning rule during inference.</li>
+                    <li>Introduces Sci-VBench, a comprehensive benchmark for evaluating knowledge- and reasoning-intensive video generation across scientific domains.</li>
                     
-                    <li>Existing TTT approaches are typically hard-coded, making it difficult to design new methods or isolate the impact of individual components.</li>
+                    <li>The benchmark comprises 1,253 expert-annotated examples spanning 60 subjects across Natural Science, Healthcare, Humanities & Social Sciences, and Engineering.</li>
                     
-                    <li>Modular TTT is proposed as a framework that represents the TTT inner learner as a directed acyclic graph (DAG), exposing components like the fast-weight network, loss function, learning rate, weight decay, and normalization as explicit design dimensions.</li>
+                    <li>Examples require models to generate temporally rich videos demanding scientific reasoning and knowledge-grounded synthesis, moving beyond surface-level visual plausibility.</li>
                     
-                    <li>The framework automatically composes primitive-level training rules into full graph-level TTT computations.</li>
+                    <li>A rubric-based evaluation protocol is established, demonstrating high agreement between expert judgments, non-expert human evaluators, and MLLM-as-Judges systems, enabling scalable and reproducible evaluation.</li>
                     
-                    <li>Systematic ablation studies using Modular TTT found that small learning rate initialization, weight decay, and a single-layer nonlinearity improve performance.</li>
+                    <li>Benchmarking 16 frontier proprietary and open-source models revealed that while automatic perceptual-quality scores are similar, performance on Prompt Grounding and Scientific and Causal Correctness varies substantially.</li>
                     
-                    <li>MSE and inner-product losses performed similarly, while deeper fast-weight networks and normalization tended to hurt performance due to excessive activations.</li>
+                    <li>A pronounced proprietary-open-source gap exists in scientific and causal correctness, indicating that proprietary models currently perform better on these reasoning-intensive tasks.</li>
                     
-                    <li>Residual connections and gating provided minimal measurable benefit in TTT.</li>
-                    
-                    <li>The best variant of Modular TTT achieved performance comparable to Gated DeltaNet when scaled to 410M and 1.45B parameter models trained on 100B tokens.</li>
+                    <li>The findings suggest that advancements in visual realism in video generation have not yet translated into reliable modeling of scientific and causal dynamics.</li>
                     
                 </ul>
                 
@@ -398,11 +398,13 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>AI researchers working on meta-learning or adaptive models should explore using the Modular TTT framework to systematically design and evaluate new Test-Time Training variants.</li>
+                    <li>AI researchers should utilize Sci-VBench to rigorously evaluate and improve video generation models, prioritizing scientific reasoning and causal correctness over just visual fidelity.</li>
                     
-                    <li>ML practitioners implementing TTT should consider incorporating the identified effective components, such as small learning rate initialization and weight decay, and avoid deeper fast-weight networks or excessive normalization.</li>
+                    <li>Developers of video generation models should focus R&D efforts on enhancing models' understanding and representation of scientific principles and causal relationships.</li>
                     
-                    <li>Developers of ML frameworks could investigate integrating modular design principles for dynamic or adaptive model components, inspired by Modular TTT's approach.</li>
+                    <li>The open-source AI community should specifically target closing the performance gap with proprietary models on knowledge- and reasoning-intensive video generation tasks.</li>
+                    
+                    <li>Investors and startups in the AI video generation space should consider the insights from Sci-VBench when assessing technological capabilities and market opportunities, recognizing the current limitations in scientific accuracy.</li>
                     
                 </ul>
                 
@@ -410,58 +412,56 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2608.07110" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.09873" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">SimWAM: A World-Action Model for Autonomous Driving</h3>
+                    <h3 class="card-title">Motif 3: A 314B Parameter Mixture-of-Experts Language Model with Novel Architecture and Training</h3>
                     <div class="badges">
-                        <span class="badge badge-category">AI/Machine Learning</span>
-                        <span class="badge badge-score">Signal: 7.0</span>
+                        <span class="badge badge-category">AI/ML</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 August 7</span>
+                    <span>📅 Aug 10</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    SimWAM addresses a critical challenge in end-to-end autonomous driving by significantly reducing the computational cost and latency of World-Action Models (WAMs) during inference. By using video generation purely as a training signal and discarding the video branch post-training, it enables a lightweight, self-contained planner that achieves state-of-the-art performance with lower latency and zero-shot transfer capabilities. This advancement makes WAM-based autonomous driving systems more practical and efficient for real-world deployment, potentially accelerating the development and adoption of safer and more responsive self-driving vehicles.
+                    Motif 3 introduces a significant advancement in large language models, particularly in the Mixture-of-Experts (MoE) architecture. Its fine-grained sparsity, novel attention mechanisms (GDLA), and sophisticated training/post-training pipeline enable competitive performance against leading open-weight models across diverse and challenging tasks, including long-horizon agentic tasks, mathematical reasoning, and hallucination-sensitive evaluations. This pushes the boundaries of what's achievable with sparse models, offering insights into scaling efficiency and specialized capabilities.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    SimWAM is a novel World-Action Model designed for end-to-end autonomous driving. It leverages video generation during training to create a lightweight, low-latency planner, demonstrating superior performance and efficiency compared to existing World-Action Models.
+                    Motif 3 is a new 314-billion-parameter decoder-only Mixture-of-Experts (MoE) language model from Motif Technologies, featuring fine-grained sparsity, novel Grouped Differential Latent Attention (GDLA), and a comprehensive training pipeline on 12.5 trillion tokens. It demonstrates competitive performance in reasoning, coding, long-context understanding, and more, against leading open-weight models.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>SimWAM is a 'Simple World Action Model' designed for end-to-end autonomous driving.</li>
+                    <li>Motif 3 is a decoder-only Mixture-of-Experts (MoE) language model with 314 billion total parameters and 13.2 billion activated per token.</li>
                     
-                    <li>It addresses the issue of existing World-Action Models (WAMs) requiring costly future video generation during inference.</li>
+                    <li>It features fine-grained sparsity with 384 routed experts per MoE layer, selecting eight per token, balancing capacity and computational cost.</li>
                     
-                    <li>SimWAM uses video generation purely as a training signal, co-training a pretrained video expert and a lightweight action expert.</li>
+                    <li>The architecture incorporates Grouped Differential Latent Attention (GDLA), modified manifold-constrained hyper-connections, Expert Specific PolyNorm activations, and multi-token prediction for improved stability, specialization, and inference efficiency.</li>
                     
-                    <li>An isolated attention mask ensures action prediction is independent of future frames, allowing the video branch to be discarded after training.</li>
+                    <li>Motif 3 was pre-trained on approximately 12.5 trillion tokens from diverse sources including web documents, STEM, code, mathematics, and multilingual content.</li>
                     
-                    <li>The resulting system is a self-contained planner that directly predicts trajectories with substantially lower latency than state-of-the-art WAM-based planners.</li>
+                    <li>Training techniques include expert-balancing, numerical-stabilization, selective MXFP8 computation, memory-efficient fused kernels, and window-aware context parallelism, supporting context lengths up to 256K tokens.</li>
                     
-                    <li>The modular design allows independent scaling or replacement of the video backbone and action expert without modifying the learning objective or inference pipeline.</li>
+                    <li>The post-training pipeline combines general supervised fine-tuning, six specialist teachers trained with reinforcement learning, a software-engineering teacher (SFT), and Multi-teacher On-Policy Distillation.</li>
                     
-                    <li>It achieves 91.5 PDMS on NAVSIM, surpasses SOTA WAMs, and demonstrates zero-shot transfer to nuScenes.</li>
+                    <li>The model exhibits strong capabilities in reasoning, coding, tool use, professional work, long-context understanding, calibrated abstention, and instruction following.</li>
                     
-                    <li>Reinforcement learning is applied to optimize a compositional driving reward beyond trajectory imitation.</li>
-                    
-                    <li>Code and model weights are publicly available on GitHub.</li>
+                    <li>Motif 3 achieves competitive performance against leading open-weight models across a broad evaluation suite, particularly excelling in long-horizon agentic tasks, mathematical reasoning, scientific knowledge, and hallucination-sensitive evaluations.</li>
                     
                 </ul>
                 
@@ -470,13 +470,13 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Explore the SimWAM GitHub repository for code and model weights to understand its implementation details.</li>
+                    <li>Researchers should investigate the architectural innovations like GDLA and fine-grained MoE sparsity for potential applications in their own model designs.</li>
                     
-                    <li>Researchers in autonomous driving should consider SimWAM as a strong baseline for efficient WAM-based planning.</li>
+                    <li>Developers and companies building AI applications should evaluate Motif 3's performance and capabilities, especially for tasks requiring long-context understanding, coding, and complex reasoning.</li>
                     
-                    <li>Developers working on real-world autonomous driving systems could investigate integrating SimWAM's approach for improved inference efficiency.</li>
+                    <li>Hardware manufacturers and software engineers should note the emphasis on training efficiency (e.g., MXFP8, fused kernels) as it indicates future demands for optimized AI infrastructure.</li>
                     
-                    <li>Monitor future advancements in video generation models, as SimWAM's performance can readily benefit from them.</li>
+                    <li>Investors should monitor Motif Technologies and the broader MoE landscape, as these advancements could shift competitive dynamics in the AI industry.</li>
                     
                 </ul>
                 
@@ -484,56 +484,60 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2608.07468" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.09119" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">UA-NWM: Uncertainty-Aware World Model for Aerial Image-Goal Navigation</h3>
+                    <h3 class="card-title">Everything we launched during Agents Week</h3>
                     <div class="badges">
-                        <span class="badge badge-category">AI/Robotics</span>
-                        <span class="badge badge-score">Signal: 7.0</span>
+                        <span class="badge badge-category">AI Infrastructure</span>
+                        <span class="badge badge-score">Signal: 8.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 August 6, 2026</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
+                    <span>📅 Mon, 10 Aug 2026 18:34:10 GMT</span>
+                    <span>🌐 Source: Cloudflare Blog</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This research significantly advances autonomous drone navigation by introducing a robust method to handle uncertainty in complex outdoor environments. By enabling more reliable and efficient image-goal navigation, it paves the way for practical applications in areas like delivery, inspection, and surveillance, reducing the need for extensive future sampling and improving real-world performance.
+                    Cloudflare is strategically positioning itself as a foundational platform for the 'Agentic Internet,' providing comprehensive infrastructure, development tools, security models, and even a programmable wallet for autonomous AI agents. This initiative could significantly influence how AI applications are built, deployed, secured, and interact with the web, moving beyond traditional human-centric web interactions and shaping the future of AI-native software development.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Researchers from Tsinghua University developed UA-NWM, an Uncertainty-Aware World Model specifically for aerial image-goal navigation. This model efficiently handles future-state uncertainty in large outdoor environments by formulating trajectory scoring as conditional out-of-distribution detection, leading to more robust and faster drone navigation, validated by real-world experiments.
+                    Cloudflare's 'Agents Week' unveiled a suite of new products and concepts, including a dedicated agent runtime (@cloudflare/computer), an Agent Development Lifecycle (ADLC), security models for agents, programmable wallets, and an open protocol (WebMCP) for agent-website interaction, all aimed at building and securing an 'Agentic Internet' where autonomous AI agents can operate and transact.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Addresses the challenge of future-state uncertainty in large-scale outdoor environments for aerial image-goal navigation using UAVs.</li>
+                    <li>Cloudflare is defining 'agents' as the next evolution of computing, requiring new infrastructure and an 'Agentic Internet' where humans and agents cooperate.</li>
                     
-                    <li>Proposes the Uncertainty-Aware Navigation World Model (UA-NWM), an efficient latent world model.</li>
+                    <li>Introduced `@cloudflare/computer`, a new runtime specifically designed for agents to choose the optimal execution environment.</li>
                     
-                    <li>Formulates trajectory scoring as conditional out-of-distribution (OOD) detection.</li>
+                    <li>Launched the Agent Development Lifecycle (ADLC) to guide agents from prototype to production, superseding the traditional SDLC.</li>
                     
-                    <li>Represents plausible future states using an uncertainty subspace and decomposes prediction-goal discrepancy into uncertainty-explainable and unexplainable components.</li>
+                    <li>Unveiled 'Cloudflare Agents,' a platform for building, tracing, replaying, and managing agents with human-in-the-loop approvals.</li>
                     
-                    <li>Utilizes only the unexplainable residual for scoring, enabling robust selection without requiring multiple future samples.</li>
+                    <li>Introduced 'Cloudflare Wallets,' a programmable wallet enabling agents to securely perform transactions in an emerging agentic economy.</li>
                     
-                    <li>Demonstrates consistent outperformance of existing navigation world models while maintaining low inference latency.</li>
+                    <li>Extended Zero Trust principles to agents with the 'Agent Access Model' and identity-aware analytics for AI activity.</li>
                     
-                    <li>Validated through extensive experiments, including real-world UAV deployments, confirming its practical applicability.</li>
+                    <li>Open-sourced 'Cloudflare OS,' an internal platform used for building apps, automating work, and accessing internal systems securely.</li>
                     
-                    <li>Associated resources including project page, GitHub code, AirGoal-10k dataset, and model checkpoints are publicly available.</li>
+                    <li>Previewed 'WebMCP,' an open protocol designed to make websites and web applications discoverable and usable by agents.</li>
+                    
+                    <li>Enhanced developer capabilities with Workers RPC across Python and JavaScript, local tracing for Workers, and programmable CI/CD.</li>
+                    
+                    <li>Demonstrated internal use of AI for enforcing engineering standards and automating software maintenance (e.g., Astro's GitHub issues).</li>
                     
                 </ul>
                 
@@ -542,19 +546,23 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Review the project page and GitHub repository for UA-NWM to understand the implementation details and potential for adaptation.</li>
+                    <li>Software Engineers: Explore `@cloudflare/computer` and Cloudflare Agents for building next-generation AI-native applications and autonomous agents. Investigate the ADLC and new debugging/tracing tools.</li>
                     
-                    <li>Explore the AirGoal-10k dataset for opportunities in related research or for training custom aerial navigation models.</li>
+                    <li>Startups: Evaluate Cloudflare's Agentic Internet platform as a potential foundation for developing and deploying innovative AI agent-based products and services.</li>
                     
-                    <li>Investigate the application of uncertainty-aware modeling techniques to other domains requiring robust autonomous decision-making under uncertainty, such as autonomous driving or industrial robotics.</li>
+                    <li>AI Researchers: Consider how Cloudflare's infrastructure and tools can facilitate the deployment, management, and secure operation of experimental and production-grade autonomous AI models.</li>
+                    
+                    <li>Investors: Analyze Cloudflare's strategic pivot and significant investment in the 'Agentic Internet' as a key indicator of its future growth and market positioning in the evolving AI landscape.</li>
+                    
+                    <li>Web Developers/Publishers: Investigate WebMCP to understand how to make websites and web applications more discoverable and usable by autonomous AI agents, potentially opening new interaction and monetization avenues.</li>
                     
                 </ul>
                 
 
                 <div class="card-footer">
-                    <span>Processed Category: AI</span>
+                    <span>Processed Category: Engineering</span>
                     
-                    <a href="https://huggingface.co/papers/2608.05597" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://blog.cloudflare.com/agents-week-review-august-2026/" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -565,70 +573,75 @@
         <section id="categories">
             <h2>By Category</h2>
             
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div class="card" style="margin-bottom: 0; padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Quantum Noise Mitigation with Adaptive Zero-Noise Extrapolation: A Contextual Multi-Armed Bandits Approach</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A novel adaptive framework integrates ZNE with Contextual Multi-Armed Bandits to dynamically mitigate time-varying noise in Variational Quantum Circuits, achieving up to 6.9% higher estimator fidelity and reducing quantum circuit executions by 40%, bytes exchanged by 35%, and end-to-end cost by 30% compared to existing methods.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
+                        <span>Score: 8.57</span>
+                        
+                        <a href="https://arxiv.org/abs/2608.06426" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
             <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">ReASearch: An AI Agent for Self-Optimizing Prompts, Programs, and ML Workflows</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">ReASearch introduces a unified AI agent framework that autonomously optimizes prompts, programs, and machine learning workflows. By internalizing search policies and reasoning, it significantly outperforms specialized optimization systems and can discover solutions superior to prior human best-known results, marking a new paradigm for AI self-optimization.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">SWE-Bench ProMax: Benchmarking Agents on Large-Scale Multilingual Code Refactoring</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new, expert-curated, multilingual benchmark called SWE-Bench ProMax is introduced to rigorously evaluate AI coding agents on large-scale code refactoring tasks, addressing quality issues and saturation of prior benchmarks. Frontier models achieve only a 41.2% resolve rate, indicating a significant challenge.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.7</span>
+                        <span>Score: 8.38</span>
                         
-                        <a href="https://huggingface.co/papers/2608.06714" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.09802" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">StreamArena and StreamMind: Advancing Agentic Streaming Video Understanding</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">StreamArena is a new benchmark featuring hour-scale videos and open-ended questions to rigorously evaluate AI agents' continuous, interactive, and long-horizon video understanding, exposing current limitations. To address these, the paper proposes StreamMind, a two-tier architecture that separates real-time interaction from asynchronous long-term memory construction, significantly outperforming existing baselines.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Sci-VBench: A New Benchmark for Scientific Video Generation Evaluation</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Sci-VBench is a new, comprehensive benchmark for evaluating AI video generation models in scientific domains, focusing on knowledge and reasoning rather than just visual quality. It features 1,253 expert-annotated examples and reveals a substantial gap where current models, especially open-source ones, struggle with scientific and causal correctness despite good visual realism.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
                         <span>Score: 8.3</span>
                         
-                        <a href="https://huggingface.co/papers/2608.05703" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Modular TTT: A Composable Framework for Test-Time Training</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Modular TTT is a new framework that rethinks Test-Time Training (TTT) by breaking it down into composable modules. This approach simplifies design and analysis, revealing key insights into effective TTT components such as small learning rates, weight decay, and single-layer nonlinearity, while achieving strong performance comparable to existing methods.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.6</span>
-                        
-                        <a href="https://huggingface.co/papers/2608.07110" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.09873" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
             </div>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/Machine Learning</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/ML</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">SimWAM: A World-Action Model for Autonomous Driving</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">SimWAM is a novel World-Action Model designed for end-to-end autonomous driving. It leverages video generation during training to create a lightweight, low-latency planner, demonstrating superior performance and efficiency compared to existing World-Action Models.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Motif 3: A 314B Parameter Mixture-of-Experts Language Model with Novel Architecture and Training</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Motif 3 is a new 314-billion-parameter decoder-only Mixture-of-Experts (MoE) language model from Motif Technologies, featuring fine-grained sparsity, novel Grouped Differential Latent Attention (GDLA), and a comprehensive training pipeline on 12.5 trillion tokens. It demonstrates competitive performance in reasoning, coding, long-context understanding, and more, against leading open-weight models.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 6.77</span>
+                        <span>Score: 7.62</span>
                         
-                        <a href="https://huggingface.co/papers/2608.07468" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.09119" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
             </div>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/Robotics</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Infrastructure</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">UA-NWM: Uncertainty-Aware World Model for Aerial Image-Goal Navigation</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Researchers from Tsinghua University developed UA-NWM, an Uncertainty-Aware World Model specifically for aerial image-goal navigation. This model efficiently handles future-state uncertainty in large outdoor environments by formulating trajectory scoring as conditional out-of-distribution detection, leading to more robust and faster drone navigation, validated by real-world experiments.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Everything we launched during Agents Week</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Cloudflare's 'Agents Week' unveiled a suite of new products and concepts, including a dedicated agent runtime (@cloudflare/computer), an Agent Development Lifecycle (ADLC), security models for agents, programmable wallets, and an open protocol (WebMCP) for agent-website interaction, all aimed at building and securing an 'Agentic Internet' where autonomous AI agents can operate and transact.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 6.7</span>
+                        <span>Score: 7.52</span>
                         
-                        <a href="https://huggingface.co/papers/2608.05597" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://blog.cloudflare.com/agents-week-review-august-2026/" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
