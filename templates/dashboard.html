@@ -3,503 +3,493 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brief &mdash; {{ date }}</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%2312130F'/><rect x='3' y='3' width='10' height='10' fill='%23C8452B'/></svg>">
+    <title>Alpha Forge &mdash; {{ date }}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..800&display=swap" rel="stylesheet">
     <style>
         :root {
             color-scheme: dark;
 
-            --bg: #12130F;
-            --surface: #191B15;
-            --surface-hover: #22241C;
-            --border: #32352A;
+            /* Night edition: newsprint inverted. Ground is near-black with a
+               trace of warmth so it sits beside an editor without going blue. */
+            --bg:        oklch(0.16 0.004 60);
+            --bg-sunk:   oklch(0.13 0.004 60);
+            --rule:      oklch(0.32 0.006 60);
+            --rule-firm: oklch(0.54 0.008 60);
 
-            --text: #E8E6DF;
-            --text-dim: #C6C5BB;
-            --text-muted: #9A9C90;
+            --ink:       oklch(0.96 0.003 80);
+            --ink-2:     oklch(0.84 0.004 80);
+            --ink-3:     oklch(0.68 0.005 80);
 
-            /* The only chromatic accent on the page. It belongs to the score. */
-            --score: #C8452B;
+            /* One accent. It belongs to rank and to the lead rule. Nothing else. */
+            --signal:    oklch(0.64 0.20 32);
+            --signal-dim: oklch(0.52 0.15 32);
 
-            --font-prose: 'IBM Plex Sans', ui-sans-serif, "Segoe UI", system-ui, sans-serif;
-            --font-data: 'IBM Plex Mono', ui-monospace, "Cascadia Mono", Consolas, monospace;
+            --font: 'Archivo', ui-sans-serif, "Segoe UI", system-ui, sans-serif;
 
-            --t-xs: 0.8125rem;
-            --t-body: 1.0625rem;
-            --t-md: 1.3125rem;
-            --t-lg: 1.6875rem;
-            --t-xl: 2.625rem;
+            --s1: 4px;  --s2: 8px;  --s3: 14px;
+            --s4: 22px; --s5: 36px; --s6: 64px;
 
-            --s1: 4px;  --s2: 8px;  --s3: 12px;
-            --s4: 20px; --s5: 32px; --s6: 56px;
-
-            --r-card: 12px;
-            --r-pill: 999px;
+            --z-sticky: 100;
         }
 
         * { box-sizing: border-box; }
 
+        html { -webkit-text-size-adjust: 100%; }
+
         body {
-            font-family: var(--font-prose);
-            font-size: var(--t-body);
+            font-family: var(--font);
+            font-size: 1rem;
             font-weight: 400;
-            background-color: var(--bg);
-            color: var(--text);
+            line-height: 1.65;
+            background: var(--bg);
+            color: var(--ink);
             margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            font-variant-numeric: tabular-nums;
             -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
-        .container {
-            max-width: 760px;
+        .sheet {
+            max-width: 1080px;
             margin: 0 auto;
-            padding: var(--s6) var(--s4) 96px;
+            padding: var(--s5) var(--s4) 96px;
         }
 
-        /* ---- masthead: left-aligned, date hung opposite ---- */
-        header {
+        /* ---------- masthead ---------- */
+        .masthead {
             display: flex;
-            align-items: baseline;
+            align-items: flex-end;
             justify-content: space-between;
             gap: var(--s4);
             flex-wrap: wrap;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: var(--s4);
-            margin-bottom: var(--s6);
+            padding-bottom: var(--s3);
+            border-bottom: 3px solid var(--ink);
         }
 
-        h1 {
-            font-size: var(--t-xl);
-            font-weight: 600;
-            line-height: 1.05;
-            letter-spacing: -0.02em;
+        .wordmark {
+            font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1;
             margin: 0;
-            color: var(--text);
+            text-transform: uppercase;
+        }
+        .wordmark .bar {
+            display: inline-block;
+            width: 0.5em;
+            height: 0.16em;
+            background: var(--signal);
+            margin-right: 0.28em;
+            vertical-align: 0.22em;
         }
 
-        .masthead-meta {
-            font-family: var(--font-data);
-            font-size: var(--t-xs);
-            line-height: 1.2;
-            color: var(--text-muted);
+        .dateline {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            line-height: 1.4;
+            color: var(--ink-3);
+            text-align: right;
+            letter-spacing: 0.01em;
+        }
+        .dateline b { color: var(--ink-2); font-weight: 600; }
+
+        /* ---------- stale notice ---------- */
+        .stale {
+            display: flex;
+            gap: var(--s3);
+            align-items: baseline;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+            color: var(--ink-2);
+            background: var(--bg-sunk);
+            border-bottom: 1px solid var(--rule);
+            padding: var(--s3) var(--s4);
+            margin: 0 calc(var(--s4) * -1);
+        }
+        .stale-flag {
+            flex-shrink: 0;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--bg);
+            background: var(--signal);
+            padding: 2px 8px;
+        }
+
+        /* ---------- the lead ---------- */
+        .lead { padding: var(--s5) 0 var(--s6); }
+
+        .lead-head {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: var(--s4);
+            align-items: start;
+        }
+
+        .lead h2 {
+            font-size: clamp(2.25rem, 1.1rem + 4.6vw, 4.75rem);
+            font-weight: 800;
+            line-height: 0.98;
+            letter-spacing: -0.035em;
+            margin: 0;
+            text-wrap: balance;
+            max-width: 18ch;
+        }
+
+        .score {
+            font-size: clamp(1.75rem, 1rem + 2.6vw, 3rem);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.04em;
+            color: var(--signal);
             text-align: right;
         }
-
-        h2 {
-            font-size: var(--t-lg);
+        .score small {
+            display: block;
+            font-size: 0.6875rem;
             font-weight: 600;
-            line-height: 1.2;
-            letter-spacing: -0.01em;
-            color: var(--text);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+            margin-top: var(--s1);
+        }
+
+        .lead-rule {
+            height: 5px;
+            background: var(--signal);
+            margin: var(--s4) 0;
+        }
+
+        .deck {
+            font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.3125rem);
+            line-height: 1.5;
+            color: var(--ink);
+            max-width: 62ch;
+            margin: 0 0 var(--s4);
+            text-wrap: pretty;
+        }
+
+        .credit {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--ink-3);
+            letter-spacing: 0.02em;
+            margin-bottom: var(--s4);
+        }
+        .credit .old { color: var(--signal); }
+
+        /* ---------- the band: items 2 and 3 ---------- */
+        .band {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 0;
+            border-top: 1px solid var(--rule-firm);
+        }
+        .band > * + * { border-left: 1px solid var(--rule); }
+
+        .band-item { padding: var(--s4) var(--s4) var(--s5); }
+        .band-item:first-child { padding-left: 0; }
+        .band-item:last-child { padding-right: 0; }
+
+        .band-item h3 {
+            font-size: 1.375rem;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin: 0 0 var(--s3);
+            text-wrap: balance;
+        }
+        .band-score {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--signal);
+            margin-bottom: var(--s2);
+        }
+
+        /* ---------- the tail: items 4+ ---------- */
+        .tail { border-top: 1px solid var(--rule-firm); }
+        .tail-row {
+            display: grid;
+            grid-template-columns: 4.5rem 1fr auto;
+            gap: var(--s4);
+            align-items: baseline;
+            padding: var(--s3) 0;
+            border-bottom: 1px solid var(--rule);
+        }
+        .tail-rank { font-weight: 700; color: var(--signal); }
+        .tail-title { font-weight: 600; line-height: 1.3; }
+        .tail-title p {
+            font-weight: 400;
+            font-size: 0.9375rem;
+            color: var(--ink-3);
+            margin: var(--s1) 0 0;
+            max-width: 68ch;
+        }
+        .tail-src { font-size: 0.8125rem; color: var(--ink-3); white-space: nowrap; }
+
+        /* ---------- section headings ---------- */
+        .rubric {
+            display: flex;
+            align-items: center;
+            gap: var(--s3);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink-3);
             margin: var(--s6) 0 var(--s4);
         }
-
-        section[id] { scroll-margin-top: var(--s5); }
-
-        /* ---- the stale notice: stated plainly, not decorated ---- */
-        .stale {
-            font-family: var(--font-data);
-            font-size: var(--t-xs);
-            line-height: 1.5;
-            color: var(--text-dim);
-            border: 1px solid var(--border);
-            border-radius: var(--r-card);
-            padding: var(--s3) var(--s4);
-            margin-bottom: var(--s5);
+        .rubric::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
         }
-        .stale strong { color: var(--score); font-weight: 500; }
+        .rubric .n { color: var(--signal); }
 
-        /* ---- cards: one base, then lead and tail ---- */
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--r-card);
-            padding: 24px 28px;
-            margin-bottom: var(--s4);
-            transition: border-color 120ms linear;
+        /* ---------- prose inside a story ---------- */
+        .story-body { max-width: 68ch; }
+        .story-body h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+            margin: var(--s4) 0 var(--s2);
         }
-        .card:hover { border-color: #454936; }
+        .story-body p { margin: 0 0 var(--s3); color: var(--ink-2); text-wrap: pretty; }
+        .story-body ul { margin: 0 0 var(--s4); padding-left: 1.1em; }
+        .story-body li { margin-bottom: var(--s2); color: var(--ink-2); }
+        .story-body li::marker { color: var(--signal-dim); }
 
-        .card--lead {
-            padding: 40px 44px;
-            margin-bottom: var(--s6);
+        .sources { font-size: 0.875rem; color: var(--ink-3); }
+        .sources li { color: var(--ink-3); margin-bottom: var(--s1); }
+
+        /* ---------- links ---------- */
+        a { color: inherit; }
+
+        .read {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 0.45em;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--ink);
+            border-bottom: 2px solid var(--signal);
+            padding-bottom: 2px;
+            transition: color 160ms cubic-bezier(0.2, 0, 0, 1);
         }
-        .card--lead .card-title { font-size: 2.1rem; }
+        .read:hover { color: var(--signal); }
+        .read .arrow { transition: transform 200ms cubic-bezier(0.2, 0, 0, 1); }
+        .read:hover .arrow { transform: translateX(4px); }
 
-        .card--tail {
-            background: none;
-            border: none;
-            border-top: 1px solid var(--border);
-            border-radius: 0;
+        .title-link {
+            text-decoration: none;
+            background-image: linear-gradient(var(--signal), var(--signal));
+            background-repeat: no-repeat;
+            background-position: 0 100%;
+            background-size: 0% 2px;
+            transition: background-size 220ms cubic-bezier(0.2, 0, 0, 1);
+        }
+        .title-link:hover { background-size: 100% 2px; }
+
+        :focus-visible {
+            outline: 3px solid var(--signal);
+            outline-offset: 3px;
+        }
+
+        /* ---------- closing matter ---------- */
+        .weekly { border-top: 1px solid var(--rule-firm); padding-top: var(--s4); }
+        .weekly h3 { font-size: 1.25rem; font-weight: 700; margin: 0 0 var(--s3); }
+        .weekly p, .weekly li { color: var(--ink-2); max-width: 68ch; }
+
+        .empty {
+            color: var(--ink-3);
+            max-width: 60ch;
+            margin: 0;
             padding: var(--s4) 0;
-            margin-bottom: 0;
         }
-        .card--tail .card-title { font-size: var(--t-body); }
 
-        .card-header {
+        .colophon {
+            border-top: 3px solid var(--ink);
+            margin-top: var(--s6);
+            padding-top: var(--s3);
+            font-size: 0.8125rem;
+            line-height: 1.6;
+            color: var(--ink-3);
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: var(--s3);
-            flex-wrap: wrap;
-            gap: var(--s3);
-        }
-
-        .card-title {
-            font-size: var(--t-md);
-            font-weight: 600;
-            line-height: 1.25;
-            letter-spacing: -0.01em;
-            margin: 0;
-            color: var(--text);
-            max-width: 32ch;
-            flex: 1;
-            min-width: 240px;
-        }
-
-        .badges {
-            display: flex;
-            gap: var(--s2);
-            align-items: center;
-            flex-shrink: 0;
-        }
-
-        .badge {
-            font-family: var(--font-data);
-            font-size: var(--t-xs);
-            font-weight: 500;
-            line-height: 1.2;
-            padding: 3px 10px;
-            border-radius: var(--r-pill);
-            text-transform: uppercase;
-            letter-spacing: 0.07em;
-            color: var(--text-muted);
-            border: 1px solid var(--border);
-        }
-        .badge-score {
-            color: var(--score);
-            border-color: var(--score);
-            text-transform: none;
-            letter-spacing: 0.02em;
-        }
-
-        .meta-line {
-            font-family: var(--font-data);
-            font-size: var(--t-xs);
-            line-height: 1.2;
-            color: var(--text-muted);
-            margin-bottom: var(--s5);
-            display: flex;
             gap: var(--s4);
             flex-wrap: wrap;
         }
-        .meta-stale { color: var(--score); }
 
-        .section-title {
-            font-family: var(--font-data);
-            font-size: var(--t-xs);
-            font-weight: 500;
-            line-height: 1.2;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin: var(--s5) 0 var(--s1);
-        }
-
-        /* The considered paragraph. Marked by measure, not by a stripe. */
-        .why-it-matters {
-            font-style: italic;
-            color: var(--text-dim);
-            max-width: 62ch;
-            margin: var(--s1) 0 var(--s5);
-        }
-
-        .tldr {
-            margin: 0 0 var(--s5);
-            max-width: 68ch;
-        }
-
-        .card ul {
-            margin: 0 0 var(--s5);
-            padding-left: 1.15em;
-            max-width: 68ch;
-        }
-        .card li {
-            line-height: 1.5;
-            margin-bottom: 0.7em;
-            color: var(--text-dim);
-        }
-
-        .sources {
-            font-family: var(--font-data);
-            font-size: var(--t-xs);
-            line-height: 1.5;
-            color: var(--text-muted);
-            margin: 0 0 var(--s5);
-            padding-left: 1.15em;
-            max-width: 68ch;
-        }
-        .sources li { margin-bottom: var(--s1); }
-
-        .card-footer {
-            border-top: 1px solid var(--border);
-            padding-top: var(--s4);
-            margin-top: var(--s5);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: var(--s3);
-        }
-        .card--tail .card-footer {
-            border-top: none;
-            padding-top: 0;
-            margin-top: var(--s3);
-        }
-        .footer-note {
-            font-family: var(--font-data);
-            font-size: var(--t-xs);
-            color: var(--text-muted);
-        }
-
-        .btn-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--text);
-            background: transparent;
-            border: 1px solid var(--border);
-            padding: 7px 16px;
-            border-radius: var(--r-card);
-            font-size: var(--t-xs);
-            font-family: var(--font-data);
-            text-decoration: none;
-            transition: background-color 100ms linear, border-color 100ms linear;
-        }
-        .btn-link:hover {
-            background: var(--surface-hover);
-            border-color: #454936;
-        }
-        .btn-link .arrow {
-            display: inline-block;
-            transition: transform 140ms cubic-bezier(0.2, 0, 0, 1);
-        }
-        .btn-link:hover .arrow { transform: translateX(3px); }
-
-        /* ---- the remainder: one line each, no card, no repetition ---- */
-        .rest-intro {
-            font-family: var(--font-data);
-            font-size: var(--t-xs);
-            color: var(--text-muted);
-            margin: 0 0 var(--s4);
-        }
-        .rest-list { list-style: none; margin: 0; padding: 0; }
-        .rest-item {
-            display: flex;
-            align-items: baseline;
-            gap: var(--s3);
-            padding: var(--s3) 0;
-            border-top: 1px solid var(--border);
-        }
-        .rest-score {
-            font-family: var(--font-data);
-            font-size: var(--t-xs);
-            color: var(--score);
-            flex-shrink: 0;
-            min-width: 3.5em;
-        }
-        .rest-title { flex: 1; min-width: 0; }
-        .rest-title a {
-            color: var(--text);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            text-decoration-color: var(--border);
-            transition: text-decoration-color 120ms linear;
-        }
-        .rest-title a:hover { text-decoration-color: var(--text-muted); }
-        .rest-source {
-            font-family: var(--font-data);
-            font-size: var(--t-xs);
-            color: var(--text-muted);
-            flex-shrink: 0;
-        }
-
-        .empty {
-            color: var(--text-muted);
-            font-style: italic;
-            margin: 0;
-            max-width: 62ch;
-        }
-
-        .run-stats {
-            font-family: var(--font-data);
-            font-size: var(--t-xs);
-            line-height: 1.6;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border);
-            margin-top: 96px;
-            padding-top: var(--s4);
-        }
-
-        a:focus-visible,
-        .btn-link:focus-visible {
-            outline: 2px solid var(--score);
-            outline-offset: 3px;
-            border-radius: var(--r-card);
-        }
-
-        @media (max-width: 620px) {
-            .card--lead { padding: 28px 22px; }
-            .card { padding: 20px 22px; }
-            .masthead-meta { text-align: left; }
+        @media (max-width: 640px) {
+            .lead-head { grid-template-columns: 1fr; gap: var(--s3); }
+            .score { text-align: left; }
+            .score small { display: inline; margin-left: 0.5em; }
+            .band > * + * { border-left: none; border-top: 1px solid var(--rule); }
+            .band-item { padding-left: 0; padding-right: 0; }
+            .tail-row { grid-template-columns: 3.5rem 1fr; gap: var(--s3); }
+            .tail-src { display: none; }
         }
 
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
                 transition-duration: 1ms !important;
                 animation-duration: 1ms !important;
-                animation-iteration-count: 1 !important;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Intelligence Brief</h1>
-            <div class="masthead-meta">
-                {{ date }}<br>
-                {{ top_insights|length }} shown{% if remainder %} · {{ remainder|length }} more{% endif %}
+<div class="sheet">
+
+    <header class="masthead">
+        <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
+        <div class="dateline">
+            <b>{{ date }}</b><br>
+            {{ top_insights|length }} of {{ total_count }} cleared
+        </div>
+    </header>
+
+    {% if stale_from %}
+    <p class="stale">
+        <span class="stale-flag">Stale</span>
+        <span>Today's run brought back nothing, so this is the brief from <b>{{ stale_from }}</b>{% if stale_days %}, {{ stale_days }} day{{ 's' if stale_days != 1 }} old{% endif %}. Nothing here is new.</span>
+    </p>
+    {% endif %}
+
+    {% if top_insights %}
+    {% set lead = top_insights[0] %}
+    <article class="lead">
+        <div class="lead-head">
+            <h2>{{ lead.title }}</h2>
+            <div class="score">{{ lead.final_score }}<small>Ranked</small></div>
+        </div>
+
+        <div class="lead-rule"></div>
+
+        <p class="credit">
+            {{ lead.category }}
+            {% if lead.source_name %} &middot; {{ lead.source_name }}{% endif %}
+            {% if lead.published_display %} &middot; {{ lead.published_display }}{% endif %}
+            {% if lead.age_days is not none and lead.age_days > 7 %}<span class="old"> &middot; {{ lead.age_days }} days old</span>{% endif %}
+            {% if lead.signal_score %} &middot; signal {{ lead.signal_score }}/10{% endif %}
+        </p>
+
+        {% if lead.tldr %}<p class="deck">{{ lead.tldr }}</p>{% endif %}
+
+        <div class="story-body">
+            {% if lead.why_it_matters and lead.why_it_matters != "Analysis unavailable." %}
+            <h4>So what</h4>
+            <p>{{ lead.why_it_matters }}</p>
+            {% endif %}
+
+            {% if lead.key_points %}
+            <h4>Key points</h4>
+            <ul>{% for pt in lead.key_points[:5] %}<li>{{ pt }}</li>{% endfor %}</ul>
+            {% endif %}
+
+            {% if lead.action_items %}
+            <h4>Worth doing</h4>
+            <ul>{% for a in lead.action_items[:4] %}<li>{{ a }}</li>{% endfor %}</ul>
+            {% endif %}
+
+            {% if lead.merged_sources %}
+            <h4>Merged from {{ lead.merged_sources|length + 1 }} sources</h4>
+            <ul class="sources">{% for s in lead.merged_sources %}<li>{{ s }}</li>{% endfor %}</ul>
+            {% endif %}
+        </div>
+
+        {% if lead.source_url %}
+        <a class="read" href="{{ lead.source_url }}" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        {% endif %}
+    </article>
+
+    {% set band = top_insights[1:3] %}
+    {% if band %}
+    <section class="band">
+        {% for item in band %}
+        <article class="band-item">
+            <div class="band-score">{{ item.final_score }}</div>
+            <h3>{% if item.source_url %}<a class="title-link" href="{{ item.source_url }}" target="_blank" rel="noopener">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3>
+            <p class="credit">
+                {{ item.category }}{% if item.source_name %} &middot; {{ item.source_name }}{% endif %}
+                {% if item.age_days is not none and item.age_days > 7 %}<span class="old"> &middot; {{ item.age_days }}d old</span>{% endif %}
+            </p>
+            <div class="story-body">
+                {% if item.tldr %}<p>{{ item.tldr }}</p>{% endif %}
+                {% if item.key_points %}
+                <ul>{% for pt in item.key_points[:3] %}<li>{{ pt }}</li>{% endfor %}</ul>
+                {% endif %}
             </div>
-        </header>
+        </article>
+        {% endfor %}
+    </section>
+    {% endif %}
 
-        {% if stale_from %}
-        <p class="stale">
-            <strong>Today's run brought back nothing.</strong><br>
-            Showing the brief from {{ stale_from }}{% if stale_days %} ({{ stale_days }} day{{ 's' if stale_days != 1 }} ago){% endif %}.
-            Nothing below is new{% if generated_on %}; this page was rebuilt {{ generated_on }}{% endif %}.
-        </p>
-        {% endif %}
+    {% set tail = top_insights[3:] %}
+    {% if tail %}
+    <section class="tail">
+        {% for item in tail %}
+        <div class="tail-row">
+            <span class="tail-rank">{{ item.final_score }}</span>
+            <span class="tail-title">
+                {% if item.source_url %}<a class="title-link" href="{{ item.source_url }}" target="_blank" rel="noopener">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}
+                {% if item.tldr %}<p>{{ item.tldr }}</p>{% endif %}
+            </span>
+            <span class="tail-src">{{ item.source_name or item.source_host }}</span>
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
 
-        <section id="today">
-            <h2>{% if stale_from %}Last good run{% else %}Today{% endif %}</h2>
+    {% else %}
+    <p class="empty">Nothing cleared the signal filter, and there is no earlier brief on file to fall back to.</p>
+    {% endif %}
 
-            {% for item in top_insights %}
-            <article class="card {% if loop.first %}card--lead{% elif loop.index > 3 %}card--tail{% endif %}">
-                <div class="card-header">
-                    <h3 class="card-title">{{ item.title }}</h3>
-                    <div class="badges">
-                        <span class="badge">{{ item.category }}</span>
-                        <span class="badge badge-score">Signal {{ item.signal_score }}/10</span>
-                    </div>
-                </div>
+    {% if remainder %}
+    <h2 class="rubric">Also cleared <span class="n">{{ remainder|length }}</span></h2>
+    <section class="tail">
+        {% for item in remainder %}
+        <div class="tail-row">
+            <span class="tail-rank">{{ item.final_score }}</span>
+            <span class="tail-title">
+                {% if item.source_url %}<a class="title-link" href="{{ item.source_url }}" target="_blank" rel="noopener">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}
+            </span>
+            <span class="tail-src">{{ item.source_name or item.source_host }}</span>
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
 
-                {% if item.published_display or item.source_name or item.source_host %}
-                <div class="meta-line">
-                    {% if item.published_display %}
-                    <span>{{ item.published_display }}{% if item.age_days is not none and item.age_days > 7 %}<span class="meta-stale"> · {{ item.age_days }} days old</span>{% endif %}</span>
-                    {% endif %}
-                    {% if item.source_name or item.source_host %}
-                    <span>{{ item.source_name }}{% if item.source_name and item.source_host %} · {% endif %}{{ item.source_host }}</span>
-                    {% endif %}
-                </div>
-                {% endif %}
+    <h2 class="rubric">This week, joined up</h2>
+    {% if weekly_content %}
+    <section class="weekly">{{ weekly_content | safe }}</section>
+    {% else %}
+    <p class="empty">The weekly synthesis runs Sunday night. Nothing to join up yet.</p>
+    {% endif %}
 
-                {% if item.tldr %}
-                <p class="tldr">{{ item.tldr }}</p>
-                {% endif %}
-
-                {% if not (loop.index > 3) %}
-                    {% if item.why_it_matters and item.why_it_matters != "Analysis unavailable." %}
-                    <div class="section-title">So what</div>
-                    <p class="why-it-matters">{{ item.why_it_matters }}</p>
-                    {% endif %}
-
-                    {% if item.key_points %}
-                    <div class="section-title">Key points</div>
-                    <ul>
-                        {% for pt in item.key_points[:5] %}
-                        <li>{{ pt }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-
-                    {% if item.action_items %}
-                    <div class="section-title">Worth doing</div>
-                    <ul>
-                        {% for action in item.action_items[:4] %}
-                        <li>{{ action }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-
-                    {% if item.merged_sources %}
-                    <div class="section-title">Merged from {{ item.merged_sources|length + 1 }} sources</div>
-                    <ul class="sources">
-                        {% for s in item.merged_sources %}
-                        <li>{{ s }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                {% endif %}
-
-                <div class="card-footer">
-                    <span class="footer-note">
-                        Ranked {{ item.final_score }}/10{% if item.personal_relevance %} · relevance {{ item.personal_relevance }}{% endif %}{% if item.show_original_category %} · {{ item.original_category }} feed{% endif %}
-                    </span>
-                    {% if item.source_url %}
-                    <a href="{{ item.source_url }}" target="_blank" rel="noopener" class="btn-link">Read it <span class="arrow">&rarr;</span></a>
-                    {% endif %}
-                </div>
-            </article>
-            {% endfor %}
-
-            {% if not top_insights %}
-            <p class="empty">Nothing cleared the signal filter, and there is no earlier brief on file to fall back to.</p>
+    <footer class="colophon">
+        <span>
+            {% if run_stats %}
+            {% if run_stats.feeds_polled %}{{ run_stats.feeds_polled }} feeds polled &middot; {{ run_stats.feeds_ok }} answered &middot; {% endif %}
+            {% if run_stats.analyzed is not none %}{{ run_stats.analyzed }} analysed &middot; {% endif %}
             {% endif %}
-        </section>
+            {{ total_count }} on this page &middot; below signal 5 dropped
+            {% if run_stats and run_stats.failed_feeds %}<br>No answer: {{ run_stats.failed_feeds|join(', ') }}.{% endif %}
+            {% if run_stats and run_stats.dropped_analysis %}<br>Gemini was unavailable for {{ run_stats.dropped_analysis }} article{{ 's' if run_stats.dropped_analysis != 1 }}; dropped rather than summarised.{% endif %}
+        </span>
+        <span>Built {{ generated_on }}</span>
+    </footer>
 
-        {% if remainder %}
-        <section id="rest">
-            <h2>Everything else</h2>
-            <p class="rest-intro">{{ remainder|length }} more cleared the filter but didn't make the top {{ top_insights|length }}.</p>
-            <ul class="rest-list">
-                {% for item in remainder %}
-                <li class="rest-item">
-                    <span class="rest-score">{{ item.final_score }}</span>
-                    <span class="rest-title">
-                        {% if item.source_url %}<a href="{{ item.source_url }}" target="_blank" rel="noopener">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}
-                    </span>
-                    <span class="rest-source">{{ item.source_name or item.source_host }}</span>
-                </li>
-                {% endfor %}
-            </ul>
-        </section>
-        {% endif %}
-
-        <section id="weekly">
-            <h2>This week, joined up</h2>
-            {% if weekly_content %}
-            <div class="card">{{ weekly_content | safe }}</div>
-            {% else %}
-            <p class="empty">The weekly synthesis runs Sunday night. Nothing to join up yet.</p>
-            {% endif %}
-        </section>
-
-        {% if run_stats %}
-        <p class="run-stats">
-            {% if run_stats.feeds_polled %}{{ run_stats.feeds_polled }} feeds polled{% if run_stats.feeds_ok is not none %} · {{ run_stats.feeds_ok }} answered{% endif %} · {% endif %}
-            {% if run_stats.analyzed is not none %}{{ run_stats.analyzed }} analysed (cap 10) · {% endif %}
-            {% if run_stats.cleared is not none %}{{ run_stats.cleared }} cleared signal 5 · {% endif %}
-            {{ total_count }} on this page
-            {% if run_stats.failed_feeds %}<br>No answer today: {{ run_stats.failed_feeds|join(', ') }}.{% endif %}
-            {% if run_stats.dropped_analysis %}<br>Gemini was unavailable for {{ run_stats.dropped_analysis }} article{{ 's' if run_stats.dropped_analysis != 1 }}; they were dropped rather than summarised.{% endif %}
-        </p>
-        {% endif %}
-    </div>
+</div>
 </body>
 </html>
