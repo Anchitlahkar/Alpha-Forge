@@ -253,11 +253,11 @@ python -m unittest discover -s tests -p "test_*.py"
 ```
 
 ### Test Coverage Details:
-- [test_dedup.py](file:///C:/Extra_s/Code/Github-Workflow/News_letter/tests/test_dedup.py): Verifies semantic grouping boundaries and empty/single-item handling.
-- [test_ranker.py](file:///C:/Extra_s/Code/Github-Workflow/News_letter/tests/test_ranker.py): Verifies category-weighted score ordering.
-- [test_key_rotation.py](file:///C:/Extra_s/Code/Github-Workflow/News_letter/tests/test_key_rotation.py): Verifies per-key cooldown and wraparound, `retryDelay` parsing, per-day vs per-minute quota classification, and that startup spends no API requests. Runs against a fake clock and a stubbed SDK, so it makes no network calls.
-- [test_parser.py](file:///C:/Extra_s/Code/Github-Workflow/News_letter/tests/test_parser.py): Verifies that a failed analysis does not blacklist a URL, and that the same URL can still deliver a different article.
-- [test_telegram_logic.py](file:///C:/Extra_s/Code/Github-Workflow/News_letter/tests/test_telegram_logic.py): Mocks request dispatch behaviors and verifies formatting layouts.
+- [test_dedup.py](tests/test_dedup.py): Verifies semantic grouping boundaries and empty/single-item handling.
+- [test_ranker.py](tests/test_ranker.py): Verifies category-weighted score ordering.
+- [test_key_rotation.py](tests/test_key_rotation.py): Verifies per-key cooldown and wraparound, `retryDelay` parsing, per-day vs per-minute quota classification, and that startup spends no API requests. Runs against a fake clock and a stubbed SDK, so it makes no network calls.
+- [test_parser.py](tests/test_parser.py): Verifies that a failed analysis does not blacklist a URL, and that the same URL can still deliver a different article.
+- [test_telegram_logic.py](tests/test_telegram_logic.py): Mocks request dispatch behaviors and verifies formatting layouts.
 
 ---
 
