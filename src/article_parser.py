@@ -1,22 +1,26 @@
 from src.fetch_sources import fetch_article_text
 from src.gemini_client import extract_insights
-from src.utils import get_today_str
+from src.utils import get_today_str, make_processed_key
 
 def parse_and_analyze(article: dict, processed_urls: set) -> dict | None:
+    # The processed key is URL + title, so the same URL can still deliver a
+    # different paper later without being skipped as a repeat.
+    processed_key = make_processed_key(article["link"], article.get("title", ""))
+
     # Feature 2: Use RSS summaries whenever available. Do NOT send full article text unless summary is missing or too short.
     text = article.get("summary", "")
     if not text or len(text) < 200:
         text = fetch_article_text(article["link"])
-    
+
     # Feature 2: Skip articles shorter than 200 characters
     if len(text) < 200:
         print(f"⏭️  (Too short: {len(text)} chars, skipping: {article['title'][:40]})")
         # Mark as processed so we don't attempt to process it in future runs
-        processed_urls.add(article["link"])
+        processed_urls.add(processed_key)
         return None
-        
+
     print(f"🔍 Analyzing: {article['title'][:60]}...", end=" ", flush=True)
-    
+
     insight = extract_insights(
         text,
         article["link"],
@@ -30,7 +34,7 @@ def parse_and_analyze(article: dict, processed_urls: set) -> dict | None:
         # failure (e.g. quota exhaustion) doesn't permanently blacklist an
         # article that was never really analyzed. Leaving it unmarked lets a
         # future run retry it instead of skipping it as "already processed".
-        processed_urls.add(article["link"])
+        processed_urls.add(processed_key)
         if not insight.get("source_url"):
             insight["source_url"] = article["link"]
         if not insight.get("source_name"):

@@ -11,6 +11,7 @@
   },
   "weights": {
     "signal": 0.7,
-    "personal": 0.3
+    "personal": 0.15,
+    "category": 0.15
   }
 }

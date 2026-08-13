@@ -10,8 +10,8 @@ if root_dir not in sys.path:
 import argparse
 import json
 from src.config import DAILY_DIR
-from src.utils import get_today_str, load_processed_urls, save_processed_urls
-from src.fetch_sources import fetch_rss_feeds
+from src.utils import get_today_str, load_processed_urls, save_processed_urls, make_processed_key
+from src.fetch_sources import fetch_rss_feeds, LAST_FEED_HEALTH
 from src.article_parser import parse_and_analyze
 from src.deduplicate import deduplicate_insights
 from src.signal_filter import filter_high_signal
@@ -26,25 +26,32 @@ def run_daily():
     raw_articles = fetch_rss_feeds()
     
     processed_urls = load_processed_urls()
-    seen_urls = set()
+    seen_keys = set()
     
     insights = []
     analyzed_count = 0
-    
+    dropped_analysis = 0
+
     for article in raw_articles:
         url = article.get("link")
         if not url:
             continue
             
-        # Feature 2: Skip duplicate URL in current run
-        if url in seen_urls:
-            print(f"Skipping duplicate URL in current run: {url}")
+        # Keyed on URL + title, so the same URL can still bring a different
+        # paper through; only an actual repeat of the same piece is skipped.
+        key = make_processed_key(url, article.get("title", ""))
+
+        # Feature 2: Skip the same article twice in one run
+        if key in seen_keys:
+            print(f"Skipping duplicate article in current run: {url}")
             continue
-        seen_urls.add(url)
-        
-        # Feature 2: Skip already processed URL from past runs
-        if url in processed_urls:
-            print(f"Skipping already processed URL: {url}")
+        seen_keys.add(key)
+
+        # Feature 2: Skip articles already handled in past runs.
+        # `url in processed_urls` catches entries written before keys carried
+        # titles; those are permalinks, so they stay skipped and age out.
+        if key in processed_urls or url in processed_urls:
+            print(f"Skipping already processed article: {url}")
             continue
             
         # Feature 2: Hard cap of 10 articles analyzed per run
@@ -58,6 +65,7 @@ def run_daily():
                 # If analysis failed and returned fail-safe values, do not count it and try next article
                 if insight.get("why_it_matters") == "Analysis unavailable.":
                     print(f"⚠️ Article analysis failed (fail-safe). Continuing to next article to take its place.")
+                    dropped_analysis += 1
                     continue
                 insights.append(insight)
                 analyzed_count += 1
@@ -72,11 +80,23 @@ def run_daily():
             
     # Save updated processed URLs
     save_processed_urls(processed_urls)
-            
+
+    failed_feeds = sorted(n for n, s in LAST_FEED_HEALTH.items() if s != "OK")
+    run_stats = {
+        "feeds_polled": len(LAST_FEED_HEALTH),
+        "feeds_ok": sum(1 for s in LAST_FEED_HEALTH.values() if s == "OK"),
+        "failed_feeds": failed_feeds,
+        "analyzed": analyzed_count,
+        "dropped_analysis": dropped_analysis,
+        "cleared": 0,
+    }
+
     if not insights:
         print("No insights were extracted today.")
+        # Archive the empty day honestly; the dashboard falls back to the last
+        # good run on its own rather than rendering an empty page.
         save_daily_archive([])
-        generate_dashboard([])
+        generate_dashboard([], run_stats=run_stats)
         send_alert({"title": "No signal found today."})
         return
 
@@ -84,11 +104,12 @@ def run_daily():
     deduped = deduplicate_insights(insights)
     high_signal = filter_high_signal(deduped)
     ranked = rank_insights(high_signal)
-    
+    run_stats["cleared"] = len(ranked)
+
     # Artifact generation
     save_daily_archive(ranked)
-    generate_dashboard(ranked)
-    
+    generate_dashboard(ranked, run_stats=run_stats)
+
     if ranked:
         send_alert(ranked[0])
     else:

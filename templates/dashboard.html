@@ -3,192 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Intelligence Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Brief &mdash; {{ date }}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%2312130F'/><rect x='3' y='3' width='10' height='10' fill='%23C8452B'/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0B0F19;
-            --surface: #151B2C;
-            --surface-hover: #1E2640;
-            --primary: #6366F1;
-            --primary-light: #8B5CF6;
-            --text: #F3F4F6;
-            --text-muted: #9CA3AF;
-            --border: #222E4A;
-            --accent: #10B981;
+            color-scheme: dark;
+
+            --bg: #12130F;
+            --surface: #191B15;
+            --surface-hover: #22241C;
+            --border: #32352A;
+
+            --text: #E8E6DF;
+            --text-dim: #C6C5BB;
+            --text-muted: #9A9C90;
+
+            /* The only chromatic accent on the page. It belongs to the score. */
+            --score: #C8452B;
+
+            --font-prose: 'IBM Plex Sans', ui-sans-serif, "Segoe UI", system-ui, sans-serif;
+            --font-data: 'IBM Plex Mono', ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+            --t-xs: 0.8125rem;
+            --t-body: 1.0625rem;
+            --t-md: 1.3125rem;
+            --t-lg: 1.6875rem;
+            --t-xl: 2.625rem;
+
+            --s1: 4px;  --s2: 8px;  --s3: 12px;
+            --s4: 20px; --s5: 32px; --s6: 56px;
+
+            --r-card: 12px;
+            --r-pill: 999px;
         }
+
+        * { box-sizing: border-box; }
+
         body {
-            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: var(--font-prose);
+            font-size: var(--t-body);
+            font-weight: 400;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
+
         .container {
-            max-width: 1000px;
+            max-width: 760px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: var(--s6) var(--s4) 96px;
         }
+
+        /* ---- masthead: left-aligned, date hung opposite ---- */
         header {
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.8em;
-            font-weight: 700;
-            margin: 0 0 10px 0;
-            background: linear-gradient(135deg, #6366F1, #A78BFA);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        h2 {
-            font-size: 1.8em;
-            color: var(--text);
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 8px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-        .nav {
-            margin-top: 20px;
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: var(--s4);
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: var(--s4);
+            margin-bottom: var(--s6);
         }
-        .nav a {
-            color: var(--text-muted);
-            font-weight: 500;
-            text-decoration: none;
-            padding: 6px 16px;
-            border-radius: 20px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-        .nav a:hover {
+
+        h1 {
+            font-size: var(--t-xl);
+            font-weight: 600;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            margin: 0;
             color: var(--text);
-            border-color: var(--primary);
-            background: var(--surface-hover);
         }
+
+        .masthead-meta {
+            font-family: var(--font-data);
+            font-size: var(--t-xs);
+            line-height: 1.2;
+            color: var(--text-muted);
+            text-align: right;
+        }
+
+        h2 {
+            font-size: var(--t-lg);
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            color: var(--text);
+            margin: var(--s6) 0 var(--s4);
+        }
+
+        section[id] { scroll-margin-top: var(--s5); }
+
+        /* ---- the stale notice: stated plainly, not decorated ---- */
+        .stale {
+            font-family: var(--font-data);
+            font-size: var(--t-xs);
+            line-height: 1.5;
+            color: var(--text-dim);
+            border: 1px solid var(--border);
+            border-radius: var(--r-card);
+            padding: var(--s3) var(--s4);
+            margin-bottom: var(--s5);
+        }
+        .stale strong { color: var(--score); font-weight: 500; }
+
+        /* ---- cards: one base, then lead and tail ---- */
         .card {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            border-radius: var(--r-card);
+            padding: 24px 28px;
+            margin-bottom: var(--s4);
+            transition: border-color 120ms linear;
         }
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: var(--primary);
+        .card:hover { border-color: #454936; }
+
+        .card--lead {
+            padding: 40px 44px;
+            margin-bottom: var(--s6);
         }
+        .card--lead .card-title { font-size: 2.1rem; }
+
+        .card--tail {
+            background: none;
+            border: none;
+            border-top: 1px solid var(--border);
+            border-radius: 0;
+            padding: var(--s4) 0;
+            margin-bottom: 0;
+        }
+        .card--tail .card-title { font-size: var(--t-body); }
+
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 15px;
+            margin-bottom: var(--s3);
             flex-wrap: wrap;
-            gap: 10px;
+            gap: var(--s3);
         }
+
         .card-title {
-            font-size: 1.5em;
+            font-size: var(--t-md);
             font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
             margin: 0;
-            color: #FFFFFF;
+            color: var(--text);
+            max-width: 32ch;
             flex: 1;
-            min-width: 250px;
+            min-width: 240px;
         }
+
         .badges {
             display: flex;
-            gap: 8px;
+            gap: var(--s2);
             align-items: center;
+            flex-shrink: 0;
         }
+
         .badge {
-            font-size: 0.8em;
-            font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 12px;
+            font-family: var(--font-data);
+            font-size: var(--t-xs);
+            font-weight: 500;
+            line-height: 1.2;
+            padding: 3px 10px;
+            border-radius: var(--r-pill);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .badge-category {
-            background: rgba(99, 102, 241, 0.15);
-            color: #A5B4FC;
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            letter-spacing: 0.07em;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
         }
         .badge-score {
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: #FFFFFF;
+            color: var(--score);
+            border-color: var(--score);
+            text-transform: none;
+            letter-spacing: 0.02em;
         }
+
         .meta-line {
-            font-size: 0.9em;
+            font-family: var(--font-data);
+            font-size: var(--t-xs);
+            line-height: 1.2;
             color: var(--text-muted);
-            margin-bottom: 20px;
+            margin-bottom: var(--s5);
             display: flex;
-            gap: 15px;
+            gap: var(--s4);
+            flex-wrap: wrap;
         }
-        .meta-line span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
+        .meta-stale { color: var(--score); }
+
         .section-title {
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #E5E7EB;
-            margin-top: 20px;
-            margin-bottom: 8px;
+            font-family: var(--font-data);
+            font-size: var(--t-xs);
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin: var(--s5) 0 var(--s1);
         }
+
+        /* The considered paragraph. Marked by measure, not by a stripe. */
         .why-it-matters {
-            background: rgba(16, 185, 129, 0.08);
-            border-left: 4px solid var(--accent);
-            padding: 12px 16px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 20px;
             font-style: italic;
+            color: var(--text-dim);
+            max-width: 62ch;
+            margin: var(--s1) 0 var(--s5);
         }
+
         .tldr {
-            font-size: 1.05em;
-            color: #D1D5DB;
-            margin-bottom: 20px;
+            margin: 0 0 var(--s5);
+            max-width: 68ch;
         }
-        ul {
-            margin: 0 0 20px 0;
-            padding-left: 20px;
+
+        .card ul {
+            margin: 0 0 var(--s5);
+            padding-left: 1.15em;
+            max-width: 68ch;
         }
-        li {
-            margin-bottom: 6px;
-            color: #D1D5DB;
+        .card li {
+            line-height: 1.5;
+            margin-bottom: 0.7em;
+            color: var(--text-dim);
         }
+
+        .sources {
+            font-family: var(--font-data);
+            font-size: var(--t-xs);
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0 0 var(--s5);
+            padding-left: 1.15em;
+            max-width: 68ch;
+        }
+        .sources li { margin-bottom: var(--s1); }
+
         .card-footer {
             border-top: 1px solid var(--border);
-            padding-top: 20px;
-            margin-top: 20px;
+            padding-top: var(--s4);
+            margin-top: var(--s5);
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: var(--s3);
         }
+        .card--tail .card-footer {
+            border-top: none;
+            padding-top: 0;
+            margin-top: var(--s3);
+        }
+        .footer-note {
+            font-family: var(--font-data);
+            font-size: var(--t-xs);
+            color: var(--text-muted);
+        }
+
         .btn-link {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            color: #FFFFFF;
-            background: var(--primary);
-            padding: 8px 18px;
-            border-radius: 8px;
-            font-weight: 500;
+            color: var(--text);
+            background: transparent;
+            border: 1px solid var(--border);
+            padding: 7px 16px;
+            border-radius: var(--r-card);
+            font-size: var(--t-xs);
+            font-family: var(--font-data);
             text-decoration: none;
-            transition: background 0.2s ease;
+            transition: background-color 100ms linear, border-color 100ms linear;
         }
         .btn-link:hover {
-            background: #4F46E5;
-            text-decoration: none;
+            background: var(--surface-hover);
+            border-color: #454936;
+        }
+        .btn-link .arrow {
+            display: inline-block;
+            transition: transform 140ms cubic-bezier(0.2, 0, 0, 1);
+        }
+        .btn-link:hover .arrow { transform: translateX(3px); }
+
+        /* ---- the remainder: one line each, no card, no repetition ---- */
+        .rest-intro {
+            font-family: var(--font-data);
+            font-size: var(--t-xs);
+            color: var(--text-muted);
+            margin: 0 0 var(--s4);
+        }
+        .rest-list { list-style: none; margin: 0; padding: 0; }
+        .rest-item {
+            display: flex;
+            align-items: baseline;
+            gap: var(--s3);
+            padding: var(--s3) 0;
+            border-top: 1px solid var(--border);
+        }
+        .rest-score {
+            font-family: var(--font-data);
+            font-size: var(--t-xs);
+            color: var(--score);
+            flex-shrink: 0;
+            min-width: 3.5em;
+        }
+        .rest-title { flex: 1; min-width: 0; }
+        .rest-title a {
+            color: var(--text);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: var(--border);
+            transition: text-decoration-color 120ms linear;
+        }
+        .rest-title a:hover { text-decoration-color: var(--text-muted); }
+        .rest-source {
+            font-family: var(--font-data);
+            font-size: var(--t-xs);
+            color: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        .empty {
+            color: var(--text-muted);
+            font-style: italic;
+            margin: 0;
+            max-width: 62ch;
+        }
+
+        .run-stats {
+            font-family: var(--font-data);
+            font-size: var(--t-xs);
+            line-height: 1.6;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 96px;
+            padding-top: var(--s4);
+        }
+
+        a:focus-visible,
+        .btn-link:focus-visible {
+            outline: 2px solid var(--score);
+            outline-offset: 3px;
+            border-radius: var(--r-card);
+        }
+
+        @media (max-width: 620px) {
+            .card--lead { padding: 28px 22px; }
+            .card { padding: 20px 22px; }
+            .masthead-meta { text-align: left; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition-duration: 1ms !important;
+                animation-duration: 1ms !important;
+                animation-iteration-count: 1 !important;
+            }
         }
     </style>
 </head>
@@ -196,108 +371,135 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on {{ date }}</p>
-            <div class="nav">
-                <a href="#top">Top Insights</a>
-                <a href="#categories">Categories</a>
-                <a href="#weekly">Weekly Deep Dive</a>
+            <div class="masthead-meta">
+                {{ date }}<br>
+                {{ top_insights|length }} shown{% if remainder %} · {{ remainder|length }} more{% endif %}
             </div>
         </header>
 
-        <section id="top">
-            <h2>Today's Top Insights</h2>
+        {% if stale_from %}
+        <p class="stale">
+            <strong>Today's run brought back nothing.</strong><br>
+            Showing the brief from {{ stale_from }}{% if stale_days %} ({{ stale_days }} day{{ 's' if stale_days != 1 }} ago){% endif %}.
+            Nothing below is new{% if generated_on %}; this page was rebuilt {{ generated_on }}{% endif %}.
+        </p>
+        {% endif %}
+
+        <section id="today">
+            <h2>{% if stale_from %}Last good run{% else %}Today{% endif %}</h2>
+
             {% for item in top_insights %}
-            <div class="card">
+            <article class="card {% if loop.first %}card--lead{% elif loop.index > 3 %}card--tail{% endif %}">
                 <div class="card-header">
                     <h3 class="card-title">{{ item.title }}</h3>
                     <div class="badges">
-                        <span class="badge badge-category">{{ item.category }}</span>
-                        <span class="badge badge-score">Signal: {{ item.signal_score }}</span>
+                        <span class="badge">{{ item.category }}</span>
+                        <span class="badge badge-score">Signal {{ item.signal_score }}/10</span>
                     </div>
                 </div>
-                
+
+                {% if item.published_display or item.source_name or item.source_host %}
                 <div class="meta-line">
-                    <span>📅 {{ item.date }}</span>
-                    <span>🌐 Source: {{ item.source_name }}</span>
-                </div>
-
-                {% if item.why_it_matters %}
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    {{ item.why_it_matters }}
+                    {% if item.published_display %}
+                    <span>{{ item.published_display }}{% if item.age_days is not none and item.age_days > 7 %}<span class="meta-stale"> · {{ item.age_days }} days old</span>{% endif %}</span>
+                    {% endif %}
+                    {% if item.source_name or item.source_host %}
+                    <span>{{ item.source_name }}{% if item.source_name and item.source_host %} · {% endif %}{{ item.source_host }}</span>
+                    {% endif %}
                 </div>
                 {% endif %}
 
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    {{ item.tldr }}
-                </div>
-
-                {% if item.key_points %}
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    {% for pt in item.key_points %}
-                    <li>{{ pt }}</li>
-                    {% endfor %}
-                </ul>
+                {% if item.tldr %}
+                <p class="tldr">{{ item.tldr }}</p>
                 {% endif %}
 
-                {% if item.action_items %}
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    {% for action in item.action_items %}
-                    <li>{{ action }}</li>
-                    {% endfor %}
-                </ul>
+                {% if not (loop.index > 3) %}
+                    {% if item.why_it_matters and item.why_it_matters != "Analysis unavailable." %}
+                    <div class="section-title">So what</div>
+                    <p class="why-it-matters">{{ item.why_it_matters }}</p>
+                    {% endif %}
+
+                    {% if item.key_points %}
+                    <div class="section-title">Key points</div>
+                    <ul>
+                        {% for pt in item.key_points[:5] %}
+                        <li>{{ pt }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    {% if item.action_items %}
+                    <div class="section-title">Worth doing</div>
+                    <ul>
+                        {% for action in item.action_items[:4] %}
+                        <li>{{ action }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    {% if item.merged_sources %}
+                    <div class="section-title">Merged from {{ item.merged_sources|length + 1 }} sources</div>
+                    <ul class="sources">
+                        {% for s in item.merged_sources %}
+                        <li>{{ s }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
                 {% endif %}
 
                 <div class="card-footer">
-                    <span>Processed Category: {{ item.original_category }}</span>
+                    <span class="footer-note">
+                        Ranked {{ item.final_score }}/10{% if item.personal_relevance %} · relevance {{ item.personal_relevance }}{% endif %}{% if item.show_original_category %} · {{ item.original_category }} feed{% endif %}
+                    </span>
                     {% if item.source_url %}
-                    <a href="{{ item.source_url }}" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="{{ item.source_url }}" target="_blank" rel="noopener" class="btn-link">Read it <span class="arrow">&rarr;</span></a>
                     {% endif %}
                 </div>
-            </div>
+            </article>
             {% endfor %}
+
             {% if not top_insights %}
-            <p style="color: var(--text-muted); font-style: italic;">No insights available for today.</p>
+            <p class="empty">Nothing cleared the signal filter, and there is no earlier brief on file to fall back to.</p>
             {% endif %}
         </section>
 
-        <section id="categories">
-            <h2>By Category</h2>
-            {% for cat, items in categorized_insights.items() %}
-            <h3 style="color: #A5B4FC; margin-top: 30px;">{{ cat }}</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                {% for item in items %}
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">{{ item.title }}</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">{{ item.tldr }}</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: {{ item.final_score }}</span>
-                        {% if item.source_url %}
-                        <a href="{{ item.source_url }}" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        {% endif %}
-                    </div>
-                </div>
+        {% if remainder %}
+        <section id="rest">
+            <h2>Everything else</h2>
+            <p class="rest-intro">{{ remainder|length }} more cleared the filter but didn't make the top {{ top_insights|length }}.</p>
+            <ul class="rest-list">
+                {% for item in remainder %}
+                <li class="rest-item">
+                    <span class="rest-score">{{ item.final_score }}</span>
+                    <span class="rest-title">
+                        {% if item.source_url %}<a href="{{ item.source_url }}" target="_blank" rel="noopener">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}
+                    </span>
+                    <span class="rest-source">{{ item.source_name or item.source_host }}</span>
+                </li>
                 {% endfor %}
-            </div>
-            {% endfor %}
-            {% if not categorized_insights %}
-            <p style="color: var(--text-muted); font-style: italic;">No categorized insights available.</p>
-            {% endif %}
+            </ul>
         </section>
+        {% endif %}
 
         <section id="weekly">
-            <h2>Weekly Deep Dive</h2>
-            <div class="card">
-                {% if weekly_content %}
-                    {{ weekly_content | safe }}
-                {% else %}
-                    <p style="color: var(--text-muted); font-style: italic; margin: 0;">No weekly synthesis available yet.</p>
-                {% endif %}
-            </div>
+            <h2>This week, joined up</h2>
+            {% if weekly_content %}
+            <div class="card">{{ weekly_content | safe }}</div>
+            {% else %}
+            <p class="empty">The weekly synthesis runs Sunday night. Nothing to join up yet.</p>
+            {% endif %}
         </section>
+
+        {% if run_stats %}
+        <p class="run-stats">
+            {% if run_stats.feeds_polled %}{{ run_stats.feeds_polled }} feeds polled{% if run_stats.feeds_ok is not none %} · {{ run_stats.feeds_ok }} answered{% endif %} · {% endif %}
+            {% if run_stats.analyzed is not none %}{{ run_stats.analyzed }} analysed (cap 10) · {% endif %}
+            {% if run_stats.cleared is not none %}{{ run_stats.cleared }} cleared signal 5 · {% endif %}
+            {{ total_count }} on this page
+            {% if run_stats.failed_feeds %}<br>No answer today: {{ run_stats.failed_feeds|join(', ') }}.{% endif %}
+            {% if run_stats.dropped_analysis %}<br>Gemini was unavailable for {{ run_stats.dropped_analysis }} article{{ 's' if run_stats.dropped_analysis != 1 }}; they were dropped rather than summarised.{% endif %}
+        </p>
+        {% endif %}
     </div>
 </body>
 </html>

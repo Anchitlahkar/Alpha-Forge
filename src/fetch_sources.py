@@ -247,6 +247,10 @@ def get_fetcher(name: str, url: str, category: str) -> RSSFetcher:
     else:
         return RSSFetcher(name, url, category)
 
+# Populated by the most recent fetch_rss_feeds() call: {source_name: "OK"|"FAIL"}
+LAST_FEED_HEALTH: dict[str, str] = {}
+
+
 def fetch_rss_feeds() -> list[dict]:
     feeds = load_feeds()
     articles = []
@@ -289,7 +293,11 @@ def fetch_rss_feeds() -> list[dict]:
     ]:
         status = health_results.get(name, "FAIL")
         print(f"{name}: {status}\n")
-        
+
+    # Keep the report available to the dashboard instead of discarding it at return.
+    LAST_FEED_HEALTH.clear()
+    LAST_FEED_HEALTH.update(health_results)
+
     return articles
 
 def fetch_article_text(url: str) -> str:

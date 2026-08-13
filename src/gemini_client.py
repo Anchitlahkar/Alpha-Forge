@@ -7,6 +7,16 @@ from google.genai import types
 from pydantic import BaseModel, Field
 from src.config import GEMINI_API_KEYS
 
+def _category_list() -> str:
+    """The exact category keys the ranker scores against, so Gemini cannot drift."""
+    try:
+        from src.config import load_scoring
+        return ", ".join(load_scoring().get("categories", {}).keys())
+    except Exception:
+        return ("AI Research, Quantum Computing, Software Engineering, Semiconductors, "
+                "Investing, Startups, Geopolitics, Consumer Tech")
+
+
 class ArticleAnalysis(BaseModel):
     title: str = Field(description="The title of the insight")
     category: str = Field(description="One of the predefined categories")
@@ -207,8 +217,53 @@ def extract_insights(text: str, source_url: str, article_source_name: str = "", 
     prompt = f"""
     Analyze the following article text.
     Extract the core facts and insights. Determine a signal score (1-10) where 10 is groundbreaking and 1 is fluff.
+
+    The category MUST be copied verbatim from this list, with no additions,
+    qualifiers or slashes. Pick the single closest one:
+    {_category_list()}
+    Do not invent categories like "Quantum Computing Research" or
+    "Semiconductors & Geopolitics"; those break scoring. Anything about markets,
+    funds, banks, fintech or the economy goes under Investing.
     Determine a single personal relevance score (float from 1 to 10) representing the overall relevance to these topics: AI Research, Quantum Computing, Software Engineering, Semiconductors, Investing, Startups. Do NOT return a dictionary of individual scores.
-    
+
+    WHO YOU ARE WRITING FOR
+    One person: a software engineer who follows AI research, quantum computing,
+    semiconductors, startups and investing, and who reads this alone each morning.
+    Write to him directly. Never address investors, companies, startups,
+    researchers, developers, or "engineers" as a group.
+
+    action_items: address him in the second person, and only include things he
+    could start within an hour - a specific paper to read, a repo to clone, a
+    name to look up, a number to check. Never write "monitor", "stay informed
+    on", "assess the implications of", "explore the potential of", "keep an eye
+    on", or "consider implementing"; those are not actions. If the article
+    implies nothing concrete to do, return an empty list rather than filling it.
+
+    why_it_matters: do not mention the article, announcement, development, or
+    news, and do not open with "This". State the consequence directly, as a
+    claim about the world, in at most two sentences. Do not assert that
+    something is significant, important, critical, major, or a breakthrough -
+    state the fact that makes it so and let him judge. If the consequence is
+    uncertain, say what would have to be true for it to matter.
+
+    STYLE
+    - Do not use em-dashes anywhere.
+    - Do not end tldr, why_it_matters, or any key point with a trailing "-ing"
+      clause that restates the point at a higher level (", representing...",
+      ", marking...", ", enabling...", ", highlighting...", ", underscoring...").
+      End on the last fact.
+    - Vary sentence length. At least one sentence under eight words per summary.
+    - Banned words: significant, leverage, utilize, streamline, seamless,
+      empower, robust, crucial, comprehensive, holistic, landscape, ecosystem,
+      game-changing, cutting-edge, revolutionize, underscore, delve.
+      Use the plain verb for the plain thing: "uses" not "utilizes",
+      "simplified its interview process" not "streamlined hiring".
+    - Prefer a number over an adjective. Where the source gives a figure, a date,
+      a name, or a price, put it in the summary instead of describing its importance.
+    - Use a vendor's coined term without quotation marks, and define it in the
+      same sentence the first time it appears. If you cannot say what it means,
+      leave it out.
+
     Article Title: {article_title}
     Source URL: {source_url}
     Source Name: {article_source_name}

@@ -1,6 +1,5 @@
-/* Styles are injected directly into the template for robustness on GitHub Pages.
-   This file exists to satisfy the structural requirement. */
-body {
-    background-color: #121212;
-    color: #e0e0e0;
-}
+/* Intentionally empty.
+   All styles live in the <style> block of templates/dashboard.html so the page
+   is a single self-contained file on GitHub Pages. This file previously held a
+   second, contradicting dark palette (#121212/#e0e0e0) that never rendered.
+   Edit the tokens under :root in dashboard.html instead. */

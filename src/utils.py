@@ -15,6 +15,25 @@ def load_json(filepath: Path) -> dict | list:
 def get_today_str() -> str:
     return datetime.utcnow().strftime("%Y-%m-%d")
 
+def make_processed_key(url: str, title: str = "") -> str:
+    """
+    Dedupe key for the processed list.
+
+    Keying on the URL alone meant one URL could only ever yield one article,
+    so a listing or index page that later carries a different paper was blocked
+    forever. Keying on URL + title lets the same URL return something new while
+    still skipping a genuine repeat.
+
+    Entries written before this change are bare URLs; those are still honoured
+    as-is (they are article permalinks, where the same URL does not change
+    content) and simply age out.
+    """
+    normalized_title = " ".join(str(title or "").split()).lower()
+    if not normalized_title:
+        return str(url)
+    return f"{url}::{normalized_title}"
+
+
 def load_processed_urls() -> set:
     from src.config import DATA_DIR
     filepath = DATA_DIR / "processed_urls.json"
