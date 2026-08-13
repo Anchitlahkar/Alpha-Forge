@@ -196,7 +196,7 @@
     <div class="container">
         <header>
             <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-12</p>
+            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-13</p>
             <div class="nav">
                 <a href="#top">Top Insights</a>
                 <a href="#categories">Categories</a>
@@ -209,79 +209,7 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">VibeLifeBench: New Benchmark for Long-Horizon Proactive AI Agents</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 9.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 August 11</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This article introduces VibeLifeBench, a crucial new benchmark that exposes significant limitations in current frontier AI agents. It highlights their inability to handle real-world, long-term, dynamic tasks requiring proactivity, persistence, and the ability to infer unstated constraints. This benchmark provides a vital tool for driving future research and development towards more robust, truly intelligent, and reliable AI assistants, moving beyond short, static interactions.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    VibeLifeBench is a new benchmark evaluating AI agents on multi-week, dynamic, everyday tasks with silent changes and unstated constraints. It reveals that current frontier models perform poorly, lacking the proactivity and persistence needed for real-world assistance, and the framework will be open-sourced.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>VibeLifeBench is a novel benchmark designed to evaluate long-horizon proactive and persistent AI agents in simulated multi-week everyday tasks.</li>
-                    
-                    <li>It addresses the shortcomings of existing benchmarks that focus on short, self-contained requests in static environments, which do not reflect real-life complexity.</li>
-                    
-                    <li>The benchmark comprises 200 tasks across ten everyday-life domains, each a scripted multi-week timeline (median 29 days) in a simulated world with 22 mock services and 288 tools.</li>
-                    
-                    <li>The simulated world features 'silent mutations' (e.g., flight delays, phishing emails) and unstated constraints, requiring agents to proactively re-inspect the world and infer implicit rules.</li>
-                    
-                    <li>Evaluation involves 12,261 fine-grained, weighted checks that assess the agent's end state, timeliness of actions, and adherence to implicit constraints, based only on what the agent 'leaves behind'.</li>
-                    
-                    <li>Seven frontier models, including Claude Opus 5, scored low (best avg@3 32.5%), demonstrating that current agents are far from capable of assisting with real-life, long-term tasks.</li>
-                    
-                    <li>Models exhibited significant performance decay (10-15 points) from the start to the end of a timeline, and notably, not a single run refused a phishing email in a flagship task.</li>
-                    
-                    <li>The tasks, environments, and the evaluation framework will be open-sourced to foster further research and development in more capable AI agents.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>AI researchers should leverage VibeLifeBench to develop and test new architectures and algorithms for long-horizon planning, proactive behavior, and dynamic environment awareness in AI agents.</li>
-                    
-                    <li>Software engineers building AI agent systems should consider integrating mechanisms for continuous environment monitoring, implicit constraint handling, and persistent state management.</li>
-                    
-                    <li>Startups and companies developing AI assistants should recognize the current limitations highlighted by this benchmark and prioritize R&D efforts to build agents capable of real-world proactivity and persistence.</li>
-                    
-                    <li>Explore the open-sourced VibeLifeBench framework to contribute to its development or adapt it for specific agent evaluation needs.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2608.10875" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Ex-Omni-2D: Expressive Omni-Modal Dialogue Models</h3>
+                    <h3 class="card-title">AI Capability Transfer via Inference-Time Harnesses</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
                         <span class="badge badge-score">Signal: 8.5</span>
@@ -289,37 +217,39 @@
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Aug 11</span>
+                    <span>📅 Aug 12</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper represents a significant leap in multimodal AI, moving beyond text and speech to enable dialogue models with a 'native visual presence.' By generating coordinated text, personalized speech, and expressive avatar video in real-time, Ex-Omni-2D addresses a key limitation of previous systems, paving the way for more natural, embodied, and engaging human-AI interactions. This has profound implications for virtual assistants, digital avatars, and the future of human-computer interfaces.
+                    This research introduces a novel and highly effective method for transferring capabilities from strong AI models to weaker ones at test-time, without requiring parameter updates or retraining. This significantly improves the performance of weaker models by offloading complex reasoning into deterministic code and routing, offering a complementary approach to traditional distillation and potentially reducing inference costs and deployment complexity for AI systems. It opens new avenues for making advanced AI more accessible and efficient.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Ex-Omni-2D is a novel omni-modal AI framework that generates coordinated text, personalized speech, and expressive avatar video responses in real-time, overcoming the 'visually disembodied' nature of prior models and advancing the field of embodied AI.
+                    A new method called "inference-time harnesses" allows strong AI models to transfer capabilities to weaker models at test-time, nearly doubling their performance by offloading reasoning into structured code and routing, without any retraining.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Ex-Omni-2D is an omni-modal dialogue framework that produces coordinated text, personalized speech, and expressive avatar video responses.</li>
+                    <li>Introduces 'strong-to-weak scaffolding' via 'inference-time harnesses' for capability transfer at test-time, contrasting with traditional training-time distillation.</li>
                     
-                    <li>It introduces 'native visual presence' to dialogue models, addressing the limitation of previous models being 'visually disembodied.'</li>
+                    <li>A stronger 'builder model' constructs these harnesses using a small validation set to iteratively refine them.</li>
                     
-                    <li>The framework utilizes a Visual Thought Plan (VTP) to describe scene, emotion, and motion, and multi-codebook speech units as a shared acoustic-temporal interface.</li>
+                    <li>Empirically, this method is highly effective, nearly doubling average target-model performance from 0.49 to 0.91 on Theory-of-Mind benchmarks.</li>
                     
-                    <li>It learns from heterogeneous speech, dialogue, and avatar-video data, avoiding the need for large-scale, fully synchronized query-text-speech-video supervision.</li>
+                    <li>Performance gains primarily stem from offloading unstable model reasoning into deterministic code, benchmark-specific routing, and strict answer-format enforcement.</li>
                     
-                    <li>An efficient teacher-student distillation approach, with a 'Prefix Streaming' mechanism, enables real-time, incremental generation while minimizing degradation.</li>
+                    <li>The approach does not primarily encourage the weaker target model to reason more extensively or sample more broadly itself.</li>
                     
-                    <li>The system achieves an end-to-end Real-Time Factor (RTF) of 1.293 on a four-GPU pipeline, demonstrating a practical balance of quality and efficiency.</li>
+                    <li>Analysis shows that builder-model reasoning effort improves harness quality monotonically, and weaker target models receive the largest performance gains.</li>
+                    
+                    <li>This 'inference-time harness design' is presented as an important complement to conventional training-time distillation, enabling cognitive structure transfer without retraining.</li>
                     
                 </ul>
                 
@@ -328,13 +258,13 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Explore the Ex-Omni-2D project page and GitHub repository for deeper technical insights and potential code access.</li>
+                    <li>AI researchers should explore hybrid approaches combining inference-time harnesses with existing training-time distillation techniques for optimal capability transfer.</li>
                     
-                    <li>Investigate the potential applications of embodied dialogue models in areas such as virtual assistants, customer service, education, and entertainment.</li>
+                    <li>Software engineers and MLOps teams deploying AI models could investigate implementing harness-like structures to enhance the performance of smaller, more efficient models in production without costly retraining cycles.</li>
                     
-                    <li>Monitor further advancements in real-time multimodal generation and avatar synthesis technologies for future integration opportunities.</li>
+                    <li>Consider developing tools or frameworks that leverage powerful 'builder models' to automatically generate robust and optimized inference pipelines for various tasks.</li>
                     
-                    <li>Consider the ethical implications and user experience design challenges associated with highly expressive and visually present AI systems.</li>
+                    <li>Evaluate the cost-benefit of using a strong model to build harnesses versus traditional fine-tuning or distillation for specific application scenarios.</li>
                     
                 </ul>
                 
@@ -342,52 +272,54 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2608.10720" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.12307" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Readout-Rank Laws for Isotropic Quantum Tangents</h3>
+                    <h3 class="card-title">Spark-to-Paper: AI Research Paper Generation</h3>
                     <div class="badges">
-                        <span class="badge badge-category">Quantum Computing</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
+                        <span class="badge badge-category">AI/ML</span>
+                        <span class="badge badge-score">Signal: 9.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 2026-08-11T00:00:00-04:00</span>
-                    <span>🌐 Source: arXiv quant-ph</span>
+                    <span>📅 Aug 12</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This article reveals fundamental limitations in extracting information from deep parameterized quantum circuits, a critical challenge for quantum machine learning (QML) and quantum control. It quantifies the 'information bottleneck' between parameter sensitivity and observable responses, showing that only a tiny fraction of full information may be accessible. Understanding these 'readout-rank laws' is crucial for designing effective quantum algorithms and hardware, as it highlights the importance of conditions like 'tangent isotropy' for successful learning and control.
+                    This article introduces a significant advancement in AI's capability to automate complex intellectual tasks, specifically scientific research paper generation. By integrating planning, evidence-based revision, and integrity checks, Spark-to-Paper moves beyond simple text generation to a more reliable and robust system for scientific communication. This has profound implications for accelerating research, improving reproducibility, and potentially transforming how scientific discovery is conducted and disseminated, while also highlighting the ongoing challenges of AI reliability.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Deep parameterized quantum circuits suffer from significant information loss during readout, meaning observable responses retain only a small fraction of the full parameter information, especially for non-isotropic systems, posing a fundamental challenge for quantum machine learning.
+                    Spark-to-Paper is an AI system implemented as composable skills within a coding assistant that generates full research papers, including experiments and figures, by separating planning from reporting, enforcing evidence-based claim revision, and using integrity checks to minimize fabrication and self-refutation.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Deep parameterized quantum circuits can be highly sensitive to parameter changes, but the information captured by observables in a learning model may be severely limited.</li>
+                    <li>Spark-to-Paper is an end-to-end system for generating research papers, implemented as thirteen composable skills within an existing coding assistant.</li>
                     
-                    <li>The paper quantifies this separation by comparing quantum Fisher information ($F_Q$), Fisher information from the complete bitstring distribution ($F_{\rm full}$), and the largest variance-normalized response ($\mathcal I_{\mathcal A}$) from a diagonal readout space.</li>
+                    <li>It separates experiment planning from reporting, ensuring evidence is specified before results are observed and claims are revised based on measured outcomes.</li>
                     
-                    <li>For Haar random joint state-tangent frames, the successive information fractions are proven to be independent Beta variables with specific means (1/2 and $r/(2^n-1)$).</li>
+                    <li>The system incorporates deterministic integrity checks, self-critique, and bounds a 'Self-Refutation Loop' to improve reliability over long research trajectories.</li>
                     
-                    <li>Even using all computational-basis Pauli strings up to a fixed weight $k$, only $O(n^k2^{-n})$ of the full-record information is retained, indicating significant information loss.</li>
+                    <li>It produces editable vector figures through programmatic plotting and code-based reconstruction for method diagrams.</li>
                     
-                    <li>Exact-statevector experiments across six circuit families generally agree with this hierarchy as circuit depth increases, confirming the theoretical predictions.</li>
+                    <li>Achieves high reliability: 99.5% citation validity, 96.4% figure editability, and increases fabrication detection from 14% (single-pass draft) to 92% (full system).</li>
                     
-                    <li>Number-conserving circuit families strongly deviate from the isotropic prediction, demonstrating that 'tangent isotropy' is a crucial condition beyond just readout rank for effective information extraction.</li>
+                    <li>The full system uses 11.9M tokens, costs $8.1 per manuscript, and takes 3.2 hours on average, demonstrating a lightweight and cost-effective approach.</li>
+                    
+                    <li>It emphasizes keeping experimental evidence central to how claims are accepted, revised, or abandoned, addressing a critical challenge in AI-generated content.</li>
                     
                 </ul>
                 
@@ -396,28 +328,30 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Quantum Machine Learning researchers should account for these information readout limitations when designing and training quantum neural networks, potentially exploring new readout strategies or circuit architectures.</li>
+                    <li>Explore the Spark-to-Paper GitHub repository and arXiv paper for technical details and potential applications.</li>
                     
-                    <li>Quantum algorithm developers should investigate methods to enhance 'tangent isotropy' in their circuit designs to improve information extractability and learning efficiency.</li>
+                    <li>Consider the implications of such systems for the future of scientific research, peer review, and academic publishing.</li>
                     
-                    <li>Hardware engineers and experimentalists should consider the implications of readout rank and tangent isotropy for designing quantum processors and measurement systems that can capture more relevant information.</li>
+                    <li>Investigate how similar composable skill architectures could be applied to other complex, multi-step knowledge work automation tasks.</li>
                     
-                    <li>Further theoretical and experimental research is needed to understand and mitigate information loss in non-isotropic quantum systems and to develop robust learning protocols under these constraints.</li>
+                    <li>For AI researchers, analyze the methods for integrity checks and self-critique to improve reliability in other large language model applications.</li>
+                    
+                    <li>For investors and startups, evaluate the market potential for AI-driven research automation tools and services.</li>
                     
                 </ul>
                 
 
                 <div class="card-footer">
-                    <span>Processed Category: Quantum</span>
+                    <span>Processed Category: AI</span>
                     
-                    <a href="https://arxiv.org/abs/2608.07628" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.11924" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Mendel Gödel Machine: Recursive Self-Improving Coding Agents</h3>
+                    <h3 class="card-title">LLM Consistency in Interactive Narratives</h3>
                     <div class="badges">
                         <span class="badge badge-category">AI Research</span>
                         <span class="badge badge-score">Signal: 8.0</span>
@@ -425,37 +359,39 @@
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Aug 7</span>
+                    <span>📅 Aug 8</span>
                     <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper introduces a significant advancement in the field of self-improving AI agents, particularly for coding tasks. By leveraging comparative evolutionary principles, the Mendel Gödel Machine (MGM) offers a more efficient, robust, and generalizable approach to agent self-modification. This could accelerate the development of autonomous software engineering, lead to more capable AI systems, and potentially impact how software is created and maintained in the future.
+                    This research introduces a critical benchmark and formalizes a significant challenge for Large Language Models: maintaining long-term logical consistency and narrative integrity in interactive environments, especially under unconstrained user interventions. The findings highlight a fundamental limitation of current state-of-the-art LLMs, which is crucial for developing reliable, engaging, and coherent AI agents in applications like games, simulations, and complex conversational systems. Addressing this gap is essential for the practical deployment of advanced LLM-powered interactive experiences.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    The Mendel Gödel Machine (MGM) is a new AI framework that significantly improves self-improving coding agents by enabling them to learn from multiple past attempts and transfer knowledge across different evolutionary lineages, leading to faster convergence, better performance, and increased generalizability compared to single-trajectory methods.
+                    A new benchmark, NCP-Bench, reveals that even advanced LLMs like GPT-5.2 struggle significantly with long-term logical consistency and narrative integrity in interactive storytelling, frequently generating conflicting content under user interventions, with high fact conflict rates and low commitment preservation over extended interactions.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>Mendel Gödel Machine (MGM) enhances self-improving coding agents by incorporating multi-trajectory mutations and cross-lineage hybridization.</li>
+                    <li>The study introduces 'Narrative Commitment Preservation' (NCP) to formalize the challenge of long-horizon logical consistency in interactive narratives for LLMs.</li>
                     
-                    <li>It addresses the limitation of existing solutions that typically derive self-modification from a single failure trajectory, overlooking rich comparative signals.</li>
+                    <li>NCP-Bench is a new benchmark comprising 100 narrative environments derived from movie synopses, designed to test LLM agents' ability to maintain narrative integrity.</li>
                     
-                    <li>MGM introduces two novel self-modification types: 'reaction-norm mutation' (editing based on multiple tasks simultaneously) and 'cross-lineage hybridization' (editing using a reference agent from another lineage).</li>
+                    <li>Each environment includes structured narrative specifications (trajectory, commitments, initial facts) that are automatically checked throughout player-narrator agent interactions.</li>
                     
-                    <li>Theoretical proofs and controlled surrogate simulations demonstrate that these new strategies facilitate faster and better convergence over single-trajectory baselines.</li>
+                    <li>Experiments with state-of-the-art LLMs reveal a substantial consistency gap: high linguistic quality does not guarantee commitment preservation.</li>
                     
-                    <li>Experiments on SWE-bench and Polyglot confirm MGM's consistent improvement in performance, efficiency, and generalizability for coding tasks.</li>
+                    <li>The best-performing model, GPT-5.2, achieved only a 42% 'survival rate' (conflict-free) after 20 turns.</li>
                     
-                    <li>The core motivation is to enable self-evolution to learn from a broader evolutionary process and facilitate information transfer across agent lineages.</li>
+                    <li>Fact conflict rates ranged from 40% to 68% across models, and very few runs satisfied all achievement commitments within a 100-turn limit.</li>
+                    
+                    <li>The data, code, and prompt templates for NCP-Bench are open-sourced on GitHub.</li>
                     
                 </ul>
                 
@@ -464,11 +400,11 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>Monitor the progress and adoption of comparative evolution principles in AI agent development, especially for coding and autonomous task execution.</li>
+                    <li>AI researchers should utilize NCP-Bench to develop and evaluate new LLM architectures and fine-tuning strategies specifically aimed at improving long-horizon consistency and narrative commitment preservation.</li>
                     
-                    <li>Investigate the potential for integrating MGM's multi-trajectory learning and cross-lineage hybridization into existing or new AI-powered software development tools.</li>
+                    <li>Software engineers and developers building interactive AI applications (e.g., games, virtual assistants, educational tools) should be aware of these LLM limitations and design systems with explicit mechanisms for fact-checking, state management, and conflict resolution.</li>
                     
-                    <li>Explore the broader applicability of these evolutionary strategies to other domains where AI agents perform iterative self-improvement.</li>
+                    <li>Future LLM development should prioritize intrinsic mechanisms for maintaining factual and narrative consistency over extended interactions, potentially through improved memory, reasoning, or planning capabilities.</li>
                     
                 </ul>
                 
@@ -476,52 +412,52 @@
                 <div class="card-footer">
                     <span>Processed Category: AI</span>
                     
-                    <a href="https://huggingface.co/papers/2608.07645" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.08160" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Security Vulnerabilities in Quantum Key Distribution's Classical Control Plane</h3>
+                    <h3 class="card-title">StateFlow: Controllable 3D Previsualization Framework</h3>
                     <div class="badges">
-                        <span class="badge badge-category">Quantum Computing</span>
+                        <span class="badge badge-category">AI Research</span>
                         <span class="badge badge-score">Signal: 8.0</span>
                     </div>
                 </div>
                 
                 <div class="meta-line">
-                    <span>📅 Tue, 11 Aug 2026 00:00:00 -0400</span>
-                    <span>🌐 Source: arXiv quant-ph</span>
+                    <span>📅 August 12, 2026</span>
+                    <span>🌐 Source: Hugging Face Papers</span>
                 </div>
 
                 
                 <div class="section-title">💡 Why It Matters</div>
                 <div class="why-it-matters">
-                    This paper matters because it uncovers critical, specification-level security vulnerabilities in standardized Quantum Key Distribution (QKD) protocols, which are foundational for future quantum-secure communication. By demonstrating how classical control-plane omissions can undermine quantum-derived security guarantees, it highlights a crucial, previously underexplored attack surface. The proposed countermeasures and communication with standardization bodies are vital for ensuring the practical and robust security of QKD systems as they move towards wider deployment.
+                    StateFlow addresses a critical limitation in generative AI for creative industries: the lack of controllability and iterative editing in 3D content creation. By introducing a persistent, editable 3D world state, it enables designers in film, games, and architecture to refine scenes, actions, and cameras much more effectively than one-shot generative methods, potentially revolutionizing previsualization workflows and fostering new tools and applications.
                 </div>
                 
 
                 <div class="section-title">📝 Summary (TLDR)</div>
                 <div class="tldr">
-                    Formal verification reveals three critical security vulnerabilities in standardized Quantum Key Distribution (QKD) protocols, stemming from classical control-plane omissions, and proposes countermeasures to fix them, impacting the practical security of quantum communication.
+                    StateFlow is a new AI framework that uses a persistent, editable 3D world state to enable iterative and controllable previsualization for film and game design, overcoming the limitations of one-shot generative methods.
                 </div>
 
                 
                 <div class="section-title">📌 Key Points</div>
                 <ul>
                     
-                    <li>QKD protocols, while quantum-secure, are hybrid and rely on classical post-processing, creating a cross-layer attack surface.</li>
+                    <li>Introduces StateFlow, a state-centric framework for generative previsualization in film, games, architecture, and urban design.</li>
                     
-                    <li>Existing QKD standards (ETSI, ITU-T) evaluate protocol security in isolation, neglecting interactions between quantum and classical phases.</li>
+                    <li>Addresses the problem of weak controllability and limited iterative editing in existing generative methods that rely on one-shot image/video synthesis.</li>
                     
-                    <li>A novel formal verification framework, using the Tamarin prover, was developed to holistically model hybrid QKD protocols and analyze classical control's influence on quantum security.</li>
+                    <li>Proposes an explicit and persistent 3D world state as the core working representation, organizing scene structure, evolution, and cameras.</li>
                     
-                    <li>Three specification-level vulnerabilities were identified in ETSI- and ITU-T-grounded QKD models: subverted entanglement injection, basis-deferred measurement, and message reflection, all arising from classical control-plane omissions.</li>
+                    <li>Comprises three stages: State Construction (lifts 2D content to 3D via dual-view initialization), State Evolution (translates user intent into structured state transitions while preserving world memory), and State Access (refines camera plans using render-feedback reflection).</li>
                     
-                    <li>Two protocol improvements, measurement commitment and identity-bound message authentication codes (MACs), were introduced and formally verified to eliminate the identified vulnerabilities.</li>
+                    <li>Enhances visual quality by integrating off-the-shelf video models when higher fidelity is desired.</li>
                     
-                    <li>The research findings and recommendations have been communicated to relevant standardization organizations.</li>
+                    <li>Experiments demonstrate its ability to produce high-quality 3D worlds for video creation and game-like prototyping.</li>
                     
                 </ul>
                 
@@ -530,21 +466,93 @@
                 <div class="section-title">⚡ Action Items</div>
                 <ul>
                     
-                    <li>For QKD developers and implementers: Review and integrate proposed countermeasures (measurement commitment, identity-bound MACs) into QKD system designs to enhance security.</li>
+                    <li>Explore the StateFlow paper and project page for technical details and examples of its application in previsualization.</li>
                     
-                    <li>For standardization bodies (ETSI, ITU-T): Update QKD specifications to address the identified classical control-plane vulnerabilities and incorporate the recommended security improvements.</li>
+                    <li>Consider the implications of persistent 3D world states for future generative AI tools and workflows in creative industries.</li>
                     
-                    <li>For security researchers: Further investigate cross-layer interactions and classical control-plane security in other hybrid quantum protocols and systems.</li>
+                    <li>Investigate potential startup opportunities in developing tools or platforms based on state-centric 3D content generation.</li>
                     
-                    <li>For investors and startups in quantum security: Assess the security posture of QKD solutions in light of these findings and prioritize those incorporating robust classical control-plane security measures.</li>
+                    <li>Monitor advancements in AI models that can be integrated with frameworks like StateFlow to further enhance visual quality and control.</li>
                     
                 </ul>
                 
 
                 <div class="card-footer">
-                    <span>Processed Category: Quantum</span>
+                    <span>Processed Category: AI</span>
                     
-                    <a href="https://arxiv.org/abs/2608.07626" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    <a href="https://huggingface.co/papers/2608.12314" target="_blank" class="btn-link">Read Original Article &rarr;</a>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">AI Investment Boom and Compute Race</h3>
+                    <div class="badges">
+                        <span class="badge badge-category">Industry Analysis</span>
+                        <span class="badge badge-score">Signal: 8.5</span>
+                    </div>
+                </div>
+                
+                <div class="meta-line">
+                    <span>📅 Tue, 11 Aug 2026 10:00:00 +0000</span>
+                    <span>🌐 Source: Stratechery</span>
+                </div>
+
+                
+                <div class="section-title">💡 Why It Matters</div>
+                <div class="why-it-matters">
+                    The article highlights the unsustainable financial practices (debt-fueled CapEx) of major tech companies in the AI race, drawing parallels to historical financial panics. It reveals Google's strategic shift from frontier AI research (DeepMind's decline) to dominating AI infrastructure (Google Cloud's rise with TPUs), and the critical role of compute cost structures in the competitive landscape of AI development. This provides crucial insights into the future trajectory of the AI industry, its financial stability, and the power dynamics among key players.
+                </div>
+                
+
+                <div class="section-title">📝 Summary (TLDR)</div>
+                <div class="tldr">
+                    Major tech companies are fueling the AI boom with massive debt for infrastructure, reminiscent of the 1873 railway panic. Microsoft stands out for cash-funded CapEx, while Google, despite DeepMind's decline as a frontier lab, is pivoting to dominate AI infrastructure via Google Cloud and TPUs, notably supplying Anthropic, leveraging a potential cost advantage over Nvidia GPUs.
+                </div>
+
+                
+                <div class="section-title">📌 Key Points</div>
+                <ul>
+                    
+                    <li>Major tech companies (Oracle, Meta, Alphabet, Amazon) are rapidly increasing AI infrastructure CapEx, largely funded by debt, with $194 billion raised by July 2026, drawing parallels to the 1873 Panic.</li>
+                    
+                    <li>Microsoft is an outlier among hyperscalers, funding its AI CapEx from substantial free cash flow, unlike its peers.</li>
+                    
+                    <li>Google raised $85 billion in equity, including a $10 billion investment from Berkshire Hathaway, signaling immense compute demand and a willingness to use all funding means.</li>
+                    
+                    <li>Google's DeepMind is reportedly no longer a frontier AI lab due to significant researcher departures, poor compute allocation, and a bureaucratic culture, with its odds of reaching SOTA deemed 'zero'.</li>
+                    
+                    <li>Google is pivoting its AI strategy, moving away from DeepMind's 'world models' vision towards a more text/code-centric approach, under new leadership and Sergey Brin's involvement.</li>
+                    
+                    <li>Google Cloud is aggressively growing and dominating AI infrastructure, with Anthropic being a massive customer for its TPUs, suggesting a strategic shift for Google to become a primary AI infrastructure provider.</li>
+                    
+                    <li>Google Cloud CEO Thomas Kurian emphasizes a 'platform company' approach, monetizing TPUs as general-purpose infrastructure even for competitors like Anthropic, implying TPUs offer a cost advantage over Nvidia GPUs.</li>
+                    
+                </ul>
+                
+
+                
+                <div class="section-title">⚡ Action Items</div>
+                <ul>
+                    
+                    <li>Monitor the debt levels and financial health of major tech companies investing heavily in AI infrastructure for signs of market instability.</li>
+                    
+                    <li>Analyze the competitive landscape between Nvidia GPUs and Google/Amazon's custom AI chips (TPUs, Trainium) for cost and performance advantages in the compute market.</li>
+                    
+                    <li>Track Google's strategic execution in AI, particularly the performance of Google Cloud's AI infrastructure offerings and the new direction of DeepMind.</li>
+                    
+                    <li>Evaluate the implications of a 'platform company' strategy for AI infrastructure providers on the broader AI ecosystem and competition.</li>
+                    
+                    <li>Assess the potential for market consolidation or financial instability in the AI sector given the high investment and debt levels.</li>
+                    
+                </ul>
+                
+
+                <div class="card-footer">
+                    <span>Processed Category: Startups</span>
+                    
+                    <a href="https://stratechery.com/2026/nvidias-risky-business/" target="_blank" class="btn-link">Read Original Article &rarr;</a>
                     
                 </div>
             </div>
@@ -559,61 +567,66 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">VibeLifeBench: New Benchmark for Long-Horizon Proactive AI Agents</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">VibeLifeBench is a new benchmark evaluating AI agents on multi-week, dynamic, everyday tasks with silent changes and unstated constraints. It reveals that current frontier models perform poorly, lacking the proactivity and persistence needed for real-world assistance, and the framework will be open-sourced.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">AI Capability Transfer via Inference-Time Harnesses</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new method called "inference-time harnesses" allows strong AI models to transfer capabilities to weaker models at test-time, nearly doubling their performance by offloading reasoning into structured code and routing, without any retraining.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 9.0</span>
+                        <span>Score: 8.42</span>
                         
-                        <a href="https://huggingface.co/papers/2608.10875" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.12307" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Ex-Omni-2D: Expressive Omni-Modal Dialogue Models</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Ex-Omni-2D is a novel omni-modal AI framework that generates coordinated text, personalized speech, and expressive avatar video responses in real-time, overcoming the 'visually disembodied' nature of prior models and advancing the field of embodied AI.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">LLM Consistency in Interactive Narratives</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new benchmark, NCP-Bench, reveals that even advanced LLMs like GPT-5.2 struggle significantly with long-term logical consistency and narrative integrity in interactive storytelling, frequently generating conflicting content under user interventions, with high fact conflict rates and low commitment preservation over extended interactions.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.65</span>
+                        <span>Score: 8.3</span>
                         
-                        <a href="https://huggingface.co/papers/2608.10720" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.08160" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Mendel Gödel Machine: Recursive Self-Improving Coding Agents</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">The Mendel Gödel Machine (MGM) is a new AI framework that significantly improves self-improving coding agents by enabling them to learn from multiple past attempts and transfer knowledge across different evolutionary lineages, leading to faster convergence, better performance, and increased generalizability compared to single-trajectory methods.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">StateFlow: Controllable 3D Previsualization Framework</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">StateFlow is a new AI framework that uses a persistent, editable 3D world state to enable iterative and controllable previsualization for film and game design, overcoming the limitations of one-shot generative methods.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.22</span>
+                        <span>Score: 8.3</span>
                         
-                        <a href="https://huggingface.co/papers/2608.07645" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.12314" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
             </div>
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Quantum Computing</h3>
+            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/ML</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
                 
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Readout-Rank Laws for Isotropic Quantum Tangents</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Deep parameterized quantum circuits suffer from significant information loss during readout, meaning observable responses retain only a small fraction of the full parameter information, especially for non-isotropic systems, posing a fundamental challenge for quantum machine learning.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Spark-to-Paper: AI Research Paper Generation</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Spark-to-Paper is an AI system implemented as composable skills within a coding assistant that generates full research papers, including experiments and figures, by separating planning from reporting, enforcing evidence-based claim revision, and using integrity checks to minimize fabrication and self-refutation.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.3</span>
+                        <span>Score: 8.32</span>
                         
-                        <a href="https://arxiv.org/abs/2608.07628" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://huggingface.co/papers/2608.11924" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
                 
+            </div>
+            
+            <h3 style="color: #A5B4FC; margin-top: 30px;">Industry Analysis</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                
                 <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Security Vulnerabilities in Quantum Key Distribution's Classical Control Plane</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Formal verification reveals three critical security vulnerabilities in standardized Quantum Key Distribution (QKD) protocols, stemming from classical control-plane omissions, and proposes countermeasures to fix them, impacting the practical security of quantum communication.</p>
+                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">AI Investment Boom and Compute Race</h4>
+                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Major tech companies are fueling the AI boom with massive debt for infrastructure, reminiscent of the 1873 railway panic. Microsoft stands out for cash-funded CapEx, while Google, despite DeepMind's decline as a frontier lab, is pivoting to dominate AI infrastructure via Google Cloud and TPUs, notably supplying Anthropic, leveraging a potential cost advantage over Nvidia GPUs.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.22</span>
+                        <span>Score: 7.97</span>
                         
-                        <a href="https://arxiv.org/abs/2608.07626" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
+                        <a href="https://stratechery.com/2026/nvidias-risky-business/" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
                         
                     </div>
                 </div>
