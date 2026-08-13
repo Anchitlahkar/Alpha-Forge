@@ -5,7 +5,7 @@
 [![Google Gemini API](https://img.shields.io/badge/Gemini-2.5%20Pro%2FFlash-brightgreen.svg)](https://aistudio.google.com/)
 [![CI/CD Pipeline](https://img.shields.io/badge/GitHub%20Actions-Daily%2FWeekly%20Cron-orange.svg)](https://github.com/features/actions)
 
-**Alpha-Forge** is an automated, highly resilient, personal intelligence platform designed to cut through the information noise. The system automatically ingests recent articles and research papers from hand-curated, high-signal feeds across strategic technology and financial domains. It processes these entries using an intelligent API key-rotating manager, performs semantic deduplication, scores them against custom category weights, and generates a dark-slate glassmorphism dashboard along with instant Telegram alerts for the day's top insight.
+**Alpha-Forge** is an automated, highly resilient, personal intelligence platform designed to cut through the information noise. The system automatically ingests recent articles and research papers from hand-curated, high-signal feeds across strategic technology and financial domains. It processes these entries using an intelligent API key-rotating manager, performs semantic deduplication, scores them against custom category weights, and generates a front-page-style dashboard along with instant Telegram alerts for the day's top insight.
 
 ---
 
@@ -36,20 +36,22 @@
   - Skips duplicate URLs within the current run and cross-checks historical records using `data/processed_urls.json`.
 - **🔑 Key Rotation & Client Resilience:**
   - Extracts and deduplicates API keys from environment variables.
-  - Verifies key validity at startup by running a lightweight test prompt.
-  - Catches rate limit errors (`429`, `RESOURCE_EXHAUSTED`) during runtimes and rotates keys automatically.
-  - Gracefully stops the run with a `RuntimeError` if all keys are exhausted.
+  - Validates keys lazily, on first real use, so no quota is spent before any work begins.
+  - Catches rate limit errors (`429`, `RESOURCE_EXHAUSTED`) at runtime and rotates keys automatically, honouring the `retryDelay` the API returns.
+  - Distinguishes per-minute throttling from per-day exhaustion: throttled keys cool down individually and are reused, so the run survives a burst of rate limits instead of ending at the last key. Keys out of daily quota, or rejected as invalid, are retired for the run.
+  - Waits for the soonest key to recover when every key is throttled, capped at a cumulative 5 minutes, then stops the run with a `RuntimeError` if nothing can recover.
 - **🔧 JSON Repair & Validation:**
   - Cleans and fixes malformed JSON formatting returned by LLMs (e.g. unescaped newlines, trailing commas, or missing brackets).
   - Validates structured outputs against Pydantic schemas: `ArticleAnalysis`, `DeduplicationItem`, and `DeduplicationResponse`.
 - **🧠 Semantic Deduplication:**
   - Groups articles reporting on the same event and consolidates their summaries and source URLs.
 - **📊 Custom Relevance Scoring:**
-  - Computes weighted scores using the formula: `(Signal Score * 0.7) + (Adjusted Personal Relevance * 0.3)`.
-  - Adjusts relevance scores using category-specific weights defined in `config/scoring.json`.
-- **🎨 Premium Dark Dashboard:**
-  - Renders a responsive glassmorphism web layout with HSL gradients using Jinja2 templates.
-  - Displays the day's top 5 insights, categorized directories, and weekly synthesis summaries.
+  - Computes weighted scores from three explicit terms: `(Signal * 0.7) + (Personal Relevance * 0.15) + (Category Weight * 0.15)`, all tunable in `config/scoring.json`.
+  - Resolves the free-text category Gemini returns onto the configured category keys (exact, then containment, then token overlap) and logs anything it cannot place, so category weights are not silently discarded.
+- **🎨 Front-Page Dashboard:**
+  - Renders a newspaper-style layout in Archivo using Jinja2 templates: the lead story takes the headline and its score, items 2-3 share a divided band, and the rest collapse to ruled rows, so the ranking is legible without reading.
+  - Shows the day's top 5 in full and lists everything else that cleared the filter exactly once, never repeating an article between sections.
+  - Falls back to the most recent archive with content, clearly marked stale, if a run returns nothing, rather than publishing an empty page.
 - **📢 Real-Time Telegram Alerts:**
   - Dispatches details of the day's top insight to a Telegram channel, complete with direct read links and Pages URLs.
 
@@ -126,11 +128,12 @@ Alpha-Forge/
 │   ├── utils.py              # File I/O helpers, datetime functions, and URL registry database
 │   └── main.py               # Main execution router for daily and weekly schedules
 ├── templates/
-│   ├── dashboard.html        # Glassmorphism HTML layout template
+│   ├── dashboard.html        # Front-page HTML layout template (all styles inlined)
 │   └── styles.css            # Base stylesheet rules
 ├── tests/
 │   ├── test_dedup.py         # Unit tests checking deduplication boundaries
-│   ├── test_parser.py        # Dummy test placeholder
+│   ├── test_key_rotation.py  # Unit tests for key cooldown, wraparound, and quota classification
+│   ├── test_parser.py        # Unit tests for processed-URL keying and fail-safe behaviour
 │   ├── test_ranker.py        # Unit tests validating weighted ranking calculations
 │   └── test_telegram_logic.py# Unit tests mocking outgoing telegram notification requests
 ├── requirements.txt          # Python library dependencies
@@ -252,6 +255,8 @@ python -m unittest discover -s tests -p "test_*.py"
 ### Test Coverage Details:
 - [test_dedup.py](file:///C:/Extra_s/Code/Github-Workflow/News_letter/tests/test_dedup.py): Verifies semantic grouping boundaries and empty/single-item handling.
 - [test_ranker.py](file:///C:/Extra_s/Code/Github-Workflow/News_letter/tests/test_ranker.py): Verifies category-weighted score ordering.
+- [test_key_rotation.py](file:///C:/Extra_s/Code/Github-Workflow/News_letter/tests/test_key_rotation.py): Verifies per-key cooldown and wraparound, `retryDelay` parsing, per-day vs per-minute quota classification, and that startup spends no API requests. Runs against a fake clock and a stubbed SDK, so it makes no network calls.
+- [test_parser.py](file:///C:/Extra_s/Code/Github-Workflow/News_letter/tests/test_parser.py): Verifies that a failed analysis does not blacklist a URL, and that the same URL can still deliver a different article.
 - [test_telegram_logic.py](file:///C:/Extra_s/Code/Github-Workflow/News_letter/tests/test_telegram_logic.py): Mocks request dispatch behaviors and verifies formatting layouts.
 
 ---
