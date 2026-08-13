@@ -3,647 +3,492 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Intelligence Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Alpha Forge &mdash; 2026-08-13</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0B0F19;
-            --surface: #151B2C;
-            --surface-hover: #1E2640;
-            --primary: #6366F1;
-            --primary-light: #8B5CF6;
-            --text: #F3F4F6;
-            --text-muted: #9CA3AF;
-            --border: #222E4A;
-            --accent: #10B981;
+            color-scheme: dark;
+
+            /* Night edition: newsprint inverted. Ground is near-black with a
+               trace of warmth so it sits beside an editor without going blue. */
+            --bg:        oklch(0.16 0.004 60);
+            --bg-sunk:   oklch(0.13 0.004 60);
+            --rule:      oklch(0.32 0.006 60);
+            --rule-firm: oklch(0.54 0.008 60);
+
+            --ink:       oklch(0.96 0.003 80);
+            --ink-2:     oklch(0.84 0.004 80);
+            --ink-3:     oklch(0.68 0.005 80);
+
+            /* One accent. It belongs to rank and to the lead rule. Nothing else. */
+            --signal:    oklch(0.64 0.20 32);
+            --signal-dim: oklch(0.52 0.15 32);
+
+            --font: 'Archivo', ui-sans-serif, "Segoe UI", system-ui, sans-serif;
+
+            --s1: 4px;  --s2: 8px;  --s3: 14px;
+            --s4: 22px; --s5: 36px; --s6: 64px;
+
+            --z-sticky: 100;
         }
+
+        * { box-sizing: border-box; }
+
+        html { -webkit-text-size-adjust: 100%; }
+
         body {
-            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
+            font-family: var(--font);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.65;
+            background: var(--bg);
+            color: var(--ink);
             margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            font-variant-numeric: tabular-nums;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
-        .container {
-            max-width: 1000px;
+
+        .sheet {
+            max-width: 1080px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: var(--s5) var(--s4) 96px;
         }
-        header {
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.8em;
-            font-weight: 700;
-            margin: 0 0 10px 0;
-            background: linear-gradient(135deg, #6366F1, #A78BFA);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        h2 {
-            font-size: 1.8em;
-            color: var(--text);
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 8px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-        .nav {
-            margin-top: 20px;
+
+        /* ---------- masthead ---------- */
+        .masthead {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .nav a {
-            color: var(--text-muted);
-            font-weight: 500;
-            text-decoration: none;
-            padding: 6px 16px;
-            border-radius: 20px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-        .nav a:hover {
-            color: var(--text);
-            border-color: var(--primary);
-            background: var(--surface-hover);
-        }
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: var(--primary);
-        }
-        .card-header {
-            display: flex;
+            align-items: flex-end;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
+            gap: var(--s4);
             flex-wrap: wrap;
-            gap: 10px;
+            padding-bottom: var(--s3);
+            border-bottom: 3px solid var(--ink);
         }
-        .card-title {
-            font-size: 1.5em;
-            font-weight: 600;
+
+        .wordmark {
+            font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1;
             margin: 0;
-            color: #FFFFFF;
-            flex: 1;
-            min-width: 250px;
-        }
-        .badges {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-        .badge {
-            font-size: 0.8em;
-            font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 12px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
-        .badge-category {
-            background: rgba(99, 102, 241, 0.15);
-            color: #A5B4FC;
-            border: 1px solid rgba(99, 102, 241, 0.3);
+        .wordmark .bar {
+            display: inline-block;
+            width: 0.5em;
+            height: 0.16em;
+            background: var(--signal);
+            margin-right: 0.28em;
+            vertical-align: 0.22em;
         }
-        .badge-score {
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: #FFFFFF;
+
+        .dateline {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            line-height: 1.4;
+            color: var(--ink-3);
+            text-align: right;
+            letter-spacing: 0.01em;
         }
-        .meta-line {
-            font-size: 0.9em;
-            color: var(--text-muted);
-            margin-bottom: 20px;
+        .dateline b { color: var(--ink-2); font-weight: 600; }
+
+        /* ---------- stale notice ---------- */
+        .stale {
             display: flex;
-            gap: 15px;
+            gap: var(--s3);
+            align-items: baseline;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+            color: var(--ink-2);
+            background: var(--bg-sunk);
+            border-bottom: 1px solid var(--rule);
+            padding: var(--s3) var(--s4);
+            margin: 0 calc(var(--s4) * -1);
         }
-        .meta-line span {
+        .stale-flag {
+            flex-shrink: 0;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--bg);
+            background: var(--signal);
+            padding: 2px 8px;
+        }
+
+        /* ---------- the lead ---------- */
+        .lead { padding: var(--s5) 0 var(--s6); }
+
+        .lead-head {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: var(--s4);
+            align-items: start;
+        }
+
+        .lead h2 {
+            font-size: clamp(2.25rem, 1.1rem + 4.6vw, 4.75rem);
+            font-weight: 800;
+            line-height: 0.98;
+            letter-spacing: -0.035em;
+            margin: 0;
+            text-wrap: balance;
+            max-width: 18ch;
+        }
+
+        .score {
+            font-size: clamp(1.75rem, 1rem + 2.6vw, 3rem);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.04em;
+            color: var(--signal);
+            text-align: right;
+        }
+        .score small {
+            display: block;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+            margin-top: var(--s1);
+        }
+
+        .lead-rule {
+            height: 5px;
+            background: var(--signal);
+            margin: var(--s4) 0;
+        }
+
+        .deck {
+            font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.3125rem);
+            line-height: 1.5;
+            color: var(--ink);
+            max-width: 62ch;
+            margin: 0 0 var(--s4);
+            text-wrap: pretty;
+        }
+
+        .credit {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--ink-3);
+            letter-spacing: 0.02em;
+            margin-bottom: var(--s4);
+        }
+        .credit .old { color: var(--signal); }
+
+        /* ---------- the band: items 2 and 3 ---------- */
+        .band {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 0;
+            border-top: 1px solid var(--rule-firm);
+        }
+        .band > * + * { border-left: 1px solid var(--rule); }
+
+        .band-item { padding: var(--s4) var(--s4) var(--s5); }
+        .band-item:first-child { padding-left: 0; }
+        .band-item:last-child { padding-right: 0; }
+
+        .band-item h3 {
+            font-size: 1.375rem;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin: 0 0 var(--s3);
+            text-wrap: balance;
+        }
+        .band-score {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--signal);
+            margin-bottom: var(--s2);
+        }
+
+        /* ---------- the tail: items 4+ ---------- */
+        .tail { border-top: 1px solid var(--rule-firm); }
+        .tail-row {
+            display: grid;
+            grid-template-columns: 4.5rem 1fr auto;
+            gap: var(--s4);
+            align-items: baseline;
+            padding: var(--s3) 0;
+            border-bottom: 1px solid var(--rule);
+        }
+        .tail-rank { font-weight: 700; color: var(--signal); }
+        .tail-title { font-weight: 600; line-height: 1.3; }
+        .tail-title p {
+            font-weight: 400;
+            font-size: 0.9375rem;
+            color: var(--ink-3);
+            margin: var(--s1) 0 0;
+            max-width: 68ch;
+        }
+        .tail-src { font-size: 0.8125rem; color: var(--ink-3); white-space: nowrap; }
+
+        /* ---------- section headings ---------- */
+        .rubric {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: var(--s3);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+            margin: var(--s6) 0 var(--s4);
         }
-        .section-title {
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #E5E7EB;
-            margin-top: 20px;
-            margin-bottom: 8px;
+        .rubric::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
         }
-        .why-it-matters {
-            background: rgba(16, 185, 129, 0.08);
-            border-left: 4px solid var(--accent);
-            padding: 12px 16px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 20px;
-            font-style: italic;
+        .rubric .n { color: var(--signal); }
+
+        /* ---------- prose inside a story ---------- */
+        .story-body { max-width: 68ch; }
+        .story-body h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+            margin: var(--s4) 0 var(--s2);
         }
-        .tldr {
-            font-size: 1.05em;
-            color: #D1D5DB;
-            margin-bottom: 20px;
+        .story-body p { margin: 0 0 var(--s3); color: var(--ink-2); text-wrap: pretty; }
+        .story-body ul { margin: 0 0 var(--s4); padding-left: 1.1em; }
+        .story-body li { margin-bottom: var(--s2); color: var(--ink-2); }
+        .story-body li::marker { color: var(--signal-dim); }
+
+        .sources { font-size: 0.875rem; color: var(--ink-3); }
+        .sources li { color: var(--ink-3); margin-bottom: var(--s1); }
+
+        /* ---------- links ---------- */
+        a { color: inherit; }
+
+        .read {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 0.45em;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--ink);
+            border-bottom: 2px solid var(--signal);
+            padding-bottom: 2px;
+            transition: color 160ms cubic-bezier(0.2, 0, 0, 1);
         }
-        ul {
-            margin: 0 0 20px 0;
-            padding-left: 20px;
+        .read:hover { color: var(--signal); }
+        .read .arrow { transition: transform 200ms cubic-bezier(0.2, 0, 0, 1); }
+        .read:hover .arrow { transform: translateX(4px); }
+
+        .title-link {
+            text-decoration: none;
+            background-image: linear-gradient(var(--signal), var(--signal));
+            background-repeat: no-repeat;
+            background-position: 0 100%;
+            background-size: 0% 2px;
+            transition: background-size 220ms cubic-bezier(0.2, 0, 0, 1);
         }
-        li {
-            margin-bottom: 6px;
-            color: #D1D5DB;
+        .title-link:hover { background-size: 100% 2px; }
+
+        :focus-visible {
+            outline: 3px solid var(--signal);
+            outline-offset: 3px;
         }
-        .card-footer {
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-            margin-top: 20px;
+
+        /* ---------- closing matter ---------- */
+        .weekly { border-top: 1px solid var(--rule-firm); padding-top: var(--s4); }
+        .weekly h3 { font-size: 1.25rem; font-weight: 700; margin: 0 0 var(--s3); }
+        .weekly p, .weekly li { color: var(--ink-2); max-width: 68ch; }
+
+        .empty {
+            color: var(--ink-3);
+            max-width: 60ch;
+            margin: 0;
+            padding: var(--s4) 0;
+        }
+
+        .colophon {
+            border-top: 3px solid var(--ink);
+            margin-top: var(--s6);
+            padding-top: var(--s3);
+            font-size: 0.8125rem;
+            line-height: 1.6;
+            color: var(--ink-3);
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            gap: var(--s4);
             flex-wrap: wrap;
-            gap: 10px;
         }
-        .btn-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: #FFFFFF;
-            background: var(--primary);
-            padding: 8px 18px;
-            border-radius: 8px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: background 0.2s ease;
+
+        @media (max-width: 640px) {
+            .lead-head { grid-template-columns: 1fr; gap: var(--s3); }
+            .score { text-align: left; }
+            .score small { display: inline; margin-left: 0.5em; }
+            .band > * + * { border-left: none; border-top: 1px solid var(--rule); }
+            .band-item { padding-left: 0; padding-right: 0; }
+            .tail-row { grid-template-columns: 3.5rem 1fr; gap: var(--s3); }
+            .tail-src { display: none; }
         }
-        .btn-link:hover {
-            background: #4F46E5;
-            text-decoration: none;
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition-duration: 1ms !important;
+                animation-duration: 1ms !important;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Intelligence Brief</h1>
-            <p style="color: var(--text-muted); font-size: 1.1em; margin: 5px 0 0 0;">Generated on 2026-08-13</p>
-            <div class="nav">
-                <a href="#top">Top Insights</a>
-                <a href="#categories">Categories</a>
-                <a href="#weekly">Weekly Deep Dive</a>
-            </div>
-        </header>
+<div class="sheet">
 
-        <section id="top">
-            <h2>Today's Top Insights</h2>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">AI Capability Transfer via Inference-Time Harnesses</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.5</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Aug 12</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
+    <header class="masthead">
+        <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
+        <div class="dateline">
+            <b>2026-08-13</b><br>
+            5 of 5 cleared
+        </div>
+    </header>
 
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This research introduces a novel and highly effective method for transferring capabilities from strong AI models to weaker ones at test-time, without requiring parameter updates or retraining. This significantly improves the performance of weaker models by offloading complex reasoning into deterministic code and routing, offering a complementary approach to traditional distillation and potentially reducing inference costs and deployment complexity for AI systems. It opens new avenues for making advanced AI more accessible and efficient.
-                </div>
-                
+    
 
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    A new method called "inference-time harnesses" allows strong AI models to transfer capabilities to weaker models at test-time, nearly doubling their performance by offloading reasoning into structured code and routing, without any retraining.
-                </div>
+    
+    
+    <article class="lead">
+        <div class="lead-head">
+            <h2>Mechanist: AI for Discovering Intelligence Mechanisms</h2>
+            <div class="score">9.22<small>Ranked</small></div>
+        </div>
 
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Introduces 'strong-to-weak scaffolding' via 'inference-time harnesses' for capability transfer at test-time, contrasting with traditional training-time distillation.</li>
-                    
-                    <li>A stronger 'builder model' constructs these harnesses using a small validation set to iteratively refine them.</li>
-                    
-                    <li>Empirically, this method is highly effective, nearly doubling average target-model performance from 0.49 to 0.91 on Theory-of-Mind benchmarks.</li>
-                    
-                    <li>Performance gains primarily stem from offloading unstable model reasoning into deterministic code, benchmark-specific routing, and strict answer-format enforcement.</li>
-                    
-                    <li>The approach does not primarily encourage the weaker target model to reason more extensively or sample more broadly itself.</li>
-                    
-                    <li>Analysis shows that builder-model reasoning effort improves harness quality monotonically, and weaker target models receive the largest performance gains.</li>
-                    
-                    <li>This 'inference-time harness design' is presented as an important complement to conventional training-time distillation, enabling cognitive structure transfer without retraining.</li>
-                    
-                </ul>
-                
+        <div class="lead-rule"></div>
 
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>AI researchers should explore hybrid approaches combining inference-time harnesses with existing training-time distillation techniques for optimal capability transfer.</li>
-                    
-                    <li>Software engineers and MLOps teams deploying AI models could investigate implementing harness-like structures to enhance the performance of smaller, more efficient models in production without costly retraining cycles.</li>
-                    
-                    <li>Consider developing tools or frameworks that leverage powerful 'builder models' to automatically generate robust and optimized inference pipelines for various tasks.</li>
-                    
-                    <li>Evaluate the cost-benefit of using a strong model to build harnesses versus traditional fine-tuning or distillation for specific application scenarios.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2608.12307" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Spark-to-Paper: AI Research Paper Generation</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI/ML</span>
-                        <span class="badge badge-score">Signal: 9.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Aug 12</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This article introduces a significant advancement in AI's capability to automate complex intellectual tasks, specifically scientific research paper generation. By integrating planning, evidence-based revision, and integrity checks, Spark-to-Paper moves beyond simple text generation to a more reliable and robust system for scientific communication. This has profound implications for accelerating research, improving reproducibility, and potentially transforming how scientific discovery is conducted and disseminated, while also highlighting the ongoing challenges of AI reliability.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Spark-to-Paper is an AI system implemented as composable skills within a coding assistant that generates full research papers, including experiments and figures, by separating planning from reporting, enforcing evidence-based claim revision, and using integrity checks to minimize fabrication and self-refutation.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Spark-to-Paper is an end-to-end system for generating research papers, implemented as thirteen composable skills within an existing coding assistant.</li>
-                    
-                    <li>It separates experiment planning from reporting, ensuring evidence is specified before results are observed and claims are revised based on measured outcomes.</li>
-                    
-                    <li>The system incorporates deterministic integrity checks, self-critique, and bounds a 'Self-Refutation Loop' to improve reliability over long research trajectories.</li>
-                    
-                    <li>It produces editable vector figures through programmatic plotting and code-based reconstruction for method diagrams.</li>
-                    
-                    <li>Achieves high reliability: 99.5% citation validity, 96.4% figure editability, and increases fabrication detection from 14% (single-pass draft) to 92% (full system).</li>
-                    
-                    <li>The full system uses 11.9M tokens, costs $8.1 per manuscript, and takes 3.2 hours on average, demonstrating a lightweight and cost-effective approach.</li>
-                    
-                    <li>It emphasizes keeping experimental evidence central to how claims are accepted, revised, or abandoned, addressing a critical challenge in AI-generated content.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Explore the Spark-to-Paper GitHub repository and arXiv paper for technical details and potential applications.</li>
-                    
-                    <li>Consider the implications of such systems for the future of scientific research, peer review, and academic publishing.</li>
-                    
-                    <li>Investigate how similar composable skill architectures could be applied to other complex, multi-step knowledge work automation tasks.</li>
-                    
-                    <li>For AI researchers, analyze the methods for integrity checks and self-critique to improve reliability in other large language model applications.</li>
-                    
-                    <li>For investors and startups, evaluate the market potential for AI-driven research automation tools and services.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2608.11924" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">LLM Consistency in Interactive Narratives</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Aug 8</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    This research introduces a critical benchmark and formalizes a significant challenge for Large Language Models: maintaining long-term logical consistency and narrative integrity in interactive environments, especially under unconstrained user interventions. The findings highlight a fundamental limitation of current state-of-the-art LLMs, which is crucial for developing reliable, engaging, and coherent AI agents in applications like games, simulations, and complex conversational systems. Addressing this gap is essential for the practical deployment of advanced LLM-powered interactive experiences.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    A new benchmark, NCP-Bench, reveals that even advanced LLMs like GPT-5.2 struggle significantly with long-term logical consistency and narrative integrity in interactive storytelling, frequently generating conflicting content under user interventions, with high fact conflict rates and low commitment preservation over extended interactions.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>The study introduces 'Narrative Commitment Preservation' (NCP) to formalize the challenge of long-horizon logical consistency in interactive narratives for LLMs.</li>
-                    
-                    <li>NCP-Bench is a new benchmark comprising 100 narrative environments derived from movie synopses, designed to test LLM agents' ability to maintain narrative integrity.</li>
-                    
-                    <li>Each environment includes structured narrative specifications (trajectory, commitments, initial facts) that are automatically checked throughout player-narrator agent interactions.</li>
-                    
-                    <li>Experiments with state-of-the-art LLMs reveal a substantial consistency gap: high linguistic quality does not guarantee commitment preservation.</li>
-                    
-                    <li>The best-performing model, GPT-5.2, achieved only a 42% 'survival rate' (conflict-free) after 20 turns.</li>
-                    
-                    <li>Fact conflict rates ranged from 40% to 68% across models, and very few runs satisfied all achievement commitments within a 100-turn limit.</li>
-                    
-                    <li>The data, code, and prompt templates for NCP-Bench are open-sourced on GitHub.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>AI researchers should utilize NCP-Bench to develop and evaluate new LLM architectures and fine-tuning strategies specifically aimed at improving long-horizon consistency and narrative commitment preservation.</li>
-                    
-                    <li>Software engineers and developers building interactive AI applications (e.g., games, virtual assistants, educational tools) should be aware of these LLM limitations and design systems with explicit mechanisms for fact-checking, state management, and conflict resolution.</li>
-                    
-                    <li>Future LLM development should prioritize intrinsic mechanisms for maintaining factual and narrative consistency over extended interactions, potentially through improved memory, reasoning, or planning capabilities.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2608.08160" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">StateFlow: Controllable 3D Previsualization Framework</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">AI Research</span>
-                        <span class="badge badge-score">Signal: 8.0</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 August 12, 2026</span>
-                    <span>🌐 Source: Hugging Face Papers</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    StateFlow addresses a critical limitation in generative AI for creative industries: the lack of controllability and iterative editing in 3D content creation. By introducing a persistent, editable 3D world state, it enables designers in film, games, and architecture to refine scenes, actions, and cameras much more effectively than one-shot generative methods, potentially revolutionizing previsualization workflows and fostering new tools and applications.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    StateFlow is a new AI framework that uses a persistent, editable 3D world state to enable iterative and controllable previsualization for film and game design, overcoming the limitations of one-shot generative methods.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Introduces StateFlow, a state-centric framework for generative previsualization in film, games, architecture, and urban design.</li>
-                    
-                    <li>Addresses the problem of weak controllability and limited iterative editing in existing generative methods that rely on one-shot image/video synthesis.</li>
-                    
-                    <li>Proposes an explicit and persistent 3D world state as the core working representation, organizing scene structure, evolution, and cameras.</li>
-                    
-                    <li>Comprises three stages: State Construction (lifts 2D content to 3D via dual-view initialization), State Evolution (translates user intent into structured state transitions while preserving world memory), and State Access (refines camera plans using render-feedback reflection).</li>
-                    
-                    <li>Enhances visual quality by integrating off-the-shelf video models when higher fidelity is desired.</li>
-                    
-                    <li>Experiments demonstrate its ability to produce high-quality 3D worlds for video creation and game-like prototyping.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Explore the StateFlow paper and project page for technical details and examples of its application in previsualization.</li>
-                    
-                    <li>Consider the implications of persistent 3D world states for future generative AI tools and workflows in creative industries.</li>
-                    
-                    <li>Investigate potential startup opportunities in developing tools or platforms based on state-centric 3D content generation.</li>
-                    
-                    <li>Monitor advancements in AI models that can be integrated with frameworks like StateFlow to further enhance visual quality and control.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: AI</span>
-                    
-                    <a href="https://huggingface.co/papers/2608.12314" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">AI Investment Boom and Compute Race</h3>
-                    <div class="badges">
-                        <span class="badge badge-category">Industry Analysis</span>
-                        <span class="badge badge-score">Signal: 8.5</span>
-                    </div>
-                </div>
-                
-                <div class="meta-line">
-                    <span>📅 Tue, 11 Aug 2026 10:00:00 +0000</span>
-                    <span>🌐 Source: Stratechery</span>
-                </div>
-
-                
-                <div class="section-title">💡 Why It Matters</div>
-                <div class="why-it-matters">
-                    The article highlights the unsustainable financial practices (debt-fueled CapEx) of major tech companies in the AI race, drawing parallels to historical financial panics. It reveals Google's strategic shift from frontier AI research (DeepMind's decline) to dominating AI infrastructure (Google Cloud's rise with TPUs), and the critical role of compute cost structures in the competitive landscape of AI development. This provides crucial insights into the future trajectory of the AI industry, its financial stability, and the power dynamics among key players.
-                </div>
-                
-
-                <div class="section-title">📝 Summary (TLDR)</div>
-                <div class="tldr">
-                    Major tech companies are fueling the AI boom with massive debt for infrastructure, reminiscent of the 1873 railway panic. Microsoft stands out for cash-funded CapEx, while Google, despite DeepMind's decline as a frontier lab, is pivoting to dominate AI infrastructure via Google Cloud and TPUs, notably supplying Anthropic, leveraging a potential cost advantage over Nvidia GPUs.
-                </div>
-
-                
-                <div class="section-title">📌 Key Points</div>
-                <ul>
-                    
-                    <li>Major tech companies (Oracle, Meta, Alphabet, Amazon) are rapidly increasing AI infrastructure CapEx, largely funded by debt, with $194 billion raised by July 2026, drawing parallels to the 1873 Panic.</li>
-                    
-                    <li>Microsoft is an outlier among hyperscalers, funding its AI CapEx from substantial free cash flow, unlike its peers.</li>
-                    
-                    <li>Google raised $85 billion in equity, including a $10 billion investment from Berkshire Hathaway, signaling immense compute demand and a willingness to use all funding means.</li>
-                    
-                    <li>Google's DeepMind is reportedly no longer a frontier AI lab due to significant researcher departures, poor compute allocation, and a bureaucratic culture, with its odds of reaching SOTA deemed 'zero'.</li>
-                    
-                    <li>Google is pivoting its AI strategy, moving away from DeepMind's 'world models' vision towards a more text/code-centric approach, under new leadership and Sergey Brin's involvement.</li>
-                    
-                    <li>Google Cloud is aggressively growing and dominating AI infrastructure, with Anthropic being a massive customer for its TPUs, suggesting a strategic shift for Google to become a primary AI infrastructure provider.</li>
-                    
-                    <li>Google Cloud CEO Thomas Kurian emphasizes a 'platform company' approach, monetizing TPUs as general-purpose infrastructure even for competitors like Anthropic, implying TPUs offer a cost advantage over Nvidia GPUs.</li>
-                    
-                </ul>
-                
-
-                
-                <div class="section-title">⚡ Action Items</div>
-                <ul>
-                    
-                    <li>Monitor the debt levels and financial health of major tech companies investing heavily in AI infrastructure for signs of market instability.</li>
-                    
-                    <li>Analyze the competitive landscape between Nvidia GPUs and Google/Amazon's custom AI chips (TPUs, Trainium) for cost and performance advantages in the compute market.</li>
-                    
-                    <li>Track Google's strategic execution in AI, particularly the performance of Google Cloud's AI infrastructure offerings and the new direction of DeepMind.</li>
-                    
-                    <li>Evaluate the implications of a 'platform company' strategy for AI infrastructure providers on the broader AI ecosystem and competition.</li>
-                    
-                    <li>Assess the potential for market consolidation or financial instability in the AI sector given the high investment and debt levels.</li>
-                    
-                </ul>
-                
-
-                <div class="card-footer">
-                    <span>Processed Category: Startups</span>
-                    
-                    <a href="https://stratechery.com/2026/nvidias-risky-business/" target="_blank" class="btn-link">Read Original Article &rarr;</a>
-                    
-                </div>
-            </div>
+        <p class="credit">
+            AI Research
+             &middot; Hugging Face Papers
             
             
-        </section>
+             &middot; signal 9.0/10
+        </p>
 
-        <section id="categories">
-            <h2>By Category</h2>
+        <p class="deck">Mechanist is an AI agent developed to autonomously discover and control the internal mechanisms of other AI models, aiming to improve their safety and performance.</p>
+
+        <div class="story-body">
             
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI Research</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+            <h4>So what</h4>
+            <p>Autonomous systems can now discover and control the internal workings of AI models. This capability allows for the identification of hidden safety risks and the development of new theories on AI cognition.</p>
+            
+
+            
+            <h4>Key points</h4>
+            <ul><li>Mechanist is an autonomous agentic system that uses AI to discover and control the mechanisms underlying model intelligence.</li><li>It generates hypotheses, performs causal interventions, and improves safety and performance.</li><li>The system integrates an interpretability-focused knowledge graph of 13,000 papers with a multidisciplinary database of 43 million papers.</li><li>It curates a library of 32 foundational methods for mechanism analysis, causal intervention, and validation.</li><li>Mechanist outperforms Claude Code and existing AI-scientist systems in generating valuable mechanism hypotheses and executing experiments reliably.</li></ul>
+            
+
+            
+            <h4>Worth doing</h4>
+            <ul><li>Read the paper at arXiv:2608.12036.</li><li>Explore the project page for Mechanist.</li><li>Check out the GitHub repository for Mechanist.</li></ul>
+            
+
+            
+        </div>
+
+        
+        <a class="read" href="https://huggingface.co/papers/2608.12036" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        
+    </article>
+
+    
+    
+    <section class="band">
+        
+        <article class="band-item">
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2608.00677" target="_blank" rel="noopener">OpenART: AI Agent Red Teaming</a></h3>
+            <p class="credit">
+                AI Research &middot; Hugging Face Papers
                 
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">AI Capability Transfer via Inference-Time Harnesses</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new method called "inference-time harnesses" allows strong AI models to transfer capabilities to weaker models at test-time, nearly doubling their performance by offloading reasoning into structured code and routing, without any retraining.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.42</span>
-                        
-                        <a href="https://huggingface.co/papers/2608.12307" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
+            </p>
+            <div class="story-body">
+                <p>OpenART introduces a new red-teaming arena and an attack policy, EMHA, designed to evaluate AI agent safety in complex, evolving environments, revealing more failures than traditional methods.</p>
                 
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">LLM Consistency in Interactive Narratives</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">A new benchmark, NCP-Bench, reveals that even advanced LLMs like GPT-5.2 struggle significantly with long-term logical consistency and narrative integrity in interactive storytelling, frequently generating conflicting content under user interventions, with high fact conflict rates and low commitment preservation over extended interactions.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.3</span>
-                        
-                        <a href="https://huggingface.co/papers/2608.08160" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">StateFlow: Controllable 3D Previsualization Framework</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">StateFlow is a new AI framework that uses a persistent, editable 3D world state to enable iterative and controllable previsualization for film and game design, overcoming the limitations of one-shot generative methods.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.3</span>
-                        
-                        <a href="https://huggingface.co/papers/2608.12314" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
+                <ul><li>OpenART is an open-ended arena for scalable agent red teaming through environment evolution, which means it evaluates AI agents in persistent, changing environments.</li><li>It provides over 10,000 validated stateful scenarios across 50 domains, using more than 500,000 tools and skills.</li><li>Tasks in OpenART require a median of 97 tool calls and allow unified evaluation across 75 different agent-model configurations.</li></ul>
                 
             </div>
-            
-            <h3 style="color: #A5B4FC; margin-top: 30px;">AI/ML</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+        </article>
+        
+        <article class="band-item">
+            <div class="band-score">8.1</div>
+            <h3><a class="title-link" href="https://arxiv.org/abs/2608.11310" target="_blank" rel="noopener">Spin-Coherent Quantum Designs</a></h3>
+            <p class="credit">
+                Quantum Computing &middot; arXiv quant-ph
                 
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">Spark-to-Paper: AI Research Paper Generation</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Spark-to-Paper is an AI system implemented as composable skills within a coding assistant that generates full research papers, including experiments and figures, by separating planning from reporting, enforcing evidence-based claim revision, and using integrity checks to minimize fabrication and self-refutation.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 8.32</span>
-                        
-                        <a href="https://huggingface.co/papers/2608.11924" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
+            </p>
+            <div class="story-body">
+                <p>Researchers developed a new theoretical framework called spin-coherent quantum designs, which enables the reconstruction of quantum information from spin systems using minimal measurements and provides practical protocols for estimating spin operator moments.</p>
                 
-            </div>
-            
-            <h3 style="color: #A5B4FC; margin-top: 30px;">Industry Analysis</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                
-                <div class="card" style="margin-bottom: 0; padding: 20px;">
-                    <h4 style="margin: 0 0 10px 0; color: #FFFFFF;">AI Investment Boom and Compute Race</h4>
-                    <p style="font-size: 0.95em; color: var(--text-muted); margin-bottom: 15px;">Major tech companies are fueling the AI boom with massive debt for infrastructure, reminiscent of the 1873 railway panic. Microsoft stands out for cash-funded CapEx, while Google, despite DeepMind's decline as a frontier lab, is pivoting to dominate AI infrastructure via Google Cloud and TPUs, notably supplying Anthropic, leveraging a potential cost advantage over Nvidia GPUs.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: var(--text-muted);">
-                        <span>Score: 7.97</span>
-                        
-                        <a href="https://stratechery.com/2026/nvidias-risky-business/" target="_blank" style="color: var(--primary); text-decoration: none;">Read &rarr;</a>
-                        
-                    </div>
-                </div>
+                <ul><li>The paper addresses the rank-resolved problem of preserving the canonical contravariant-symbol representation for quantum information reconstruction.</li><li>It shows that the canonical finite coherent-state formula reconstructs every operator in the rank-$S$ sector exactly if sampling points form a spherical $(2J+S)$-design.</li><li>The associated configurations are called spin-coherent quantum designs.</li></ul>
                 
             </div>
-            
-            
-        </section>
+        </article>
+        
+    </section>
+    
 
-        <section id="weekly">
-            <h2>Weekly Deep Dive</h2>
-            <div class="card">
-                
-                    <p style="color: var(--text-muted); font-style: italic; margin: 0;">No weekly synthesis available yet.</p>
-                
-            </div>
-        </section>
-    </div>
+    
+    
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">8.07</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2608.11309" target="_blank" rel="noopener">Quantum Chaos and Geometric Response</a>
+                <p>Researchers introduced the spectral density of geometric response, a new measure demonstrating how quantum systems transition from predictable to chaotic states, with this crossover initiating locally before spreading, a behavior replicated by specific random-matrix models.</p>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.15</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2608.11314" target="_blank" rel="noopener">Quantum Teleportation in Noisy Channels</a>
+                <p>Researchers analyzed quantum teleportation through noisy, time-varying channels, determining that entanglement and teleportation fidelity are dependent on accumulated noise parameters. They identified conditions for entanglement vanishing or restoration and established a bound on 'backflow' for harmonically modulated noise, allowing for 'entanglement sudden birth.'</p>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+    </section>
+    
+
+    
+
+    
+
+    <h2 class="rubric">This week, joined up</h2>
+    
+    <p class="empty">The weekly synthesis runs Sunday night. Nothing to join up yet.</p>
+    
+
+    <footer class="colophon">
+        <span>
+            
+            14 feeds polled &middot; 12 answered &middot; 
+            5 analysed &middot; 
+            
+            5 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
+            <br>Gemini was unavailable for 1 article; dropped rather than summarised.
+        </span>
+        <span>Built 2026-08-13</span>
+    </footer>
+
+</div>
 </body>
 </html>
