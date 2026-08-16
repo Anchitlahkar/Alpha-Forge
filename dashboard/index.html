@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-08-15</title>
+    <title>Alpha Forge &mdash; 2026-08-16</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-08-15</b><br>
-            5 of 7 cleared
+            <b>2026-08-16</b><br>
+            1 of 1 cleared
         </div>
     </header>
 
@@ -365,131 +365,51 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>DarwinX: Evolving Agent Harnesses Through Natural Selection</h2>
-            <div class="score">8.52<small>Ranked</small></div>
+            <h2>Building an AI Text Detector From Scratch</h2>
+            <div class="score">6.97<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
             AI Research
-             &middot; Hugging Face Papers
+             &middot; Ahead of AI
+             &middot; 15 Aug
             
-            
-             &middot; signal 8.0/10
+             &middot; signal 6.0/10
         </p>
 
-        <p class="deck">DarwinX evolves AI agent 'harnesses' like prompts and tools using natural selection on a population of variants. This method improves agent performance across benchmarks by an average of 17 points, even with frozen language models.</p>
+        <p class="deck">This article outlines how to build an AI text detector from scratch, explaining its underlying principles, practical applications like filtering spam or refining human writing, and its limitations as a cat-and-mouse game.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>AI agents can achieve large performance gains and better generalization by evolving their 'harnesses' without retraining the underlying large language model. This approach turns evaluation compute into durable capability, making agents more adaptable across tasks.</p>
+            <p>Understanding how AI detectors work helps you develop more robust AI models and evaluate the authenticity of text. It also shows how to build verifier systems for LLMs beyond traditional reasoning tasks.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>DarwinX evolves an AI agent's 'harness', which includes prompts, tools, skills, and control flow, using population selection.</li><li>It operates with a frozen underlying language model.</li><li>A 'preserve-and-extend contract' ensures only variants that expand coverage without regressing are admitted.</li><li>An archive stores alternative lineages for recombination.</li><li>Fitness is measured by each benchmark's verifier, not gold solutions.</li></ul>
+            <ul><li>The project aims to explain AI detector mechanics by building a simple one.</li><li>It can serve as a verifier to train small language models (SLMs) to produce text that avoids detection.</li><li>Practical uses include filtering spam and helping writers improve text without making it sound AI-generated.</li><li>AI detection is an ongoing "cat-and-mouse game" with evolving models and potential for false positives.</li><li>The proposed method involves fine-tuning a DistilBERT classifier to produce a 0-100 score indicating the likelihood of AI generation.</li></ul>
             
 
-            
-            <h4>Worth doing</h4>
-            <ul><li>Read the paper at arxiv:2608.07545.</li><li>Look up the project page at https://huggingface.co/spaces/CoderDoge/darwinx.</li><li>Install the Hugging Face CLI by running `curl -LsSf https://hf.co/cli/install.sh | bash` to access papers directly.</li><li>After installing the CLI, read the paper using `hf papers read 2608.07545`.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2608.07545" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://magazine.sebastianraschka.com/p/ai-detector-from-scratch" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
     
     
-    <section class="band">
-        
-        <article class="band-item">
-            <div class="band-score">8.48</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2608.13546" target="_blank" rel="noopener">Alaya-EVOKE: An Interactive World Model for Open-Ended Video Generation</a></h3>
-            <p class="credit">
-                AI Research &middot; Hugging Face Papers
-                
-            </p>
-            <div class="story-body">
-                <p>Alaya-EVOKE is an interactive world model that generates open-ended video by using external persistent memory and a redesigned long-horizon teacher, achieving state-of-the-art performance on WBench with bounded context and low latency.</p>
-                
-                <ul><li>Alaya-EVOKE is an interactive world model designed for open-ended video generation.</li><li>It addresses challenges in maintaining persistent memory and enabling long-horizon generation with low latency.</li><li>The model uses external persistent memory, storing scene geometry in a camera-indexed world state bank, which keeps the denoiser context bounded.</li></ul>
-                
-            </div>
-        </article>
-        
-        <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2608.06867" target="_blank" rel="noopener">LLMRouter: Unified Infrastructure for Developing, Evaluating, and Deploying LLM Routers</a></h3>
-            <p class="credit">
-                AI Research &middot; Hugging Face Papers
-                
-            </p>
-            <div class="story-body">
-                <p>Researchers introduced LLMRouter, a unified open-source infrastructure and benchmark (xRouteBench) for developing, evaluating, and deploying LLM routing solutions. It formalizes LLM routing as a sequential decision process, includes over 16 router implementations, and shows learned routers improve performance by 14.6%.</p>
-                
-                <ul><li>LLMRouter is a unified, open-source infrastructure for developing, evaluating, and deploying LLM routers.</li><li>It formalizes LLM routing as a sequential decision process with five components: context encoders, model encoders, scoring functions, decision rules, and learning signals.</li><li>The xRouteBench benchmark covers five diverse routing scenarios, including generic LLM, memory-augmented, vision, time-series, and personalized tasks.</li></ul>
-                
-            </div>
-        </article>
-        
-    </section>
-    
 
     
-    
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">8.07</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://www.netinterest.co/p/financing-the-ai-boom-3" target="_blank" rel="noopener">AI Infrastructure Financing and Capital Expenditure</a>
-                <p>The AI industry is experiencing a significant capital expenditure boom, with major financial institutions mobilizing over $500 billion to finance AI compute infrastructure. This trend is driven by rising GPU prices and the recognition of AI compute as a new, durable asset class, with companies like Nvidia and Google creating new funding mechanisms to address capital and power constraints in AI development.</p>
-            </span>
-            <span class="tail-src">Net Interest</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2608.12504" target="_blank" rel="noopener">Spatially Dense, Continuous-Variable Quantum Computing with Solid State Spin Nonlinearities</a>
-                <p>Researchers propose a new architecture for bosonic quantum computing that uses strain-sensitive solid-state spins to create necessary nonlinear interactions, enabling high spatial density of logical qubits on-chip.</p>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-    </section>
     
 
     
 
-    
-    <h2 class="rubric">Also cleared <span class="n">2</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2608.12509" target="_blank" rel="noopener">Quantum Tanner Codes at Moderate Blocklength</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.52</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2608.12450" target="_blank" rel="noopener">Embedding Stabilizer Codes and Leakage Correction in Multilevel Quantum Systems</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -500,14 +420,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            10 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            1 analysed &middot; 
             
-            7 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
+            1 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-08-15</span>
+        <span>Built 2026-08-16</span>
     </footer>
 
 </div>
