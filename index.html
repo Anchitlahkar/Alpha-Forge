@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-08-17</title>
+    <title>Alpha Forge &mdash; 2026-08-18</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-08-17</b><br>
-            5 of 5 cleared
+            <b>2026-08-18</b><br>
+            5 of 9 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Dion3 Optimizer for Orthogonal Updates</h2>
-            <div class="score">8.52<small>Ranked</small></div>
+            <h2>VibeWorlding: Can Multimodal Agents Construct 3D Open Worlds End-to-End?</h2>
+            <div class="score">8.38<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -379,29 +379,29 @@
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Dion3 is a new optimizer that builds upon Muon, significantly reducing orthogonalization and communication overhead. It achieves up to a 6x speedup in optimizer step time while maintaining or improving model loss.</p>
+        <p class="deck">Researchers introduced VibeWorlding, a framework for training and benchmarking multimodal agents that build 3D open worlds end-to-end. It includes a large benchmark and an RL training environment. Reinforcement learning significantly improves agent performance, allowing open-source models to outperform closed-source ones.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Training large AI models often requires substantial time and computational resources. Faster optimizers reduce the cost and accelerate the development cycle for new models.</p>
+            <p>Multimodal agents can now construct complex 3D open worlds from user queries, and reinforcement learning helps open-source models surpass proprietary ones in this task. This advances the capability of AI to create interactive virtual environments.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Dion3 is a revision of the Muon optimizer, designed to reduce its cubic-time Newton-Schulz orthogonalization and communication overhead.</li><li>It incorporates a Gram Newton-Schulz algorithm to lower FLOP costs and CuteDSL kernels to accelerate computations by exploiting symmetry.</li><li>A megabatching strategy reduces communication overhead, especially when weights are sharded.</li><li>Dion3 introduces a new update rule that selects only a fraction of the momentum matrix's rows for orthogonalization at each step, further cutting costs.</li><li>The optimizer matches or improves the loss achieved by Muon, but reduces optimizer step time by up to 6x.</li></ul>
+            <ul><li>VibeWorlding is a unified framework for benchmarking and training multimodal agents that autonomously infer user intent, plan 3D scenes, invoke tools, and reflect on feedback.</li><li>The framework includes VWE-BENCH, a benchmark with 2,616 high-quality 3D assets, 323 human-annotated seed 3D worlds, and 6,828 multimodal user queries.</li><li>VibeWorlding-Gym is a multimodal reinforcement learning (RL) post-training framework that integrates a sandbox environment with MCP tools for asset retrieval, editing, and image rendering.</li><li>A rubric-based verifier in VibeWorlding-Gym combines physical feasibility and intent fulfillment verification for fair model evaluation and scalable RL reward service.</li><li>Current frontier MLLMs, including GPT-5.5 and Qwen3.8-Max, achieve below 60% success rate on the vibe worlding agent task, with precise 3D world editing identified as the main bottleneck.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Clone the `dion` package from `https://github.com/microsoft/dion` to explore its implementation.</li><li>Read the paper `arxiv:2608.11612` to understand the algorithmic and kernel-level improvements in detail.</li><li>Look up John Langford, one of the authors, to see his other contributions to machine learning research.</li></ul>
+            <ul><li>Read the VibeWorlding paper on arXiv, identifier 2608.15265.</li><li>Check out the VibeWorlding project page for more details.</li><li>Explore the GitHub repository for VibeWorlding to see the code and assets.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2608.11612" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2608.15265" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2608.14290" target="_blank" rel="noopener">Mobius-v0 AI Architecture for Decoupled Knowledge and Reasoning</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2608.13900" target="_blank" rel="noopener">Agentic Transaction: Towards ACID-Compliant Agent Systems</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Researchers introduced Mobius-v0, an AI architecture that decouples knowledge storage from reasoning, resulting in improved knowledge compression and efficiency. A 7B model using Mobius-v0 required 62.6% less training data, and a 35B model achieved a 4x inference speedup.</p>
+                <p>A new framework applies ACID-like transactional properties to LLM agents, enabling reliable, long-horizon task execution and showing a 10.6% performance improvement on benchmarks.</p>
                 
-                <ul><li>Mobius-v0 is an architecture that separates a globally shared Memory (FFN) from multiple Reasoners (Self-Attn).</li><li>This knowledge-reasoning-separation improves knowledge compression and reasoning efficiency.</li><li>A 7B Mobius-v0 model trained from scratch matched a 7B Transformer baseline's performance using 62.6% of the baseline's training data.</li></ul>
+                <ul><li>Large language model (LLM) agents are evolving into autonomous systems that execute long-horizon tasks.</li><li>These agents face challenges similar to transactional database systems, including reliable execution and consistent outcomes.</li><li>The paper introduces the concept of an agentic transaction and an ACID-compliant agent system framework.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.03</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2608.14530" target="_blank" rel="noopener">Marionette AI Model for 3D World State Prediction</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2608.14783" target="_blank" rel="noopener">MegaParts: Scaling Part-Aware 3D Object Generation to 300 Parts via Token-Efficient Autoregressive Modeling</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Marionette is a novel AI model designed to predict explicit 3D world states for interactive games. It utilizes a fixed renderer for geometry and a diffusion model for appearance, enhancing long-horizon consistency and enabling direct state-level control.</p>
+                <p>MegaParts scales part-aware 3D object generation to 300 parts using token-efficient autoregressive modeling. It achieves higher mesh quality than diffusion models.</p>
                 
-                <ul><li>Marionette, a world model for interactive games with articulated characters, predicts explicit 3D articulated world states.</li><li>It uses a fixed, zero-parameter renderer, which is a graphics bridge that computes world-space geometry and occlusion in closed form.</li><li>A two-stage autoregressive dynamics model predicts a 276-dimensional 3D world state, including multi-entity articulated skeletons, metric root trajectories, and rotations.</li></ul>
+                <ul><li>MegaParts scales part-aware 3D object generation to 300 parts.</li><li>It uses token-efficient vector-quantized part tokens and structured autoregressive sequence modeling with long-context training.</li><li>The method handles sequence lengths up to 256k tokens.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,21 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">8.3</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2608.13417" target="_blank" rel="noopener">Evaluation of AI Agents for Long-Horizon Tasks</a>
-                <p>A new framework systematically evaluated seven frontier AI agents for long-horizon AI research and development, concluding that they function more as engineering optimizers than autonomous researchers, exhibiting variable performance, limited novelty, and inconsistent experience reuse across 36 tasks.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2608.12898" target="_blank" rel="noopener">NaviDC-OCR: Navigating Document Parsing Across Digital and Camera-Captured Documents</a>
+                <p>Researchers introduced NaviDC-OCR, a unified vision-language framework that achieves state-of-the-art performance in document parsing by handling geometric distortions and improving structural reasoning.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">7.75</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2608.14138" target="_blank" rel="noopener">SPARGen Multimodal Model for Spatial Perception and Reasoning</a>
-                <p>SPARGen is a new instruction-conditioned multimodal generative model that unifies 3D reconstruction, dense correspondence, and spatial reasoning within a single framework, achieving competitive performance across these diverse tasks.</p>
+                <a class="title-link" href="https://arxiv.org/abs/2608.13644" target="_blank" rel="noopener">Heuristic Lookahead Distillation Protocol Search</a>
+                <p>Researchers developed a new method for quantum entanglement distillation, achieving higher rates for qubit Werner states. This improves the best-known lower bound for the quantum capacity of the qubit depolarising channel, addressing a long-standing problem in quantum information theory.</p>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
     </section>
@@ -469,6 +469,43 @@
 
     
 
+    
+    <h2 class="rubric">Also cleared <span class="n">4</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2608.15304" target="_blank" rel="noopener">Understanding Cognition-Induced Risks in Agentic AI Systems</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2608.13614" target="_blank" rel="noopener">A Quantum Optimization Framework for Data-Assimilation-Augmented Parameter Estimation</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2608.13627" target="_blank" rel="noopener">A scalable edge-pass Purcell filter for high-fidelity readout of superconducting qubits</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">5.83</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://stratechery.com/2026/stripe-acquiring-openrouter-aggregating-ai-flipping-the-business-model/" target="_blank" rel="noopener">Stripe Acquiring OpenRouter, Aggregating AI?, Flipping the Business Model</a>
+            </span>
+            <span class="tail-src">Stratechery</span>
+        </div>
+        
+    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -479,14 +516,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 11 answered &middot; 
-            5 analysed &middot; 
+            14 feeds polled &middot; 12 answered &middot; 
+            10 analysed &middot; 
             
-            5 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
+            9 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-08-17</span>
+        <span>Built 2026-08-18</span>
     </footer>
 
 </div>
