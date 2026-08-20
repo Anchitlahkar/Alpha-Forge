@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-08-19</title>
+    <title>Alpha Forge &mdash; 2026-08-20</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-08-19</b><br>
-            5 of 10 cleared
+            <b>2026-08-20</b><br>
+            3 of 3 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Counterexamples to Complementary Quantum Correlations</h2>
-            <div class="score">9.07<small>Ranked</small></div>
+            <h2>Quantum State Preparation Research</h2>
+            <div class="score">8.45<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -374,34 +374,34 @@
         <p class="credit">
             Quantum Computing
              &middot; arXiv quant-ph
-             &middot; 18 Aug
+             &middot; 19 Aug
             
-             &middot; signal 9.0/10
+             &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers discovered counterexamples to the complementary quantum correlations (CQC) relation, demonstrating that it is false for many quantum systems. The study also explained why previous random search methods failed to identify these violations.</p>
+        <p class="deck">Research introduces two new quantum state preparation syntheses, QsiHT Fast Path Real Synthesis and QsiHT Fast Path Complex Synthesis, achieving the lowest CNOT count and competitive error rates on IBM Heron r2 processors.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>The established understanding of complementary quantum correlations is incorrect. This means previous theoretical bounds on quantum information might need re-evaluation, impacting the design and analysis of quantum systems.</p>
+            <p>Efficiently preparing quantum states is a fundamental challenge in quantum computing. New methods that reduce the cost of this process can make complex quantum algorithms more feasible on current and future hardware.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>The complementary quantum correlations (CQC) relation, which bounds the sum of two classical mutual informations by the quantum mutual information, has been refuted.</li><li>Separable rank-two counterexamples exist in local dimension pairs m x n (m,n ≥ 3) and qubit-qudit pairs 2 x n (n ≥ 3, except n=3,5).</li><li>These counterexamples show an excess of at least 1/(8m^2n^2) nats.</li><li>A new state-dependent corrected inequality is proposed, which is universal and incomparable with CQC at 2x2.</li><li>Previous random searches failed because the violating states are extremely rare, requiring 10^10 to 10^18 samples compared to the 10^7 samples previously run.</li></ul>
+            <ul><li>The thesis studies exact, deterministic preparation of arbitrary dense n-qubit states, a data-loading step in quantum signal and image processing.</li><li>It derives two syntheses based on the Digital Signal-induced Heap Transform (DsiHT): the QsiHT Fast Path Real Synthesis and the QsiHT Fast Path Complex Synthesis.</li><li>Both syntheses were benchmarked against ten configurations, including UCR, isometry, multiplexor, Schmidt/SVD, QSD, and heap-transform families.</li><li>Testing occurred on ibm_fez, ibm_kingston, and ibm_marrakesh, which are three 156-qubit IBM Heron r2 processors.</li><li>Both syntheses realize the deployed Qiskit StatePreparation floor of 2^n-n-1 CNOTs, undercutting other from-scratch methods on the CNOT axis.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper "Separable Counterexamples to Complementary Quantum Correlations, and Why Random Search Missed Them" on arXiv.</li><li>Look up the authors of this paper to see their other work in quantum information theory.</li></ul>
+            <ul><li>Read the paper at arXiv:2608.16937 to understand the QsiHT syntheses and their performance.</li><li>Look up the Digital Signal-induced Heap Transform (DsiHT) to learn its underlying principles.</li><li>Examine the Qiskit StatePreparation implementation to compare its approach with the new syntheses.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://arxiv.org/abs/2608.14806" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://arxiv.org/abs/2608.16937" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2608.12313" target="_blank" rel="noopener">AVA-Encoder for Agent-Native Video Representation Learning</a></h3>
+            <div class="band-score">7.6</div>
+            <h3><a class="title-link" href="https://blog.pragmaticengineer.com/grolk-cli-uploaded-all-your-files-to-the-cloud/" target="_blank" rel="noopener">Grok CLI Data Upload Incident</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                Software Engineering &middot; Pragmatic Engineer
                 
             </p>
             <div class="story-body">
-                <p>Researchers developed AVA-Encoder, a new method that enables creative AI agents to learn structured video representations from human films using knowledge graphs and textual-gradient optimization. This significantly improves video generation and reasoning, addressing a limitation in cinematic video production.</p>
+                <p>xAI's Grok Build coding CLI was discovered secretly uploading users' entire local codebases, including sensitive `.env` files and git history, to Google Cloud. Following public backlash, xAI open-sourced the CLI and committed to deleting retained data, but the incident significantly eroded developer trust.</p>
                 
-                <ul><li>Creative agents currently cannot effectively learn from high-quality human films, hindering their ability to produce cinematic-grade videos.</li><li>The Agentic Video Auto-Encoder (AVA-Encoder) is a framework that learns agent-native video representations via agentic auto-encoding.</li><li>AVA-Encoder transforms a video into a knowledge graph (KG) representation and then reconstructs it back into video.</li></ul>
+                <ul><li>xAI's Grok Build coding CLI (grok) transmitted all local files, including `.env` secrets and git history, to a Google Cloud Storage bucket named `grok-code-session-traces`.</li><li>This data upload was active by default, not disclosed to users, and disabling the 'Improve the model' setting did not stop it.</li><li>An independent AI safety researcher, Cerblab, documented the full scope of the data transmission.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://arxiv.org/abs/2608.14798" target="_blank" rel="noopener">Stabilizer Statistical Mechanics for Quantum Magic States</a></h3>
+            <div class="band-score">7.22</div>
+            <h3><a class="title-link" href="https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/" target="_blank" rel="noopener">Cloudflare Spectre Vulnerability Reassessment</a></h3>
             <p class="credit">
-                Quantum Computing &middot; arXiv quant-ph
+                Software Engineering &middot; Cloudflare Blog
                 
             </p>
             <div class="story-body">
-                <p>Researchers developed Stabilizer Statistical Mechanics, a novel framework for efficiently quantifying and classifying 'magic' states in quantum computation. This framework utilizes a 'Pauli gas' and 'stabilizer partition function' to derive 'stabilizer work,' a magic monotone estimable via Bell sampling.</p>
+                <p>Cloudflare conducted a reassessment of remote Spectre attacks on its Workers platform in 2024 and 2025, identifying new attack methods like Spectre gadgets and remote timers, and subsequently implemented new defensive measures.</p>
                 
-                <ul><li>A new framework, Stabilizer Statistical Mechanics, efficiently quantifies and classifies 'magic states' in quantum computation.</li><li>Magic is the resource separating universal quantum computation from classically simulable stabilizer dynamics.</li><li>The framework maps a quantum state's Pauli spectrum to energy levels of a fictitious many-body system called the Pauli gas.</li></ul>
+                <ul><li>Cloudflare reassessed remote Spectre attacks on its Workers infrastructure during 2024 and 2025.</li><li>The assessment identified new attack primitives, including Spectre gadgets and remote timers.</li><li>New methods for achieving co-location for these attacks were also detailed.</li></ul>
                 
             </div>
         </article>
@@ -444,76 +444,9 @@
 
     
     
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">8.03</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2608.17286" target="_blank" rel="noopener">Scaling Laws for Diffusion Image Training</a>
-                <p>A new study on text-to-image diffusion models identified predictable scaling laws, revealing that these models require ten times more data than language models for optimal training. The research also found them robust to overtraining, suggesting that prioritizing more data over larger models is beneficial.</p>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2608.16002" target="_blank" rel="noopener">Relational Uncertainty Propagation for LLM Agents (RUPA)</a>
-                <p>A new framework called RUPA has been introduced to model LLM agent execution as a dependency graph. This allows for the propagation of uncertainty, leading to more accurate failure detection and confidence estimates across long interaction trajectories for LLM agents.</p>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-    </section>
-    
 
     
 
-    
-    <h2 class="rubric">Also cleared <span class="n">5</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2608.16393" target="_blank" rel="noopener">Security Assessment of DeepSeek Harness for Indirect Prompt Injection</a>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2608.17271" target="_blank" rel="noopener">ASI-Bench: Evaluating AI for Autonomous Scientific Exploration</a>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.52</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2608.14807" target="_blank" rel="noopener">Multicolor Nonlinear Chiral Quantum Optics for Higher Efficiency</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.07</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://blog.cloudflare.com/rfc9234-bgp-role-model/" target="_blank" rel="noopener">BGP Role Model: Tracking RFC 9234 Adoption and Issues</a>
-            </span>
-            <span class="tail-src">Cloudflare Blog</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">6.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://stratechery.com/2026/nvidia-backs-openai-data-center-anthropic-news-google-buys-spirit-airlines-data/" target="_blank" rel="noopener">Multiple Tech and Business News Updates</a>
-            </span>
-            <span class="tail-src">Stratechery</span>
-        </div>
-        
-    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -524,14 +457,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            10 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            5 analysed &middot; 
             
-            10 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
-            
+            3 on this page &middot; below signal 5 dropped
+            <br>No answer: Hugging Face Papers, Import AI, Quantum Zeitgeist.
+            <br>Gemini was unavailable for 2 articles; dropped rather than summarised.
         </span>
-        <span>Built 2026-08-19</span>
+        <span>Built 2026-08-20</span>
     </footer>
 
 </div>
