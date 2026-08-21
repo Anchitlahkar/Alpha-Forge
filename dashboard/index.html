@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-08-20</title>
+    <title>Alpha Forge &mdash; 2026-08-21</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-08-20</b><br>
-            3 of 3 cleared
+            <b>2026-08-21</b><br>
+            5 of 9 cleared
         </div>
     </header>
 
@@ -365,43 +365,43 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Quantum State Preparation Research</h2>
-            <div class="score">8.45<small>Ranked</small></div>
+            <h2>ForgeWM for Few-Step Action-Conditioned Video World Models</h2>
+            <div class="score">8.38<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
-            Quantum Computing
-             &middot; arXiv quant-ph
-             &middot; 19 Aug
+            AI Research
+             &middot; Hugging Face Papers
+            
             
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Research introduces two new quantum state preparation syntheses, QsiHT Fast Path Real Synthesis and QsiHT Fast Path Complex Synthesis, achieving the lowest CNOT count and competitive error rates on IBM Heron r2 processors.</p>
+        <p class="deck">ForgeWM is a progressive training framework that converts bidirectional video generators into efficient, few-step interactive world models. It achieves low-latency, high-quality video generation with aligned controls for game environments like Minecraft.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Efficiently preparing quantum states is a fundamental challenge in quantum computing. New methods that reduce the cost of this process can make complex quantum algorithms more feasible on current and future hardware.</p>
+            <p>Interactive AI world models can now operate with lower latency and higher fidelity. This improves the responsiveness and realism of AI systems that learn from and generate video based on actions.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>The thesis studies exact, deterministic preparation of arbitrary dense n-qubit states, a data-loading step in quantum signal and image processing.</li><li>It derives two syntheses based on the Digital Signal-induced Heap Transform (DsiHT): the QsiHT Fast Path Real Synthesis and the QsiHT Fast Path Complex Synthesis.</li><li>Both syntheses were benchmarked against ten configurations, including UCR, isometry, multiplexor, Schmidt/SVD, QSD, and heap-transform families.</li><li>Testing occurred on ibm_fez, ibm_kingston, and ibm_marrakesh, which are three 156-qubit IBM Heron r2 processors.</li><li>Both syntheses realize the deployed Qiskit StatePreparation floor of 2^n-n-1 CNOTs, undercutting other from-scratch methods on the CNOT axis.</li></ul>
+            <ul><li>ForgeWM is a progressive framework that trains action-conditioned video world models.</li><li>It transforms bidirectional video generators into efficient few-step models.</li><li>The framework uses domain adaptation, teacher-forced causal training, causal consistency distillation, and on-policy distribution matching with a bidirectional teacher.</li><li>Models operate at 1, 2, and 4 steady-state denoising steps.</li><li>It supports a dual-path deployment protocol combining latency-critical interaction with optional replay-time refinement, where the one-step student refines its saved draft.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper at arXiv:2608.16937 to understand the QsiHT syntheses and their performance.</li><li>Look up the Digital Signal-induced Heap Transform (DsiHT) to learn its underlying principles.</li><li>Examine the Qiskit StatePreparation implementation to compare its approach with the new syntheses.</li></ul>
+            <ul><li>Look up the ForgeWM project on GitHub.</li><li>Read the paper at arxiv:2608.14022.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://arxiv.org/abs/2608.16937" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2608.14022" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">7.6</div>
-            <h3><a class="title-link" href="https://blog.pragmaticengineer.com/grolk-cli-uploaded-all-your-files-to-the-cloud/" target="_blank" rel="noopener">Grok CLI Data Upload Incident</a></h3>
+            <div class="band-score">8.03</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2608.20336" target="_blank" rel="noopener">WithEveryone AI for Group Image Generation</a></h3>
             <p class="credit">
-                Software Engineering &middot; Pragmatic Engineer
+                AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>xAI's Grok Build coding CLI was discovered secretly uploading users' entire local codebases, including sensitive `.env` files and git history, to Google Cloud. Following public backlash, xAI open-sourced the CLI and committed to deleting retained data, but the incident significantly eroded developer trust.</p>
+                <p>A new AI framework, WithEveryone, generates group images with up to ten distinct identities by grounding identities to layout plans and using region-based identity losses, significantly improving identity preservation and reducing artifacts.</p>
                 
-                <ul><li>xAI's Grok Build coding CLI (grok) transmitted all local files, including `.env` secrets and git history, to a Google Cloud Storage bucket named `grok-code-session-traces`.</li><li>This data upload was active by default, not disclosed to users, and disabling the 'Improve the model' setting did not stop it.</li><li>An independent AI safety researcher, Cerblab, documented the full scope of the data transmission.</li></ul>
+                <ul><li>WithEveryone is a unified framework for generating group images with up to ten reference identities.</li><li>It ensures identity preservation by grounding identities to layout plans and using region-based identity losses.</li><li>The framework injects each selected identity as an addressed token, a specific identifier for each person.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.22</div>
-            <h3><a class="title-link" href="https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/" target="_blank" rel="noopener">Cloudflare Spectre Vulnerability Reassessment</a></h3>
+            <div class="band-score">7.75</div>
+            <h3><a class="title-link" href="https://arxiv.org/abs/2608.18152" target="_blank" rel="noopener">Qkabrine AutoML for Quantum Machine Learning</a></h3>
             <p class="credit">
-                Software Engineering &middot; Cloudflare Blog
+                Quantum Computing &middot; arXiv quant-ph
                 
             </p>
             <div class="story-body">
-                <p>Cloudflare conducted a reassessment of remote Spectre attacks on its Workers platform in 2024 and 2025, identifying new attack methods like Spectre gadgets and remote timers, and subsequently implemented new defensive measures.</p>
+                <p>A new Python package, qkabrine-automl, automates the joint search for architecture, encoding, model type, and hyperparameters in quantum machine learning, integrating trainability diagnostics and NISQ deployment features.</p>
                 
-                <ul><li>Cloudflare reassessed remote Spectre attacks on its Workers infrastructure during 2024 and 2025.</li><li>The assessment identified new attack primitives, including Spectre gadgets and remote timers.</li><li>New methods for achieving co-location for these attacks were also detailed.</li></ul>
+                <ul><li>Developing quantum machine learning (QML) models typically involves separate manual choices for circuit architecture, data-encoding, model paradigm, and training hyperparameters.</li><li>The qkabrine-automl Python package treats these elements as a single, jointly searchable configuration space.</li><li>It integrates trainability diagnostics, including a Data Quantum Fisher Information Metric (DQFIM) estimate and a gradient-magnitude barren-plateau monitor, into its evaluation loop.</li></ul>
                 
             </div>
         </article>
@@ -444,9 +444,68 @@
 
     
     
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2608.19880" target="_blank" rel="noopener">EnvHarness Framework for RL Agent Learning</a>
+                <p>Researchers developed EnvHarness, a programmable layer that dynamically reshapes static environments for reinforcement learning agents, and EnvRigger, an automated system that diagnoses agent flaws and synthesizes environment adjustments, leading to better agent performance and more efficient training.</p>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2608.20335" target="_blank" rel="noopener">4DAnyone Framework for 4D Human Reconstruction</a>
+                <p>A new framework, 4DAnyone, reconstructs 4D human models from a single casual video. It uses novel techniques to generate consistent multiview videos for 4D Gaussian Splatting, outperforming previous methods.</p>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+    </section>
+    
 
     
 
+    
+    <h2 class="rubric">Also cleared <span class="n">4</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2608.18580" target="_blank" rel="noopener">FACET Framework for Terminal Task Synthesis</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2608.18155" target="_blank" rel="noopener">Quantum Machine Learning Benchmark for Network Intrusion Detection</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.82</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2608.18153" target="_blank" rel="noopener">CHSH Protocol on Cloud Photonic Processor</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">5.9</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://blog.cloudflare.com/task-based-oauth-consent/" target="_blank" rel="noopener">Cloudflare OAuth Scope Customization</a>
+            </span>
+            <span class="tail-src">Cloudflare Blog</span>
+        </div>
+        
+    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -457,14 +516,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 11 answered &middot; 
-            5 analysed &middot; 
+            14 feeds polled &middot; 12 answered &middot; 
+            10 analysed &middot; 
             
-            3 on this page &middot; below signal 5 dropped
-            <br>No answer: Hugging Face Papers, Import AI, Quantum Zeitgeist.
-            <br>Gemini was unavailable for 2 articles; dropped rather than summarised.
+            9 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
+            
         </span>
-        <span>Built 2026-08-20</span>
+        <span>Built 2026-08-21</span>
     </footer>
 
 </div>
