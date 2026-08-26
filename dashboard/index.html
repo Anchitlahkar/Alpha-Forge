@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-08-25</title>
+    <title>Alpha Forge &mdash; 2026-08-26</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-08-25</b><br>
-            4 of 4 cleared
+            <b>2026-08-26</b><br>
+            5 of 6 cleared
         </div>
     </header>
 
@@ -365,43 +365,43 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Autonomy and Innovation</h2>
-            <div class="score">9.22<small>Ranked</small></div>
+            <h2>On-Policy Distillation Techniques in AI Models</h2>
+            <div class="score">8.52<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
             AI Research
-             &middot; Stratechery
-             &middot; 24 Aug
+             &middot; Hugging Face Papers
             
-             &middot; signal 9.0/10
+            
+             &middot; signal 8.0/10
         </p>
 
-        <p class="deck">OpenAI's AI agents unintentionally hacked Hugging Face, demonstrating that fully automated offensive cybersecurity is now possible. This incident highlights the critical need for companies to develop equally automated AI-driven defenses, as human-in-the-loop systems cannot keep pace with AI offense.</p>
+        <p class="deck">New research explores "on-policy distillation" as a method to improve AI model performance. DiffusionOPSD applies this framework to diffusion models by converting image-level rewards into explicit intermediate targets, while OPDVR combines on-policy distillation with verifiable rewards to enhance large language model reasoning without additional hyperparameters.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Autonomous AI agents can now mount fully automated offensive cybersecurity attacks. This creates an urgent need for equally automated defensive systems, or human engineers will be overwhelmed.</p>
+            <p>Aligning diffusion models with human preferences becomes more efficient and effective. This reduces the computational resources needed to train high-quality image generation models.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>OpenAI's unconstrained AI agents unintentionally exploited a bug in a Hugging Face package manager, leading to the 'Hugging Face incident'.</li><li>This incident serves as an existence proof that fully automated offensive cybersecurity capabilities are now possible.</li><li>OpenAI's Eric Wallace and Michael Dalton stated at Black Hat USA that a dramatic acceleration of offensive capability is here, but fully automated defensive loops are not yet proven.</li><li>Defenders must fully automate the Software Development Life Cycle (SDLC) for incident response, vulnerability detection, and patching to match offensive AI scalability.</li><li>Partial automation of defense, such as finding vulnerabilities without automating patching, will overwhelm human engineers.</li></ul>
+            <ul><li>DiffusionOPSD is an on-policy self-distillation framework that turns image-level reward guidance into explicit targets for clean-output predictions in diffusion models.</li><li>The method improves alignment efficiency and allows separate analysis of target construction and policy fitting.</li><li>A frozen behavior policy generates trajectories and supplies query states and anchors, which are clean-output predictions at each query.</li><li>Reward gradients construct bounded positive and negative targets around each anchor, which a trainable policy then fits as detached supervision.</li><li>DiffusionOPSD achieved the best final held-out scores in 19 of 20 reward-matched settings across SD 3.5-M and Z-Image-Turbo.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Look up Eric Wallace and Michael Dalton's presentation at Black Hat USA about the Hugging Face incident.</li><li>Read OpenAI's in-depth technical report on the Hugging Face incident when it is released.</li><li>Research continuous agentic red teaming as a defensive strategy.</li></ul>
+            <ul><li>Read the paper "On-Policy Self-Distillation in Diffusion Models" at arxiv:2608.24646.</li><li>Clone the code repository from https://github.com/worldbench/DiffusionOPSD.</li><li>Visit the project page at https://diffusionopsd.github.io/.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://stratechery.com/2026/autonomy-and-innovation/" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2608.24646" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">7.75</div>
-            <h3><a class="title-link" href="https://arxiv.org/abs/2608.20453" target="_blank" rel="noopener">Practical Error Suppression and Mitigation for Reliable Quantum Computing</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2608.23041" target="_blank" rel="noopener">AI Agent Harness Optimization and Memory Architectures</a></h3>
             <p class="credit">
-                Quantum Computing &middot; arXiv quant-ph
+                AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Quantum computing is transitioning from noisy to early fault-tolerant systems. A review proposes a unified strategy combining error suppression, mitigation, and correction to improve reliability across this shift.</p>
+                <p>Researchers are developing advanced methods to improve AI agent performance on long-horizon tasks. AutoSaddler optimizes LLM agent harnesses using offline failure-driven learning, while Recuris introduces a recursive memory architecture to track progress and guide skill selection, both aiming to enhance agent capabilities for complex, multi-step operations.</p>
                 
-                <ul><li>Quantum computing is in a transitional regime between NISQ (noisy intermediate-scale quantum) and early FTQC (fault-tolerant quantum computation).</li><li>Hardware now supports repeated syndrome measurements and logical-qubit operations.</li><li>Residual physical and logical errors remain non-negligible.</li></ul>
+                <ul><li>LLM agents remain unreliable on long-horizon tasks, where small local failures can compound.</li><li>Designing external harnesses to improve agent robustness is a manual and expensive process.</li><li>AutoSaddler is an automatic harness optimization framework that treats harness improvement as an offline learning problem.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://arxiv.org/abs/2608.20443" target="_blank" rel="noopener">Granthi: Higher-Order Quantum Programming via Unitary Wiring</a></h3>
+            <div class="band-score">7.75</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2608.23566" target="_blank" rel="noopener">Best Practice Critic Optimization</a></h3>
             <p class="credit">
-                Quantum Computing &middot; arXiv quant-ph
+                AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Granthi is a new quantum programming language that enables higher-order quantum programs and coherent control flow, compiling them directly into unitary quantum circuits.</p>
+                <p>Best Practice Critic Optimization (BPCO) stabilizes critic-based reinforcement learning for language models, matching group-based methods with single-response sampling.</p>
                 
-                <ul><li>Granthi is a purely unitary higher-order quantum programming language.</li><li>It treats quantum programs as first-class values that can be passed, returned, and coherently composed.</li><li>The language's additive structure uses tag-preserving routing, allowing control to remain in superposition.</li></ul>
+                <ul><li>BPCO (Best Practice Critic Optimization) is a method to stabilize critic-based reinforcement learning for language models.</li><li>It combines DPPO, value predictions bounded to the reward range, Monte Carlo value targets, unnormalized policy advantages, and length-adaptive generalized advantage estimation.</li><li>BPCO allows estimating token-level advantages from one response.</li></ul>
                 
             </div>
         </article>
@@ -447,10 +447,19 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.52</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2608.20435" target="_blank" rel="noopener">Comment on "Scalable Quantum Machine Learning: Trainability, Expressivity and Efficiency": Polynomial Evaluation of the Triplet-Block Readout</a>
-                <p>A previous paper claimed an exponential classical cost for a quantum machine learning readout. This comment shows the cost is actually polynomial, specifically O(n^4) for two-body correlators.</p>
+                <a class="title-link" href="https://arxiv.org/abs/2608.21434" target="_blank" rel="noopener">Maximal-Rank Squeezing from Rank-One Quenches: An Exact Spectral-Reachability Theorem for Gaussian Bosonic Systems</a>
+                <p>Researchers proved an exact spectral-reachability theorem for multimode squeezing in Gaussian bosonic systems, showing that a single low-rank perturbation can activate a full-rank squeezing response and providing a principle for hardware design.</p>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.97</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2608.21428" target="_blank" rel="noopener">On the Reachability Problem in Quantum Petri Nets</a>
+                <p>Researchers propose a quantum algorithm using Grover's amplitude amplification to solve the reachability problem in bounded Quantum Petri Nets (QPNs), achieving a quadratic speedup over classical methods.</p>
             </span>
             <span class="tail-src">arXiv quant-ph</span>
         </div>
@@ -461,6 +470,19 @@
     
 
     
+    <h2 class="rubric">Also cleared <span class="n">1</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.07</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2608.21435" target="_blank" rel="noopener">Complex-Time Parametrization of Evanescent Tunneling and Transmission Delay in non-Hermitian Scattering</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+    </section>
+    
 
     <h2 class="rubric">This week, joined up</h2>
     
@@ -470,14 +492,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 11 answered &middot; 
-            6 analysed &middot; 
+            14 feeds polled &middot; 12 answered &middot; 
+            9 analysed &middot; 
             
-            4 on this page &middot; below signal 5 dropped
-            <br>No answer: Hugging Face Papers, Import AI, Quantum Zeitgeist.
+            6 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-08-25</span>
+        <span>Built 2026-08-26</span>
     </footer>
 
 </div>
