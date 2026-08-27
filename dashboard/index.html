@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-08-26</title>
+    <title>Alpha Forge &mdash; 2026-08-27</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-08-26</b><br>
-            5 of 6 cleared
+            <b>2026-08-27</b><br>
+            5 of 7 cleared
         </div>
     </header>
 
@@ -365,7 +365,7 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>On-Policy Distillation Techniques in AI Models</h2>
+            <h2>WarpSAC: Scalable Off-policy RL Algorithm</h2>
             <div class="score">8.52<small>Ranked</small></div>
         </div>
 
@@ -379,29 +379,29 @@
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">New research explores "on-policy distillation" as a method to improve AI model performance. DiffusionOPSD applies this framework to diffusion models by converting image-level rewards into explicit intermediate targets, while OPDVR combines on-policy distillation with verifiable rewards to enhance large language model reasoning without additional hyperparameters.</p>
+        <p class="deck">WarpSAC is a new family of off-policy reinforcement learning algorithms that adapts its stabilizers based on data availability, improving performance across CPU-scale and GPU-parallel training environments.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Aligning diffusion models with human preferences becomes more efficient and effective. This reduces the computational resources needed to train high-quality image generation models.</p>
+            <p>Reinforcement learning agents can now adapt their learning strategies based on data availability. This leads to more efficient training and faster deployment in real-world robotic systems.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>DiffusionOPSD is an on-policy self-distillation framework that turns image-level reward guidance into explicit targets for clean-output predictions in diffusion models.</li><li>The method improves alignment efficiency and allows separate analysis of target construction and policy fitting.</li><li>A frozen behavior policy generates trajectories and supplies query states and anchors, which are clean-output predictions at each query.</li><li>Reward gradients construct bounded positive and negative targets around each anchor, which a trainable policy then fits as detached supervision.</li><li>DiffusionOPSD achieved the best final held-out scores in 19 of 20 reward-matched settings across SD 3.5-M and Z-Image-Turbo.</li></ul>
+            <ul><li>Off-policy reinforcement learning stabilizers, such as parameter normalization and clipped double-Q, are data-regime-dependent.</li><li>WarpSAC is a regime-aware family of off-policy RL algorithms that uses Sample Weight Decay for efficient exploitation.</li><li>WarpSAC offers two variants: WarpSAC-L for data-limited CPU-scale training and WarpSAC-A for data-abundant GPU-parallel training.</li><li>WarpSAC improves normalized score-step AUC over FlashSAC by 4.5% across nine CPU-scale environments.</li><li>It improves normalized score-step AUC over FlashSAC by 23.1% across fourteen GPU-parallel environments.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper "On-Policy Self-Distillation in Diffusion Models" at arxiv:2608.24646.</li><li>Clone the code repository from https://github.com/worldbench/DiffusionOPSD.</li><li>Visit the project page at https://diffusionopsd.github.io/.</li></ul>
+            <ul><li>Read the paper "WarpSAC: Towards the Pinnacle of Scalable Off-policy RL by Rethinking Exploration and Exploitation" at arxiv:2608.24479.</li><li>Clone the GitHub repository linked from the project page to examine the source code and experiment configurations.</li><li>Look up the authors, such as Yifu Yuan, from Tianjin University.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2608.24646" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2608.24479" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -411,30 +411,30 @@
         
         <article class="band-item">
             <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2608.23041" target="_blank" rel="noopener">AI Agent Harness Optimization and Memory Architectures</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2608.25593" target="_blank" rel="noopener">JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Researchers are developing advanced methods to improve AI agent performance on long-horizon tasks. AutoSaddler optimizes LLM agent harnesses using offline failure-driven learning, while Recuris introduces a recursive memory architecture to track progress and guide skill selection, both aiming to enhance agent capabilities for complex, multi-step operations.</p>
+                <p>Researchers developed JIT-Agent, a model that automatically generates and optimizes 'agent harnesses' for LLMs, leading to substantial performance gains across various models and tasks.</p>
                 
-                <ul><li>LLM agents remain unreliable on long-horizon tasks, where small local failures can compound.</li><li>Designing external harnesses to improve agent robustness is a manual and expensive process.</li><li>AutoSaddler is an automatic harness optimization framework that treats harness improvement as an offline learning problem.</li></ul>
+                <ul><li>JIT-Agent is a trainable model that synthesizes adaptive agent harnesses for off-the-shelf Large Language Models (LLMs).</li><li>An agent harness, which includes memory management, planning strategy, and tool orchestration, can contribute more to agent capability than the base LLM.</li><li>JIT-Agent generates task-adaptive harnesses on the fly, repairs them for stable execution, and self-evolves by learning from past configurations.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.75</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2608.23566" target="_blank" rel="noopener">Best Practice Critic Optimization</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2608.26005" target="_blank" rel="noopener">VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Best Practice Critic Optimization (BPCO) stabilizes critic-based reinforcement learning for language models, matching group-based methods with single-response sampling.</p>
+                <p>VoiceMem introduces a dual-brain streaming memory architecture for speech language models, significantly improving retrieval accuracy, emotional personalization, and real-time efficiency with a 134 ms retrieval time.</p>
                 
-                <ul><li>BPCO (Best Practice Critic Optimization) is a method to stabilize critic-based reinforcement learning for language models.</li><li>It combines DPPO, value predictions bounded to the reward range, Monte Carlo value targets, unnormalized policy advantages, and length-adaptive generalized advantage estimation.</li><li>BPCO allows estimating token-level advantages from one response.</li></ul>
+                <ul><li>VoiceMem is a dual-brain streaming memory architecture for speech language models (SLMs).</li><li>It features a parallel informational left brain, an emotional right brain, and streaming memory I/O mechanisms.</li><li>The left brain improves retrieval accuracy, outperforming classical systems like Mem0 by nearly 30 points under top-5 retrieval.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,21 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">8.38</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2608.21434" target="_blank" rel="noopener">Maximal-Rank Squeezing from Rank-One Quenches: An Exact Spectral-Reachability Theorem for Gaussian Bosonic Systems</a>
-                <p>Researchers proved an exact spectral-reachability theorem for multimode squeezing in Gaussian bosonic systems, showing that a single low-rank perturbation can activate a full-rank squeezing response and providing a principle for hardware design.</p>
+                <a class="title-link" href="https://arxiv.org/abs/2608.24981" target="_blank" rel="noopener">Observing Bell Inequality Violation in a Spinor Bose--Einstein Condensate</a>
+                <p>Researchers observed qutrit Bell correlations in a Bose-Einstein condensate, violating a Bell witness beyond the qubit bound. This demonstrates a new platform for high-dimensional quantum correlations using collective measurements.</p>
             </span>
             <span class="tail-src">arXiv quant-ph</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">6.97</span>
+            <span class="tail-rank">7.75</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2608.21428" target="_blank" rel="noopener">On the Reachability Problem in Quantum Petri Nets</a>
-                <p>Researchers propose a quantum algorithm using Grover's amplitude amplification to solve the reachability problem in bounded Quantum Petri Nets (QPNs), achieving a quadratic speedup over classical methods.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2608.19583" target="_blank" rel="noopener">VGI-BENCH: Probing Visual Intelligence in Video Generation Models</a>
+                <p>Researchers introduced VGI-BENCH, a new benchmark with 27 tasks and 810 instances, to evaluate visual reasoning in video generation models. Evaluations show current models are unreliable, with the strongest model scoring 51.0%, and exhibit limited self-correction.</p>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Hugging Face Papers</span>
         </div>
         
     </section>
@@ -470,13 +470,21 @@
     
 
     
-    <h2 class="rubric">Also cleared <span class="n">1</span></h2>
+    <h2 class="rubric">Also cleared <span class="n">2</span></h2>
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">6.07</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2608.21435" target="_blank" rel="noopener">Complex-Time Parametrization of Evanescent Tunneling and Transmission Delay in non-Hermitian Scattering</a>
+                <a class="title-link" href="https://huggingface.co/papers/2608.24979" target="_blank" rel="noopener">FrontierChallenge: Evaluating Scientific Workflow Completion</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2608.24993" target="_blank" rel="noopener">Experimental Study of Topological Order in Superconducting Qubits</a>
             </span>
             <span class="tail-src">arXiv quant-ph</span>
         </div>
@@ -493,13 +501,13 @@
         <span>
             
             14 feeds polled &middot; 12 answered &middot; 
-            9 analysed &middot; 
+            10 analysed &middot; 
             
-            6 on this page &middot; below signal 5 dropped
+            7 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-08-26</span>
+        <span>Built 2026-08-27</span>
     </footer>
 
 </div>
