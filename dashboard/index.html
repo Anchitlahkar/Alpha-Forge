@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-08-31</title>
+    <title>Alpha Forge &mdash; 2026-09-01</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-08-31</b><br>
-            5 of 8 cleared
+            <b>2026-09-01</b><br>
+            5 of 9 cleared
         </div>
     </header>
 
@@ -365,43 +365,43 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Quantum Information at Infinity</h2>
-            <div class="score">8.93<small>Ranked</small></div>
+            <h2>GenFirst: Stable End-to-End Latent Generative Modeling</h2>
+            <div class="score">8.45<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
-            Quantum Computing
-             &middot; arXiv quant-ph
-             &middot; 31 Aug
+            AI Research
+             &middot; Hugging Face Papers
             
-             &middot; signal 9.0/10
+            
+             &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers introduce the Quantum Information Space at Infinity (Quinfinity), a new mathematical framework that unifies concepts like quantum pure states, the Heisenberg uncertainty principle, and dissipative quantum dynamics within a single algebraic structure.</p>
+        <p class="deck">Researchers introduced GenFirst, a 'generation-before-reconstruction' strategy that enables stable end-to-end training of latent generative models, achieving state-of-the-art results in image and multimodal generation by addressing latent collapse.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>A new mathematical framework unifies quantum information concepts. This could provide a more coherent understanding of quantum states and their dynamics.</p>
+            <p>Directly training latent generative models without collapse becomes possible. This simplifies the development of unified multimodal generation systems.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>The Quantum Information Space at Infinity (Quinfinity) $\mathcal{Q}_\infty$ is introduced as an inverse limit of symbolic Quantum $N$-Spaces $\mathcal{Q}_N$.</li><li>Quinfinity is identified with the complete local real algebra of formal power series under the adic topology.</li><li>The pure state pro-variety is formalized as the inverse limit of $N$-level pure state varieties, linking to the classical Fisher-Rao statistical manifold.</li><li>The Heisenberg uncertainty principle is structurally regularized at infinity, appearing as a localized truncation obstruction.</li><li>The continuous Liouville-von Neumann equation acts as an internal derivation tangent to the pro-variety.</li></ul>
+            <ul><li>Latent generative models typically use a two-stage pipeline, training a variational autoencoder for reconstruction then a generative model on the frozen latent space.</li><li>Direct end-to-end training of these models is challenging due to latent collapse and a generation-reconstruction conflict.</li><li>GenFirst, a simple generation-before-reconstruction strategy, achieves the first direct end-to-end training without latent collapse.</li><li>The method is based on two insights: entropy in the Kullback-Leibler divergence prevents collapse, and reconstruction and generation have asymmetric learning dynamics.</li><li>GenFirst first shapes the latent space with a generative objective under weak reconstruction pressure, then progressively strengthens reconstruction to recover visual details.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper at arXiv:2608.27498.</li></ul>
+            <ul><li>Read the paper arxiv:2608.29335 to understand the GenFirst strategy in detail.</li><li>Look up the authors, starting with Yiyuan Zhang, to see their other contributions.</li><li>Visit the project page linked from the Hugging Face paper page for additional resources.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://arxiv.org/abs/2608.27498" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2608.29335" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.85</div>
-            <h3><a class="title-link" href="https://arxiv.org/abs/2608.27543" target="_blank" rel="noopener">Reverse Quantum Mechanics</a></h3>
-            <p class="credit">
-                Quantum Computing &middot; arXiv quant-ph
-                
-            </p>
-            <div class="story-body">
-                <p>A new methodology called Reverse Physics re-examines quantum mechanics, finding conflicts in the standard Hilbert-space formulation and proposing a topological modification to resolve them. It redefines key concepts like the Born rule and unitary evolution, and recovers classical mechanics as a high-entropy limit of quantum mechanics.</p>
-                
-                <ul><li>Reverse Physics is a methodology that separates physical theories into mathematical and physical conditions to establish their logical relationships.</li><li>The standard Hilbert-space formulation of quantum mechanics conflicts with basic physical requirements.</li><li>A minimal topological modification can solve the problems found in the Hilbert-space formulation.</li></ul>
-                
-            </div>
-        </article>
-        
-        <article class="band-item">
             <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2608.27529" target="_blank" rel="noopener">Revisiting Local Context for Long-Horizon Streaming 3D Reconstruction</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2608.31046" target="_blank" rel="noopener">On-Policy Self-Adaptation: Improving Language Model Reasoning Without Teacher Supervision</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>ABot-Recon is a new streaming 3D reconstruction model. It uses local context from 12 preceding frames. This achieves stable, long-horizon reconstruction from continuous video, reducing errors by 40% and operating efficiently on large sequences.</p>
+                <p>On-policy distillation (OPD) improves language model reasoning by suppressing unlikely tokens. Teacher guidance is not its main driver. A new method, On-Policy Self-Adaptation (OPSA), uses the model's own uncertainty to achieve better results without a teacher.</p>
                 
-                <ul><li>ABot-Recon performs stable long-horizon streaming 3D reconstruction from continuous video.</li><li>It uses local temporal context, caching KV features from 11 preceding frames.</li><li>The model predicts a point map and an adjacent-frame relative pose. Global geometry is recovered through sequential composition.</li></ul>
+                <ul><li>On-policy distillation (OPD) suppresses low-probability tokens. Teacher guidance is not its main driver.</li><li>Teacher supervision in OPD contains substantial noise, but student performance is insensitive to it.</li><li>A fixed negative advantage can match the performance of teacher-provided advantages in OPD.</li></ul>
+                
+            </div>
+        </article>
+        
+        <article class="band-item">
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2608.30821" target="_blank" rel="noopener">Lucida: Parse, Generate, and Place for Composable Real-to-Sim Scene Modeling</a></h3>
+            <p class="credit">
+                AI Research &middot; Hugging Face Papers
+                
+            </p>
+            <div class="story-body">
+                <p>Lucida is a new AI model that improves the creation of editable 3D scene replicas from real-world video captures, making them more suitable for robot simulation and embodied AI.</p>
+                
+                <ul><li>Lucida improves composable indoor scene reconstruction, creating high-fidelity, editable 3D replicas from cluttered video captures.</li><li>It distributes pipeline requirements across parsing, asset generation, and VLM-guided placement.</li><li>The system parses video into a scene graph, which carries per-instance multi-view evidence.</li></ul>
                 
             </div>
         </article>
@@ -447,19 +447,19 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.45</span>
+            <span class="tail-rank">8.3</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2608.27550" target="_blank" rel="noopener">Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models</a>
-                <p>VLAct introduces a representation-centric continued pre-training method for vision-language-action models, achieving high performance in robotics with modest compute and open-source data.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2608.31119" target="_blank" rel="noopener">PaperGym: Rubric-Centered Evolution for Research-Plan Generation</a>
+                <p>PaperGym trains AI to generate better research plans. It uses scientific papers as training environments, separating research questions from evaluation rubrics to enable reinforcement learning, showing improved performance over existing methods.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">8.45</span>
+            <span class="tail-rank">7.75</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2608.28476" target="_blank" rel="noopener">ContextPilot: Teaching Agents for Proactive Context Management via Fine-grained RL</a>
-                <p>ContextPilot is a framework that improves long-horizon AI agent reasoning. It expands context-editing tools and uses a fine-grained reinforcement learning method for proactive context management.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2608.31106" target="_blank" rel="noopener">DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution</a>
+                <p>Researchers developed DreamX-Creator 1.0, a compact 7B model that generates native, synchronized audio and video at 2K resolution, using novel techniques like Gated Cross-Modal Attention and an Autoregressive 1-Step 2K Refinement pipeline.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -470,31 +470,39 @@
     
 
     
-    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
+    <h2 class="rubric">Also cleared <span class="n">4</span></h2>
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.38</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2608.27549" target="_blank" rel="noopener">Code as Worlds: Agentic Discovery of Executable World Representations for Physical Reasoning</a>
+                <a class="title-link" href="https://arxiv.org/abs/2608.28808" target="_blank" rel="noopener">Quantum synchronization of spin-1 system: Enhanced synchronization due to additive Lindblad operators</a>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">8.38</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2608.26582" target="_blank" rel="noopener">J-Zero: Unified Challenger--Solver--Judge Co-Evolution from Zero Data</a>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2608.27503" target="_blank" rel="noopener">Quantized Low-Rank Quantum State Tomography: Hyperbolic Quantization and Riemannian Least-Squares Recovery</a>
+                <a class="title-link" href="https://arxiv.org/abs/2608.28811" target="_blank" rel="noopener">BAHAMAS: A Control Plane for Optimization and Execution of Variational Quantum Circuits</a>
             </span>
             <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.6</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2608.28650" target="_blank" rel="noopener">Alphabet-Dependent Bounds for Pure Quantum $(r,\rho)$-Locally Recoverable Codes</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.22</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://blog.cloudflare.com/introducing-adaptive-intelligence/" target="_blank" rel="noopener">Cloudflare Introduces Adaptive Intelligence to Counter Bot Attacks</a>
+            </span>
+            <span class="tail-src">Cloudflare Blog</span>
         </div>
         
     </section>
@@ -509,13 +517,13 @@
         <span>
             
             14 feeds polled &middot; 12 answered &middot; 
-            8 analysed &middot; 
+            9 analysed &middot; 
             
-            8 on this page &middot; below signal 5 dropped
+            9 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-08-31</span>
+        <span>Built 2026-09-01</span>
     </footer>
 
 </div>
