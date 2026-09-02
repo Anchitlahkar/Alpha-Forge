@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-09-01</title>
+    <title>Alpha Forge &mdash; 2026-09-02</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-09-01</b><br>
-            5 of 9 cleared
+            <b>2026-09-02</b><br>
+            5 of 8 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>GenFirst: Stable End-to-End Latent Generative Modeling</h2>
-            <div class="score">8.45<small>Ranked</small></div>
+            <h2>ZimaBlue: Evolving Generalizable World Action Models through Scalable Video Pre-training</h2>
+            <div class="score">8.8<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 8.0/10
+             &middot; signal 8.5/10
         </p>
 
-        <p class="deck">Researchers introduced GenFirst, a 'generation-before-reconstruction' strategy that enables stable end-to-end training of latent generative models, achieving state-of-the-art results in image and multimodal generation by addressing latent collapse.</p>
+        <p class="deck">ZimaBlue is an AI framework that uses large-scale egocentric video pre-training and a novel Slow-Fast architecture to substantially improve zero-shot robotic manipulation.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Directly training latent generative models without collapse becomes possible. This simplifies the development of unified multimodal generation systems.</p>
+            <p>Robots can learn complex manipulation tasks more effectively from vast amounts of unlabeled video data. This reduces the need for expensive, diverse action-labeled trajectories.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Latent generative models typically use a two-stage pipeline, training a variational autoencoder for reconstruction then a generative model on the frozen latent space.</li><li>Direct end-to-end training of these models is challenging due to latent collapse and a generation-reconstruction conflict.</li><li>GenFirst, a simple generation-before-reconstruction strategy, achieves the first direct end-to-end training without latent collapse.</li><li>The method is based on two insights: entropy in the Kullback-Leibler divergence prevents collapse, and reconstruction and generation have asymmetric learning dynamics.</li><li>GenFirst first shapes the latent space with a generative objective under weak reconstruction pressure, then progressively strengthens reconstruction to recover visual details.</li></ul>
+            <ul><li>ZimaBlue learns generalizable World Action Models (WAMs) from large-scale egocentric video, addressing the challenge of converting action-free experience into robot control.</li><li>It employs a three-stage training curriculum: causal embodied video pre-training, video-action mid-training with a unified action representation, and specialization for a target robot.</li><li>The framework uses a Slow-Fast dual-system architecture; a high-capacity Slow world model provides generalizable spatiotemporal representations, and a lightweight Fast branch enables 30 Hz action prediction on an NVIDIA RTX 4090.</li><li>Scaling from target-robot data alone to over 120,000 hours of embodied video improved real-robot zero-shot evaluation success from 36.1% to 77.8%.</li><li>ZimaBlue delivers strong performance across multiple benchmarks, with notable gains on unseen tasks.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper arxiv:2608.29335 to understand the GenFirst strategy in detail.</li><li>Look up the authors, starting with Yiyuan Zhang, to see their other contributions.</li><li>Visit the project page linked from the Hugging Face paper page for additional resources.</li></ul>
+            <ul><li>Check out the ZimaBlue project page.</li><li>Explore the ZimaBlue GitHub repository.</li><li>Read the full paper on arXiv using the ID 2609.00188.</li><li>If you use the Hugging Face CLI, run `hf papers read 2609.00188`.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2608.29335" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2609.00188" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -411,30 +411,30 @@
         
         <article class="band-item">
             <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2608.31046" target="_blank" rel="noopener">On-Policy Self-Adaptation: Improving Language Model Reasoning Without Teacher Supervision</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.00028" target="_blank" rel="noopener">UI-Venus-2 Technical Report</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>On-policy distillation (OPD) improves language model reasoning by suppressing unlikely tokens. Teacher guidance is not its main driver. A new method, On-Policy Self-Adaptation (OPSA), uses the model's own uncertainty to achieve better results without a teacher.</p>
+                <p>UI-Venus-2 is a general-purpose multimodal GUI agent. It automates tasks across mobile, web, and desktop environments. It uses a unified reasoning-action framework and reliable verification.</p>
                 
-                <ul><li>On-policy distillation (OPD) suppresses low-probability tokens. Teacher guidance is not its main driver.</li><li>Teacher supervision in OPD contains substantial noise, but student performance is insensitive to it.</li><li>A fixed negative advantage can match the performance of teacher-provided advantages in OPD.</li></ul>
+                <ul><li>UI-Venus-2 is a general-purpose multimodal GUI agent.</li><li>It operates across mobile, web, and desktop environments.</li><li>The agent uses a unified closed-loop reasoning-action framework, which means it continuously reasons and acts.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2608.30821" target="_blank" rel="noopener">Lucida: Parse, Generate, and Place for Composable Real-to-Sim Scene Modeling</a></h3>
+            <div class="band-score">8.03</div>
+            <h3><a class="title-link" href="https://arxiv.org/abs/2609.00167" target="_blank" rel="noopener">Encoding Compact U(1) Gauge Fields in Bosonic Modes with GKP Stabilization</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                Quantum Computing &middot; arXiv quant-ph
                 
             </p>
             <div class="story-body">
-                <p>Lucida is a new AI model that improves the creation of editable 3D scene replicas from real-world video captures, making them more suitable for robot simulation and embodied AI.</p>
+                <p>Researchers developed a one-to-one encoding method to map compact lattice gauge theories onto bosonic quantum hardware. It uses GKP-type stabilizers to provide compactness and manages errors from finite squeezing.</p>
                 
-                <ul><li>Lucida improves composable indoor scene reconstruction, creating high-fidelity, editable 3D replicas from cluttered video captures.</li><li>It distributes pipeline requirements across parsing, asset generation, and VLM-guided placement.</li><li>The system parses video into a scene graph, which carries per-instance multi-view evidence.</li></ul>
+                <ul><li>The paper bridges the gap between compact lattice gauge theories, which use angular variables and integer electric fluxes, and bosonic quantum hardware, which has continuous quadratures.</li><li>It introduces a one-to-one encoding where each gauge degree of freedom is carried by a single oscillator mode.</li><li>Interactions are built from trigonometric gates.</li></ul>
                 
             </div>
         </article>
@@ -447,19 +447,19 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.3</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2608.31119" target="_blank" rel="noopener">PaperGym: Rubric-Centered Evolution for Research-Plan Generation</a>
-                <p>PaperGym trains AI to generate better research plans. It uses scientific papers as training environments, separating research questions from evaluation rubrics to enable reinforcement learning, showing improved performance over existing methods.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2609.01591" target="_blank" rel="noopener">StudentSim: Training LLM-based Student Simulators</a>
+                <p>Microsoft Research developed StudentSim, an LLM-based framework that creates personalized student simulators from sparse data. It outperforms GPT-5.4 in mirroring student responses and adapting to tutor guidance across chess, writing, and math.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.75</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2608.31106" target="_blank" rel="noopener">DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution</a>
-                <p>Researchers developed DreamX-Creator 1.0, a compact 7B model that generates native, synchronized audio and video at 2K resolution, using novel techniques like Gated Cross-Modal Attention and an Autoregressive 1-Step 2K Refinement pipeline.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2609.01343" target="_blank" rel="noopener">SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers</a>
+                <p>SMELT improves Transformer training. This new architecture loops middle layers twice in Mixture-of-Experts models, saving 6.8% to 18.0% of training FLOPs while matching compute budgets.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -470,39 +470,31 @@
     
 
     
-    <h2 class="rubric">Also cleared <span class="n">4</span></h2>
+    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
     <section class="tail">
         
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2608.28808" target="_blank" rel="noopener">Quantum synchronization of spin-1 system: Enhanced synchronization due to additive Lindblad operators</a>
+                <a class="title-link" href="https://arxiv.org/abs/2609.00168" target="_blank" rel="noopener">Entangling capability of coherently controlled quantum processes</a>
             </span>
             <span class="tail-src">arXiv quant-ph</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">7.37</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2608.28811" target="_blank" rel="noopener">BAHAMAS: A Control Plane for Optimization and Execution of Variational Quantum Circuits</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.6</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2608.28650" target="_blank" rel="noopener">Alphabet-Dependent Bounds for Pure Quantum $(r,\rho)$-Locally Recoverable Codes</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.22</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://blog.cloudflare.com/introducing-adaptive-intelligence/" target="_blank" rel="noopener">Cloudflare Introduces Adaptive Intelligence to Counter Bot Attacks</a>
+                <a class="title-link" href="https://blog.cloudflare.com/cache-transcoding/" target="_blank" rel="noopener">Cloudflare's Cache Transcoding Saves Petabytes with Zstandard and Pingora</a>
             </span>
             <span class="tail-src">Cloudflare Blog</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.82</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2609.00056" target="_blank" rel="noopener">Isospectral potentials with Dirac delta interaction: Constrained Spectra</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
     </section>
@@ -519,11 +511,11 @@
             14 feeds polled &middot; 12 answered &middot; 
             9 analysed &middot; 
             
-            9 on this page &middot; below signal 5 dropped
+            8 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist.
-            
+            <br>Gemini was unavailable for 1 article; dropped rather than summarised.
         </span>
-        <span>Built 2026-09-01</span>
+        <span>Built 2026-09-02</span>
     </footer>
 
 </div>
