@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-09-04</title>
+    <title>Alpha Forge &mdash; 2026-09-05</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-09-04</b><br>
-            5 of 8 cleared
+            <b>2026-09-05</b><br>
+            4 of 4 cleared
         </div>
     </header>
 
@@ -365,43 +365,43 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Computing with qLDPC Codes by Climbing the Chain Map Hierarchy</h2>
-            <div class="score">9.22<small>Ranked</small></div>
+            <h2>Conditional Experience Transfer in LLM Post-Training</h2>
+            <div class="score">8.38<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
-            Quantum Computing
-             &middot; arXiv quant-ph
-             &middot; 4 Sep
+            AI Research
+             &middot; Hugging Face Papers
             
-             &middot; signal 9.0/10
+            
+             &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers developed the "chain map hierarchy," a new framework that unifies logical Pauli, Clifford, and non-Clifford operations for qLDPC codes, enabling the discovery of new constant-depth quantum gates.</p>
+        <p class="deck">A novel method, Boundary-Calibrated Intervention Transfer (BCIT), enhances autonomous LLM post-training by strategically reusing past training evidence. This selective approach helps to mitigate harmful updates and ultimately improves the final quality of the model.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Building fault-tolerant quantum computers requires efficient logical operations. This framework simplifies the discovery and design of these operations, potentially speeding up the development of practical quantum computing.</p>
+            <p>Autonomous LLM post-training can become more efficient and produce higher quality models. This reduces wasted compute and improves model performance over time.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>A new framework, the "chain map hierarchy," unifies the description of logical Pauli, Clifford, and non-Clifford operations on qLDPC codes.</li><li>This framework provides a tool to discover new logical gates by applying intuition from Pauli logicals.</li><li>Researchers used this strategy to find constant-depth unitary implementations of the full logical Clifford group on any number of blocks of the 2D toric code.</li><li>They also found addressable logical CCZ gates on any triple of logical qubits on any number of blocks of the 3D toric code.</li><li>The chain map hierarchy extends other logical gadget constructions, offering a universal parameterization of cup products.</li></ul>
+            <ul><li>Autonomous systems for LLM post-training face a problem: determining which past update evidence remains actionable after the parent model has changed.</li><li>The paper formulates this challenge as conditional experience transfer.</li><li>It introduces Boundary-Calibrated Intervention Transfer (BCIT), a method that authorizes experience reuse before weight-changing training.</li><li>BCIT binds observed effects to their source context, checks applicability conditions, vetoes hard conflicts, and uses bounded training trials when applicability is uncertain.</li><li>On a 4B model adapted across finance reasoning, text-to-SQL, and function calling, BCIT authorized fewer harmful updates.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper "Computing with qLDPC Codes by Climbing the Chain Map Hierarchy" on arXiv:2609.02999.</li><li>Look up the concept of the "chain map hierarchy" in quantum error correction.</li></ul>
+            <ul><li>Read the paper "Knowing When Not to Reuse: Conditional Experience Transfer in Autonomous LLM Post-Training" at arxiv:2608.26730.</li><li>Look up the authors: Tingyun Li, Wenfeng Feng, Weiqing Li, Abudukelimu Wuerkaixi, Guohua Liu, Yuewei Zhang.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://arxiv.org/abs/2609.02999" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2608.26730" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.03796" target="_blank" rel="noopener">LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes</a></h3>
+            <div class="band-score">7.67</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.04199" target="_blank" rel="noopener">Compile by Training Method for Neural Functions</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>LLaDA-Image is a new open-source framework that combines a 6B Diffusion Transformer with a frozen vision-language module, achieving state-of-the-art photorealistic image generation and editing through image-only pre-training and a Muon optimizer. A faster variant, LLaDA-Image-Turbo, performs inference in 2-4 steps.</p>
+                <p>A new method called "Compile by Training" allows for the conversion of natural language specifications into small, reusable neural functions. This is achieved by training adapters with teacher-generated examples, resulting in 83.6% semantic accuracy on FuzzyBench-Hard and offering a high-accuracy solution for local AI deployment.</p>
                 
-                <ul><li>LLaDA-Image is a unified framework that pairs a 6B Diffusion Transformer (DiT) with a frozen vision-language understanding module built on the LLaDA2.0-Mini diffusion language model backbone.</li><li>It uses image-only pre-training and mid-training with 220 million samples, 98% of which are real images.</li><li>The model employs parameter-free RMSNorm and the Muon optimizer for efficient training.</li></ul>
+                <ul><li>"Compile by Training" converts natural-language specifications into reusable neural functions.</li><li>It distills teacher-generated examples into small adapters for a compact interpreter, which is a shared 0.6B local model.</li><li>The resulting neural function runs locally without remote model dependencies, unlike calling large remote models.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.03430" target="_blank" rel="noopener">Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning</a></h3>
+            <div class="band-score">7.67</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.04148" target="_blank" rel="noopener">Terminal-Universe for AI Agent Training Environments</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>A new method called Random Attention simplifies KV cache eviction for large language models by keeping the prompt and randomly evicting other tokens. This approach matches or exceeds complex scoring methods while delivering 32-43% higher throughput in vLLM deployment.</p>
+                <p>Terminal-Universe is a method that reconstructs executable terminal environments from AI agent interaction histories. This process generates diverse training tasks and has been shown to improve agent performance on coding benchmarks when used to fine-tune models like Qwen3.5-27B.</p>
                 
-                <ul><li>Large language models performing extended reasoning face a KV cache memory bottleneck.</li><li>Existing KV cache compression methods score each cached token to decide what to keep.</li><li>Random Attention keeps the prompt and evicts tokens uniformly at random within each attention head, computing no score.</li></ul>
+                <ul><li>Terminal-Universe reconstructs executable workspaces from agent trajectories to synthesize diverse training tasks.</li><li>It addresses the scarcity of realistic, executable environments for AI agent post-training.</li><li>The framework replays file operations recorded in a trajectory to restore a partial workspace.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,12 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.38</span>
+            <span class="tail-rank">6.05</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.04098" target="_blank" rel="noopener">Gated DeltaNet Survives 4-Bit Quantization in Hybrid 27B LLMs</a>
-                <p>Researchers successfully applied 4-bit NVFP4 W4A4 quantization to all layers of a 27B hybrid LLM, including its recurrent Gated DeltaNet components. This resulted in a model that matches BF16 accuracy, is 2.9 times smaller at 17.5 GiB, and offers 14-19% faster prefill.</p>
+                <a class="title-link" href="https://www.netinterest.co/p/hot-european-summer" target="_blank" rel="noopener">European Equities Performance and Investor Behavior</a>
+                <p>European equities have shown strong outperformance since early 2025, driven by robust earnings and foreign investment. Despite this, European retail investor participation in equities remains low compared to the US, influenced by factors such as government incentives, gambling regulations, and bans on payment for order flow.</p>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">8.3</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://blog.pragmaticengineer.com/the-pulse-meta-wanted-to-reduce-teams-by-60-because-of-ai/" target="_blank" rel="noopener">The Pulse: Meta wanted to reduce teams by 60% because of AI</a>
-                <p>Meta planned to reduce engineering teams by 60% through a program called Project Organization Transformation (Project OT), aiming for an "AI-native" future. CEO Mark Zuckerberg scaled back the plan due to internal resistance, but the initiative reveals a major tech company's strategy to use AI for significant workforce restructuring.</p>
-            </span>
-            <span class="tail-src">Pragmatic Engineer</span>
+            <span class="tail-src">Net Interest</span>
         </div>
         
     </section>
@@ -469,35 +460,6 @@
 
     
 
-    
-    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.01507" target="_blank" rel="noopener">LatentPress: Context Compression Beyond Text and Vision</a>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.03014" target="_blank" rel="noopener">Shuttling-aware dynamical decoupling for quantum charge-coupled devices</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.6</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.03021" target="_blank" rel="noopener">Quantum low-density lattice codes</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -508,14 +470,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            9 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            4 analysed &middot; 
             
-            8 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
-            <br>Gemini was unavailable for 1 article; dropped rather than summarised.
+            4 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
+            
         </span>
-        <span>Built 2026-09-04</span>
+        <span>Built 2026-09-05</span>
     </footer>
 
 </div>
