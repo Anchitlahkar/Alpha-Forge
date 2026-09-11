@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-09-10</title>
+    <title>Alpha Forge &mdash; 2026-09-11</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-09-10</b><br>
-            5 of 10 cleared
+            <b>2026-09-11</b><br>
+            5 of 9 cleared
         </div>
     </header>
 
@@ -365,43 +365,43 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>OpenAI's GPT-6 Astra Model and Looped Transformers</h2>
-            <div class="score">9.22<small>Ranked</small></div>
+            <h2>Vulnerability of Group Ring Cryptography</h2>
+            <div class="score">9.07<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
-            AI Research
-             &middot; Ahead of AI
-             &middot; 9 Sep
+            Quantum Computing
+             &middot; arXiv quant-ph
+             &middot; 11 Sep
             
              &middot; signal 9.0/10
         </p>
 
-        <p class="deck">OpenAI has introduced GPT-6 Astra, a highly capable new model proficient in 3D rendering and computer interaction. It reportedly utilizes 'looped transformers' to enhance efficiency by reusing architectural blocks.</p>
+        <p class="deck">A new paper shows that public-key schemes relying on the hardness of inverting units in group rings, including those using non-abelian dihedral groups, are vulnerable to polynomial-time attacks, both classical and quantum. The attack works by splitting the group ring into small matrix blocks, not by solving the hidden subgroup problem.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>OpenAI's GPT-6 Astra sets new performance standards, particularly in graphical tasks and computer interaction. Its use of looped transformers offers a method to increase model depth and capability while managing parameter count.</p>
+            <p>Public-key cryptographic schemes based on group ring unit inversion are vulnerable to polynomial-time attacks, even those designed to resist quantum computers. This means current assumptions about their security are false.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>OpenAI released GPT-6 Astra, an exceptionally good model, especially strong in 3D rendering and animation tasks.</li><li>Astra achieved 99.9% on the ARC-AGI-3 benchmark, a significant jump from its predecessor.</li><li>The model demonstrates advanced computer-use capabilities, interacting with graphical user interfaces on a local computer.</li><li>OpenAI reportedly acquired tens of thousands of Mac Minis and Mac Studios to train models on macOS environments for computer use.</li><li>Computer-use training involves feeding screenshots to the model, which then predicts and executes mouse/keyboard actions.</li></ul>
+            <ul><li>Several public-key schemes base their security on the belief that inverting a unit of a group ring is hard.</li><li>A prior result showed this belief is false on a quantum computer when the group is abelian.</li><li>Designers moved to non-abelian groups, such as dihedral groups, believing the dihedral hidden subgroup problem would protect the scheme.</li><li>This paper proves unit inversion is polynomial-time, classically and quantumly, when an efficient generalized Fourier transform exists, the group ring is semisimple, and the largest matrix block has polynomial size.</li><li>Dihedral group rings satisfy these conditions because their irreducible representations have dimension at most 2.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Consider updating or regenerating your AGENTS.md and SKILL.md files for newer LLMs.</li><li>Look up Nanbeige4.2-3B to examine an open-weight LLM using looped transformers.</li><li>Read the 2018 Universal Transformers paper to understand the foundational concept of looped transformers.</li></ul>
+            <ul><li>Read "Quantum Inversion of Units in Group Rings: Block Dimension, Not Commutativity, Governs Hardness" on arXiv (2609.10596).</li><li>Examine the reproducible software artifacts mentioned in the paper.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://arxiv.org/abs/2609.10596" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -411,30 +411,30 @@
         
         <article class="band-item">
             <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.10522" target="_blank" rel="noopener">Show-Harness for VLM Robot Control</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.10715" target="_blank" rel="noopener">NCP-ArchPreview Latent Space Language Model</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Show-Harness is a new Embodied Harness that enables vision-language models (VLMs) to control robots and graphical user interfaces (GUIs) through a concise semantic interface, facilitating zero-shot deployment and efficient fine-tuning.</p>
+                <p>NCP-ArchPreview is an 8.9B parameter latent-space language model that uses Next Concept Prediction alongside next-token prediction, achieving better performance and pretraining efficiency than comparable models like OLMo-3-7B.</p>
                 
-                <ul><li>Show-Harness links vision-language models (VLMs) to robot control using discrete semantic action units interpreted by embodiment-specific modules.</li><li>This system enables zero-shot robot control with closed-source frontier VLMs.</li><li>It also allows adapting small-scale open-source VLMs for low-cost deployment with just a few GPU-hours of fine-tuning.</li></ul>
+                <ul><li>NCP-ArchPreview is an 8.9B parameter latent-space language model, the largest demonstrated to date.</li><li>It trains using both next-token prediction (NTP) and Next Concept Prediction (NCP), which predicts discrete concepts across multiple tokens.</li><li>The model builds a latent space from its hidden states and uses a Concept Module to predict future concepts that guide token generation.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.3</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.10540" target="_blank" rel="noopener">Programmable World Model AI Framework</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.05903" target="_blank" rel="noopener">EvoSafeHarness for LLM Agent Security</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>A novel AI framework, the Programmable World Model, has been developed. It allows for persistent and controllable virtual environments by separating explicit world state evolution from visual generation, using executable programs and 3D bounding boxes.</p>
+                <p>Researchers developed EvoSafeHarness, an automated framework that creates custom safety harnesses for LLM agents by evolving natural-language policies and executable code, significantly improving safety without sacrificing much utility.</p>
                 
-                <ul><li>The Programmable World Model (PWM) framework decouples world-state evolution from visual observation generation.</li><li>An agent translates natural-language instructions into executable programs that specify entity states and state-transition rules.</li><li>A lightweight engine executes these programs to update a persistent global world state, including off-screen entities and non-visual attributes.</li></ul>
+                <ul><li>Large Language Model (LLM) agents require safety measures against prompt injection and harmful requests as they interact with real-world systems.</li><li>Existing safety harnesses are often fixed and applied broadly, leading to suboptimal safety-utility trade-offs across different models and domains.</li><li>EvoSafeHarness is a framework that synthesizes a deployable safety harness for a specific frozen model and target domain.</li></ul>
                 
             </div>
         </article>
@@ -447,10 +447,36 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.3</span>
+            <span class="tail-rank">8.45</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.09219" target="_blank" rel="noopener">Discovery Certification Protocol for Auditing AI Research Agents</a>
-                <p>The Discovery Certification Protocol (DCP) is a new structured method for auditing AI research agents. It aims to validate their discoveries through executable recovery tests, controlled audits, and deterministic verification, moving beyond sole reliance on performance scores.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2609.07064" target="_blank" rel="noopener">SpatialBlock Dataset for LVLM Spatial Intelligence</a>
+                <p>Researchers created SpatialBlock, a synthetic dataset of 15,000 block-stacking problems, to improve 3D spatial reasoning in Large Vision-Language Models (LVLMs). Models trained on this dataset outperform previous methods and transfer their skills to real-world tasks.</p>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">8.03</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2609.11499" target="_blank" rel="noopener">Recursive Code World Models (RCWM)</a>
+                <p>Researchers introduced Recursive Code World Models (RCWM), an AI framework that builds complex 3D worlds as executable code from a single image. It uses a recursive process of global and local reconstruction, outperforming previous methods.</p>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+    </section>
+    
+
+    
+
+    
+    <h2 class="rubric">Also cleared <span class="n">4</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.75</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2609.11929" target="_blank" rel="noopener">SenseNova-U1.5 Multimodal AI Model</a>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -458,59 +484,25 @@
         <div class="tail-row">
             <span class="tail-rank">7.75</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.09269" target="_blank" rel="noopener">Geometry of Transport in Quantum Walks and Parrondo's Paradox</a>
-                <p>Researchers have established a geometric criterion for Parrondo's paradox in quantum walks. They introduced a transport vector that elucidates how combining individually losing quantum strategies can result in an overall winning outcome.</p>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-    </section>
-    
-
-    
-
-    
-    <h2 class="rubric">Also cleared <span class="n">5</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.09113" target="_blank" rel="noopener">SAEScientist-Bench for Autonomous AI Interpretability Research</a>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.09227" target="_blank" rel="noopener">GKP State-Enhanced Optical Interferometry</a>
+                <a class="title-link" href="https://arxiv.org/abs/2609.10606" target="_blank" rel="noopener">Quantum Computational Sensing for Power-Grid Attack Detection</a>
             </span>
             <span class="tail-src">arXiv quant-ph</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.6</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.05405" target="_blank" rel="noopener">WearableQA Benchmark for Health Reasoning</a>
+                <a class="title-link" href="https://blog.pragmaticengineer.com/the-pulse-tech-companies-move-to-open-ai-models/" target="_blank" rel="noopener">Tech Companies Adopting Open AI Models for Cost Savings</a>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">Pragmatic Engineer</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.45</span>
+            <span class="tail-rank">7.52</span>
             <span class="tail-title">
-                <a class="title-link" href="https://blog.cloudflare.com/workers-module-registry-nodejs/" target="_blank" rel="noopener">Cloudflare Workers Node.js Compatibility Update</a>
+                <a class="title-link" href="https://blog.cloudflare.com/post-quantum-dnssec-1111/" target="_blank" rel="noopener">Cloudflare 1.1.1.1 Supports Post-Quantum DNSSEC</a>
             </span>
             <span class="tail-src">Cloudflare Blog</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">6.82</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.09268" target="_blank" rel="noopener">Quantum Algorithm for Fluid Velocity Field Reconstruction</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
     </section>
@@ -527,11 +519,11 @@
             14 feeds polled &middot; 12 answered &middot; 
             10 analysed &middot; 
             
-            10 on this page &middot; below signal 5 dropped
+            9 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-09-10</span>
+        <span>Built 2026-09-11</span>
     </footer>
 
 </div>
