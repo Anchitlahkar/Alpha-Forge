@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-09-18</title>
+    <title>Alpha Forge &mdash; 2026-09-19</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-09-18</b><br>
-            5 of 6 cleared
+            <b>2026-09-19</b><br>
+            3 of 3 cleared
         </div>
     </header>
 
@@ -365,43 +365,40 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>JEPA-Anything: Learning Predictive Models across Different Worlds</h2>
-            <div class="score">8.45<small>Ranked</small></div>
+            <h2>Cloudflare Saves 100TB RAM with Optimization</h2>
+            <div class="score">8.22<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
-            AI Research
-             &middot; Hugging Face Papers
-            
+            Software Engineering
+             &middot; Cloudflare Blog
+             &middot; 18 Sep
             
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers introduced JEPA-Anything, a domain-agnostic AI framework using orthogonal predictive factorization (OPF) to build world models that predict outcomes across seven different scientific and real-world domains, showing improved performance over existing baselines.</p>
+        <p class="deck">Cloudflare successfully saved 100TB of RAM by optimizing a Pingora service using statistical methods and Rust programming.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>A single AI framework can now predict dynamics across diverse domains like biology, physics, and vision. This advances the goal of general AI that understands and interacts with many types of systems.</p>
+            <p>Large-scale systems can still achieve massive resource savings through clever engineering. This directly reduces operational costs and environmental impact for global infrastructure providers.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>JEPA-Anything is a domain-agnostic framework for world modeling.</li><li>It uses orthogonal predictive factorization (OPF), which extends joint-embedding predictive architectures (JEPA) by decomposing latent targets into complementary factors.</li><li>The framework was evaluated across seven domains: vision, biology, clinical trajectories, control, molecular dynamics, physical fields, and weather.</li><li>It improved reported metrics on all 10 dynamics tasks compared to JEPA baselines.</li><li>JEPA-Anything reduced single-intervention prediction error on Interventional Pong by 34.8%.</li></ul>
+            <ul><li>Cloudflare reduced RAM usage in one of its services.</li><li>The service uses Pingora.</li><li>They saved 100TB of RAM.</li><li>The optimization used statistics and Rust.</li></ul>
             
 
-            
-            <h4>Worth doing</h4>
-            <ul><li>Read the paper arxiv:2609.20800.</li><li>Clone the repository at github.com/Gen-Verse/JEPA-Anything.</li><li>Look up Taoyong Cui, the first author.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2609.20800" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +407,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.19969" target="_blank" rel="noopener">DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression</a></h3>
+            <div class="band-score">7.67</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.20511" target="_blank" rel="noopener">EOS Token Mismatch in On-Policy Distillation</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>DeepSeek-V4.1-Flash is a new multimodal Mixture-of-Experts (MoE) model that drastically reduces KV cache memory footprint by up to 8x while improving performance, making long-context AI more cost-efficient.</p>
+                <p>A new paper identifies that length inflation in on-policy distillation (OPD) often stems from a mismatch in how student and teacher models handle end-of-sequence (EOS) tokens, even when their declared stopping sets are identical. Treating functionally equivalent EOS tokens as a single semantic stopping action reduces this problem, though other factors can still cause late-stage length growth.</p>
                 
-                <ul><li>DeepSeek-V4.1-Flash is a multimodal Mixture-of-Experts (MoE) model with 552 billion backbone parameters.</li><li>It supports contexts up to one million tokens.</li><li>Its Causal Encoder-Decoder (CED) architecture activates 16 billion parameters per token during decode and 8 billion during prefill.</li></ul>
+                <ul><li>On-policy distillation (OPD) can cause 'length inflation,' where student models generate thousands of redundant tokens after the correct answer.</li><li>A key cause is a 'termination-token mismatch' where base students and post-trained teachers prefer different EOS tokens, even if their official stopping sets are the same.</li><li>This mismatch suppresses the student's preferred termination without reliably transferring the teacher's alternative.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://arxiv.org/abs/2609.19147" target="_blank" rel="noopener">Qupertino: Pure MLX Array Kernels versus Hand-Tuned Metal Shaders for Quantum Circuit Simulation on Apple Silicon</a></h3>
+            <div class="band-score">7.3</div>
+            <h3><a class="title-link" href="https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Netflix Releases 'ja' Java Development Tools</a></h3>
             <p class="credit">
-                Quantum Computing &middot; arXiv quant-ph
+                Software Engineering &middot; Netflix Tech Blog
                 
             </p>
             <div class="story-body">
-                <p>Qupertino is an open-source quantum circuit simulator for Apple Silicon that achieves significant speedups using specialized MLX kernels and hand-tuned Metal shaders, outperforming Qiskit Aer CPU and PennyLane lightning.qubit by up to 95.3x.</p>
+                <p>Netflix released `ja`, a suite of composable command line tools designed to simplify modern Java development, particularly with the Java Module System, integrating with Maven, and enhancing module integrity.</p>
                 
-                <ul><li>Qupertino is an open-source quantum circuit simulator designed for Apple Silicon.</li><li>It compares performance between a 'pure tier' using MLX array operations and a 'shader tier' with hand-tuned Metal kernels.</li><li>The pure tier, using specialized MLX kernels, shows a 25-33x speedup over a dense-path ablation.</li></ul>
+                <ul><li>Netflix introduced `ja`, a family of composable command line tools for modern Java development, building on the Java Module System.</li><li>`ja` makes the module descriptor a complete project description, including dependency versions and module metadata.</li><li>The `ja` suite includes `jig` for module version resolution and Maven integration, `jfmt` for source formatting, `jist` for source-aware symbol search, and `jdocserver` for local API documentation.</li></ul>
                 
             </div>
         </article>
@@ -444,44 +441,9 @@
 
     
     
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">8.38</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.19160" target="_blank" rel="noopener">AlchemQ: Proof-Carrying Quantum Circuit Optimization with Per-Result Equivalence Certificates</a>
-                <p>AlchemQ v0.5 is a proof-of-concept system that provides machine-checkable certificates for optimized quantum circuits, ensuring their verifiable equivalence.</p>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.20804" target="_blank" rel="noopener">Advancements in AI Coding Agent Harness Design and Efficiency</a>
-                <p>Two distinct research efforts focus on improving the efficiency and design of AI coding agents. One study empirically evaluates various components of coding agent harnesses, emphasizing the critical role of context management, the efficiency of rule-based elision, and how planning and tools impact model performance and cost. The other introduces SoL-Pi, a novel approach designed to significantly enhance token efficiency and reduce API costs for AI coding agents by nearly half, all while maintaining comparable performance to leading models. Both articles contribute to optimizing the operational aspects and cost-effectiveness of AI coding agents through better harness design.</p>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-    </section>
-    
 
     
 
-    
-    <h2 class="rubric">Also cleared <span class="n">1</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.45</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.16900" target="_blank" rel="noopener">RiskChainBench: A Benchmark for Obfuscated Platform Message Restoration and Evidence-Grounded Web Investigation</a>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -492,14 +454,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            9 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            4 analysed &middot; 
             
-            6 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
+            3 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-09-18</span>
+        <span>Built 2026-09-19</span>
     </footer>
 
 </div>
