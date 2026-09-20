@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-09-19</title>
+    <title>Alpha Forge &mdash; 2026-09-20</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-09-19</b><br>
-            3 of 3 cleared
+            <b>2026-09-20</b><br>
+            2 of 2 cleared
         </div>
     </header>
 
@@ -365,40 +365,43 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Cloudflare Saves 100TB RAM with Optimization</h2>
-            <div class="score">8.22<small>Ranked</small></div>
+            <h2>Evaluation of MiniMax-H3 Omni-Modal Generative Model</h2>
+            <div class="score">7.67<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
-            Software Engineering
-             &middot; Cloudflare Blog
-             &middot; 18 Sep
+            AI Research
+             &middot; Hugging Face Papers
             
-             &middot; signal 8.0/10
+            
+             &middot; signal 7.0/10
         </p>
 
-        <p class="deck">Cloudflare successfully saved 100TB of RAM by optimizing a Pingora service using statistical methods and Rust programming.</p>
+        <p class="deck">A new evaluation framework assessed the MiniMax-H3 Omni-Modal Generative Model's ability to reason about the physical world, achieving an overall success rate of 41.97% but showing weaknesses in audio-based reasoning.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Large-scale systems can still achieve massive resource savings through clever engineering. This directly reduces operational costs and environmental impact for global infrastructure providers.</p>
+            <p>Current multimodal AI models struggle with complex physical world reasoning, particularly when integrating audio information. This limits their ability to accurately infer event states and future dynamics from diverse sensory inputs.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Cloudflare reduced RAM usage in one of its services.</li><li>The service uses Pingora.</li><li>They saved 100TB of RAM.</li><li>The optimization used statistics and Rust.</li></ul>
+            <ul><li>Omni-Modal Generative Models (Omni-Models) unify text, image, video, and audio generation.</li><li>MiniMax-H3 is an Omni-Model that combines multimodal context understanding with joint audio-visual generation.</li><li>The paper introduces a new evaluation framework for physical world reasoning in Omni-Models, designed to use multimodal inputs.</li><li>This framework includes four scenarios: implicit prompts with multiple frames, audio-image, prefix-videos, and audio-video inputs.</li><li>MiniMax-H3 achieved an overall success rate of 41.97% across 517 evaluation instances.</li></ul>
             
 
+            
+            <h4>Worth doing</h4>
+            <ul><li>Clone the project repository at https://github.com/gulucaptain/MiniMax-H3-Reason to explore the evaluation framework and model.</li><li>Look up the lead author, Haoyu Zhao, to follow his other work in multimodal AI.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2609.18323" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -407,31 +410,16 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.20511" target="_blank" rel="noopener">EOS Token Mismatch in On-Policy Distillation</a></h3>
+            <div class="band-score">6.52</div>
+            <h3><a class="title-link" href="https://www.netinterest.co/p/brookfield-of-dreams" target="_blank" rel="noopener">Brookfield's AI Infrastructure Investment Strategy</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                Investing &middot; Net Interest
                 
             </p>
             <div class="story-body">
-                <p>A new paper identifies that length inflation in on-policy distillation (OPD) often stems from a mismatch in how student and teacher models handle end-of-sequence (EOS) tokens, even when their declared stopping sets are identical. Treating functionally equivalent EOS tokens as a single semantic stopping action reduces this problem, though other factors can still cause late-stage length growth.</p>
+                <p>Brookfield, a $1.3 trillion asset manager, is actively funding AI infrastructure and adapting its investment strategy with the goal of doubling its assets.</p>
                 
-                <ul><li>On-policy distillation (OPD) can cause 'length inflation,' where student models generate thousands of redundant tokens after the correct answer.</li><li>A key cause is a 'termination-token mismatch' where base students and post-trained teachers prefer different EOS tokens, even if their official stopping sets are the same.</li><li>This mismatch suppresses the student's preferred termination without reliably transferring the teacher's alternative.</li></ul>
-                
-            </div>
-        </article>
-        
-        <article class="band-item">
-            <div class="band-score">7.3</div>
-            <h3><a class="title-link" href="https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Netflix Releases 'ja' Java Development Tools</a></h3>
-            <p class="credit">
-                Software Engineering &middot; Netflix Tech Blog
-                
-            </p>
-            <div class="story-body">
-                <p>Netflix released `ja`, a suite of composable command line tools designed to simplify modern Java development, particularly with the Java Module System, integrating with Maven, and enhancing module integrity.</p>
-                
-                <ul><li>Netflix introduced `ja`, a family of composable command line tools for modern Java development, building on the Java Module System.</li><li>`ja` makes the module descriptor a complete project description, including dependency versions and module metadata.</li><li>The `ja` suite includes `jig` for module version resolution and Maven integration, `jfmt` for source formatting, `jist` for source-aware symbol search, and `jdocserver` for local API documentation.</li></ul>
+                <ul><li>Brookfield was selected by Jensen Huang to help mobilize $500 billion of third-party capital for AI infrastructure.</li><li>The firm manages $1.3 trillion in capital and employs over 5,800 professionals across 50 countries.</li><li>Brookfield CEO Bruce Flatt states the company has a history of building backbone infrastructure, from power to data centers, and now compute for AI.</li></ul>
                 
             </div>
         </article>
@@ -455,13 +443,13 @@
         <span>
             
             14 feeds polled &middot; 11 answered &middot; 
-            4 analysed &middot; 
+            2 analysed &middot; 
             
-            3 on this page &middot; below signal 5 dropped
+            2 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-09-19</span>
+        <span>Built 2026-09-20</span>
     </footer>
 
 </div>
