@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-09-20</title>
+    <title>Alpha Forge &mdash; 2026-09-21</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-09-20</b><br>
-            2 of 2 cleared
+            <b>2026-09-21</b><br>
+            5 of 8 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Evaluation of MiniMax-H3 Omni-Modal Generative Model</h2>
-            <div class="score">7.67<small>Ranked</small></div>
+            <h2>Grounded Skill Synthesis from Code for AI Agents</h2>
+            <div class="score">8.45<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 7.0/10
+             &middot; signal 8.0/10
         </p>
 
-        <p class="deck">A new evaluation framework assessed the MiniMax-H3 Omni-Modal Generative Model's ability to reason about the physical world, achieving an overall success rate of 41.97% but showing weaknesses in audio-based reasoning.</p>
+        <p class="deck">This research introduces Code2Skill, a method that extracts verifiable procedural skills directly from source code. This capability significantly enhances the performance of AI agents, improving it by 11.7%.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Current multimodal AI models struggle with complex physical world reasoning, particularly when integrating audio information. This limits their ability to accurately infer event states and future dynamics from diverse sensory inputs.</p>
+            <p>AI agents can now learn complex procedural skills directly from existing software codebases. This allows them to perform better without needing extensive interaction experience in specific environments.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Omni-Modal Generative Models (Omni-Models) unify text, image, video, and audio generation.</li><li>MiniMax-H3 is an Omni-Model that combines multimodal context understanding with joint audio-visual generation.</li><li>The paper introduces a new evaluation framework for physical world reasoning in Omni-Models, designed to use multimodal inputs.</li><li>This framework includes four scenarios: implicit prompts with multiple frames, audio-image, prefix-videos, and audio-video inputs.</li><li>MiniMax-H3 achieved an overall success rate of 41.97% across 517 evaluation instances.</li></ul>
+            <ul><li>Code2Skill is an automated pipeline that extracts verifiable procedural skills from source code.</li><li>It transforms selected code units into atomic operations, composite workflows, and recurring patterns.</li><li>Verification involves source-body-blind reconstruction and source-aware comparison.</li><li>The pipeline processed 19,769 popular GitHub repositories.</li><li>This created CodeSkillBank, a collection of 1,006,822 accepted skill records.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Clone the project repository at https://github.com/gulucaptain/MiniMax-H3-Reason to explore the evaluation framework and model.</li><li>Look up the lead author, Haoyu Zhao, to follow his other work in multimodal AI.</li></ul>
+            <ul><li>Read the paper arxiv:2609.05571.</li><li>Explore the CodeSkillBank dataset at huggingface.co/datasets/ant-intl/DeveloperSkills-Code2Skill.</li><li>Check out the Code2Skill project page linked from the paper for potential code or further resources.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2609.18323" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2609.05571" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,16 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">6.52</div>
-            <h3><a class="title-link" href="https://www.netinterest.co/p/brookfield-of-dreams" target="_blank" rel="noopener">Brookfield's AI Infrastructure Investment Strategy</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.15779" target="_blank" rel="noopener">EvoOntology: Self-Evolving Ontology for Data Agents</a></h3>
             <p class="credit">
-                Investing &middot; Net Interest
+                AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Brookfield, a $1.3 trillion asset manager, is actively funding AI infrastructure and adapting its investment strategy with the goal of doubling its assets.</p>
+                <p>EvoOntology presents a self-evolving ontology layer aimed at improving how AI data agents comprehend and interact with diverse, heterogeneous data. This new approach has demonstrated superior performance compared to existing methods.</p>
                 
-                <ul><li>Brookfield was selected by Jensen Huang to help mobilize $500 billion of third-party capital for AI infrastructure.</li><li>The firm manages $1.3 trillion in capital and employs over 5,800 professionals across 50 countries.</li><li>Brookfield CEO Bruce Flatt states the company has a history of building backbone infrastructure, from power to data centers, and now compute for AI.</li></ul>
+                <ul><li>EvoOntology is a self-evolving ontology layer designed for data agents.</li><li>It addresses the 'agent-data gap,' where agents struggle to access and understand heterogeneous data like tables and files.</li><li>The system encapsulates the ontology as an MCP server, which comprises a schema layer, a content layer, and a tool layer.</li></ul>
+                
+            </div>
+        </article>
+        
+        <article class="band-item">
+            <div class="band-score">7.75</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.20816" target="_blank" rel="noopener">Paint-Anything: Unified Color Control for Image AI</a></h3>
+            <p class="credit">
+                AI Research &middot; Hugging Face Papers
+                
+            </p>
+            <div class="story-body">
+                <p>Paint-Anything introduces a unified system for precise 24-bit hex color control over objects in AI-generated and edited images. It utilizes a shared hex-prompt interface and is supported by a newly created dataset.</p>
+                
+                <ul><li>Paint-Anything provides unified any-color control for image generation and editing tasks.</li><li>It allows you to specify an object's target color using any 24-bit hex value.</li><li>The model learns a shared hex-prompt interface through object-level color supervision.</li></ul>
                 
             </div>
         </article>
@@ -429,9 +444,60 @@
 
     
     
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2609.22000" target="_blank" rel="noopener">RecreationWorld Framework for Hybrid Computer-Use Agents</a>
+                <p>RecreationWorld is a novel framework and benchmark designed for the training and evaluation of hybrid computer-use agents. It supports agents interacting across five different platforms, enabling them to navigate graphical user interfaces (GUIs), write code, and verify their own work.</p>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2609.22068" target="_blank" rel="noopener">CodeMidas: Scaling RL Environments for Coding Agents</a>
+                <p>CodeMidas is a pipeline that automates the generation of reinforcement learning environments for coding agents by leveraging open-source code. This innovation leads to better agent performance on complex tasks such as bug fixing and program construction.</p>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+    </section>
+    
 
     
 
+    
+    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2609.20853" target="_blank" rel="noopener">Quantum Annealing for 2D Cutting Stock Problem</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2609.20854" target="_blank" rel="noopener">Quantum Oracle Synthesis with X-Map Decision Diagrams</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.6</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2609.20852" target="_blank" rel="noopener">UCQM: Quality Framework for Quantum Cluster States</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -442,14 +508,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 11 answered &middot; 
-            2 analysed &middot; 
+            14 feeds polled &middot; 12 answered &middot; 
+            8 analysed &middot; 
             
-            2 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
+            8 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-09-20</span>
+        <span>Built 2026-09-21</span>
     </footer>
 
 </div>
