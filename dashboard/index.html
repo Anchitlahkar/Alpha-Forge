@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-09-21</title>
+    <title>Alpha Forge &mdash; 2026-09-22</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-09-21</b><br>
-            5 of 8 cleared
+            <b>2026-09-22</b><br>
+            5 of 9 cleared
         </div>
     </header>
 
@@ -365,43 +365,43 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Grounded Skill Synthesis from Code for AI Agents</h2>
+            <h2>Local Universality of Six Two-Qubit Gates on Three Qubits</h2>
             <div class="score">8.45<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
-            AI Research
-             &middot; Hugging Face Papers
-            
+            Quantum Computing
+             &middot; arXiv quant-ph
+             &middot; 22 Sep
             
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">This research introduces Code2Skill, a method that extracts verifiable procedural skills directly from source code. This capability significantly enhances the performance of AI agents, improving it by 11.7%.</p>
+        <p class="deck">Researchers have analytically determined that six arbitrary two-qubit gates are both necessary and sufficient to achieve local universality on three qubits, marking the first exact accessible dimension for all fixed architectures in this context.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>AI agents can now learn complex procedural skills directly from existing software codebases. This allows them to perform better without needing extensive interaction experience in specific environments.</p>
+            <p>Understanding the minimum number of gates needed for universal quantum operations on a given number of qubits helps optimize quantum circuit design. This establishes a fundamental limit for synthesizing three-qubit operations.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Code2Skill is an automated pipeline that extracts verifiable procedural skills from source code.</li><li>It transforms selected code units into atomic operations, composite workflows, and recurring patterns.</li><li>Verification involves source-body-blind reconstruction and source-aware comparison.</li><li>The pipeline processed 19,769 popular GitHub repositories.</li><li>This created CodeSkillBank, a collection of 1,006,822 accepted skill records.</li></ul>
+            <ul><li>This is the first analytical determination of the exact accessible dimension for every fixed architecture of arbitrary two-qubit gates on three qubits.</li><li>A "support word" describes which qubit pair each two-qubit gate acts on. Its "reduced length" combines consecutive gates on the same pair.</li><li>For a reduced length `r`, the accessible dimension of implementable three-qubit unitaries is `min{63, 9r+9}`.</li><li>Six arbitrary two-qubit gates are necessary and sufficient for local universality on three qubits.</li><li>Every fixed architecture achieves a nonempty open subset of SU(8) when its reduced length is at least six.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper arxiv:2609.05571.</li><li>Explore the CodeSkillBank dataset at huggingface.co/datasets/ant-intl/DeveloperSkills-Code2Skill.</li><li>Check out the Code2Skill project page linked from the paper for potential code or further resources.</li></ul>
+            <ul><li>Read the paper "Every architecture of six two-qubit gates is locally universal on three qubits" on arXiv (2609.22176).</li><li>Look up the authors of arXiv:2609.22176 to see their other work.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2609.05571" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://arxiv.org/abs/2609.22176" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -411,30 +411,30 @@
         
         <article class="band-item">
             <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.15779" target="_blank" rel="noopener">EvoOntology: Self-Evolving Ontology for Data Agents</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.22966" target="_blank" rel="noopener">RoboDawn: Transferring VLM Intelligence to Robotic Control</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>EvoOntology presents a self-evolving ontology layer aimed at improving how AI data agents comprehend and interact with diverse, heterogeneous data. This new approach has demonstrated superior performance compared to existing methods.</p>
+                <p>RoboDawn is a new system that allows Vision-Language Models (VLMs) to control robots in the physical world. It achieves strong performance, including in zero-shot scenarios, by using a simple interface and in-context learning, without requiring task-specific robot training.</p>
                 
-                <ul><li>EvoOntology is a self-evolving ontology layer designed for data agents.</li><li>It addresses the 'agent-data gap,' where agents struggle to access and understand heterogeneous data like tables and files.</li><li>The system encapsulates the ontology as an MCP server, which comprises a schema layer, a content layer, and a tool layer.</li></ul>
+                <ul><li>RoboDawn is an interface that exposes robotic control to an agentic VLM. It uses discrete translation, rotation, and gripper commands.</li><li>The VLM operates in a closed loop. It observes visual state, reasons, executes actions, and adapts decisions.</li><li>An in-context learning (ICL) scheme uses a few demonstrations. This grounds the VLM in interface usage and task-solving strategies.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.75</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.20816" target="_blank" rel="noopener">Paint-Anything: Unified Color Control for Image AI</a></h3>
+            <div class="band-score">8.03</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.24984" target="_blank" rel="noopener">WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Paint-Anything introduces a unified system for precise 24-bit hex color control over objects in AI-generated and edited images. It utilizes a shared hex-prompt interface and is supported by a newly created dataset.</p>
+                <p>WorldCrafter is a novel video world model that leverages implicit 3D-aware memory to enhance long-horizon video consistency and enable precise camera control from a single input.</p>
                 
-                <ul><li>Paint-Anything provides unified any-color control for image generation and editing tasks.</li><li>It allows you to specify an object's target color using any 24-bit hex value.</li><li>The model learns a shared hex-prompt interface through object-level color supervision.</li></ul>
+                <ul><li>WorldCrafter is a video world model developed by ARC Lab, Tencent.</li><li>It addresses the challenge of maintaining consistency over long horizons and across viewpoints in dynamic environments.</li><li>The model learns a camera-queryable implicit 3D-aware memory.</li></ul>
                 
             </div>
         </article>
@@ -449,8 +449,8 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.22000" target="_blank" rel="noopener">RecreationWorld Framework for Hybrid Computer-Use Agents</a>
-                <p>RecreationWorld is a novel framework and benchmark designed for the training and evaluation of hybrid computer-use agents. It supports agents interacting across five different platforms, enabling them to navigate graphical user interfaces (GUIs), write code, and verify their own work.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2609.24972" target="_blank" rel="noopener">RRSI: Regularized Recursive Self-Improvement of Agent Harnesses</a>
+                <p>A new method, RRSI, has been developed to regularize how LLM agents improve their own 'harness,' preventing overfitting. This method significantly boosts performance on new tasks by up to 4.7 points and reduces token usage by 30%.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -458,8 +458,8 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.22068" target="_blank" rel="noopener">CodeMidas: Scaling RL Environments for Coding Agents</a>
-                <p>CodeMidas is a pipeline that automates the generation of reinforcement learning environments for coding agents by leveraging open-source code. This innovation leads to better agent performance on complex tasks such as bug fixing and program construction.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2609.24997" target="_blank" rel="noopener">VideoGen-Agent: Reinforcing Video Generation Agents</a>
+                <p>Researchers have developed VideoGen-Agent, a multimodal agent that utilizes reinforcement learning to coordinate external tools for video generation. This approach significantly improves video quality and prompt adherence, as demonstrated on the new VABench benchmark.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -470,31 +470,39 @@
     
 
     
-    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
+    <h2 class="rubric">Also cleared <span class="n">4</span></h2>
     <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.20853" target="_blank" rel="noopener">Quantum Annealing for 2D Cutting Stock Problem</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.20854" target="_blank" rel="noopener">Quantum Oracle Synthesis with X-Map Decision Diagrams</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
         
         <div class="tail-row">
             <span class="tail-rank">7.6</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.20852" target="_blank" rel="noopener">UCQM: Quality Framework for Quantum Cluster States</a>
+                <a class="title-link" href="https://huggingface.co/papers/2609.25001" target="_blank" rel="noopener">GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.37</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2609.22181" target="_blank" rel="noopener">Structural Rule for Localizable Quantum Measurements</a>
             </span>
             <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.97</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2609.22159" target="_blank" rel="noopener">Critique of QBism and Reinterpretation of the Born Rule</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://blog.cloudflare.com/python-workers-ga/" target="_blank" rel="noopener">Cloudflare Python Workers General Availability</a>
+            </span>
+            <span class="tail-src">Cloudflare Blog</span>
         </div>
         
     </section>
@@ -509,13 +517,13 @@
         <span>
             
             14 feeds polled &middot; 12 answered &middot; 
-            8 analysed &middot; 
+            9 analysed &middot; 
             
-            8 on this page &middot; below signal 5 dropped
+            9 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-09-21</span>
+        <span>Built 2026-09-22</span>
     </footer>
 
 </div>
