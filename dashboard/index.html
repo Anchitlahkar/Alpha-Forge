@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-09-22</title>
+    <title>Alpha Forge &mdash; 2026-09-23</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,7 +354,7 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-09-22</b><br>
+            <b>2026-09-23</b><br>
             5 of 9 cleared
         </div>
     </header>
@@ -365,7 +365,7 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Local Universality of Six Two-Qubit Gates on Three Qubits</h2>
+            <h2>Circuit Hypernetworks for Quantum-Augmented Diffusion Language Models</h2>
             <div class="score">8.45<small>Ranked</small></div>
         </div>
 
@@ -373,35 +373,35 @@
 
         <p class="credit">
             Quantum Computing
-             &middot; arXiv quant-ph
-             &middot; 22 Sep
+             &middot; Hugging Face Papers
+            
             
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers have analytically determined that six arbitrary two-qubit gates are both necessary and sufficient to achieve local universality on three qubits, marking the first exact accessible dimension for all fixed architectures in this context.</p>
+        <p class="deck">Researchers have introduced HyperQ, a novel method that integrates token-conditioned quantum residual branches into large language models (LLMs). This approach enables the efficient incorporation of quantum circuits, demonstrating improved performance on benchmarks with reduced training data requirements.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Understanding the minimum number of gates needed for universal quantum operations on a given number of qubits helps optimize quantum circuit design. This establishes a fundamental limit for synthesizing three-qubit operations.</p>
+            <p>A new architecture allows quantum circuits to augment language models efficiently, potentially expanding AI model capabilities. This approach achieves performance gains with significantly less training data than classical methods.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>This is the first analytical determination of the exact accessible dimension for every fixed architecture of arbitrary two-qubit gates on three qubits.</li><li>A "support word" describes which qubit pair each two-qubit gate acts on. Its "reduced length" combines consecutive gates on the same pair.</li><li>For a reduced length `r`, the accessible dimension of implementable three-qubit unitaries is `min{63, 9r+9}`.</li><li>Six arbitrary two-qubit gates are necessary and sufficient for local universality on three qubits.</li><li>Every fixed architecture achieves a nonempty open subset of SU(8) when its reduced length is at least six.</li></ul>
+            <ul><li>HyperQ adds token-conditioned quantum residual branches to a frozen masked-diffusion language model, where only these branches are trained.</li><li>A quantum residual branch is a module in each transformer block that reads a token's hidden state, emits its circuit coordinates, executes it, and adds measured values back via a residual connection.</li><li>A lightweight circuit hypernetwork within each branch emits token-specific rotation angles, coupling strengths, and measurement axes in a shared sparse circuit structure.</li><li>The evaluation cost for required expectation values grows linearly with qubit count, allowing training of 16 to 64 qubit circuits within a 1.1-billion-parameter backbone.</li><li>HyperQ raised the average score on downstream benchmarks from 47.65 to 54.30.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper "Every architecture of six two-qubit gates is locally universal on three qubits" on arXiv (2609.22176).</li><li>Look up the authors of arXiv:2609.22176 to see their other work.</li></ul>
+            <ul><li>Read the paper on arXiv using the ID 2609.24657.</li><li>Look up the authors, Xiaoqiang Wang, Mengyang Xiong, Jun Dai, and Bang Liu, to see their other work.</li><li>Check the Hugging Face CLI command `hf papers read 2609.24657` to access the paper directly.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://arxiv.org/abs/2609.22176" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2609.24657" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -411,30 +411,30 @@
         
         <article class="band-item">
             <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.22966" target="_blank" rel="noopener">RoboDawn: Transferring VLM Intelligence to Robotic Control</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.24981" target="_blank" rel="noopener">GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>RoboDawn is a new system that allows Vision-Language Models (VLMs) to control robots in the physical world. It achieves strong performance, including in zero-shot scenarios, by using a simple interface and in-context learning, without requiring task-specific robot training.</p>
+                <p>GAE, a Geometry-Native Autoencoder, is presented as a method to create a compact latent space specifically designed for 3D-consistent world generation, leading to improvements in both visual quality and the overall 3D coherence of the generated worlds.</p>
                 
-                <ul><li>RoboDawn is an interface that exposes robotic control to an agentic VLM. It uses discrete translation, rotation, and gripper commands.</li><li>The VLM operates in a closed loop. It observes visual state, reasons, executes actions, and adapts decisions.</li><li>An in-context learning (ICL) scheme uses a few demonstrations. This grounds the VLM in interface usage and task-solving strategies.</li></ul>
+                <ul><li>Visual generators often produce photorealistic frames without preserving a consistent 3D scene.</li><li>This inconsistency stems from generators using appearance-centric latent spaces, while perception models recover geometry in semantically rich spaces.</li><li>GAE (Geometry-Native Autoencoder) reparameterizes features from a geometry foundation model into a compact latent space for generation.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.03</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.24984" target="_blank" rel="noopener">WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory</a></h3>
+            <div class="band-score">8.22</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.25270" target="_blank" rel="noopener">RULER: Instance-aware Rubric Rewards for SVG Generation</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>WorldCrafter is a novel video world model that leverages implicit 3D-aware memory to enhance long-horizon video consistency and enable precise camera control from a single input.</p>
+                <p>RULER introduces a new method for training AI models to generate Scalable Vector Graphics (SVG) from natural language, utilizing a vision-language model to score generated SVGs against a dynamic, instance-aware rubric, thereby improving performance without requiring human-labeled ground truth.</p>
                 
-                <ul><li>WorldCrafter is a video world model developed by ARC Lab, Tencent.</li><li>It addresses the challenge of maintaining consistency over long horizons and across viewpoints in dynamic environments.</li><li>The model learns a camera-queryable implicit 3D-aware memory.</li></ul>
+                <ul><li>Generating Scalable Vector Graphics (SVG) from natural language instructions is challenging due to the lack of absolute visual ground truth and poor transfer of scalar metrics like CLIP from natural images to stylized vector content.</li><li>RULER (Instance-aware Rubric Rewards for Reinforcement Learning) addresses this by converting each instruction into a 6-item instance-aware rubric spanning semantic, visual, and stylistic axes.</li><li>A judge Vision-Language Model (VLM) scores rendered SVG outputs item-by-item against this rubric, and weighted satisfactions form a fine-grained reward.</li></ul>
                 
             </div>
         </article>
@@ -449,8 +449,8 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.24972" target="_blank" rel="noopener">RRSI: Regularized Recursive Self-Improvement of Agent Harnesses</a>
-                <p>A new method, RRSI, has been developed to regularize how LLM agents improve their own 'harness,' preventing overfitting. This method significantly boosts performance on new tasks by up to 4.7 points and reduces token usage by 30%.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2609.15987" target="_blank" rel="noopener">Bellman Policy Optimization for LLM Reasoning</a>
+                <p>Bellman Policy Optimization (BPO) is introduced as a new critic-free reinforcement learning method. It aims to enhance the reasoning capabilities of Large Language Models (LLMs) by reformulating policy optimization to bypass the need for intermediate state value estimation.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -458,8 +458,8 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.24997" target="_blank" rel="noopener">VideoGen-Agent: Reinforcing Video Generation Agents</a>
-                <p>Researchers have developed VideoGen-Agent, a multimodal agent that utilizes reinforcement learning to coordinate external tools for video generation. This approach significantly improves video quality and prompt adherence, as demonstrated on the new VABench benchmark.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2609.25186" target="_blank" rel="noopener">Survey of Large Language Models in Mental Health</a>
+                <p>This paper provides a comprehensive survey on the evolution of Large Language Models (LLMs) within the mental health domain. It categorizes their roles, from basic information tools to advanced personalized companions, and reviews the underlying technologies and resources that support their application.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -474,35 +474,35 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.6</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.25001" target="_blank" rel="noopener">GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay</a>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.37</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.22181" target="_blank" rel="noopener">Structural Rule for Localizable Quantum Measurements</a>
+                <a class="title-link" href="https://arxiv.org/abs/2609.25044" target="_blank" rel="noopener">End-to-End Quantum Semantic Communication</a>
             </span>
             <span class="tail-src">arXiv quant-ph</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">6.97</span>
+            <span class="tail-rank">6.77</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.22159" target="_blank" rel="noopener">Critique of QBism and Reinterpretation of the Born Rule</a>
+                <a class="title-link" href="https://arxiv.org/abs/2609.25043" target="_blank" rel="noopener">Relational Diagnosis in Quantum Encrypted Cloning</a>
             </span>
             <span class="tail-src">arXiv quant-ph</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">6.67</span>
+            <span class="tail-rank">6.6</span>
             <span class="tail-title">
-                <a class="title-link" href="https://blog.cloudflare.com/python-workers-ga/" target="_blank" rel="noopener">Cloudflare Python Workers General Availability</a>
+                <a class="title-link" href="https://blog.cloudflare.com/worker-previews/" target="_blank" rel="noopener">Cloudflare Worker Previews Launch</a>
             </span>
             <span class="tail-src">Cloudflare Blog</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.22</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2609.25117" target="_blank" rel="noopener">Non-Robust Quantum Correlation Self-Test</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
     </section>
@@ -517,13 +517,13 @@
         <span>
             
             14 feeds polled &middot; 12 answered &middot; 
-            9 analysed &middot; 
+            10 analysed &middot; 
             
             9 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-09-22</span>
+        <span>Built 2026-09-23</span>
     </footer>
 
 </div>
