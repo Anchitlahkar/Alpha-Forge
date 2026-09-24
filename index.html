@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-09-23</title>
+    <title>Alpha Forge &mdash; 2026-09-24</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-09-23</b><br>
-            5 of 9 cleared
+            <b>2026-09-24</b><br>
+            5 of 7 cleared
         </div>
     </header>
 
@@ -365,43 +365,43 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Circuit Hypernetworks for Quantum-Augmented Diffusion Language Models</h2>
-            <div class="score">8.45<small>Ranked</small></div>
+            <h2>Bosonic Error Correction with Fluxonium Qubits</h2>
+            <div class="score">8.38<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
             Quantum Computing
-             &middot; Hugging Face Papers
-            
+             &middot; arXiv quant-ph
+             &middot; 24 Sep
             
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers have introduced HyperQ, a novel method that integrates token-conditioned quantum residual branches into large language models (LLMs). This approach enables the efficient incorporation of quantum circuits, demonstrating improved performance on benchmarks with reduced training data requirements.</p>
+        <p class="deck">Researchers have successfully demonstrated standalone bosonic quantum error correction within a fully planar superconducting circuit. This was achieved using a heavy fluxonium qubit and an on-chip spiral resonator, resulting in a 1.59 times extension of the logical lifetime.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>A new architecture allows quantum circuits to augment language models efficiently, potentially expanding AI model capabilities. This approach achieves performance gains with significantly less training data than classical methods.</p>
+            <p>Building fault-tolerant quantum computers requires effective error correction. This work demonstrates a more scalable and robust method for correcting errors in quantum systems.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>HyperQ adds token-conditioned quantum residual branches to a frozen masked-diffusion language model, where only these branches are trained.</li><li>A quantum residual branch is a module in each transformer block that reads a token's hidden state, emits its circuit coordinates, executes it, and adds measured values back via a residual connection.</li><li>A lightweight circuit hypernetwork within each branch emits token-specific rotation angles, coupling strengths, and measurement axes in a shared sparse circuit structure.</li><li>The evaluation cost for required expectation values grows linearly with qubit count, allowing training of 16 to 64 qubit circuits within a 1.1-billion-parameter backbone.</li><li>HyperQ raised the average score on downstream benchmarks from 47.65 to 54.30.</li></ul>
+            <ul><li>Previous superconducting circuit implementations of bosonic quantum error correction (QEC) used centimeter-scale 3D microwave cavities and transmon qubits, limited by transmon bit-flip errors.</li><li>This work realizes bosonic QEC in a fully planar architecture.</li><li>It pairs a heavy fluxonium qubit, which has a 451 ± 70 µs bit-flip lifetime, with an on-chip Archimedean spiral resonator.</li><li>The resonator is several orders of magnitude smaller in mode volume than prior 3D cavities.</li><li>They prepared finite-energy Gottesman-Kitaev-Preskill (GKP) states.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper on arXiv using the ID 2609.24657.</li><li>Look up the authors, Xiaoqiang Wang, Mengyang Xiong, Jun Dai, and Bang Liu, to see their other work.</li><li>Check the Hugging Face CLI command `hf papers read 2609.24657` to access the paper directly.</li></ul>
+            <ul><li>Read the paper 'Bosonic Error Correction with Fluxonium' on arXiv (2609.26880).</li><li>Look up 'fluxonium qubit' to understand its properties and advantages.</li><li>Research 'Gottesman-Kitaev-Preskill (GKP) states' for quantum error correction.</li><li>Investigate 'Archimedean spiral resonator' designs in quantum circuits.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2609.24657" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://arxiv.org/abs/2609.26880" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.24981" target="_blank" rel="noopener">GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation</a></h3>
+            <div class="band-score">7.67</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.24308" target="_blank" rel="noopener">HappyWorld-Bench: A New Benchmark for AI World Models</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>GAE, a Geometry-Native Autoencoder, is presented as a method to create a compact latent space specifically designed for 3D-consistent world generation, leading to improvements in both visual quality and the overall 3D coherence of the generated worlds.</p>
+                <p>HappyWorld-Bench is introduced as a new benchmark designed to evaluate AI world models across various tasks including video, spatial, and embodied scenarios, using both human and automated metrics to identify reliability gaps.</p>
                 
-                <ul><li>Visual generators often produce photorealistic frames without preserving a consistent 3D scene.</li><li>This inconsistency stems from generators using appearance-centric latent spaces, while perception models recover geometry in semantically rich spaces.</li><li>GAE (Geometry-Native Autoencoder) reparameterizes features from a geometry foundation model into a compact latent space for generation.</li></ul>
+                <ul><li>HappyWorld-Bench evaluates AI world models for reliability as agents interact with them.</li><li>It uses a hierarchical framework of six world capabilities (W1-W6), from generative construction to unified world modeling.</li><li>The benchmark covers three evaluation tracks: video world models, spatial world models, and embodied world models.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.22</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.25270" target="_blank" rel="noopener">RULER: Instance-aware Rubric Rewards for SVG Generation</a></h3>
+            <div class="band-score">7.67</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.26780" target="_blank" rel="noopener">SpeakerMem-R1: Speaker-Centered Dual-Track Memory for Multi-Party Dialogue</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>RULER introduces a new method for training AI models to generate Scalable Vector Graphics (SVG) from natural language, utilizing a vision-language model to score generated SVGs against a dynamic, instance-aware rubric, thereby improving performance without requiring human-labeled ground truth.</p>
+                <p>Researchers have developed SpeakerMem-R1, a dual-track memory framework for large language models, which enhances their ability to understand and recall information in multi-party dialogues by storing both verbatim messages and derived states, achieving state-of-the-art accuracy on benchmarks like EverMemBench.</p>
                 
-                <ul><li>Generating Scalable Vector Graphics (SVG) from natural language instructions is challenging due to the lack of absolute visual ground truth and poor transfer of scalar metrics like CLIP from natural images to stylized vector content.</li><li>RULER (Instance-aware Rubric Rewards for Reinforcement Learning) addresses this by converting each instruction into a 6-item instance-aware rubric spanning semantic, visual, and stylistic axes.</li><li>A judge Vision-Language Model (VLM) scores rendered SVG outputs item-by-item against this rubric, and weighted satisfactions form a fine-grained reward.</li></ul>
+                <ul><li>Existing general-purpose LLM memory systems struggle with message attribution and relational understanding in multi-party dialogues.</li><li>SpeakerMem-R1 is a speaker-centered dual-track memory framework designed to address these challenges.</li><li>Its dual-track memory stores speaker-labeled verbatim messages and derived states, organized into person-level and group-level views.</li></ul>
                 
             </div>
         </article>
@@ -449,8 +449,8 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.15987" target="_blank" rel="noopener">Bellman Policy Optimization for LLM Reasoning</a>
-                <p>Bellman Policy Optimization (BPO) is introduced as a new critic-free reinforcement learning method. It aims to enhance the reasoning capabilities of Large Language Models (LLMs) by reformulating policy optimization to bypass the need for intermediate state value estimation.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2609.22947" target="_blank" rel="noopener">RewardVerse: Rubric-Guided Policy Optimization for Video Reward Modeling</a>
+                <p>RewardVerse is a novel framework that employs dynamic rubrics and a two-stage optimization algorithm (RGPO) to create stable and interpretable reward models for video generation, effectively overcoming the issue of scalar drift that plagues existing models.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -458,10 +458,10 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.25186" target="_blank" rel="noopener">Survey of Large Language Models in Mental Health</a>
-                <p>This paper provides a comprehensive survey on the evolution of Large Language Models (LLMs) within the mental health domain. It categorizes their roles, from basic information tools to advanced personalized companions, and reviews the underlying technologies and resources that support their application.</p>
+                <a class="title-link" href="https://arxiv.org/abs/2609.26800" target="_blank" rel="noopener">Structured Variational Key Concentration for Reduced AES Cipher</a>
+                <p>Researchers have developed a variational quantum algorithm for simplified AES (S-AES) key recovery. This algorithm uses phase separators derived from S-box properties and achieved a 46.78 percent public-consistent-key probability on 16-bit S-AES, consistently ranking the correct key first.</p>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
     </section>
@@ -470,39 +470,23 @@
     
 
     
-    <h2 class="rubric">Also cleared <span class="n">4</span></h2>
+    <h2 class="rubric">Also cleared <span class="n">2</span></h2>
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">7.52</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.25044" target="_blank" rel="noopener">End-to-End Quantum Semantic Communication</a>
+                <a class="title-link" href="https://huggingface.co/papers/2609.23038" target="_blank" rel="noopener">Spatial-Interactor: Learning Spatial Reasoning for Vision-Language Models</a>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">6.77</span>
+            <span class="tail-rank">6.9</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.25043" target="_blank" rel="noopener">Relational Diagnosis in Quantum Encrypted Cloning</a>
+                <a class="title-link" href="https://huggingface.co/papers/2609.28466" target="_blank" rel="noopener">Memory Mechanisms in Autoregressive Video Generation</a>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">6.6</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://blog.cloudflare.com/worker-previews/" target="_blank" rel="noopener">Cloudflare Worker Previews Launch</a>
-            </span>
-            <span class="tail-src">Cloudflare Blog</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">6.22</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.25117" target="_blank" rel="noopener">Non-Robust Quantum Correlation Self-Test</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Hugging Face Papers</span>
         </div>
         
     </section>
@@ -517,13 +501,13 @@
         <span>
             
             14 feeds polled &middot; 12 answered &middot; 
-            10 analysed &middot; 
+            8 analysed &middot; 
             
-            9 on this page &middot; below signal 5 dropped
+            7 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist.
-            
+            <br>Gemini was unavailable for 1 article; dropped rather than summarised.
         </span>
-        <span>Built 2026-09-23</span>
+        <span>Built 2026-09-24</span>
     </footer>
 
 </div>
