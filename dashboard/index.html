@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-09-24</title>
+    <title>Alpha Forge &mdash; 2026-09-25</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-09-24</b><br>
-            5 of 7 cleared
+            <b>2026-09-25</b><br>
+            5 of 9 cleared
         </div>
     </header>
 
@@ -365,43 +365,43 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Bosonic Error Correction with Fluxonium Qubits</h2>
-            <div class="score">8.38<small>Ranked</small></div>
+            <h2>IterSynth: Role-Decoupled Iterative Synthesis for Deep Search Agents</h2>
+            <div class="score">8.45<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
-            Quantum Computing
-             &middot; arXiv quant-ph
-             &middot; 24 Sep
+            AI Research
+             &middot; Hugging Face Papers
+            
             
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers have successfully demonstrated standalone bosonic quantum error correction within a fully planar superconducting circuit. This was achieved using a heavy fluxonium qubit and an on-chip spiral resonator, resulting in a 1.59 times extension of the logical lifetime.</p>
+        <p class="deck">IterSynth introduces a new paradigm for deep search agents, decoupling planning and synthesis roles and using a summary-based context. This approach improves performance by +4.2% over prior 8B agents and reduces context exhaustion.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Building fault-tolerant quantum computers requires effective error correction. This work demonstrates a more scalable and robust method for correcting errors in quantum systems.</p>
+            <p>Large language model agents can now perform complex deep searches more effectively and efficiently. This reduces the problem of context overload and improves the accuracy of synthesized answers.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Previous superconducting circuit implementations of bosonic quantum error correction (QEC) used centimeter-scale 3D microwave cavities and transmon qubits, limited by transmon bit-flip errors.</li><li>This work realizes bosonic QEC in a fully planar architecture.</li><li>It pairs a heavy fluxonium qubit, which has a 451 ± 70 µs bit-flip lifetime, with an on-chip Archimedean spiral resonator.</li><li>The resonator is several orders of magnitude smaller in mode volume than prior 3D cavities.</li><li>They prepared finite-energy Gottesman-Kitaev-Preskill (GKP) states.</li></ul>
+            <ul><li>Existing ReAct-style LLM agents for deep search suffer from role coupling, where one policy handles planning, evidence use, and synthesis, and context accumulation, which introduces noise.</li><li>IterSynth is a role-decoupled, summary-based paradigm that alternates between a Planner and a Synthesizer.</li><li>The Planner identifies information needs and formulates sub-queries from a compact, persistent summary state.</li><li>The Synthesizer integrates new evidence into that summary, making summary updates a learned part of the search policy.</li><li>Role-Decoupled Policy Optimization (RDPO) is a new reinforcement learning method that combines terminal outcome rewards with turn-level rubric evaluations, computing role-specific advantages.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper 'Bosonic Error Correction with Fluxonium' on arXiv (2609.26880).</li><li>Look up 'fluxonium qubit' to understand its properties and advantages.</li><li>Research 'Gottesman-Kitaev-Preskill (GKP) states' for quantum error correction.</li><li>Investigate 'Archimedean spiral resonator' designs in quantum circuits.</li></ul>
+            <ul><li>Read the paper at arxiv:2609.29444 to understand the IterSynth architecture and RDPO.</li><li>Clone the GitHub repository at https://github.com/Tencent/IterSynth to explore the implementation.</li><li>Look up the lead author, Xingyu Wu, to see their other work in this area.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://arxiv.org/abs/2609.26880" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2609.29444" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.24308" target="_blank" rel="noopener">HappyWorld-Bench: A New Benchmark for AI World Models</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.28654" target="_blank" rel="noopener">Training Object Permanence in World Models</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>HappyWorld-Bench is introduced as a new benchmark designed to evaluate AI world models across various tasks including video, spatial, and embodied scenarios, using both human and automated metrics to identify reliability gaps.</p>
+                <p>Researchers introduced WROP, a dataset of 150 cognitive tasks, to train world models in object permanence. Their 16B PWM-WROP model ranked first among continuation models and was evaluated against 14 video models.</p>
                 
-                <ul><li>HappyWorld-Bench evaluates AI world models for reliability as agents interact with them.</li><li>It uses a hierarchical framework of six world capabilities (W1-W6), from generative construction to unified world modeling.</li><li>The benchmark covers three evaluation tracks: video world models, spatial world models, and embodied world models.</li></ul>
+                <ul><li>Object permanence and solidity are human cognitive priors.</li><li>Video generation models, a type of world model, are candidates for building human-like physical intelligence.</li><li>The WROP (World Reasoning with Object Permanence) data infrastructure contains 150 hand-designed cognitive science-inspired tasks.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.26780" target="_blank" rel="noopener">SpeakerMem-R1: Speaker-Centered Dual-Track Memory for Multi-Party Dialogue</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.29892" target="_blank" rel="noopener">Qwen-Planner-Agent: Closed-Loop AI-for-AI Framework for Mobile Planner Agents</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Researchers have developed SpeakerMem-R1, a dual-track memory framework for large language models, which enhances their ability to understand and recall information in multi-party dialogues by storing both verbatim messages and derived states, achieving state-of-the-art accuracy on benchmarks like EverMemBench.</p>
+                <p>Researchers developed Qwen-Planner-Agent, a closed-loop AI-for-AI framework that autonomously improves mobile planning agents. It achieved top performance on the MobilePA-Bench benchmark by using AI to generate data, train models, and co-evolve with its operational harness.</p>
                 
-                <ul><li>Existing general-purpose LLM memory systems struggle with message attribution and relational understanding in multi-party dialogues.</li><li>SpeakerMem-R1 is a speaker-centered dual-track memory framework designed to address these challenges.</li><li>Its dual-track memory stores speaker-labeled verbatim messages and derived states, organized into person-level and group-level views.</li></ul>
+                <ul><li>Qwen-Planner-Agent is a closed-loop AI-for-AI framework.</li><li>It develops and iteratively improves real-world mobile planner agents.</li><li>The framework connects data production, model training, and deployment through an action-feedback-verification contract.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,21 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">8.3</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.22947" target="_blank" rel="noopener">RewardVerse: Rubric-Guided Policy Optimization for Video Reward Modeling</a>
-                <p>RewardVerse is a novel framework that employs dynamic rubrics and a two-stage optimization algorithm (RGPO) to create stable and interpretable reward models for video generation, effectively overcoming the issue of scalar drift that plagues existing models.</p>
+                <a class="title-link" href="https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/" target="_blank" rel="noopener">CPU Shortages Impacting Cloud Providers</a>
+                <p>Cloud providers are facing significant CPU shortages. This trend is driven by high AI demand and shifts in manufacturing, leading to the disappearance of spot pricing, long lead times, and increased costs.</p>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">Pragmatic Engineer</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">7.75</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.26800" target="_blank" rel="noopener">Structured Variational Key Concentration for Reduced AES Cipher</a>
-                <p>Researchers have developed a variational quantum algorithm for simplified AES (S-AES) key recovery. This algorithm uses phase separators derived from S-box properties and achieved a 46.78 percent public-consistent-key probability on 16-bit S-AES, consistently ranking the correct key first.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2609.28416" target="_blank" rel="noopener">Agent-Editing World Model for LLM Agents</a>
+                <p>Researchers propose the Agent-Editing World Model (AEWM) to improve LLM agent performance by modeling how reasoning and actions affect task progress, rather than just predicting environment observations. It uses Action Judge and State Revision to edit noisy decisions, showing performance gains of 3.2-6.7 points on various benchmarks.</p>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Hugging Face Papers</span>
         </div>
         
     </section>
@@ -470,23 +470,39 @@
     
 
     
-    <h2 class="rubric">Also cleared <span class="n">2</span></h2>
+    <h2 class="rubric">Also cleared <span class="n">4</span></h2>
     <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2609.28491" target="_blank" rel="noopener">Hybrid Variational Quantum-Classical Framework for Image Classification</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2609.28493" target="_blank" rel="noopener">Variational Quantum Cryptanalysis for Key Recovery</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
         
         <div class="tail-row">
             <span class="tail-rank">7.52</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.23038" target="_blank" rel="noopener">Spatial-Interactor: Learning Spatial Reasoning for Vision-Language Models</a>
+                <a class="title-link" href="https://huggingface.co/papers/2609.23407" target="_blank" rel="noopener">OmniEcho: Spatial Audio Understanding for Embodied Agents</a>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">6.9</span>
+            <span class="tail-rank">6.82</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.28466" target="_blank" rel="noopener">Memory Mechanisms in Autoregressive Video Generation</a>
+                <a class="title-link" href="https://arxiv.org/abs/2609.28492" target="_blank" rel="noopener">Non-Equilibrium Condensate-Like State in Superconducting Quantum Circuits</a>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
     </section>
@@ -501,13 +517,13 @@
         <span>
             
             14 feeds polled &middot; 12 answered &middot; 
-            8 analysed &middot; 
+            10 analysed &middot; 
             
-            7 on this page &middot; below signal 5 dropped
+            9 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist.
-            <br>Gemini was unavailable for 1 article; dropped rather than summarised.
+            
         </span>
-        <span>Built 2026-09-24</span>
+        <span>Built 2026-09-25</span>
     </footer>
 
 </div>
