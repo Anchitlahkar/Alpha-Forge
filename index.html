@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-09-25</title>
+    <title>Alpha Forge &mdash; 2026-09-26</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-09-25</b><br>
-            5 of 9 cleared
+            <b>2026-09-26</b><br>
+            4 of 4 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>IterSynth: Role-Decoupled Iterative Synthesis for Deep Search Agents</h2>
-            <div class="score">8.45<small>Ranked</small></div>
+            <h2>LLM Superposition Linearity Discovery</h2>
+            <div class="score">8.52<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -379,29 +379,29 @@
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">IterSynth introduces a new paradigm for deep search agents, decoupling planning and synthesis roles and using a summary-based context. This approach improves performance by +4.2% over prior 8B agents and reduces context exhaustion.</p>
+        <p class="deck">Research indicates that Large Language Models (LLMs) possess a fundamental property called Superposition Linearity, enabling them to process two distinct text streams simultaneously. This intrinsic characteristic of the Transformer architecture, though it may diminish during pre-training, can be reactivated through fine-tuning, allowing for the generation of two coherent continuations from a single forward pass.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Large language model agents can now perform complex deep searches more effectively and efficiently. This reduces the problem of context overload and improves the accuracy of synthesized answers.</p>
+            <p>Large Language Models can process and generate two distinct text streams simultaneously from a single computation pass. This could lead to more efficient inference and novel multi-tasking capabilities.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Existing ReAct-style LLM agents for deep search suffer from role coupling, where one policy handles planning, evidence use, and synthesis, and context accumulation, which introduces noise.</li><li>IterSynth is a role-decoupled, summary-based paradigm that alternates between a Planner and a Synthesizer.</li><li>The Planner identifies information needs and formulates sub-queries from a compact, persistent summary state.</li><li>The Synthesizer integrates new evidence into that summary, making summary updates a learned part of the search policy.</li><li>Role-Decoupled Policy Optimization (RDPO) is a new reinforcement learning method that combines terminal outcome rewards with turn-level rubric evaluations, computing role-specific advantages.</li></ul>
+            <ul><li>Large Language Models (LLMs) exhibit fundamental linearity despite relying on highly non-linear components.</li><li>This phenomenon is termed the Superposition Linearity Hypothesis: when inputs from distinct text streams are linearly combined, the model outputs a superposition of individual next-token distributions.</li><li>Superposition is an intrinsic property of the Transformer architecture, not an emergent consequence of training.</li><li>This linearity tends to diminish as pre-training progresses.</li><li>Lightweight fine-tuning can substantially restore linearity, reducing divergence between predicted and averaged next-token distributions.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper at arxiv:2609.29444 to understand the IterSynth architecture and RDPO.</li><li>Clone the GitHub repository at https://github.com/Tencent/IterSynth to explore the implementation.</li><li>Look up the lead author, Xingyu Wu, to see their other work in this area.</li></ul>
+            <ul><li>Read the paper arxiv:2609.29845.</li><li>Look up the authors Pavel Tikhonov and Anton Razzhigaev.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2609.29444" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2609.29845" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.28654" target="_blank" rel="noopener">Training Object Permanence in World Models</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.30221" target="_blank" rel="noopener">WanPE Model for Cinematic Text-to-Video Generation</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Researchers introduced WROP, a dataset of 150 cognitive tasks, to train world models in object permanence. Their 16B PWM-WROP model ranked first among continuation models and was evaluated against 14 video models.</p>
+                <p>Researchers have developed WanPE, a 397-billion-parameter AI model designed to enhance text prompts for video generation. This model is capable of producing cinematic quality and maintaining consistency across multi-shot sequences up to 30 seconds in length.</p>
                 
-                <ul><li>Object permanence and solidity are human cognitive priors.</li><li>Video generation models, a type of world model, are candidates for building human-like physical intelligence.</li><li>The WROP (World Reasoning with Object Permanence) data infrastructure contains 150 hand-designed cognitive science-inspired tasks.</li></ul>
+                <ul><li>WanPE is a 397B-parameter prompt enhancement model designed for text-to-video generation.</li><li>It was trained on 1.05 million real-world videos to master director-level cinematic planning.</li><li>The model formulates shot-level cinematic plans using video-grounded reverse construction and Semantic-Consistency GRPO (SC-GRPO), which preserves user requirements across shots.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.29892" target="_blank" rel="noopener">Qwen-Planner-Agent: Closed-Loop AI-for-AI Framework for Mobile Planner Agents</a></h3>
+            <div class="band-score">8.15</div>
+            <h3><a class="title-link" href="https://www.netinterest.co/p/the-agents-revolt" target="_blank" rel="noopener">Meta's Muse AI Agent Launch and Adoption</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                Investing &middot; Net Interest
                 
             </p>
             <div class="story-body">
-                <p>Researchers developed Qwen-Planner-Agent, a closed-loop AI-for-AI framework that autonomously improves mobile planning agents. It achieved top performance on the MobilePA-Bench benchmark by using AI to generate data, train models, and co-evolve with its operational harness.</p>
+                <p>Meta launched Muse, a personal AI agent designed to assist with tasks like finding cheaper car insurance. The agent quickly gained traction, recording 2.8 million downloads within two weeks, highlighting rapid user adoption and its potential to disrupt financial services by reducing customer inertia.</p>
                 
-                <ul><li>Qwen-Planner-Agent is a closed-loop AI-for-AI framework.</li><li>It develops and iteratively improves real-world mobile planner agents.</li><li>The framework connects data production, model training, and deployment through an action-feedback-verification contract.</li></ul>
+                <ul><li>Meta launched Muse, a personal AI agent that proactively helps with people's goals and suggests ideas, capable of handling tasks like sending emails or booking travel.</li><li>Muse recorded 2.8 million downloads within two weeks of its launch, reaching number one on both Apple's US App Store and Google Play.</li><li>Alexandr Wang, Muse's creator, stated the app's reception exceeded their biggest dreams.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,12 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.3</span>
+            <span class="tail-rank">7.37</span>
             <span class="tail-title">
-                <a class="title-link" href="https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/" target="_blank" rel="noopener">CPU Shortages Impacting Cloud Providers</a>
-                <p>Cloud providers are facing significant CPU shortages. This trend is driven by high AI demand and shifts in manufacturing, leading to the disappearance of spot pricing, long lead times, and increased costs.</p>
+                <a class="title-link" href="https://netflixtechblog.com/trading-a-cloud-identity-for-your-own-workload-attestation-on-managed-compute-516d5a29b252?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Netflix's Cloud Identity Workload Attestation System</a>
+                <p>Netflix engineered a system to securely integrate its internal identity management system, Metatron, with AWS IAM roles for Apache Spark workloads running on Amazon EMR. This system employs a one-to-one mapping between internal Data Projects and IAM roles, utilizes a signed control plane claim, and leverages AWS STS for corroboration to issue short-lived internal certificates, enhancing security for managed compute environments.</p>
             </span>
-            <span class="tail-src">Pragmatic Engineer</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.75</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.28416" target="_blank" rel="noopener">Agent-Editing World Model for LLM Agents</a>
-                <p>Researchers propose the Agent-Editing World Model (AEWM) to improve LLM agent performance by modeling how reasoning and actions affect task progress, rather than just predicting environment observations. It uses Action Judge and State Revision to edit noisy decisions, showing performance gains of 3.2-6.7 points on various benchmarks.</p>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">Netflix Tech Blog</span>
         </div>
         
     </section>
@@ -469,43 +460,6 @@
 
     
 
-    
-    <h2 class="rubric">Also cleared <span class="n">4</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.28491" target="_blank" rel="noopener">Hybrid Variational Quantum-Classical Framework for Image Classification</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.28493" target="_blank" rel="noopener">Variational Quantum Cryptanalysis for Key Recovery</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.52</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.23407" target="_blank" rel="noopener">OmniEcho: Spatial Audio Understanding for Embodied Agents</a>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">6.82</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2609.28492" target="_blank" rel="noopener">Non-Equilibrium Condensate-Like State in Superconducting Quantum Circuits</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -516,14 +470,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            10 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            5 analysed &middot; 
             
-            9 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
+            4 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-09-25</span>
+        <span>Built 2026-09-26</span>
     </footer>
 
 </div>
