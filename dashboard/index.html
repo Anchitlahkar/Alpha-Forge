@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-04</title>
+    <title>Alpha Forge &mdash; 2026-10-05</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,17 +354,150 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-04</b><br>
-            0 of 0 cleared
+            <b>2026-10-05</b><br>
+            5 of 8 cleared
         </div>
     </header>
 
     
 
     
-    <p class="empty">Nothing cleared the signal filter, and there is no earlier brief on file to fall back to.</p>
+    
+    <article class="lead">
+        <div class="lead-head">
+            <h2>Fold2Reason: Protein Folding for General AI Reasoning</h2>
+            <div class="score">8.52<small>Ranked</small></div>
+        </div>
+
+        <div class="lead-rule"></div>
+
+        <p class="credit">
+            AI Research
+             &middot; Hugging Face Papers
+            
+            
+             &middot; signal 8.0/10
+        </p>
+
+        <p class="deck">A new AI model, Fold2Reason, was developed and post-trained on protein folding data. This model significantly improved both protein structure prediction and general reasoning across 10 different benchmarks, suggesting that learning protein folding can generalize to broader reasoning tasks.</p>
+
+        <div class="story-body">
+            
+            <h4>So what</h4>
+            <p>AI models can learn broader reasoning capabilities by training on structured scientific data like protein folding. This suggests that complex scientific problems can serve as a rich, non-linguistic source of supervision for improving AI.</p>
+            
+
+            
+            <h4>Key points</h4>
+            <ul><li>Large language models often lack spatial and structural logic found in scientific problems.</li><li>Protein folding offers a natural testbed, providing thousands of checkable spatial and topological statements from one solved structure.</li><li>Researchers created FoldingCorpus, a protein-derived question-answer dataset.</li><li>They developed Fold2Reason, a post-training method that uses discrete structural answers and continuous 3D geometry.</li><li>Fold2Reason achieved structure prediction scores 2.7 to 3.5 times higher than Qwen3.5-9B on FoldBench.</li></ul>
+            
+
+            
+            <h4>Worth doing</h4>
+            <ul><li>Read the paper arxiv:2609.38879 to understand the Fold2Reason architecture and training methodology.</li><li>Install the Hugging Face CLI by running `curl -LsSf https://hf.co/cli/install.sh | bash`.</li><li>Use the Hugging Face CLI to read the paper: `hf papers read 2609.38879`.</li><li>Look up Yong Liu from Shanghai JiaoTong University to see their other work.</li></ul>
+            
+
+            
+        </div>
+
+        
+        <a class="read" href="https://huggingface.co/papers/2609.38879" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        
+    </article>
+
+    
+    
+    <section class="band">
+        
+        <article class="band-item">
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://arxiv.org/abs/2610.02312" target="_blank" rel="noopener">Counterdiabatic Quantum Circuits Theory</a></h3>
+            <p class="credit">
+                Quantum Computing &middot; arXiv quant-ph
+                
+            </p>
+            <div class="story-body">
+                <p>Researchers developed a Hamiltonian-free theory for counterdiabatic driving. This advancement enables faster quantum control for Floquet systems and quantum circuits without the necessity of a local effective Hamiltonian.</p>
+                
+                <ul><li>Counterdiabatic driving, a method for fast quantum control, typically requires a Hamiltonian generator.</li><li>This research introduces a Hamiltonian-free theory for the adiabatic gauge potential (AGP) for parameter-dependent unitary operators.</li><li>The exact and regularized AGP versions come from a Hermitian, banded linear system.</li></ul>
+                
+            </div>
+        </article>
+        
+        <article class="band-item">
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2609.38078" target="_blank" rel="noopener">MotorMind: Zero-Shot Robot Manipulation with VLMs</a></h3>
+            <p class="credit">
+                AI Research &middot; Hugging Face Papers
+                
+            </p>
+            <div class="story-body">
+                <p>Researchers developed MotorMind, a system that enables general vision language models to perform zero-shot robot manipulation with high success rates on both simulated and real robots, without requiring task-specific training or external tools.</p>
+                
+                <ul><li>MotorMind is a robot manipulation harness that connects VLM-proposed mid-level actions to deterministic robot control and feedback.</li><li>It uses asynchronous monitoring and background memory updates.</li><li>The system does not require task-specific policy training, coding agents, or additional grounding tools like SAM3.</li></ul>
+                
+            </div>
+        </article>
+        
+    </section>
     
 
+    
+    
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">8.38</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.03632" target="_blank" rel="noopener">World Embedding Benchmark for Video Representations</a>
+                <p>Researchers introduced the World Embedding Benchmark, a dataset comprising 8,000 simulated video-text cases across 80 physical families. This benchmark evaluates how effectively video representations capture physical information, revealing a trade-off between cross-modal alignment and quantitative physical information recoverability in pre-trained models. However, it also demonstrated that physics-adapted models can improve retrieval-augmented video generation.</p>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">8.15</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2610.02287" target="_blank" rel="noopener">Premonoidal Semantics for Fermionic Quantum Computing</a>
+                <p>This paper introduces a categorical framework and diagrammatic notation specifically for fermionic quantum computing. It addresses the unique compositional structure of local fermionic mode systems, defines pronaps for reasoning, and provides new normal forms for circuit fragments.</p>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+    </section>
+    
+
+    
+
+    
+    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.75</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2609.38839" target="_blank" rel="noopener">FrameMorrow: Future-Guided Long-Horizon Video Generation</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.03195" target="_blank" rel="noopener">LLM Agent Source Preference Bias</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2610.02310" target="_blank" rel="noopener">Homological Thresholds in Quantum Error-Correcting Codes</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -375,11 +508,14 @@
     <footer class="colophon">
         <span>
             
-            0 on this page &middot; below signal 5 dropped
+            14 feeds polled &middot; 12 answered &middot; 
+            8 analysed &middot; 
             
+            8 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-10-04</span>
+        <span>Built 2026-10-05</span>
     </footer>
 
 </div>
