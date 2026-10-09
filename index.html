@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-08</title>
+    <title>Alpha Forge &mdash; 2026-10-09</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-08</b><br>
-            5 of 7 cleared
+            <b>2026-10-09</b><br>
+            5 of 9 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Long-WAM: Scaling Context for Robot Control</h2>
-            <div class="score">8.38<small>Ranked</small></div>
+            <h2>AgentGarten: Code Worlds for Evolving Agents</h2>
+            <div class="score">9.22<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 8.0/10
+             &middot; signal 9.0/10
         </p>
 
-        <p class="deck">Long-WAM is a new model-system framework designed to scale the context of world-action models for real-time robot control. It uses autoregressive pretraining to process longer visual histories, boosting robot task success rates and enabling deployment on various hardware.</p>
+        <p class="deck">AgentGarten is a framework that combines simulators and neural rendering to create real-time interactive environments for AI agents, enabling them to learn complex tasks in just 4 rounds of experience, a substantial improvement over traditional methods.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Real-time robot control can now use longer visual histories without action delays. This improves task success rates and enables more complex, dynamic manipulations.</p>
+            <p>This framework allows AI agents to learn complex behaviors in interactive environments with significantly less training data. It could accelerate the development of more capable and adaptable AI systems.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Long-WAM is a model-system framework for scaling causal world-action models under real-time control constraints.</li><li>Autoregressively pretrained video foundation models are key to effectively using longer visual histories for robot control.</li><li>Increasing context from 0.0 to 19.2 seconds on RoboCasa GR-1 raised success from 63.3% to 78.7%.</li><li>Long-WAM achieved the best results among compared methods on LIBERO-Long, RoboTwin2.0, and DOMINO benchmarks.</li><li>It deploys on RTX 5090, DGX Spark, and Jetson AGX Thor, with each action chunk taking 107.4ms on RTX 5090.</li></ul>
+            <ul><li>AgentGarten is a framework for building real-time interactive environments where AI agents can evolve.</li><li>It couples traditional simulators and game engines with a shared neural renderer to generate realistic visual observations.</li><li>The neural renderer uses a technique called Adversarial Forcing, which makes history prefilling differentiable and adds real-data adversarial supervision.</li><li>Agents perceive the world visually, interact in real-time, and improve by distilling experience into playbooks that subsequent agents inherit.</li><li>Empirical studies show agents learn tasks in 4 rounds, a significant efficiency gain compared to millions of rounds for conventional reinforcement learning.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper at arxiv:2610.10528.</li><li>Look up the lead author, Wei Huang, and the NVIDIA research team.</li><li>Run `hf papers read 2610.10528` in your terminal to access the paper via the Hugging Face CLI.</li></ul>
+            <ul><li>Read the paper at arxiv:2610.12374.</li><li>Look up the AgentGarten project page.</li><li>Explore the GitHub repository linked from the paper page.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.10528" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2610.12374" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.03</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.04299" target="_blank" rel="noopener">R-Quest: Sustaining Self-Evolution in Reasoning Models</a></h3>
+            <div class="band-score">9.15</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.12242" target="_blank" rel="noopener">TokenRouter: Efficient Serving System for Token-Level LLM Routing</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Self-evolving AI models often suffer performance collapse due to invalid and repetitive self-generated questions. Researchers introduced R-Quest, a method that uses validity and novelty feedback to guide self-evolution, achieving superior and stable performance across various reasoning tasks.</p>
+                <p>Researchers developed TokenRouter, a new serving system for token-level LLM routing that achieves 2 to 64 times higher decoding throughput than current systems by using a request-centric, model-centric approach and delayed-batching schedulers.</p>
                 
-                <ul><li>Self-evolving reasoning models, which learn from their own generated questions, can experience performance collapse during repeated self-training.</li><li>Analysis identified two core problems: invalid questions becoming prevalent and existing diversity controls failing to detect mathematically equivalent but lexically different questions.</li><li>Invalid questions increase across training rounds, and answer-consistency filtering exacerbates their proportion in training data.</li></ul>
+                <ul><li>Token-level routing for large language models (LLMs) offers efficiency and quality gains over coarser-grained methods.</li><li>Existing LLM serving systems struggle with token-level routing due to single-model assumptions, step desynchronization, and batch admission delays.</li><li>TokenRouter is a new system designed for efficient token-level LLM inference.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2609.38169" target="_blank" rel="noopener">STEPQuant: Recurrent State Quantization Framework</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://arxiv.org/abs/2610.10697" target="_blank" rel="noopener">On linearity or non-linearity in machine learning for quantum chaotic dynamics</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                AI Research &middot; arXiv quant-ph
                 
             </p>
             <div class="story-body">
-                <p>Researchers developed STEPQuant, a post-training quantization framework for linear attention recurrent states. It significantly reduces memory usage by up to 68.7% and achieves over 5x compression while maintaining near FP32 accuracy with 6-bit states.</p>
+                <p>A study found that a simple linear machine learning model, DLinear, accurately forecasts chaotic quantum many-body dynamics across various regimes, outperforming a complex Transformer model. This suggests simpler models can predict complex quantum behavior.</p>
                 
-                <ul><li>Linear attention models use fixed-size recurrent states, which can be a memory bottleneck during concurrent serving.</li><li>Directly quantizing these states to low precision often causes severe accuracy degradation due to error propagation.</li><li>The impact of quantization errors depends on temporal (long-lived memory) and spatial (key-row impact) dimensions.</li></ul>
+                <ul><li>Simulating chaotic quantum many-body dynamics is a major computational challenge for classical methods.</li><li>Researchers explored machine learning for time-series forecasting of quantum dynamics.</li><li>They used a few-qubit PXP chain, realizable with Rydberg-atom arrays, as a benchmark system.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,21 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.6</span>
+            <span class="tail-rank">8.38</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.08926" target="_blank" rel="noopener">High-Fidelity Inter-Species Rydberg Gates</a>
-                <p>Researchers developed a model to suppress laser crosstalk in dual-species neutral atom quantum gates. They demonstrated that gate fidelities above 99.8% are achievable in an $^{85}$Rb/$^{87}$Rb system through careful gate design.</p>
+                <a class="title-link" href="https://arxiv.org/abs/2610.10684" target="_blank" rel="noopener">Quantum non-Markovian response spectra</a>
+                <p>Researchers developed a response matrix method to characterize hidden environmental memory in quantum systems, which causes correlated errors and is hard to measure directly.</p>
             </span>
             <span class="tail-src">arXiv quant-ph</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.52</span>
+            <span class="tail-rank">7.75</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.08621" target="_blank" rel="noopener">Recursive Game Creator AI Agent Framework</a>
-                <p>Researchers developed Recursive Game Creator, an AI agent framework that iteratively refines game prototypes into engaging games using a four-component system. This framework achieves state-of-the-art performance on game creation benchmarks.</p>
+                <a class="title-link" href="https://arxiv.org/abs/2610.10702" target="_blank" rel="noopener">Combining Error Verification and Privacy Amplification in Quantum Key Distribution</a>
+                <p>Researchers mathematically justify a single-step hashing procedure for Quantum Key Distribution, which simplifies classical postprocessing and reduces communication and randomness while maintaining the key rate.</p>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
     </section>
@@ -470,23 +470,39 @@
     
 
     
-    <h2 class="rubric">Also cleared <span class="n">2</span></h2>
+    <h2 class="rubric">Also cleared <span class="n">4</span></h2>
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.25</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.08890" target="_blank" rel="noopener">Quantum Readout Complexity for Linear Functionals</a>
+                <a class="title-link" href="https://huggingface.co/papers/2610.08215" target="_blank" rel="noopener">Learn2Play Bench: How Well Do LLM Agents Learn from Experience in Unfamiliar Environments?</a>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">6.97</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.08699" target="_blank" rel="noopener">nanoMuse: Open-Source Personal Agent for All Devices</a>
+                <a class="title-link" href="https://huggingface.co/papers/2610.06100" target="_blank" rel="noopener">From Traces to Agentic Worlds: Agentic Language World Models for Interactive Environment Simulation</a>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.52</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.12126" target="_blank" rel="noopener">SuperNav: An Agentic Navigation System for Any Task in Any Scene</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.52</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://blog.pragmaticengineer.com/the-pulse-firebases-global-outage-poor-response/" target="_blank" rel="noopener">The Pulse: Firebase’s global outage & poor response</a>
+            </span>
+            <span class="tail-src">Pragmatic Engineer</span>
         </div>
         
     </section>
@@ -501,13 +517,13 @@
         <span>
             
             14 feeds polled &middot; 12 answered &middot; 
-            9 analysed &middot; 
+            10 analysed &middot; 
             
-            7 on this page &middot; below signal 5 dropped
+            9 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-10-08</span>
+        <span>Built 2026-10-09</span>
     </footer>
 
 </div>
