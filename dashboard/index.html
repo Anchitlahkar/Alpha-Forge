@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-12</title>
+    <title>Alpha Forge &mdash; 2026-10-13</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-12</b><br>
-            5 of 8 cleared
+            <b>2026-10-13</b><br>
+            5 of 5 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>DiffusionART: Efficient, Stable and Scalable Reinforcement of Diffusion Models</h2>
-            <div class="score">8.45<small>Ranked</small></div>
+            <h2>GroundingPI Foundation Model Release</h2>
+            <div class="score">9.22<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 8.0/10
+             &middot; signal 9.0/10
         </p>
 
-        <p class="deck">DiffusionART is a new method for fine-tuning diffusion models with reinforcement learning, offering significantly improved efficiency and stability compared to previous approaches.</p>
+        <p class="deck">Researchers have introduced GroundingPI, a 4B parameter grounding foundation model that achieves state-of-the-art performance across 34 benchmarks, surpassing larger models like GPT-6 Astra, and significantly enhancing robotic manipulation and autonomous driving capabilities.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Training diffusion models with reinforcement learning can now be much faster and more stable. This makes it easier to develop high-quality image and video generation systems.</p>
+            <p>Models can now perceive and locate objects with greater precision and speed, even in complex environments. This enables more reliable and efficient control for embodied AI systems like robots and autonomous vehicles.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Online reinforcement learning (RL) fine-tuning of diffusion models faces efficiency issues with reverse-process methods like Flow-GRPO and instability with forward-process methods like DiffusionNFT.</li><li>DiffusionART (Diffusion Reinforcement with Aggregation-First Reward Tilting) aggregates each prompt's rewards into a shared reward-improving direction for reverse-process states.</li><li>It removes a hidden forward-reverse consistency force found in NFT-style objectives and adds a trust-region-masked second update for drift-adaptive restoration without needing Exponential Moving Average (EMA) tuning.</li><li>The method requires no differentiable reward model, works effectively with fewer samples per prompt, and supports pairwise reward models.</li><li>On Hunyuan Video-13B, DiffusionART achieves the same late-stage mean reward levels as DiffusionNFT and Flow-GRPO-Fast with 12.02 and 11.72 times fewer GPU hours, respectively.</li></ul>
+            <ul><li>GroundingPI is a 4B parameter grounding foundation model designed for precise object localization in complex scenes.</li><li>It establishes a new state of the art, averaging 73.68% across 34 grounding benchmarks, surpassing GPT-6 Astra's 71.54%.</li><li>The model improves performance in robotic manipulation and autonomous driving tasks.</li><li>On RoboTwin2.0, it outperforms other backbones by up to 24.8% in out-of-distribution settings.</li><li>GroundingPI trained with 50% of demonstrations on RoboCasa-GR1 outperforms baselines trained with 75%.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper arxiv:2610.12572 on Hugging Face.</li><li>Clone the GitHub repository linked on the paper page to explore the code.</li><li>Look up the authors, Zhenglin Wan and Yang You, for their other work.</li></ul>
+            <ul><li>Read the GroundingPI paper at arxiv:2609.39601.</li><li>Clone the GroundingPI GitHub repository to explore the open-source code and model weights.</li><li>Look up Qize Yu, one of the lead authors from XPENG AI.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.12572" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2609.39601" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -411,30 +411,30 @@
         
         <article class="band-item">
             <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.12611" target="_blank" rel="noopener">SoftwareGym: Scaling Computer-Use Agent Training with Diverse Synthesized Software Environments</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.13166" target="_blank" rel="noopener">Terminal Horizon for Agentic Data Synthesis</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>SoftwareGym is an automated pipeline that synthesizes diverse, runnable GUI software environments for training computer-use agents (CUAs), improving their performance on benchmarks like OSWorld.</p>
+                <p>Researchers developed Terminal Horizon, an automated engine designed to synthesize long-horizon agentic data from real-world tasks. This data was utilized to fine-tune Qwen3.5-27B, resulting in Terminal Horizon-27B, which demonstrates improved performance on complex agent benchmarks.</p>
                 
-                <ul><li>Computer-use agents (CUAs) are improving, but synthesizing diverse and reliable software environments at scale remains a challenge.</li><li>SoftwareGym is an automated pipeline for synthesizing GUI software environments with diverse interfaces, executable functionality, and runtime-verified behavior.</li><li>It generates structurally diverse designs, realizes them as runnable applications, and uses GUI evaluation with iterative repair to ensure functional reliability.</li></ul>
+                <ul><li>The paper introduces Terminal Horizon, a fully automated data synthesis engine for long-horizon terminal agents.</li><li>Terminal Horizon addresses the problem of synthetic environments simplifying key agent behaviors like exploration, implementation, and verification.</li><li>It starts with real-world professional work, uses independent execution to identify omitted work, and guides environment reconstruction.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
             <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.07987" target="_blank" rel="noopener">VisionWeave: Weaving Elastic Visual Representations as a Native Capability of MLLMs</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.13361" target="_blank" rel="noopener">AgentSWE Benchmark for AI Coding Agents</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>VisionWeave introduces a new method for Multimodal Large Language Models (MLLMs) to adaptively process visual information, saving 43% of visual tokens and increasing throughput by 2.3x while maintaining 98.9% performance.</p>
+                <p>A new benchmark named AgentSWE has been introduced, which reveals that current AI coding agents consistently fail to deliver fully functional software that meets specified requirements, despite often appearing to succeed.</p>
                 
-                <ul><li>Multimodal large language models (MLLMs) currently incur high costs by encoding visual inputs into dense, fixed-size patch tokens.</li><li>Visual information is unevenly distributed, requiring varied levels of detail.</li><li>VisionWeave introduces "elastic visual representation weaving," a native MLLM capability to learn where and at what granularity to allocate visual representations.</li></ul>
+                <ul><li>Researchers introduced AgentSWE, a benchmark for evaluating AI coding agents across the agent development lifecycle.</li><li>AgentSWE spans three stages: creation of an agent from natural language, editing of production agent codebases, and optimization towards a measurable target.</li><li>The benchmark includes 25 tasks, framed as commissions where the builder iterates against illustrative cases, with acceptance exercises on held-out cases.</li></ul>
                 
             </div>
         </article>
@@ -447,57 +447,28 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.45</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.12485" target="_blank" rel="noopener">Warm-Start Quantum Computation for Energy Readout and State Preparation</a>
-                <p>A new quantum computation framework called WARP separates state preparation from readout. It achieves 3 orders of magnitude higher accuracy for ground-state energy estimation and 50 times faster signal processing.</p>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">8.38</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.12772" target="_blank" rel="noopener">Reflex: Visually Grounded Reactive Humanoid Control</a>
-                <p>Researchers developed Reflex, a three-stage AI framework enabling humanoids to perform visually grounded, reactive whole-body control, demonstrated by catching thrown objects with a Unitree G1 robot.</p>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-    </section>
-    
-
-    
-
-    
-    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">8.38</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.12546" target="_blank" rel="noopener">Exact solutions of non-Markovian dissipative Ising models</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">8.22</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.12551" target="_blank" rel="noopener">Engineering Ergodicity-Breaking and Stable Emergent Conservation Laws in a Generic Quantum Many-body System Under Strong Periodic Drive</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
             <span class="tail-rank">7.75</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.13395" target="_blank" rel="noopener">ProgramGym: Scaling Training Environments for Long-Horizon Program Reproduction Agents</a>
+                <a class="title-link" href="https://huggingface.co/papers/2610.13630" target="_blank" rel="noopener">Multi-Stream Attention Residuals (MSAR) Introduction</a>
+                <p>Researchers have introduced Multi-Stream Attention Residuals (MSAR), an extension of AttnRes that utilizes multi-head depth attention to improve the performance of large models with minimal additional overhead.</p>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.11765" target="_blank" rel="noopener">LLM Thinking Inertia Phenomenon</a>
+                <p>A phenomenon termed "Thinking Inertia" has been observed in Large Language Models (LLMs), where they continue to reason even when explicitly instructed not to, impacting control and efficiency.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
     </section>
+    
+
+    
+
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -508,14 +479,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            8 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            6 analysed &middot; 
             
-            8 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
+            5 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-10-12</span>
+        <span>Built 2026-10-13</span>
     </footer>
 
 </div>
