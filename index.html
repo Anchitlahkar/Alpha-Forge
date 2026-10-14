@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-13</title>
+    <title>Alpha Forge &mdash; 2026-10-14</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,7 +354,7 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-13</b><br>
+            <b>2026-10-14</b><br>
             5 of 5 cleared
         </div>
     </header>
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>GroundingPI Foundation Model Release</h2>
-            <div class="score">9.22<small>Ranked</small></div>
+            <h2>Harness^2: Recursive Agent Harnessing for an Open World</h2>
+            <div class="score">8.45<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 9.0/10
+             &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers have introduced GroundingPI, a 4B parameter grounding foundation model that achieves state-of-the-art performance across 34 benchmarks, surpassing larger models like GPT-6 Astra, and significantly enhancing robotic manipulation and autonomous driving capabilities.</p>
+        <p class="deck">Harness^2 is a framework that enables LLM agents to recursively self-improve their execution harnesses for open-world tasks, learning from edits without ground-truth verifiers.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Models can now perceive and locate objects with greater precision and speed, even in complex environments. This enables more reliable and efficient control for embodied AI systems like robots and autonomous vehicles.</p>
+            <p>LLM agents can now improve their performance on unseen tasks without human feedback. This allows them to adapt and generalize more effectively in real-world scenarios.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>GroundingPI is a 4B parameter grounding foundation model designed for precise object localization in complex scenes.</li><li>It establishes a new state of the art, averaging 73.68% across 34 grounding benchmarks, surpassing GPT-6 Astra's 71.54%.</li><li>The model improves performance in robotic manipulation and autonomous driving tasks.</li><li>On RoboTwin2.0, it outperforms other backbones by up to 24.8% in out-of-distribution settings.</li><li>GroundingPI trained with 50% of demonstrations on RoboCasa-GR1 outperforms baselines trained with 75%.</li></ul>
+            <ul><li>LLM agent performance depends on their underlying models and execution harnesses.</li><li>Recursive self-improvement (RSI) can automatically evolve these harnesses, but struggles with unseen open-world tasks due to a lack of ground-truth verifiers and poor generalization.</li><li>Harness^2 is a plug-and-play framework that uses two levels of recursion to address these challenges.</li><li>Task-level recursion refines the current task's harness using a contrastive Propose-Probe-Compose step, which guides edits without needing ground-truth feedback.</li><li>Harnessing-level recursion extracts experience from these edits to update a continual improvement harness, helping the agent adapt to future tasks.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the GroundingPI paper at arxiv:2609.39601.</li><li>Clone the GroundingPI GitHub repository to explore the open-source code and model weights.</li><li>Look up Qize Yu, one of the lead authors from XPENG AI.</li></ul>
+            <ul><li>Read the paper at arxiv:2610.14224.</li><li>Check out the project page for Harness^2.</li><li>Clone the GitHub repository for the project.</li><li>Install the Hugging Face CLI by running `curl -LsSf https://hf.co/cli/install.sh | bash`.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2609.39601" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2610.14224" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.13166" target="_blank" rel="noopener">Terminal Horizon for Agentic Data Synthesis</a></h3>
+            <div class="band-score">8.03</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.14709" target="_blank" rel="noopener">Vela: User Behavior as Supervision Sparks LLM Intelligence</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Researchers developed Terminal Horizon, an automated engine designed to synthesize long-horizon agentic data from real-world tasks. This data was utilized to fine-tune Qwen3.5-27B, resulting in Terminal Horizon-27B, which demonstrates improved performance on complex agent benchmarks.</p>
+                <p>Researchers introduced Vela, a framework that trains large language models using real user behavior data as supervision, leading to improved performance on tasks requiring an understanding of user preferences and general benchmarks.</p>
                 
-                <ul><li>The paper introduces Terminal Horizon, a fully automated data synthesis engine for long-horizon terminal agents.</li><li>Terminal Horizon addresses the problem of synthetic environments simplifying key agent behaviors like exploration, implementation, and verification.</li><li>It starts with real-world professional work, uses independent execution to identify omitted work, and guides environment reconstruction.</li></ul>
+                <ul><li>Large language models (LLMs) need to infer user preferences and future actions from long-term behavior histories.</li><li>Current models, trained on static text or synthetic data, do not capture how user behavior evolves over time.</li><li>Vela, a framework, converts real user behavior data into trainable tasks and trajectories for LLM supervision.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.13361" target="_blank" rel="noopener">AgentSWE Benchmark for AI Coding Agents</a></h3>
+            <div class="band-score">7.75</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.15028" target="_blank" rel="noopener">UltraBERT: Beyond the Limit of BERT Pre-Training</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>A new benchmark named AgentSWE has been introduced, which reveals that current AI coding agents consistently fail to deliver fully functional software that meets specified requirements, despite often appearing to succeed.</p>
+                <p>Researchers introduced UltraBERT, a new encoder model that achieves state-of-the-art performance on both classification (GLUE 91.0) and retrieval (BEIR 47.7) tasks by optimizing pre-training design choices like masking ratios and distillation.</p>
                 
-                <ul><li>Researchers introduced AgentSWE, a benchmark for evaluating AI coding agents across the agent development lifecycle.</li><li>AgentSWE spans three stages: creation of an agent from natural language, editing of production agent codebases, and optimization towards a measurable target.</li><li>The benchmark includes 25 tasks, framed as commissions where the builder iterates against illustrative cases, with acceptance exercises on held-out cases.</li></ul>
+                <ul><li>Existing bidirectional encoders are under-optimized, with no single model performing competitively across both classification and retrieval tasks.</li><li>Encoder performance saturates on downstream tasks after a few trillion tokens of pre-training.</li><li>Lower masking ratios improve classification, while higher ratios improve retrieval, contradicting previous assumptions.</li></ul>
                 
             </div>
         </article>
@@ -447,10 +447,10 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.75</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.13630" target="_blank" rel="noopener">Multi-Stream Attention Residuals (MSAR) Introduction</a>
-                <p>Researchers have introduced Multi-Stream Attention Residuals (MSAR), an extension of AttnRes that utilizes multi-head depth attention to improve the performance of large models with minimal additional overhead.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.13990" target="_blank" rel="noopener">DoSA: Dots Sparse Attention</a>
+                <p>DoSA is a lossless sparse attention method that speeds up AI model processing. It conditionally scores keys and rejects candidates early, boosting Indexer performance by up to 2.74 times and time-to-first-token by up to 1.94 times.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -458,8 +458,8 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.11765" target="_blank" rel="noopener">LLM Thinking Inertia Phenomenon</a>
-                <p>A phenomenon termed "Thinking Inertia" has been observed in Large Language Models (LLMs), where they continue to reason even when explicitly instructed not to, impacting control and efficiency.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2609.38847" target="_blank" rel="noopener">Scoring Higher, Answering Worse: Mitigating Reward Hacking in Rubric-Based RL via Protocol-Level Rubrics</a>
+                <p>Rubric-based reinforcement learning (RL) can suffer from reward hacking where models score high but give bad answers due to simple additive score aggregation. A new method, ProRubric, groups criteria so they must pass together, improving answer appropriateness by 10.8 points.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -480,13 +480,13 @@
         <span>
             
             14 feeds polled &middot; 11 answered &middot; 
-            6 analysed &middot; 
+            8 analysed &middot; 
             
             5 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-10-13</span>
+        <span>Built 2026-10-14</span>
     </footer>
 
 </div>
