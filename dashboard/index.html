@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-14</title>
+    <title>Alpha Forge &mdash; 2026-10-15</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-14</b><br>
-            5 of 5 cleared
+            <b>2026-10-15</b><br>
+            5 of 10 cleared
         </div>
     </header>
 
@@ -365,7 +365,7 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Harness^2: Recursive Agent Harnessing for an Open World</h2>
+            <h2>Measuring Impact of Netflix Personalized Recommendations</h2>
             <div class="score">8.45<small>Ranked</small></div>
         </div>
 
@@ -373,35 +373,35 @@
 
         <p class="credit">
             AI Research
-             &middot; Hugging Face Papers
-            
+             &middot; Netflix Tech Blog
+             &middot; 14 Oct
             
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Harness^2 is a framework that enables LLM agents to recursively self-improve their execution harnesses for open-world tasks, learning from edits without ground-truth verifiers.</p>
+        <p class="deck">Netflix developed a behavioral model, validated with A/B tests, to measure the causal impact of personalized recommendations. The current system increases engagement by 16% over random recommendations and maintains content diversity.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>LLM agents can now improve their performance on unseen tasks without human feedback. This allows them to adapt and generalize more effectively in real-world scenarios.</p>
+            <p>Quantifying the causal effect of personalized recommendations is challenging due to inherent biases. A validated hybrid approach combining modeling and experimentation can accurately measure how much these systems drive user engagement and content diversity.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>LLM agent performance depends on their underlying models and execution harnesses.</li><li>Recursive self-improvement (RSI) can automatically evolve these harnesses, but struggles with unseen open-world tasks due to a lack of ground-truth verifiers and poor generalization.</li><li>Harness^2 is a plug-and-play framework that uses two levels of recursion to address these challenges.</li><li>Task-level recursion refines the current task's harness using a contrastive Propose-Probe-Compose step, which guides edits without needing ground-truth feedback.</li><li>Harnessing-level recursion extracts experience from these edits to update a continual improvement harness, helping the agent adapt to future tasks.</li></ul>
+            <ul><li>Netflix created a behavioral model to measure the causal impact of personalized recommendations, separating member preferences from recommendation effects.</li><li>The model uses a low-rank choice model to learn dynamic member preferences and title representations from viewing behavior.</li><li>It includes a 'recommendation bonus' to capture how recommendations create awareness and provide information.</li><li>Validation with small-scale A/B tests showed the model's predicted diversion ratios had a 0.86 correlation and 0.73 R-squared with experimental results.</li><li>Counterfactual analysis revealed the current recommender system increases engagement by 16% compared to random recommendations, 12% over popularity-based, and 4% over a basic matrix factorization model.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper at arxiv:2610.14224.</li><li>Check out the project page for Harness^2.</li><li>Clone the GitHub repository for the project.</li><li>Install the Hugging Face CLI by running `curl -LsSf https://hf.co/cli/install.sh | bash`.</li></ul>
+            <ul><li>Read the new article in the International Journal of Industrial Organization, PII S0167718726000561.</li><li>Look up the authors: Kevin Zielnicki, Guy Aridor, Aurélien Bibaut, Allen Tran, Winston Chou, and Nathan Kallus.</li><li>Check the proceedings of the ACM Conference on Economics & Computation (EC '26) for their presentation.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.14224" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://netflixtechblog.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.03</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.14709" target="_blank" rel="noopener">Vela: User Behavior as Supervision Sparks LLM Intelligence</a></h3>
+            <div class="band-score">7.75</div>
+            <h3><a class="title-link" href="https://arxiv.org/abs/2610.18954" target="_blank" rel="noopener">Optimal Disorder Strength for Unitary k-Designs in Spin Chains</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                Quantum Computing &middot; arXiv quant-ph
                 
             </p>
             <div class="story-body">
-                <p>Researchers introduced Vela, a framework that trains large language models using real user behavior data as supervision, leading to improved performance on tasks requiring an understanding of user preferences and general benchmarks.</p>
+                <p>Researchers developed a theoretical framework to identify the optimal disorder strength for creating Haar-like unitary ensembles in quantum spin chains, confirming their findings with simulations and showing a multi-quench protocol improves performance for classical shadow tomography.</p>
                 
-                <ul><li>Large language models (LLMs) need to infer user preferences and future actions from long-term behavior histories.</li><li>Current models, trained on static text or synthetic data, do not capture how user behavior evolves over time.</li><li>Vela, a framework, converts real user behavior data into trainable tasks and trajectories for LLM supervision.</li></ul>
+                <ul><li>Quantum simulators with disordered spin Hamiltonians can generate Haar-like unitary ensembles.</li><li>An optimal intermediate disorder strength exists for approximating a unitary k-design.</li><li>A perturbative theory for the moment gap, Δ^(k), was developed to quantify deviation from the Haar value.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.75</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.15028" target="_blank" rel="noopener">UltraBERT: Beyond the Limit of BERT Pre-Training</a></h3>
+            <div class="band-score">7.67</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.20571" target="_blank" rel="noopener">ATAS Framework for Agentic Video Generation</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Researchers introduced UltraBERT, a new encoder model that achieves state-of-the-art performance on both classification (GLUE 91.0) and retrieval (BEIR 47.7) tasks by optimizing pre-training design choices like masking ratios and distillation.</p>
+                <p>Researchers introduced ATAS, a framework that uses scene and event memories to improve spatial and temporal consistency in long-form AI-generated videos, outperforming existing methods across multiple metrics and human ratings.</p>
                 
-                <ul><li>Existing bidirectional encoders are under-optimized, with no single model performing competitively across both classification and retrieval tasks.</li><li>Encoder performance saturates on downstream tasks after a few trillion tokens of pre-training.</li><li>Lower masking ratios improve classification, while higher ratios improve retrieval, contradicting previous assumptions.</li></ul>
+                <ul><li>Long-form agentic video generation struggles with maintaining spatial and temporal consistency across non-consecutive shots.</li><li>The Any Time, Any Space (ATAS) framework compiles screenplays into shot requests with explicit location, camera, and event-time references.</li><li>ATAS uses a scene memory for static geometry and an event memory for time-indexed dynamic observations to retrieve relevant evidence before generating each shot.</li></ul>
                 
             </div>
         </article>
@@ -449,8 +449,8 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.13990" target="_blank" rel="noopener">DoSA: Dots Sparse Attention</a>
-                <p>DoSA is a lossless sparse attention method that speeds up AI model processing. It conditionally scores keys and rejects candidates early, boosting Indexer performance by up to 2.74 times and time-to-first-token by up to 1.94 times.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.20584" target="_blank" rel="noopener">Player-1 Framework for AI Game Control</a>
+                <p>Researchers introduced Player-1, a post-training framework that teaches AI agents to control games using synthetic experience, significantly improving performance over supervised learning baselines in complex 2D and 3D environments.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -458,8 +458,8 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2609.38847" target="_blank" rel="noopener">Scoring Higher, Answering Worse: Mitigating Reward Hacking in Rubric-Based RL via Protocol-Level Rubrics</a>
-                <p>Rubric-based reinforcement learning (RL) can suffer from reward hacking where models score high but give bad answers due to simple additive score aggregation. A new method, ProRubric, groups criteria so they must pass together, improving answer appropriateness by 10.8 points.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.19975" target="_blank" rel="noopener">LatentLoop for Scaling Looped MoE Models</a>
+                <p>LatentLoop improves looped Mixture-of-Experts (MoE) models by compressing the first processing pass and reallocating saved compute to increase model width, leading to better performance and compute savings.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -470,6 +470,51 @@
     
 
     
+    <h2 class="rubric">Also cleared <span class="n">5</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.19820" target="_blank" rel="noopener">ActionOPD for Distilling LLM Agents</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.20572" target="_blank" rel="noopener">CriticOPD for Critique-Guided On-Policy Distillation</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.52</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://netflixtechblog.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Integrating Netflix's Foundation Model into Personalization</a>
+            </span>
+            <span class="tail-src">Netflix Tech Blog</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.52</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://netflixtechblog.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Netflix Adopts DataJunction for Semantic Layer</a>
+            </span>
+            <span class="tail-src">Netflix Tech Blog</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.92</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2610.18953" target="_blank" rel="noopener">Invertible Subalgebras for Chiral Semion Topological Order</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+    </section>
+    
 
     <h2 class="rubric">This week, joined up</h2>
     
@@ -479,14 +524,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 11 answered &middot; 
-            8 analysed &middot; 
+            14 feeds polled &middot; 12 answered &middot; 
+            10 analysed &middot; 
             
-            5 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
-            
+            10 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
+            <br>Gemini was unavailable for 1 article; dropped rather than summarised.
         </span>
-        <span>Built 2026-10-14</span>
+        <span>Built 2026-10-15</span>
     </footer>
 
 </div>
