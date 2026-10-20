@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-19</title>
+    <title>Alpha Forge &mdash; 2026-10-20</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-19</b><br>
-            5 of 7 cleared
+            <b>2026-10-20</b><br>
+            5 of 8 cleared
         </div>
     </header>
 
@@ -365,7 +365,7 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>CarryOn Method for Long-Horizon AI Agents</h2>
+            <h2>Collective Experience Learning for Robots</h2>
             <div class="score">8.45<small>Ranked</small></div>
         </div>
 
@@ -379,29 +379,29 @@
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">A new method called CarryOn has been developed to organize long-horizon AI agent context using reusable task objects instead of interaction histories. This approach significantly improves performance and reduces token usage on complex benchmarks.</p>
+        <p class="deck">Researchers introduced Collective Experience Learning (CEL), a new paradigm enabling robots to share execution data and autonomously improve their policies. This system, which uses failure-guided retrieval and asynchronous training, demonstrated high success rates (93.3-99.2%) across five real-world tasks.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Long-horizon AI agents currently waste compute by repeatedly processing past interactions. New methods that organize context around reusable task objects can make these agents significantly more efficient and performant.</p>
+            <p>Robot fleets can now learn and improve autonomously from their own execution failures. This removes the need for constant human supervision and correction, making large-scale robot deployment more practical.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Long-horizon agents typically process full interaction histories to maintain context.</li><li>CarryOn is an object-oriented context runtime that organizes agent continuation around reusable task objects.</li><li>It uses continuation carriers, execution context, and a live tail of recent interactions to build its context view.</li><li>CarryOn maintains carrier records across folds, revising affected records and carrying forward unaffected ones.</li><li>Experiments show performance gains of 5.8% on OSWorld 2.0 and 7.0% on BrowseComp-Plus.</li></ul>
+            <ul><li>Collective Experience Learning (CEL) is a new paradigm for robots to improve policies by sharing execution experience across fleets.</li><li>CEL uses Failure-guided Experience Retrieval Fine-tuning (FERT), an algorithm that retrieves successful trajectory segments from shared fleet experience based on failure contexts.</li><li>FERT uses these successful actions as supervision for policy updates, eliminating the need for additional expert demonstrations or human corrections.</li><li>A Fault-tolerant Asynchronous Training System (FATS) coordinates experience collection, policy optimization, and policy distribution across the robot fleet.</li><li>The system achieved 93.3-99.2% success rates across five real-world manipulation tasks, evaluated over 120 trials per task on robots excluded from training.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper "Pack Light, CarryOn: Building Object-Oriented Context for Long-Horizon Agents" (arxiv:2610.18784).</li><li>Visit the project page at https://ethannju.github.io/carryon/ to explore the work.</li><li>Look up Yuchen Lu, Julian McAuley, and Lei Zhang to see their other work.</li></ul>
+            <ul><li>Read the paper "Learning from Fleet Experience: A Collective Learning Paradigm for Robots" (arxiv:2610.25736).</li><li>Visit the project page at cel-robot-learning.github.io to see more details.</li><li>Look up the lead author, Shu'ang Yu, to follow their work.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.18784" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2610.25736" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -411,30 +411,30 @@
         
         <article class="band-item">
             <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://arxiv.org/abs/2610.22482" target="_blank" rel="noopener">Quantum Phase Transitions Beyond Landau Theory</a></h3>
+            <h3><a class="title-link" href="https://blog.cloudflare.com/clairic-extraction-model/" target="_blank" rel="noopener">Cloudflare Introduces Clairic Extraction Model</a></h3>
             <p class="credit">
-                Quantum Computing &middot; arXiv quant-ph
+                AI Research &middot; Cloudflare Blog
                 
             </p>
             <div class="story-body">
-                <p>Researchers have utilized superconducting quantum processors to investigate a quantum phase transition that deviates from the conventional Landau-Ginzburg-Wilson paradigm. This work establishes a novel framework for exploring complex many-body dynamics in quantum systems.</p>
+                <p>Cloudflare announced Clairic, a new System One class of extraction models. Hosted on Workers AI, Clairic is designed to quickly and accurately extract, compute, estimate, and forecast values from unstructured text, offering a more cost-effective solution than traditional LLMs.</p>
                 
-                <ul><li>Researchers investigated a Landau-forbidden ferromagnetic-to-valence-bond-solid (FM-VBS) transition, which is a direct continuous quantum phase transition between phases breaking distinct symmetries.</li><li>The study used superconducting quantum processors to explore this transition in a frustrated one-dimensional spin chain.</li><li>The method combined matrix-product-state-assisted circuit preparation with quantum-hardware measurements.</li></ul>
+                <ul><li>Cloudflare launched Clairic, a new System One extraction model.</li><li>It is available as `@cf/cloudflare/clairic` on Workers AI.</li><li>Clairic extracts, computes, estimates, and forecasts values from unstructured inputs.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
             <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.19159" target="_blank" rel="noopener">Benchmarking AI Agents on Open Scientific Research</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.26860" target="_blank" rel="noopener">OpenVLHarness for Multimodal LLM Tool-Use</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>A new benchmark, "Into the Unknown," was introduced to evaluate nine frontier AI agents on their ability to draft follow-up scientific papers. The results showed that none of the 135 submissions met expert standards, with 114 containing fabricated claims or contradictory evidence, highlighting significant challenges for AI in scientific research.</p>
+                <p>OpenVLHarness is a training-free framework designed to significantly enhance multimodal large language models' (LLMs) ability to utilize tools and memory for visual reasoning. It achieved notable score increases (9.7-12.6 points) across 22 benchmarks.</p>
                 
-                <ul><li>Researchers introduced "Into the Unknown," a benchmark for evaluating AI agents on open scientific problems.</li><li>The benchmark tasks agents to write follow-up papers based on an initial science paper and a specific research direction.</li><li>Scientists from US Department of Energy national laboratories provided unpublished follow-up directions and evaluation criteria.</li></ul>
+                <ul><li>OpenVLHarness enhances multimodal reasoning by integrating persistent memory, diverse tool interfaces, and iterative evidence composition.</li><li>It was tested on 22 benchmarks, showing that MLLMs alone gain little from just more inference budget for tasks needing external evidence.</li><li>The system includes a capability layer for tool access and output rendering, and persistent multimodal memory to store images, data, and web references.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,21 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.38</span>
+            <span class="tail-rank">8.03</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.23479" target="_blank" rel="noopener">HexaShell VLM Agent for Robot Coding</a>
-                <p>HexaShell is a VLM-powered coding agent designed to control a dual-arm robot. It achieves state-of-the-art results on RoboDojo by autonomously writing and fixing its own tools, though it faces difficulties with tasks requiring precise physical contact.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.22791" target="_blank" rel="noopener">Microsoft's Self-Evolving Coding Agents (Self-HPO)</a>
+                <p>Microsoft Research developed Self-HPO, a recursive framework that enables coding agents to improve themselves. This is achieved by alternating between optimizing their interaction environment (harness) and their policy model, resulting in enhanced performance on coding benchmarks.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">8.3</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.22489" target="_blank" rel="noopener">Axiomatic Framework for Multi-Time States in Quantum Theories</a>
-                <p>A new axiomatic framework has been developed for multi-time states within operational probabilistic theories (OPTs), which encompass quantum mechanics and other general physical theories. This framework is capable of handling both Markovian and non-Markovian dynamics and aids in inferring quantum causal models.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.25690" target="_blank" rel="noopener">ScaleNav for Language-Conditioned Robot Navigation</a>
+                <p>ScaleNav is an AI model developed to train robots for language-conditioned local navigation. It leverages large-scale internet videos to learn visual dynamics, achieving high success rates in simulations and on a real quadruped robot.</p>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Hugging Face Papers</span>
         </div>
         
     </section>
@@ -470,23 +470,31 @@
     
 
     
-    <h2 class="rubric">Also cleared <span class="n">2</span></h2>
+    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">7.6</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.22471" target="_blank" rel="noopener">GPT-6-Astra's Embodied Intelligence Performance</a>
+                <a class="title-link" href="https://huggingface.co/papers/2610.25404" target="_blank" rel="noopener">MT Forcing for Multi-Turn Image Editing</a>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">7.52</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.20424" target="_blank" rel="noopener">BizBench for Real-World Business AI Agents</a>
+                <a class="title-link" href="https://blog.cloudflare.com/obsessive-inference-optimization/" target="_blank" rel="noopener">Cloudflare's AI Inference Cost Optimization</a>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">Cloudflare Blog</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.82</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://stripe.com/blog/saas-platform-trends-in-AI-era" target="_blank" rel="noopener">Stripe Survey on SaaS Trends in the AI Era</a>
+            </span>
+            <span class="tail-src">Stripe Engineering</span>
         </div>
         
     </section>
@@ -500,14 +508,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            7 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            9 analysed &middot; 
             
-            7 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
-            <br>Gemini was unavailable for 1 article; dropped rather than summarised.
+            8 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
+            
         </span>
-        <span>Built 2026-10-19</span>
+        <span>Built 2026-10-20</span>
     </footer>
 
 </div>
