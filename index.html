@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-20</title>
+    <title>Alpha Forge &mdash; 2026-10-21</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-20</b><br>
-            5 of 8 cleared
+            <b>2026-10-21</b><br>
+            5 of 10 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Collective Experience Learning for Robots</h2>
-            <div class="score">8.45<small>Ranked</small></div>
+            <h2>SolarRenderer: Few-Step Generative Reference Rendering</h2>
+            <div class="score">8.52<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -379,29 +379,29 @@
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers introduced Collective Experience Learning (CEL), a new paradigm enabling robots to share execution data and autonomously improve their policies. This system, which uses failure-guided retrieval and asynchronous training, demonstrated high success rates (93.3-99.2%) across five real-world tasks.</p>
+        <p class="deck">SolarRenderer is a new AI model that generates realistic videos from structural inputs, such as game engine data, in just four steps or real-time. It achieves state-of-the-art generalization across 16 structural representations by adapting a frozen MiniMax-H3 33B backbone with LoRAs.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Robot fleets can now learn and improve autonomously from their own execution failures. This removes the need for constant human supervision and correction, making large-scale robot deployment more practical.</p>
+            <p>This model can generate realistic video from structural inputs in real time. It makes it possible to quickly create high-fidelity visual content from simple scene descriptions.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Collective Experience Learning (CEL) is a new paradigm for robots to improve policies by sharing execution experience across fleets.</li><li>CEL uses Failure-guided Experience Retrieval Fine-tuning (FERT), an algorithm that retrieves successful trajectory segments from shared fleet experience based on failure contexts.</li><li>FERT uses these successful actions as supervision for policy updates, eliminating the need for additional expert demonstrations or human corrections.</li><li>A Fault-tolerant Asynchronous Training System (FATS) coordinates experience collection, policy optimization, and policy distribution across the robot fleet.</li><li>The system achieved 93.3-99.2% success rates across five real-world manipulation tasks, evaluated over 120 trials per task on robots excluded from training.</li></ul>
+            <ul><li>SolarRenderer is a structure-conditioned video renderer.</li><li>It adapts a frozen MiniMax-H3 33B backbone using two lightweight LoRAs.</li><li>The model renders realistic videos from diverse structural inputs in four steps.</li><li>This four-step rendering is 12.3 times faster than 50-step sampling.</li><li>A block-causal variant renders 768p video in real time, producing a 17-frame chunk every 0.70 seconds at 24 fps.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper "Learning from Fleet Experience: A Collective Learning Paradigm for Robots" (arxiv:2610.25736).</li><li>Visit the project page at cel-robot-learning.github.io to see more details.</li><li>Look up the lead author, Shu'ang Yu, to follow their work.</li></ul>
+            <ul><li>Read the paper "SolarRenderer: Few-Step Generative Reference Rendering" at arxiv:2610.28630.</li><li>Clone the GitHub repository at https://github.com/Enderfga/SolarRenderer.</li><li>Explore the live demos on the project page at https://enderfga.cn/SolarRenderer/.</li><li>Look up the MiniMax-H3 33B backbone model.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.25736" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2610.28630" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -411,30 +411,30 @@
         
         <article class="band-item">
             <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://blog.cloudflare.com/clairic-extraction-model/" target="_blank" rel="noopener">Cloudflare Introduces Clairic Extraction Model</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.28578" target="_blank" rel="noopener">Sage-A1.5 Agentic Model for Scientific Exploration</a></h3>
             <p class="credit">
-                AI Research &middot; Cloudflare Blog
+                AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Cloudflare announced Clairic, a new System One class of extraction models. Hosted on Workers AI, Clairic is designed to quickly and accurately extract, compute, estimate, and forecast values from unstructured text, offering a more cost-effective solution than traditional LLMs.</p>
+                <p>Sage-A1.5 is a newly open-sourced 35B Mixture-of-Experts agentic model that significantly improves long-horizon problem-solving and open scientific exploration through adaptive task delegation and verification.</p>
                 
-                <ul><li>Cloudflare launched Clairic, a new System One extraction model.</li><li>It is available as `@cf/cloudflare/clairic` on Workers AI.</li><li>Clairic extracts, computes, estimates, and forecasts values from unstructured inputs.</li></ul>
+                <ul><li>Sage-A1.5 is a 35B Mixture-of-Experts (MoE) agentic model.</li><li>It improves long-horizon problem solving via adaptive task delegation, verification, and open scientific exploration.</li><li>Agentic orchestration extends single-agent execution through task delegation and parallel collaboration among subagents with isolated contexts.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
             <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.26860" target="_blank" rel="noopener">OpenVLHarness for Multimodal LLM Tool-Use</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.27628" target="_blank" rel="noopener">Progress-Aligned Recurrence (PAR) for Language Model Length Generalization</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>OpenVLHarness is a training-free framework designed to significantly enhance multimodal large language models' (LLMs) ability to utilize tools and memory for visual reasoning. It achieved notable score increases (9.7-12.6 points) across 22 benchmarks.</p>
+                <p>Researchers introduced Progress-Aligned Recurrence (PAR), a method enabling looped language models to generalize to sequence lengths 16 times greater than their training data by aligning intermediate predictions and stabilizing recurrent state norms.</p>
                 
-                <ul><li>OpenVLHarness enhances multimodal reasoning by integrating persistent memory, diverse tool interfaces, and iterative evidence composition.</li><li>It was tested on 22 benchmarks, showing that MLLMs alone gain little from just more inference budget for tasks needing external evidence.</li><li>The system includes a capability layer for tool access and output rendering, and persistent multimodal memory to store images, data, and web references.</li></ul>
+                <ul><li>Progress-Aligned Recurrence (PAR) trains looped language models to achieve strong length extrapolation on sequential tracking tasks.</li><li>PAR addresses two core problems: the lack of intermediate supervision and the drift in recurrent state scale during repeated updates.</li><li>The method involves two changes: predicting the state after k steps at loop k, and rescaling hidden states to match their first-loop scale.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,21 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.03</span>
+            <span class="tail-rank">8.38</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.22791" target="_blank" rel="noopener">Microsoft's Self-Evolving Coding Agents (Self-HPO)</a>
-                <p>Microsoft Research developed Self-HPO, a recursive framework that enables coding agents to improve themselves. This is achieved by alternating between optimizing their interaction environment (harness) and their policy model, resulting in enhanced performance on coding benchmarks.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.28594" target="_blank" rel="noopener">Video-Point Model (VPM) for 4D World Forecasting</a>
+                <p>Researchers developed the Video-Point Model (VPM), a world model capable of forecasting future multi-view videos and 3D point trajectories from historical video data and instructions, improving video fidelity, 3D motion accuracy, and robot control through point supervision.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">8.38</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.25690" target="_blank" rel="noopener">ScaleNav for Language-Conditioned Robot Navigation</a>
-                <p>ScaleNav is an AI model developed to train robots for language-conditioned local navigation. It leverages large-scale internet videos to learn visual dynamics, achieving high success rates in simulations and on a real quadruped robot.</p>
+                <a class="title-link" href="https://arxiv.org/abs/2610.27065" target="_blank" rel="noopener">Polynomial-Time Classical Simulation of BosonSampling with Photon Loss</a>
+                <p>A new algorithm has been developed that allows for the classical simulation of BosonSampling in polynomial time, even when a constant fraction of photons are lost, significantly expanding the known limits of classical simulability for these quantum experiments.</p>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
     </section>
@@ -470,13 +470,21 @@
     
 
     
-    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
+    <h2 class="rubric">Also cleared <span class="n">5</span></h2>
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.6</span>
+            <span class="tail-rank">7.75</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.25404" target="_blank" rel="noopener">MT Forcing for Multi-Turn Image Editing</a>
+                <a class="title-link" href="https://arxiv.org/abs/2610.26900" target="_blank" rel="noopener">Concurrent Entanglement Purification Scheduling in Quantum Networks</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.26203" target="_blank" rel="noopener">Focused Omni-Modal GUI Agents (FocusGUI)</a>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -484,17 +492,25 @@
         <div class="tail-row">
             <span class="tail-rank">7.52</span>
             <span class="tail-title">
-                <a class="title-link" href="https://blog.cloudflare.com/obsessive-inference-optimization/" target="_blank" rel="noopener">Cloudflare's AI Inference Cost Optimization</a>
+                <a class="title-link" href="https://blog.cloudflare.com/typescript-rust-port/" target="_blank" rel="noopener">Introduction of tsrs: TypeScript Port to Rust</a>
             </span>
             <span class="tail-src">Cloudflare Blog</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">6.82</span>
+            <span class="tail-rank">7.37</span>
             <span class="tail-title">
-                <a class="title-link" href="https://stripe.com/blog/saas-platform-trends-in-AI-era" target="_blank" rel="noopener">Stripe Survey on SaaS Trends in the AI Era</a>
+                <a class="title-link" href="https://arxiv.org/abs/2610.27070" target="_blank" rel="noopener">Cavity Models of Non-Abelian Gauge Theories</a>
             </span>
-            <span class="tail-src">Stripe Engineering</span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.37</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://blog.cloudflare.com/emudhra-certificate-compromise/" target="_blank" rel="noopener">eMudhra Certificate Compromise</a>
+            </span>
+            <span class="tail-src">Cloudflare Blog</span>
         </div>
         
     </section>
@@ -508,14 +524,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 11 answered &middot; 
-            9 analysed &middot; 
+            14 feeds polled &middot; 12 answered &middot; 
+            10 analysed &middot; 
             
-            8 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
+            10 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-10-20</span>
+        <span>Built 2026-10-21</span>
     </footer>
 
 </div>
