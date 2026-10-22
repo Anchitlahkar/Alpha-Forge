@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-21</title>
+    <title>Alpha Forge &mdash; 2026-10-22</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-21</b><br>
-            5 of 10 cleared
+            <b>2026-10-22</b><br>
+            5 of 8 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>SolarRenderer: Few-Step Generative Reference Rendering</h2>
-            <div class="score">8.52<small>Ranked</small></div>
+            <h2>Agent World Model in the Wild: Computer-Use Agent Environment Synthesis</h2>
+            <div class="score">8.45<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -379,29 +379,29 @@
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">SolarRenderer is a new AI model that generates realistic videos from structural inputs, such as game engine data, in just four steps or real-time. It achieves state-of-the-art generalization across 16 structural representations by adapting a frozen MiniMax-H3 33B backbone with LoRAs.</p>
+        <p class="deck">WildAWM synthesizes controllable computer-use environments and tasks using open-source models to train general computer-use agents (CUAs), showing broad generalization across web, CLI, and GUI benchmarks.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>This model can generate realistic video from structural inputs in real time. It makes it possible to quickly create high-fidelity visual content from simple scene descriptions.</p>
+            <p>Training general AI agents to interact with computers is difficult and risky in real systems. This work provides a scalable, safe method to create complex training environments, which could accelerate the development of more capable AI assistants.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>SolarRenderer is a structure-conditioned video renderer.</li><li>It adapts a frozen MiniMax-H3 33B backbone using two lightweight LoRAs.</li><li>The model renders realistic videos from diverse structural inputs in four steps.</li><li>This four-step rendering is 12.3 times faster than 50-step sampling.</li><li>A block-causal variant renders 768p video in real time, producing a 17-frame chunk every 0.70 seconds at 24 fps.</li></ul>
+            <ul><li>WildAWM, or Agent World Model in the Wild, is a scalable pipeline that synthesizes controllable environments and tasks for training general computer-use agents (CUAs).</li><li>It constructs executable environments that jointly support graphical user interfaces (GUI), model context protocol (MCP) services, and command-line interfaces (CLI).</li><li>The entire pipeline uses open-source models, avoiding proprietary frontier models.</li><li>It addresses task synthesis challenges with execution-based quality gates, which combine heterogeneous agent rollouts, cross-judge consistency checks, and counterfactual probes.</li><li>The pipeline synthesizes 341 long-horizon environment-task pairs; some need over 100 agent steps.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper "SolarRenderer: Few-Step Generative Reference Rendering" at arxiv:2610.28630.</li><li>Clone the GitHub repository at https://github.com/Enderfga/SolarRenderer.</li><li>Explore the live demos on the project page at https://enderfga.cn/SolarRenderer/.</li><li>Look up the MiniMax-H3 33B backbone model.</li></ul>
+            <ul><li>Clone the WildAWM GitHub repository at https://github.com/MSR-Orchard/WildAWM.</li><li>Look up the paper arxiv:2610.26828 on arXiv.</li><li>Check the Hugging Face collection for "Agent World Model in the Wild" for models and data.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.28630" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2610.26828" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.28578" target="_blank" rel="noopener">Sage-A1.5 Agentic Model for Scientific Exploration</a></h3>
+            <div class="band-score">8.03</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.17860" target="_blank" rel="noopener">Socratic Skill Learning: Interleaving Teaching and Practice for Transferable Agent Skills</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Sage-A1.5 is a newly open-sourced 35B Mixture-of-Experts agentic model that significantly improves long-horizon problem-solving and open scientific exploration through adaptive task delegation and verification.</p>
+                <p>Socratic Skill Learning (SSL) improves how LLM agents acquire and reuse skills. It combines expert teaching with student practice. SSL outperforms existing methods and uses a new benchmark, SkillTransferBench.</p>
                 
-                <ul><li>Sage-A1.5 is a 35B Mixture-of-Experts (MoE) agentic model.</li><li>It improves long-horizon problem solving via adaptive task delegation, verification, and open scientific exploration.</li><li>Agentic orchestration extends single-agent execution through task delegation and parallel collaboration among subagents with isolated contexts.</li></ul>
+                <ul><li>Socratic Skill Learning (SSL) improves reusable agent skills by interleaving expert guidance with student practice and targeted review.</li><li>SSL outperforms trajectory distillation (Trace2Skill) and contrastive distillation (SKILL-KD) methods.</li><li>The research introduces SkillTransferBench, a benchmark with 35 task families and 408 executable cases for testing skill reuse.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.27628" target="_blank" rel="noopener">Progress-Aligned Recurrence (PAR) for Language Model Length Generalization</a></h3>
+            <div class="band-score">7.75</div>
+            <h3><a class="title-link" href="https://arxiv.org/abs/2610.28705" target="_blank" rel="noopener">Separability does not certify zero-noise extrapolation: Factorial diagnostics in dynamic quantum circuits</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                Quantum Computing &middot; arXiv quant-ph
                 
             </p>
             <div class="story-body">
-                <p>Researchers introduced Progress-Aligned Recurrence (PAR), a method enabling looped language models to generalize to sequence lengths 16 times greater than their training data by aligning intermediate predictions and stabilizing recurrent state norms.</p>
+                <p>A study on IBM quantum circuits shows that zero-noise extrapolation, a technique to reduce quantum errors, often fails to accurately reach the ideal zero-noise limit. Separately amplifying errors does not guarantee an accurate result. Multi-knob extrapolations perform better than single-knob ones but still miss the known ideal value in many cases.</p>
                 
-                <ul><li>Progress-Aligned Recurrence (PAR) trains looped language models to achieve strong length extrapolation on sequential tracking tasks.</li><li>PAR addresses two core problems: the lack of intermediate supervision and the drift in recurrent state scale during repeated updates.</li><li>The method involves two changes: predicting the state after k steps at loop k, and rescaling hidden states to match their first-loop scale.</li></ul>
+                <ul><li>Separately amplifying gate, latency, and mid-circuit measurement errors can simplify zero-noise extrapolation (ZNE), but weak interaction between amplification knobs does not establish an accurate zero-noise limit.</li><li>The paper distinguishes observable separability, response-model adequacy, and calibration of the zero-noise limit.</li><li>Researchers tested these concepts in a 2^3 factorial experiment on three IBM dynamic circuits.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,21 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.38</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.28594" target="_blank" rel="noopener">Video-Point Model (VPM) for 4D World Forecasting</a>
-                <p>Researchers developed the Video-Point Model (VPM), a world model capable of forecasting future multi-view videos and 3D point trajectories from historical video data and instructions, improving video fidelity, 3D motion accuracy, and robot control through point supervision.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.28577" target="_blank" rel="noopener">Cache Engineering for Agents</a>
+                <p>A new method called cache engineering lets LLM agents directly manage their key-value cache using `drop` and `repos` operations, supported by the AKV serving engine. This improves efficiency and accuracy for long agent trajectories.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">8.38</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.27065" target="_blank" rel="noopener">Polynomial-Time Classical Simulation of BosonSampling with Photon Loss</a>
-                <p>A new algorithm has been developed that allows for the classical simulation of BosonSampling in polynomial time, even when a constant fraction of photons are lost, significantly expanding the known limits of classical simulability for these quantum experiments.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.29989" target="_blank" rel="noopener">Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation</a>
+                <p>Researchers at Tencent's ARC Lab introduced Future Chunk Prediction (FCP), a new auxiliary objective for autoregressive video diffusion models. FCP improves physical plausibility and training efficiency by enforcing future-chunk supervision, potentially aiding in building world models.</p>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Hugging Face Papers</span>
         </div>
         
     </section>
@@ -470,21 +470,21 @@
     
 
     
-    <h2 class="rubric">Also cleared <span class="n">5</span></h2>
+    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.75</span>
+            <span class="tail-rank">7.62</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.26900" target="_blank" rel="noopener">Concurrent Entanglement Purification Scheduling in Quantum Networks</a>
+                <a class="title-link" href="https://arxiv.org/abs/2610.28732" target="_blank" rel="noopener">Interacting quantum reference frames</a>
             </span>
             <span class="tail-src">arXiv quant-ph</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">7.52</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.26203" target="_blank" rel="noopener">Focused Omni-Modal GUI Agents (FocusGUI)</a>
+                <a class="title-link" href="https://huggingface.co/papers/2610.21114" target="_blank" rel="noopener">Spectral-Spatial Interpretation</a>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -492,25 +492,9 @@
         <div class="tail-row">
             <span class="tail-rank">7.52</span>
             <span class="tail-title">
-                <a class="title-link" href="https://blog.cloudflare.com/typescript-rust-port/" target="_blank" rel="noopener">Introduction of tsrs: TypeScript Port to Rust</a>
-            </span>
-            <span class="tail-src">Cloudflare Blog</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.37</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.27070" target="_blank" rel="noopener">Cavity Models of Non-Abelian Gauge Theories</a>
+                <a class="title-link" href="https://arxiv.org/abs/2610.28737" target="_blank" rel="noopener">Local Clifford equivalence to CSS codes: Polynomial-time classification and conversion</a>
             </span>
             <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.37</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://blog.cloudflare.com/emudhra-certificate-compromise/" target="_blank" rel="noopener">eMudhra Certificate Compromise</a>
-            </span>
-            <span class="tail-src">Cloudflare Blog</span>
         </div>
         
     </section>
@@ -527,11 +511,11 @@
             14 feeds polled &middot; 12 answered &middot; 
             10 analysed &middot; 
             
-            10 on this page &middot; below signal 5 dropped
+            8 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-10-21</span>
+        <span>Built 2026-10-22</span>
     </footer>
 
 </div>
