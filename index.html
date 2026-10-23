@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-22</title>
+    <title>Alpha Forge &mdash; 2026-10-23</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,7 +354,7 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-22</b><br>
+            <b>2026-10-23</b><br>
             5 of 8 cleared
         </div>
     </header>
@@ -365,7 +365,7 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Agent World Model in the Wild: Computer-Use Agent Environment Synthesis</h2>
+            <h2>Lean-QuantumAlg Framework for Trustworthy Quantum Algorithms</h2>
             <div class="score">8.45<small>Ranked</small></div>
         </div>
 
@@ -373,35 +373,35 @@
 
         <p class="credit">
             AI Research
-             &middot; Hugging Face Papers
-            
+             &middot; arXiv quant-ph
+             &middot; 23 Oct
             
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">WildAWM synthesizes controllable computer-use environments and tasks using open-source models to train general computer-use agents (CUAs), showing broad generalization across web, CLI, and GUI benchmarks.</p>
+        <p class="deck">A new Lean 4 framework, Lean-QuantumAlg, has been developed to assist AI agents in producing trustworthy quantum algorithms that require minimal human review.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Training general AI agents to interact with computers is difficult and risky in real systems. This work provides a scalable, safe method to create complex training environments, which could accelerate the development of more capable AI assistants.</p>
+            <p>AI agents can now create quantum algorithms that humans can verify with high confidence and minimal effort. This could accelerate the discovery and deployment of new quantum algorithms.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>WildAWM, or Agent World Model in the Wild, is a scalable pipeline that synthesizes controllable environments and tasks for training general computer-use agents (CUAs).</li><li>It constructs executable environments that jointly support graphical user interfaces (GUI), model context protocol (MCP) services, and command-line interfaces (CLI).</li><li>The entire pipeline uses open-source models, avoiding proprietary frontier models.</li><li>It addresses task synthesis challenges with execution-based quality gates, which combine heterogeneous agent rollouts, cross-judge consistency checks, and counterfactual probes.</li><li>The pipeline synthesizes 341 long-horizon environment-task pairs; some need over 100 agent steps.</li></ul>
+            <ul><li>AI agents are increasingly capable of constructing quantum algorithms, but machine-checked proofs alone do not guarantee problem solving or resource claims.</li><li>Lean-QuantumAlg is a Lean 4 framework for trustworthy AI-assisted development of quantum algorithms.</li><li>Its Algorithm-Solves-Problem contract binds correctness, success probability, borrowed-state restoration, and quantum and classical resource bounds to a single execution.</li><li>The framework separates guarantees that Lean checks from problem specifications and execution models that humans review.</li><li>It was demonstrated on nine AI-formalized quantum algorithms, including Grover search and quantum attacks on RSA-2048 and P-256.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Clone the WildAWM GitHub repository at https://github.com/MSR-Orchard/WildAWM.</li><li>Look up the paper arxiv:2610.26828 on arXiv.</li><li>Check the Hugging Face collection for "Agent World Model in the Wild" for models and data.</li></ul>
+            <ul><li>Read the paper 'Lean-QuantumAlg: A Framework for AI Agents to Produce Quantum Algorithms that Humans Can Trust' on arXiv.</li><li>Look up the Lean 4 theorem prover.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.26828" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://arxiv.org/abs/2610.30216" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.03</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.17860" target="_blank" rel="noopener">Socratic Skill Learning: Interleaving Teaching and Practice for Transferable Agent Skills</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.25100" target="_blank" rel="noopener">Deep Fusion Memory for LLMs</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Socratic Skill Learning (SSL) improves how LLM agents acquire and reuse skills. It combines expert teaching with student practice. SSL outperforms existing methods and uses a new benchmark, SkillTransferBench.</p>
+                <p>Deep Fusion Memory (DFM) is a new parametric memory for large language models that reduces training data construction effort and improves performance on knowledge-intensive tasks by integrating learned memory into intermediate hidden states.</p>
                 
-                <ul><li>Socratic Skill Learning (SSL) improves reusable agent skills by interleaving expert guidance with student practice and targeted review.</li><li>SSL outperforms trajectory distillation (Trace2Skill) and contrastive distillation (SKILL-KD) methods.</li><li>The research introduces SkillTransferBench, a benchmark with 35 task families and 408 executable cases for testing skill reuse.</li></ul>
+                <ul><li>Deep Fusion Memory (DFM) is a chunk-level parametric memory architecture for large language models (LLMs).</li><li>It integrates predicted parametric memory into intermediate hidden states via gated cross-attention.</li><li>DFM reduces retrieval overhead and improves knowledge-intensive tasks without online retrieval.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.75</div>
-            <h3><a class="title-link" href="https://arxiv.org/abs/2610.28705" target="_blank" rel="noopener">Separability does not certify zero-noise extrapolation: Factorial diagnostics in dynamic quantum circuits</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://arxiv.org/abs/2610.30279" target="_blank" rel="noopener">Transversal Syndrome Extraction for Quantum Error Correction</a></h3>
             <p class="credit">
                 Quantum Computing &middot; arXiv quant-ph
                 
             </p>
             <div class="story-body">
-                <p>A study on IBM quantum circuits shows that zero-noise extrapolation, a technique to reduce quantum errors, often fails to accurately reach the ideal zero-noise limit. Separately amplifying errors does not guarantee an accurate result. Multi-knob extrapolations perform better than single-knob ones but still miss the known ideal value in many cases.</p>
+                <p>New research introduces a unified approach to quantum error correction called transversal syndrome extraction. This method offers a flexible balance between the size and speed of quantum circuits, improving fault tolerance for stabilizer codes.</p>
                 
-                <ul><li>Separately amplifying gate, latency, and mid-circuit measurement errors can simplify zero-noise extrapolation (ZNE), but weak interaction between amplification knobs does not establish an accurate zero-noise limit.</li><li>The paper distinguishes observable separability, response-model adequacy, and calibration of the zero-noise limit.</li><li>Researchers tested these concepts in a 2^3 factorial experiment on three IBM dynamic circuits.</li></ul>
+                <ul><li>Fault-tolerant syndrome extraction is fundamental to quantum error correction using stabilizer codes.</li><li>Existing general protocols for error syndrome extraction demand high circuit depth or width.</li><li>Researchers designed ancilla stabilizer states for a general transversal circuit.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,21 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">7.75</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.28577" target="_blank" rel="noopener">Cache Engineering for Agents</a>
-                <p>A new method called cache engineering lets LLM agents directly manage their key-value cache using `drop` and `repos` operations, supported by the AKV serving engine. This improves efficiency and accuracy for long agent trajectories.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.27598" target="_blank" rel="noopener">Meta Expert for MoE Models</a>
+                <p>Meta Expert is a novel approach for Mixture-of-Experts (MoE) models that shares experts across layers, significantly reducing redundancy. This allows models to achieve comparable performance with 70-80% fewer experts and 75-90% fewer parameters.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">7.75</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.29989" target="_blank" rel="noopener">Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation</a>
-                <p>Researchers at Tencent's ARC Lab introduced Future Chunk Prediction (FCP), a new auxiliary objective for autoregressive video diffusion models. FCP improves physical plausibility and training efficiency by enforcing future-chunk supervision, potentially aiding in building world models.</p>
+                <a class="title-link" href="https://arxiv.org/abs/2610.30257" target="_blank" rel="noopener">Scalable Neural Wave Functions for Quantum Systems</a>
+                <p>Researchers have developed a new neural network architecture that utilizes information mixing and hierarchical network designs to simulate large quantum many-body systems more efficiently than previous methods.</p>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
     </section>
@@ -474,17 +474,9 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.62</span>
+            <span class="tail-rank">7.6</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.28732" target="_blank" rel="noopener">Interacting quantum reference frames</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.52</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.21114" target="_blank" rel="noopener">Spectral-Spatial Interpretation</a>
+                <a class="title-link" href="https://huggingface.co/papers/2610.26233" target="_blank" rel="noopener">Heartbeat Thinking for Realtime Voice Agents</a>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -492,9 +484,17 @@
         <div class="tail-row">
             <span class="tail-rank">7.52</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.28737" target="_blank" rel="noopener">Local Clifford equivalence to CSS codes: Polynomial-time classification and conversion</a>
+                <a class="title-link" href="https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Netflix Introduces Single-Tenant Titus for VM Isolation</a>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Netflix Tech Blog</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.82</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://blog.pragmaticengineer.com/the-pulse-anthropic-builds-its-own-source-control-system/" target="_blank" rel="noopener">Anthropic Builds Custom Source Control System</a>
+            </span>
+            <span class="tail-src">Pragmatic Engineer</span>
         </div>
         
     </section>
@@ -513,9 +513,9 @@
             
             8 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist.
-            
+            <br>Gemini was unavailable for 2 articles; dropped rather than summarised.
         </span>
-        <span>Built 2026-10-22</span>
+        <span>Built 2026-10-23</span>
     </footer>
 
 </div>
