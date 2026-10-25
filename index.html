@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-24</title>
+    <title>Alpha Forge &mdash; 2026-10-25</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-24</b><br>
-            5 of 6 cleared
+            <b>2026-10-25</b><br>
+            3 of 3 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>WeVisOne-VL: Unified Visual Perception from Objects to Pixels</h2>
-            <div class="score">8.45<small>Ranked</small></div>
+            <h2>IQuest-Q1 Model Release</h2>
+            <div class="score">8.52<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -379,29 +379,29 @@
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">WeVisOne-VL is a new vision-language model from Tencent that unifies object-level and pixel-level visual perception, achieving leading performance across over 30 benchmarks.</p>
+        <p class="deck">IQuest-Q1 is a newly released open-source 320B parameter sparse Mixture-of-Experts model, designed to excel in agentic coding and general tasks through a multi-stage training process.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Vision-language models can now reliably perform fine-grained visual perception tasks. This expands the capabilities of AI systems for real-world applications requiring detailed image understanding.</p>
+            <p>Open-source foundation models with advanced agentic coding capabilities can accelerate the development of AI agents. This provides new tools for automating complex software tasks.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>WeVisOne-VL is a vision-language model (VLM) from Tencent.</li><li>It unifies object-level and pixel-level visual perception through structured next-token prediction.</li><li>The model supports multiple visual tasks, including object detection, referring localization, counting, OCR, segmentation, and matting.</li><li>It integrates a lightweight pixel decoder into the VLM via a special <OBJ> token to generate instance-level pixel outputs.</li><li>The model was trained with a three-stage curriculum SFT followed by mixed-task RL.</li></ul>
+            <ul><li>IQuest-Q1 is a sparse Mixture-of-Experts (MoE) foundation model.</li><li>It has 320 billion total parameters, with 15 billion activated.</li><li>The model uses a three-stage training process: pre-training, mid-training, and post-training.</li><li>Pre-training combines Stable SplitNorm, Muon, and muP with a two-stage curriculum.</li><li>Post-training integrates SFT, domain-specialized RL, and MOPD across various scaffolds.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Clone the GitHub repository at https://github.com/Tencent/WeVisOne-VL.</li><li>Look up the WeVisOne-VL model collection on Hugging Face at https://huggingface.co/collections/tencent/wevisone-vl.</li><li>Read the paper at arxiv:2610.31329.</li></ul>
+            <ul><li>Read the IQuest-Q1 paper at arxiv:2610.30949.</li><li>Install the Hugging Face CLI by running `curl -LsSf https://hf.co/cli/install.sh | bash`.</li><li>Access the paper using the Hugging Face CLI command `hf papers read 2610.30949`.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.31329" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2610.30949" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.30181" target="_blank" rel="noopener">Deep Search in Real-World Web Environments</a></h3>
+            <div class="band-score">7.75</div>
+            <h3><a class="title-link" href="https://magazine.sebastianraschka.com/p/building-reasoning-models" target="_blank" rel="noopener">New Video Course on Reasoning Models</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                AI Research &middot; Ahead of AI
                 
             </p>
             <div class="story-body">
-                <p>A new benchmark, OpenDS-World, evaluates AI agents on multi-step deep search in live web environments. The best model achieved 39.0% accuracy, surpassing a human baseline of 21.1% on 200 tasks, but challenges remain in tool coordination and long-horizon search.</p>
+                <p>An 11-hour video course has been released, teaching how to build reasoning models from scratch using Python and PyTorch, covering topics like evaluation, inference-time scaling, reinforcement learning, and distillation for LLMs.</p>
                 
-                <ul><li>OpenDS-World is a new live-web benchmark for evaluating autonomous multi-step deep search agents.</li><li>The OpenDS task requires agents to explore the real Web, find and connect evidence from multiple sources using Web search, browser interaction, and evidence processing.</li><li>The benchmark includes 200 challenging tasks across diverse information modalities and file formats.</li></ul>
+                <ul><li>A new video course offers over 11 hours of coding content on building reasoning models from the ground up.</li><li>The course covers evaluation, inference-time scaling, reinforcement learning, and distillation using Python and PyTorch.</li><li>Reasoning models are an upgrade to conventional LLMs, adding post-training via reinforcement learning to solve challenging problems.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.24738" target="_blank" rel="noopener">Editing Images into Reusable Layers via Compositional Edit-Prior Distillation</a></h3>
+            <div class="band-score">7.52</div>
+            <h3><a class="title-link" href="https://netflixtechblog.com/beyond-api-compatibility-building-a-tool-to-measure-the-blast-radius-of-library-changes-9474f2fd4f90?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Netflix's Quasar Tool for API Change Impact</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                Software Engineering &middot; Netflix Tech Blog
                 
             </p>
             <div class="story-body">
-                <p>LayerEditor is a new AI framework that edits images based on instructions and outputs them as reusable RGBA layers, improving local manipulation and content reuse.</p>
+                <p>Netflix developed Quasar, a tool that uses SCIP to index code across repositories. It helps library producers assess the impact of API changes by identifying which consumer repositories use the exact symbols that changed, before release.</p>
                 
-                <ul><li>LayerEditor unifies instruction-guided image editing with reusable RGBA layer generation.</li><li>It addresses the limitation of existing models that produce flattened outputs, which restrict precise local manipulation.</li><li>In-Context RGB-Alpha Token Modeling represents the edited canvas and ordered RGB-Alpha layers within a single token sequence.</li></ul>
+                <ul><li>Netflix built Quasar to measure the 'blast radius' of library changes across its large Java repository ecosystem.</li><li>Quasar indexes symbol definitions and references, connecting API changes in one repository to exact usages elsewhere.</li><li>It uses SCIP, an open interchange format for semantic code intelligence, to encode definitions and references.</li></ul>
                 
             </div>
         </article>
@@ -444,44 +444,9 @@
 
     
     
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.6</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.30926" target="_blank" rel="noopener">Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation</a>
-                <p>Researchers developed Factor-Aware Predictive Learning (FAPL), a method that enables Video Diffusion Transformers to effectively use Multimodal Large Language Model representations for cinematic video generation, offering better control and sparse temporal inference.</p>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.37</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://www.netinterest.co/p/capital-wars" target="_blank" rel="noopener">Capital Wars</a>
-                <p>AI development is increasingly a financing challenge, with large tech companies needing to raise vast sums for infrastructure. CoreWeave, a major GPU cloud provider, faces rising capital costs, with unsecured debt yields hitting 15%, indicating market stress for AI infrastructure funding.</p>
-            </span>
-            <span class="tail-src">Net Interest</span>
-        </div>
-        
-    </section>
-    
 
     
 
-    
-    <h2 class="rubric">Also cleared <span class="n">1</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">6.82</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://blog.cloudflare.com/post-quantum-geo-key-manager/" target="_blank" rel="noopener">Bringing post-quantum cryptography to geographically fenced key management</a>
-            </span>
-            <span class="tail-src">Cloudflare Blog</span>
-        </div>
-        
-    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -493,13 +458,13 @@
         <span>
             
             14 feeds polled &middot; 11 answered &middot; 
-            6 analysed &middot; 
+            4 analysed &middot; 
             
-            6 on this page &middot; below signal 5 dropped
+            3 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
-            <br>Gemini was unavailable for 3 articles; dropped rather than summarised.
+            
         </span>
-        <span>Built 2026-10-24</span>
+        <span>Built 2026-10-25</span>
     </footer>
 
 </div>
