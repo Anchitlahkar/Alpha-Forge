@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-25</title>
+    <title>Alpha Forge &mdash; 2026-10-26</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-25</b><br>
-            3 of 3 cleared
+            <b>2026-10-26</b><br>
+            5 of 9 cleared
         </div>
     </header>
 
@@ -365,43 +365,43 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>IQuest-Q1 Model Release</h2>
-            <div class="score">8.52<small>Ranked</small></div>
+            <h2>Secure Classical Control of Quantum Computers</h2>
+            <div class="score">9.15<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
-            AI Research
-             &middot; Hugging Face Papers
+            Quantum Computing
+             &middot; arXiv quant-ph
+             &middot; 26 Oct
             
-            
-             &middot; signal 8.0/10
+             &middot; signal 9.0/10
         </p>
 
-        <p class="deck">IQuest-Q1 is a newly released open-source 320B parameter sparse Mixture-of-Experts model, designed to excel in agentic coding and general tasks through a multi-stage training process.</p>
+        <p class="deck">A new protocol enables a classical computer to securely and privately utilize an untrusted quantum server. This allows users to perform quantum computations and manage quantum memory without needing to own quantum hardware.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Open-source foundation models with advanced agentic coding capabilities can accelerate the development of AI agents. This provides new tools for automating complex software tasks.</p>
+            <p>A classical computer can now securely and privately use an untrusted quantum computer as if it were its own. This enables new ways to access and verify quantum computations without needing local quantum hardware.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>IQuest-Q1 is a sparse Mixture-of-Experts (MoE) foundation model.</li><li>It has 320 billion total parameters, with 15 billion activated.</li><li>The model uses a three-stage training process: pre-training, mid-training, and post-training.</li><li>Pre-training combines Stable SplitNorm, Muon, and muP with a two-stage curriculum.</li><li>Post-training integrates SFT, domain-specialized RL, and MOPD across various scaffolds.</li></ul>
+            <ul><li>A classical client can use a single untrusted quantum server as its own trusted quantum computer.</li><li>The client can privately choose and run quantum computations.</li><li>It can prepare quantum states and process states supplied by other parties.</li><li>Quantum memory can be kept hidden on the server and used across multiple interactions.</li><li>This allows a purely classical party to act as a quantum party in interactive protocols.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the IQuest-Q1 paper at arxiv:2610.30949.</li><li>Install the Hugging Face CLI by running `curl -LsSf https://hf.co/cli/install.sh | bash`.</li><li>Access the paper using the Hugging Face CLI command `hf papers read 2610.30949`.</li></ul>
+            <ul><li>Read the paper at arXiv:2610.31775.</li><li>Look up the 'learning with errors' (LWE) problem to understand its role in post-quantum cryptography.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.30949" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://arxiv.org/abs/2610.31775" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">7.75</div>
-            <h3><a class="title-link" href="https://magazine.sebastianraschka.com/p/building-reasoning-models" target="_blank" rel="noopener">New Video Course on Reasoning Models</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.27103" target="_blank" rel="noopener">Omni-Woodpecker for LLM Hallucination Correction</a></h3>
             <p class="credit">
-                AI Research &middot; Ahead of AI
+                AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>An 11-hour video course has been released, teaching how to build reasoning models from scratch using Python and PyTorch, covering topics like evaluation, inference-time scaling, reinforcement learning, and distillation for LLMs.</p>
+                <p>Omni-Woodpecker is a training-free framework designed to reduce cross-modal hallucinations in omni LLMs. It works by identifying modality conflicts and rebalancing hidden representations to suppress misleading information, improving performance across benchmarks and generalizing to various models.</p>
                 
-                <ul><li>A new video course offers over 11 hours of coding content on building reasoning models from the ground up.</li><li>The course covers evaluation, inference-time scaling, reinforcement learning, and distillation using Python and PyTorch.</li><li>Reasoning models are an upgrade to conventional LLMs, adding post-training via reinforcement learning to solve challenging problems.</li></ul>
+                <ul><li>Omni-Woodpecker (OWP) is a training-free framework designed to correct cross-modal hallucinations in omni LLMs, which are incorrect outputs from multimodal models when processing different data types.</li><li>The framework works by identifying conflicts between different modalities and rebalancing hidden representations to suppress misleading priors, which are learned biases.</li><li>OWP uses orthogonal decomposition to separate grounding evidence, which is factual information, from competing priors within the hidden states.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.52</div>
-            <h3><a class="title-link" href="https://netflixtechblog.com/beyond-api-compatibility-building-a-tool-to-measure-the-blast-radius-of-library-changes-9474f2fd4f90?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Netflix's Quasar Tool for API Change Impact</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.32965" target="_blank" rel="noopener">RynnUnify: Unified Embodied AI Model</a></h3>
             <p class="credit">
-                Software Engineering &middot; Netflix Tech Blog
+                AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Netflix developed Quasar, a tool that uses SCIP to index code across repositories. It helps library producers assess the impact of API changes by identifying which consumer repositories use the exact symbols that changed, before release.</p>
+                <p>Researchers have introduced RynnUnify, a 16B unified embodied model that integrates visual planning, physical reasoning, and robot control. This model achieves state-of-the-art results on complex embodied tasks.</p>
                 
-                <ul><li>Netflix built Quasar to measure the 'blast radius' of library changes across its large Java repository ecosystem.</li><li>Quasar indexes symbol definitions and references, connecting API changes in one repository to exact usages elsewhere.</li><li>It uses SCIP, an open interchange format for semantic code intelligence, to encode definitions and references.</li></ul>
+                <ul><li>RynnUnify is a 16B unified embodied model.</li><li>It integrates visual planning, physical reasoning, and robot control.</li><li>The model achieves state-of-the-art results on long-horizon embodied tasks.</li></ul>
                 
             </div>
         </article>
@@ -444,9 +444,68 @@
 
     
     
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">8.38</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2610.31694" target="_blank" rel="noopener">Verified Pauli-Product Measurement Compilation for Quantum Computing</a>
+                <p>Researchers have developed QPPM, a new language for quantum programs, and formally verified its compiler using quantum Hoare logic mechanized in Lean. This innovation leads to a 17.9% reduction in logical measurement depth on QASMBench, enhancing fault-tolerant quantum computation.</p>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">8.22</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.30932" target="_blank" rel="noopener">UserArena AI Shopping Agent Benchmark</a>
+                <p>UserArena is a new benchmark designed to evaluate AI shopping agents using real-world e-commerce data. It introduces On-Policy Trajectory Distillation (OPTD), a novel method that enhances the accuracy of the simulator.</p>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+    </section>
+    
 
     
 
+    
+    <h2 class="rubric">Also cleared <span class="n">4</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.31162" target="_blank" rel="noopener">HiSTEVE 1.0 VLA Agent for Open-World Games</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.32253" target="_blank" rel="noopener">RSIHub Agent-Evolution Framework</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.52</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2610.31729" target="_blank" rel="noopener">Quantum Mutual Information Across Reference Frames</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">5.95</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://www.apricitas.io/p/how-canada-is-decoupling-from-the" target="_blank" rel="noopener">Canada-US Economic Decoupling</a>
+            </span>
+            <span class="tail-src">Apricitas Economics</span>
+        </div>
+        
+    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -457,14 +516,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 11 answered &middot; 
-            4 analysed &middot; 
+            14 feeds polled &middot; 12 answered &middot; 
+            9 analysed &middot; 
             
-            3 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
+            9 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-10-25</span>
+        <span>Built 2026-10-26</span>
     </footer>
 
 </div>
