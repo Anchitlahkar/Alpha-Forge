@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-27</title>
+    <title>Alpha Forge &mdash; 2026-10-28</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,7 +354,7 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-27</b><br>
+            <b>2026-10-28</b><br>
             5 of 7 cleared
         </div>
     </header>
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Trajectory2Gym: Decision-Grounded Compositional Interaction Synthesis for Tool-Use Agents</h2>
-            <div class="score">7.67<small>Ranked</small></div>
+            <h2>Rollback: Experience Backtracking in World Models for Policy Improvement</h2>
+            <div class="score">9.15<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 7.0/10
+             &middot; signal 9.0/10
         </p>
 
-        <p class="deck">Researchers introduced Trajectory2Gym, a new method that significantly improves the training of tool-use agents by creating interactions with compositional coverage and decision grounding. This approach has led to performance gains of 16.9-29.8 percentage points on relevant benchmarks.</p>
+        <p class="deck">A new method called Rollback improves robot policies by letting world models rewind to past decisions, explore different actions, and learn from counterfactual outcomes, leading to better performance and faster training.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Training AI agents to use tools effectively requires carefully constructed interactions, not just collecting successful examples. This method improves agent performance by focusing on learnable decisions and multi-step dependencies.</p>
+            <p>Robot policies can now learn more effectively by exploring alternative past actions in simulated environments. This allows for faster and more stable improvement, even surpassing human performance in some tasks.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Successful tool-use trajectories often lack compositional coverage or decision grounding, making them poor training data.</li><li>Trajectory2Gym constructs executable interactions that represent multi-step dependencies and uses only decisions supported by the agent's visible history.</li><li>The method uses structural-support selection and parent-normalized supervised fine-tuning.</li><li>It improves Tau1, Tau2, and BFCL benchmarks by 16.9 to 29.8 percentage points across five Qwen3 model scales.</li><li>Performance gains are highest in stateful and multi-turn interactions.</li></ul>
+            <ul><li>Rollback is a new method that improves robot policies by using world models to rewind to past decisions.</li><li>It explores counterfactual actions and generates fine-grained supervision without needing a separate value model.</li><li>The system unifies distributed world-model search with asynchronous real-robot execution, forming a self-reinforcing cycle.</li><li>Real-world experience continually refines the world model, and a sharper world model drives further policy improvement.</li><li>Rollback improved success rates over baselines by 10.67% on block extraction, 11.11% on ball tossing, and 11.85% on tabletop curling.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper arxiv:2610.33568 to understand the Trajectory2Gym framework.</li><li>Look up the GitHub repository associated with Trajectory2Gym for implementation details.</li><li>Search for Yihao Hu to see related work on tool-use agents.</li></ul>
+            <ul><li>Read the paper "Rollback: Experience Backtracking in World Models for Policy Improvement" at arxiv:2610.36068.</li><li>Look up Jiayi Luo, one of the authors, to see their other research.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.33568" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2610.36068" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.34662" target="_blank" rel="noopener">StreamVibe: Proactive Video Agents for Evolving User Intent</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.36077" target="_blank" rel="noopener">The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>StreamVibe is a new initiative that includes a benchmark, a streaming vision-language model, and a hierarchical memory system. Its goal is to enable proactive, intent-aware interaction for video agents, allowing them to adapt to implicit and evolving user goals.</p>
+                <p>The Trinity framework enables multimodal AI agents to recursively improve themselves by organizing tasks into capability trees, generating simulated training worlds, and evolving specialized harness modules, leading to significant performance gains on unseen tasks.</p>
                 
-                <ul><li>Existing vision-language models often rely on explicit requests and fail to update their understanding as user intents change.</li><li>StreamVibe-Bench is a new benchmark with 4.1K evaluation samples and 85K training samples, covering explicit, implicit, and dynamic user intents.</li><li>StreamVibe-VL is a streaming proactive model that infers implicit user intents from continuous observations and dynamically tailors interactions as intents evolve.</li></ul>
+                <ul><li>The Trinity framework allows multimodal agents to recursively improve their own capabilities.</li><li>It organizes tasks into a "capability tree," a hierarchy based on shared underlying requirements rather than surface categories.</li><li>The system uses "Capability-Driven Real2Sim2Real" to abstract common task requirements into simplified, verifiable simulated worlds for learning.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.33966" target="_blank" rel="noopener">InteractiveWorld: A Verifiable Human-Centric Environment for Building Better Interactive MLLM Assistants</a></h3>
+            <div class="band-score">7.75</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.36729" target="_blank" rel="noopener">Hy-Nomas: Towards Free-form Interactive World Generation</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Researchers have introduced InteractiveWorld, a verifiable simulation environment, along with a benchmark called InteractiveBench. This platform evaluates the effectiveness of multimodal language models (MLLMs) in guiding humans through physical tasks, revealing that current MLLMs perform poorly, with the best model achieving only 25% on planning tasks.</p>
+                <p>Hy-Nomas is an open-source video world model from Tencent Hunyuan that generates interactive virtual worlds using multi-turn text and camera controls, outperforming other models.</p>
                 
-                <ul><li>InteractiveWorld is the first verifiable environment for closed-loop interaction, which means continuous feedback, between a human and an AI assistant.</li><li>It simulates an AI assistant guiding a human agent who observes the scene, understands instructions, and acts independently.</li><li>InteractiveBench is a dynamic benchmark with 120 multi-turn tasks across six categories.</li></ul>
+                <ul><li>Hy-Nomas is a video world model designed for free-form interactive world generation.</li><li>It follows multi-turn text and camera instructions while preserving interaction history.</li><li>The model uses an 8B diffusion backbone.</li></ul>
                 
             </div>
         </article>
@@ -449,17 +449,17 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.33135" target="_blank" rel="noopener">WorldCast: World-Consistent Character Video Generation with Large-Angle Camera Control</a>
-                <p>WorldCast is a new technology capable of generating consistent character videos even when complex, large-angle camera movements are involved. This innovation addresses a significant challenge in cinematic video production.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.34283" target="_blank" rel="noopener">ChronoReplay: One Answer Interface Is Not Enough for Streaming Spatial Intelligence</a>
+                <p>ChronoReplay is a training framework that helps vision-language models learn diverse spatial reasoning skills. It prevents models from specializing in one answer format by replaying heterogeneous spatial supervision chronologically.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.6</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.32285" target="_blank" rel="noopener">TraceTrial-Bench: Benchmarking AI Agent Harnesses for Reliability and Failure Attribution</a>
-                <p>TraceTrial-Bench is a newly developed benchmark designed to evaluate the reliability of AI agent harnesses. It assesses performance across seven components using 95 tasks and employs a two-layer evaluation framework to accurately diagnose failures.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.37381" target="_blank" rel="noopener">PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations</a>
+                <p>PDRVLA is a new Vision-Language-Action model that improves robot task success by predicting future visual features with a lightweight Physical Dynamics Module, avoiding video generation latency.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -474,19 +474,19 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.57</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://netflixtechblog.com/making-failure-diagnosis-reliable-with-pensive-ai-6b0811a1c015?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Netflix's Pensive AI for Reliable Failure Diagnosis</a>
+                <a class="title-link" href="https://arxiv.org/abs/2610.36067" target="_blank" rel="noopener">Diagonal, Switching, and Locally Optimal Unraveling for efficient quantum trajectories in metastable open quantum systems</a>
             </span>
-            <span class="tail-src">Netflix Tech Blog</span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">5.9</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://netflixtechblog.com/multi-ratio-video-resizing-for-mobile-feed-and-marketing-2e6b42810f49?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Netflix's Automated Multi-Ratio Video Resizing for Mobile</a>
+                <a class="title-link" href="https://arxiv.org/abs/2610.36070" target="_blank" rel="noopener">Equilibrium Learning of Quantum Circuits</a>
             </span>
-            <span class="tail-src">Netflix Tech Blog</span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
     </section>
@@ -501,13 +501,13 @@
         <span>
             
             14 feeds polled &middot; 12 answered &middot; 
-            8 analysed &middot; 
+            9 analysed &middot; 
             
             7 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist.
-            
+            <br>Gemini was unavailable for 2 articles; dropped rather than summarised.
         </span>
-        <span>Built 2026-10-27</span>
+        <span>Built 2026-10-28</span>
     </footer>
 
 </div>
