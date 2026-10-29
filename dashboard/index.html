@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-28</title>
+    <title>Alpha Forge &mdash; 2026-10-29</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-28</b><br>
-            5 of 7 cleared
+            <b>2026-10-29</b><br>
+            5 of 5 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Rollback: Experience Backtracking in World Models for Policy Improvement</h2>
-            <div class="score">9.15<small>Ranked</small></div>
+            <h2>DTCA: Denoising Token Credit Assignment for Reinforcement Learning in Diffusion Language Models</h2>
+            <div class="score">8.52<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 9.0/10
+             &middot; signal 8.0/10
         </p>
 
-        <p class="deck">A new method called Rollback improves robot policies by letting world models rewind to past decisions, explore different actions, and learn from counterfactual outcomes, leading to better performance and faster training.</p>
+        <p class="deck">Researchers have introduced DTCA, a new method designed to enhance reinforcement learning for diffusion language models. This method improves mathematical reasoning performance by assigning credit to individual tokens based on changes in confidence and entropy.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Robot policies can now learn more effectively by exploring alternative past actions in simulated environments. This allows for faster and more stable improvement, even surpassing human performance in some tasks.</p>
+            <p>Diffusion language models can now learn more effectively from reinforcement signals. This improves their ability to perform complex tasks like mathematical reasoning.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Rollback is a new method that improves robot policies by using world models to rewind to past decisions.</li><li>It explores counterfactual actions and generates fine-grained supervision without needing a separate value model.</li><li>The system unifies distributed world-model search with asynchronous real-robot execution, forming a self-reinforcing cycle.</li><li>Real-world experience continually refines the world model, and a sharper world model drives further policy improvement.</li><li>Rollback improved success rates over baselines by 10.67% on block extraction, 11.11% on ball tossing, and 11.85% on tabletop curling.</li></ul>
+            <ul><li>DTCA (Denoising Token Credit Assignment) is a framework for token-level credit assignment in reinforcement learning for diffusion language models.</li><li>It estimates token contributions by measuring the improvement in prediction confidence for remaining masked positions after a token is committed.</li><li>DTCA groups these contribution signals by part-of-speech (POS) categories.</li><li>The method uses these weights to select informative denoising timesteps and assign token-level learning signals during RL training.</li><li>It further calibrates learning signals based on token-level entropy changes induced by policy updates.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper "Rollback: Experience Backtracking in World Models for Policy Improvement" at arxiv:2610.36068.</li><li>Look up Jiayi Luo, one of the authors, to see their other research.</li></ul>
+            <ul><li>Read the paper at arxiv:2610.35201 to understand the DTCA framework in detail.</li><li>Look up the project page linked from the Hugging Face paper page to see if there are additional resources or code.</li><li>Check the GitHub repository linked from the paper page for potential code implementations or datasets.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.36068" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2610.35201" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -411,30 +411,30 @@
         
         <article class="band-item">
             <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.36077" target="_blank" rel="noopener">The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.31670" target="_blank" rel="noopener">Sensorimotor Alignment for Embodied Policy Success</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>The Trinity framework enables multimodal AI agents to recursively improve themselves by organizing tasks into capability trees, generating simulated training worlds, and evolving specialized harness modules, leading to significant performance gains on unseen tasks.</p>
+                <p>A new low-cost, offline metric called Sensorimotor Alignment (S²) has been introduced. This metric predicts robot task success by evaluating how well a model's sensory representations align with physical motion geometry.</p>
                 
-                <ul><li>The Trinity framework allows multimodal agents to recursively improve their own capabilities.</li><li>It organizes tasks into a "capability tree," a hierarchy based on shared underlying requirements rather than surface categories.</li><li>The system uses "Capability-Driven Real2Sim2Real" to abstract common task requirements into simplified, verifiable simulated worlds for learning.</li></ul>
+                <ul><li>Evaluating robot foundation models typically requires costly closed-loop rollouts.</li><li>Sensorimotor Alignment (S²) is a training-free, offline metric that measures how a model's sensory representations match the geometry of physical motion.</li><li>The metric extends the Platonic Representation Hypothesis (PRH) to robotics, suggesting motion trajectories are another modality that converges with improving representations.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.75</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.36729" target="_blank" rel="noopener">Hy-Nomas: Towards Free-form Interactive World Generation</a></h3>
+            <div class="band-score">8.03</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.32749" target="_blank" rel="noopener">Efficient Streaming Audio-Visual Target Speaker Extraction</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Hy-Nomas is an open-source video world model from Tencent Hunyuan that generates interactive virtual worlds using multi-turn text and camera controls, outperforming other models.</p>
+                <p>A new lightweight AI model named Falcon has been developed for efficient streaming audio-visual target speaker extraction, significantly reducing parameters and latency. Alongside Falcon, a new benchmark called RealSSA was released to evaluate speaker extraction in complex, real-world acoustic environments.</p>
                 
-                <ul><li>Hy-Nomas is a video world model designed for free-form interactive world generation.</li><li>It follows multi-turn text and camera instructions while preserving interaction history.</li><li>The model uses an 8B diffusion backbone.</li></ul>
+                <ul><li>Falcon is a lightweight causal audio-visual target speaker extraction (AVTSE) method. It cuts parameters by 91.9%.</li><li>Compared to the causal AV-TFGridNet baseline, Falcon reduces computation by 20.2 times and GPU inference latency by 11.1 times.</li><li>Falcon uses a single-pass multi-scale time-frequency separator and an encoder-space speaker contrastive loss.</li></ul>
                 
             </div>
         </article>
@@ -447,10 +447,10 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">8.03</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.34283" target="_blank" rel="noopener">ChronoReplay: One Answer Interface Is Not Enough for Streaming Spatial Intelligence</a>
-                <p>ChronoReplay is a training framework that helps vision-language models learn diverse spatial reasoning skills. It prevents models from specializing in one answer format by replaying heterogeneous spatial supervision chronologically.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.35684" target="_blank" rel="noopener">Omnidirectional Subject-Consistent Video Generation</a>
+                <p>Researchers have developed OmniShowcase, a method that generates 360-degree videos of subjects from just four input images. This technique uses geometry-driven training data and surface-normal maps to maintain consistent 3D subject shape, reducing geometric error by over 50% compared to previous methods.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -458,8 +458,8 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.37381" target="_blank" rel="noopener">PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations</a>
-                <p>PDRVLA is a new Vision-Language-Action model that improves robot task success by predicting future visual features with a lightweight Physical Dynamics Module, avoiding video generation latency.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2610.37230" target="_blank" rel="noopener">TAO: Tool-Aware Joint Scheduling for LLM-Based Agentic Serving</a>
+                <p>TAO is a new scheduling framework designed for LLM-based agentic services. It optimizes performance by considering tool readiness and employing dynamic programming for session placement, leading to reduced latency and increased throughput.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -469,27 +469,6 @@
 
     
 
-    
-    <h2 class="rubric">Also cleared <span class="n">2</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.36067" target="_blank" rel="noopener">Diagonal, Switching, and Locally Optimal Unraveling for efficient quantum trajectories in metastable open quantum systems</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.36070" target="_blank" rel="noopener">Equilibrium Learning of Quantum Circuits</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -500,14 +479,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            9 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            6 analysed &middot; 
             
-            7 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
-            <br>Gemini was unavailable for 2 articles; dropped rather than summarised.
+            5 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
+            
         </span>
-        <span>Built 2026-10-28</span>
+        <span>Built 2026-10-29</span>
     </footer>
 
 </div>
