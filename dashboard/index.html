@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-30</title>
+    <title>Alpha Forge &mdash; 2026-10-31</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-30</b><br>
-            5 of 5 cleared
+            <b>2026-10-31</b><br>
+            4 of 4 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Adaptive Task Refresh for Zero-Data Multimodal Self-Improvement (A-RSI)</h2>
-            <div class="score">8.38<small>Ranked</small></div>
+            <h2>Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities</h2>
+            <div class="score">9.22<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 8.0/10
+             &middot; signal 9.0/10
         </p>
 
-        <p class="deck">A-RSI is a framework designed to enable AI models to self-improve without requiring external data. It achieves this by adaptively refreshing tasks and generating verifiable answers, which in turn boosts the model's performance across various multimodal tasks.</p>
+        <p class="deck">Tencent's Youtu-Parsing-Omni is a 5-billion-parameter multi-modal parser that achieves state-of-the-art results across ten parsing tasks for documents, images, audio, and video using a single encoder and unified schema, with code and weights publicly available.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>AI models can improve without new human data. This makes training more efficient and less reliant on costly data acquisition.</p>
+            <p>A single model can now parse diverse data types like documents, images, audio, and video into structured records. This simplifies building agents that need to understand and extract information from varied sources.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>A-RSI improves recursive self-improvement, a process where models acquire useful training experience and decide when to introduce fresh experience.</li><li>It refreshes a task pool when its learning signal declines, monitoring reward variation and accuracy in training logs.</li><li>The method uses independently verifiable program-generated answers, which are created by a static library of model-authored programs.</li><li>These programs produce multimodal questions and derive their reference answers.</li><li>The training loop uses no external training examples or human-written answer labels.</li></ul>
+            <ul><li>Youtu-Parsing-Omni is a unified multi-modal parser from Tencent.</li><li>It converts documents, images, audio, and video into structured spatiotemporal records.</li><li>The model uses a single Youtu-Omni-Encoder, which encodes all modalities with shared weights in a unified space-time coordinate system.</li><li>OmniSchema unifies the outputs of all ten parsing tasks.</li><li>It employs OmniSchema-Aware On-Policy Distillation (OSAD), a self-evolving post-training procedure.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper `arxiv:2610.38568` to understand the A-RSI method in detail.</li><li>Look up the lead authors, such as Shaojie Zhang, Yu Liu, Radu Timofte, Nicu Sebe, and Barnabas Poczos.</li><li>Check the A-RSI project page for additional resources or code.</li></ul>
+            <ul><li>Look up the Youtu-Parsing-Omni paper on arXiv using the ID 2610.39301.</li><li>Clone the public repository for Youtu-Parsing-Omni to examine its code and model weights.</li><li>Check the vLLM plugin and inference examples provided with the model.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.38568" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2610.39301" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">7.75</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.39633" target="_blank" rel="noopener">Enhancing Few-Step Text-to-Image Generation with Intrinsic Distribution Matching</a></h3>
+            <div class="band-score">8.22</div>
+            <h3><a class="title-link" href="https://blog.pragmaticengineer.com/the-pulse-time-to-rethink-software-security-because-of-ai/" target="_blank" rel="noopener">The Pulse: Time to rethink software security because of AI?</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                Software Engineering &middot; Pragmatic Engineer
                 
             </p>
             <div class="story-body">
-                <p>Intrinsic Distribution Matching (IDM) is a novel technique that significantly improves few-step text-to-image generation. By incorporating explicit moment constraints into distribution matching distillation, IDM achieves state-of-the-art results in rendering long text prompts with a minimal number of network evaluations.</p>
+                <p>Recent security incidents, including a Certificate Authority compromise and major software vulnerabilities, show a growing threat. AI models are finding bugs, but attackers are also using AI to exploit unpatched systems rapidly, leading to warnings of an "AI-fueled security tsunami."</p>
                 
-                <ul><li>Intrinsic Distribution Matching (IDM) enhances few-step text-to-image generation by adding explicit moment constraints to distribution matching distillation (DMD).</li><li>IDM uses the generator's exponential-moving-average (EMA) copy to match feature means and per-coordinate standard deviations, removing the need for an external feature encoder.</li><li>The method retains the full DMD correction and is motivated by a Gaussian-plus-residual decomposition of the reverse-KL field.</li></ul>
+                <ul><li>Multiple recent security incidents include a critical eMudhra Certificate Authority (CA) compromise, PHP remote code execution, and Railway customer secrets leak.</li><li>eMudhra's intermediate CA private keys were trivially guessable, like "4," due to a flaw in their Key Generation Ceremony (KGC). Google Chrome is evaluating eMudhra's continued inclusion in its root program.</li><li>eMudhra's market capitalization dropped 40% in two days after details of its key generation incompetence emerged.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.29927" target="_blank" rel="noopener">Improving AI Benchmark Quality with BenchFill</a></h3>
+            <div class="band-score">7.15</div>
+            <h3><a class="title-link" href="https://blog.cloudflare.com/emudhra-patching/" target="_blank" rel="noopener">4 real? Tracking exploitation and patching of eMudhra’s weak keys</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                Software Engineering &middot; Cloudflare Blog
                 
             </p>
             <div class="story-body">
-                <p>A new paper introduces a formal framework for evaluating AI benchmarks based on difficulty measures. It identifies common issues like measure mismatch and coverage gaps, and proposes BenchFill, an algorithm designed to enhance benchmark quality by generating new examples for difficulty regions that are currently underrepresented.</p>
+                <p>A critical vulnerability allows breaking into unpatched internet connections using eMudhra certificates with only four keys. Cloudflare patched its systems and observed exploitation attempts, while much of the internet remains exposed.</p>
                 
-                <ul><li>Benchmarks are not just test questions; they induce an empirical measure over difficulty.</li><li>Two main failure modes exist: measure mismatch, where the benchmark difficulty distribution differs from the intended distribution, and coverage gaps, where uncovered difficulty regions prevent detecting localized progress.</li><li>The paper proposes two diagnostic metrics to capture these failure modes with theoretical guarantees.</li></ul>
+                <ul><li>Only four keys are needed to break into unpatched internet connections that use eMudhra certificates.</li><li>Cloudflare quickly patched its own systems to address this vulnerability.</li><li>Evidence of attempted exploitation of this weakness has been observed.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,12 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">6.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.36671" target="_blank" rel="noopener">Efficient Diffusion Vision-Language Models via Certificate-Guided Visual Routing (LOWN)</a>
-                <p>LOWN (Look Only When Needed) is a new decoding method for diffusion vision-language models (VLMs) that dramatically improves efficiency. It intelligently skips image processing steps when predictions are consistent, leading to a 64.7% reduction in computation and a 57.4% decrease in generation time, all while maintaining 99.6% accuracy.</p>
+                <a class="title-link" href="https://www.netinterest.co/p/follow-the-money-ece" target="_blank" rel="noopener">Follow the Money</a>
+                <p>An analysis of six years of financial commentary identifies seven key trends shaping finance, including AI's role as a financing story, the rise of private markets, and the changing landscape of payments.</p>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.37161" target="_blank" rel="noopener">WorkFactory: Generating Professional Tasks for Scalable AI Agent Training</a>
-                <p>WorkFactory is an innovative framework capable of generating over 112,000 coherent professional tasks across 612 different occupations. Utilizing information planning and repair mechanisms, this extensive dataset is used to train WorkPilot models, demonstrating improved performance on benchmarks related to professional work.</p>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">Net Interest</span>
         </div>
         
     </section>
@@ -482,11 +473,11 @@
             14 feeds polled &middot; 11 answered &middot; 
             6 analysed &middot; 
             
-            5 on this page &middot; below signal 5 dropped
+            4 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-10-30</span>
+        <span>Built 2026-10-31</span>
     </footer>
 
 </div>
