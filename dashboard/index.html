@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-10-31</title>
+    <title>Alpha Forge &mdash; 2026-11-01</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-10-31</b><br>
-            4 of 4 cleared
+            <b>2026-11-01</b><br>
+            2 of 2 cleared
         </div>
     </header>
 
@@ -365,7 +365,7 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities</h2>
+            <h2>Platonic Representation Hypothesis with JEPAs</h2>
             <div class="score">9.22<small>Ranked</small></div>
         </div>
 
@@ -379,29 +379,29 @@
              &middot; signal 9.0/10
         </p>
 
-        <p class="deck">Tencent's Youtu-Parsing-Omni is a 5-billion-parameter multi-modal parser that achieves state-of-the-art results across ten parsing tasks for documents, images, audio, and video using a single encoder and unified schema, with code and weights publicly available.</p>
+        <p class="deck">Researchers have successfully proven the Platonic Representation Hypothesis for Joint-Embedding Predictive Architectures (JEPAs). Their findings indicate that utilizing "good views" (two observations of a single scene) significantly boosts the efficiency of learning shared representations, making it 42 times more efficient than next-token prediction and even outperforming much larger language models.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>A single model can now parse diverse data types like documents, images, audio, and video into structured records. This simplifies building agents that need to understand and extract information from varied sources.</p>
+            <p>Models can achieve cross-modal alignment with far less data and compute than previously thought. This changes the understanding of how AI systems learn shared representations of the world.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Youtu-Parsing-Omni is a unified multi-modal parser from Tencent.</li><li>It converts documents, images, audio, and video into structured spatiotemporal records.</li><li>The model uses a single Youtu-Omni-Encoder, which encodes all modalities with shared weights in a unified space-time coordinate system.</li><li>OmniSchema unifies the outputs of all ten parsing tasks.</li><li>It employs OmniSchema-Aware On-Policy Distillation (OSAD), a self-evolving post-training procedure.</li></ul>
+            <ul><li>The Platonic Representation Hypothesis (PRH), which states that models trained on different modalities converge to the same world representation, is now a theorem for Joint-Embedding Predictive Architectures (JEPAs).</li><li>JEPAs, which are architectures trained on aligned multi-modal observations, learn the same representation up to one rotation when using "good views" (two observations of one scene) as positive pairs.</li><li>Next-token prediction, common in large language models, is a JEPA that uses "bad views" (parts of a single document), explaining its inefficiency in cross-modal alignment.</li><li>Using "good views" requires 42 times fewer training samples than next-token prediction to achieve the same alignment.</li><li>A 109M-parameter text JEPA aligns better with DINOv2 and CLIP's image encoders than language models up to 72B parameters and CLIP's text encoder.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Look up the Youtu-Parsing-Omni paper on arXiv using the ID 2610.39301.</li><li>Clone the public repository for Youtu-Parsing-Omni to examine its code and model weights.</li><li>Check the vLLM plugin and inference examples provided with the model.</li></ul>
+            <ul><li>Check out the demo at https://huggingface.co/spaces/galilai-group/prh_demo to caption your own photos and videos.</li><li>Clone the code repository from https://github.com/galilai-group/prh-proof to examine the implementation.</li><li>Look up Randall Balestriero and Yann LeCun to see their other work.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.39301" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2610.39302" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,16 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.22</div>
-            <h3><a class="title-link" href="https://blog.pragmaticengineer.com/the-pulse-time-to-rethink-software-security-because-of-ai/" target="_blank" rel="noopener">The Pulse: Time to rethink software security because of AI?</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.40614" target="_blank" rel="noopener">L3G-World: Real-Time Infinite World Generation</a></h3>
             <p class="credit">
-                Software Engineering &middot; Pragmatic Engineer
+                AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Recent security incidents, including a Certificate Authority compromise and major software vulnerabilities, show a growing threat. AI models are finding bugs, but attackers are also using AI to exploit unpatched systems rapidly, leading to warnings of an "AI-fueled security tsunami."</p>
+                <p>Researchers have introduced L3G-World, an innovative system capable of generating spatially consistent and interactive virtual worlds in real time. This system leverages a compact Latent 3D Gaussian Memory to achieve a performance of 9 frames per second.</p>
                 
-                <ul><li>Multiple recent security incidents include a critical eMudhra Certificate Authority (CA) compromise, PHP remote code execution, and Railway customer secrets leak.</li><li>eMudhra's intermediate CA private keys were trivially guessable, like "4," due to a flaw in their Key Generation Ceremony (KGC). Google Chrome is evaluating eMudhra's continued inclusion in its root program.</li><li>eMudhra's market capitalization dropped 40% in two days after details of its key generation incompetence emerged.</li></ul>
-                
-            </div>
-        </article>
-        
-        <article class="band-item">
-            <div class="band-score">7.15</div>
-            <h3><a class="title-link" href="https://blog.cloudflare.com/emudhra-patching/" target="_blank" rel="noopener">4 real? Tracking exploitation and patching of eMudhra’s weak keys</a></h3>
-            <p class="credit">
-                Software Engineering &middot; Cloudflare Blog
-                
-            </p>
-            <div class="story-body">
-                <p>A critical vulnerability allows breaking into unpatched internet connections using eMudhra certificates with only four keys. Cloudflare patched its systems and observed exploitation attempts, while much of the internet remains exposed.</p>
-                
-                <ul><li>Only four keys are needed to break into unpatched internet connections that use eMudhra certificates.</li><li>Cloudflare quickly patched its own systems to address this vulnerability.</li><li>Evidence of attempted exploitation of this weakness has been observed.</li></ul>
+                <ul><li>L3G-World generates spatially consistent, interactive worlds in real time.</li><li>It uses Latent 3D Gaussian Memory (L3G), which is a compact, rapidly renderable scene representation.</li><li>The system employs a video diffusion transformer (DiT) and an L3G memory updater.</li></ul>
                 
             </div>
         </article>
@@ -443,19 +428,6 @@
     
 
     
-    
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">6.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://www.netinterest.co/p/follow-the-money-ece" target="_blank" rel="noopener">Follow the Money</a>
-                <p>An analysis of six years of financial commentary identifies seven key trends shaping finance, including AI's role as a financing story, the rise of private markets, and the changing landscape of payments.</p>
-            </span>
-            <span class="tail-src">Net Interest</span>
-        </div>
-        
-    </section>
     
 
     
@@ -471,13 +443,13 @@
         <span>
             
             14 feeds polled &middot; 11 answered &middot; 
-            6 analysed &middot; 
+            2 analysed &middot; 
             
-            4 on this page &middot; below signal 5 dropped
+            2 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-10-31</span>
+        <span>Built 2026-11-01</span>
     </footer>
 
 </div>
