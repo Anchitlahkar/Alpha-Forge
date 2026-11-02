@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-11-01</title>
+    <title>Alpha Forge &mdash; 2026-11-02</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-11-01</b><br>
-            2 of 2 cleared
+            <b>2026-11-02</b><br>
+            5 of 8 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Platonic Representation Hypothesis with JEPAs</h2>
-            <div class="score">9.22<small>Ranked</small></div>
+            <h2>R^2Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop</h2>
+            <div class="score">8.52<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 9.0/10
+             &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers have successfully proven the Platonic Representation Hypothesis for Joint-Embedding Predictive Architectures (JEPAs). Their findings indicate that utilizing "good views" (two observations of a single scene) significantly boosts the efficiency of learning shared representations, making it 42 times more efficient than next-token prediction and even outperforming much larger language models.</p>
+        <p class="deck">R^2Orch is a new method for training AI agent orchestrators using recursive self-play and skill withdrawal. It improves performance across various tasks without needing hand-designed curricula.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Models can achieve cross-modal alignment with far less data and compute than previously thought. This changes the understanding of how AI systems learn shared representations of the world.</p>
+            <p>Agent systems can now learn complex tasks without human-designed training paths. This makes developing more autonomous and capable AI agents easier.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>The Platonic Representation Hypothesis (PRH), which states that models trained on different modalities converge to the same world representation, is now a theorem for Joint-Embedding Predictive Architectures (JEPAs).</li><li>JEPAs, which are architectures trained on aligned multi-modal observations, learn the same representation up to one rotation when using "good views" (two observations of one scene) as positive pairs.</li><li>Next-token prediction, common in large language models, is a JEPA that uses "bad views" (parts of a single document), explaining its inefficiency in cross-modal alignment.</li><li>Using "good views" requires 42 times fewer training samples than next-token prediction to achieve the same alignment.</li><li>A 109M-parameter text JEPA aligns better with DINOv2 and CLIP's image encoders than language models up to 72B parameters and CLIP's text encoder.</li></ul>
+            <ul><li>R^2Orch trains agent orchestrators using recursive self-play.</li><li>It eliminates the need for hand-designed curricula in agent training.</li><li>The system has an inner self-play loop and an outer loop that improves the inner loop's learning.</li><li>Recursive Learnability rewards a Proposer for choosing tasks where outcomes vary as skills are removed.</li><li>Skill Withdrawal removes skills when the orchestrator performs equally well without them.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Check out the demo at https://huggingface.co/spaces/galilai-group/prh_demo to caption your own photos and videos.</li><li>Clone the code repository from https://github.com/galilai-group/prh-proof to examine the implementation.</li><li>Look up Randall Balestriero and Yann LeCun to see their other work.</li></ul>
+            <ul><li>Clone the R^2Orch code repository from https://github.com/beita6969/R2Orch.</li><li>Examine the R^2Orch-9b model on Hugging Face at https://huggingface.co/beita6969/R2Orch-9b.</li><li>Read the paper on arXiv:2610.22740 to understand Recursive Learnability and Skill Withdrawal.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.39302" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2610.22740" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,16 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.40614" target="_blank" rel="noopener">L3G-World: Real-Time Infinite World Generation</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://arxiv.org/abs/2610.40709" target="_blank" rel="noopener">Finite-resource cooling of qudits beyond thermodynamic length</a></h3>
+            <p class="credit">
+                Quantum Computing &middot; arXiv quant-ph
+                
+            </p>
+            <div class="story-body">
+                <p>New research shows that qudits can be cooled more efficiently than previously believed, reducing excess cooling costs by up to 83% using specific energy eigenstate permutations.</p>
+                
+                <ul><li>Cooling a quantum system with N thermal machines costs more than Landauer's bound.</li><li>For qubits in swap-based collision models, the excess cost is set by thermodynamic length, which was thought to be generally optimal.</li><li>New findings show that qudits can achieve better cooling performance.</li></ul>
+                
+            </div>
+        </article>
+        
+        <article class="band-item">
+            <div class="band-score">8.03</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2610.39497" target="_blank" rel="noopener">Does Scaling Toward AGI Depend on What System-1 Lets System-2 Execute?</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Researchers have introduced L3G-World, an innovative system capable of generating spatially consistent and interactive virtual worlds in real time. This system leverages a compact Latent 3D Gaussian Memory to achieve a performance of 9 frames per second.</p>
+                <p>A new paper proposes co-designing a lightweight System-1 predictor with a resource-intensive System-2 executive to filter interactions, potentially making AGI scaling more compute-efficient.</p>
                 
-                <ul><li>L3G-World generates spatially consistent, interactive worlds in real time.</li><li>It uses Latent 3D Gaussian Memory (L3G), which is a compact, rapidly renderable scene representation.</li><li>The system employs a video diffusion transformer (DiT) and an L3G memory updater.</li></ul>
+                <ul><li>Progress toward artificial general intelligence (AGI) has largely relied on scaling System-2, a resource-intensive executive.</li><li>The paper asks if the next stage may come from co-designing System-2 with System-1, a lightweight, semantically aware predictor.</li><li>System-1 evaluates candidate interactions before System-2 executes them, so System-2 acts only on those worth their cost.</li></ul>
                 
             </div>
         </article>
@@ -429,9 +444,60 @@
 
     
     
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">8.03</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.34722" target="_blank" rel="noopener">CEPO: A General Framework for Improving Prompt Optimization in Multi-Agent Systems</a>
+                <p>A new framework called CEPO improves prompt optimization in multi-agent AI systems by separating coordination from execution, leading to better performance and scaling.</p>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.75</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.36545" target="_blank" rel="noopener">FrameForge: Harnessing Priors of Video Foundation Models for Unified Image Generation</a>
+                <p>FrameForge is a new AI model that uses video foundation models to improve conditional image generation. It adapts to different input conditions and performs better on various image generation tasks.</p>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+    </section>
+    
 
     
 
+    
+    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.75</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2610.40762" target="_blank" rel="noopener">Quantum manifestations of converse symmetry breaking</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.40339" target="_blank" rel="noopener">Wizard: Manipulate Any World in Real Time via Agentic Control</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.52</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2610.40693" target="_blank" rel="noopener">Finite-Element Electromagnetic Analysis and Evaluation of Antenna Performance Metrics Using a Quantum Linear System Solver</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -442,14 +508,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 11 answered &middot; 
-            2 analysed &middot; 
+            14 feeds polled &middot; 12 answered &middot; 
+            8 analysed &middot; 
             
-            2 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
+            8 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-11-01</span>
+        <span>Built 2026-11-02</span>
     </footer>
 
 </div>
