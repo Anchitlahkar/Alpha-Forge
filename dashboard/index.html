@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-11-02</title>
+    <title>Alpha Forge &mdash; 2026-11-03</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-11-02</b><br>
-            5 of 8 cleared
+            <b>2026-11-03</b><br>
+            5 of 5 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>R^2Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop</h2>
-            <div class="score">8.52<small>Ranked</small></div>
+            <h2>Wave Forcing for Speed-of-Light Streaming Video Generation</h2>
+            <div class="score">9.22<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 8.0/10
+             &middot; signal 9.0/10
         </p>
 
-        <p class="deck">R^2Orch is a new method for training AI agent orchestrators using recursive self-play and skill withdrawal. It improves performance across various tasks without needing hand-designed curricula.</p>
+        <p class="deck">Researchers introduced Wave Forcing, a new co-designed method for streaming video generation that uses wavefront scheduling and parallel execution to produce consistent, high-quality long videos at high speeds, achieving 7.07x single-GPU throughput on 8xH200 GPUs.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Agent systems can now learn complex tasks without human-designed training paths. This makes developing more autonomous and capable AI agents easier.</p>
+            <p>Generating long, consistent videos efficiently is a major hurdle for AI. This method makes high-quality, continuous video output practical, opening new possibilities for real-time applications.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>R^2Orch trains agent orchestrators using recursive self-play.</li><li>It eliminates the need for hand-designed curricula in agent training.</li><li>The system has an inner self-play loop and an outer loop that improves the inner loop's learning.</li><li>Recursive Learnability rewards a Proposer for choosing tasks where outcomes vary as skills are removed.</li><li>Skill Withdrawal removes skills when the orchestrator performs equally well without them.</li></ul>
+            <ul><li>Wave Forcing (WF) co-designs generation, training, and execution for continuous long-video output with multi-step denoising.</li><li>It uses chunk-wise causal attention to access earlier, cleaner video chunks before their denoising completes.</li><li>Wave Runtime (WaveRT) employs Wave Parallelism (WP) for early K/V delivery and communication-computation overlap, achieving 1F1C, which means one output chunk per concurrent forward round.</li><li>A three-stage training procedure introduces mixed-noise denoising, motion supervision, and causal adaptation.</li><li>On 8xH200 GPUs, 4-step WF achieves 147.6 DiT FPS and 134.8 end-to-end FPS, delivering 7.07x the single-GPU end-to-end throughput.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Clone the R^2Orch code repository from https://github.com/beita6969/R2Orch.</li><li>Examine the R^2Orch-9b model on Hugging Face at https://huggingface.co/beita6969/R2Orch-9b.</li><li>Read the paper on arXiv:2610.22740 to understand Recursive Learnability and Skill Withdrawal.</li></ul>
+            <ul><li>Clone the GitHub repository at https://github.com/SJTU-DENG-Lab/WaveForcing.</li><li>Review the project page at https://sjtu-deng-lab.github.io/WaveForcing/ for more details.</li><li>Look up the authors, such as Yijie Jin and Zhijie Deng, to see their other work.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2610.22740" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2611.00859" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://arxiv.org/abs/2610.40709" target="_blank" rel="noopener">Finite-resource cooling of qudits beyond thermodynamic length</a></h3>
-            <p class="credit">
-                Quantum Computing &middot; arXiv quant-ph
-                
-            </p>
-            <div class="story-body">
-                <p>New research shows that qudits can be cooled more efficiently than previously believed, reducing excess cooling costs by up to 83% using specific energy eigenstate permutations.</p>
-                
-                <ul><li>Cooling a quantum system with N thermal machines costs more than Landauer's bound.</li><li>For qubits in swap-based collision models, the excess cost is set by thermodynamic length, which was thought to be generally optimal.</li><li>New findings show that qudits can achieve better cooling performance.</li></ul>
-                
-            </div>
-        </article>
-        
-        <article class="band-item">
-            <div class="band-score">8.03</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2610.39497" target="_blank" rel="noopener">Does Scaling Toward AGI Depend on What System-1 Lets System-2 Execute?</a></h3>
+            <div class="band-score">8.52</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.03126" target="_blank" rel="noopener">CUA-Master: Scaling Computer-use Agents through Open-World Recursive Improvements</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>A new paper proposes co-designing a lightweight System-1 predictor with a resource-intensive System-2 executive to filter interactions, potentially making AGI scaling more compute-efficient.</p>
+                <p>CUA-Master is a new framework that uses nested recursive loops and open-world data to continuously improve computer-use AI agents, achieving strong performance on benchmarks like OSWorld and WeaveBench.</p>
                 
-                <ul><li>Progress toward artificial general intelligence (AGI) has largely relied on scaling System-2, a resource-intensive executive.</li><li>The paper asks if the next stage may come from co-designing System-2 with System-1, a lightweight, semantically aware predictor.</li><li>System-1 evaluates candidate interactions before System-2 executes them, so System-2 acts only on those worth their cost.</li></ul>
+                <ul><li>CUA-Master is a nested double-loop recursive improvement framework designed to scale computer-use agents.</li><li>Its outer loop, a 'world-data-model flywheel', integrates open-world data and uses evolving model weaknesses to guide optimization.</li><li>The inner loop combines 'open-world seeding', which mines authentic workflows from instructional videos, and 'autocatalytic propagation', which transforms these seeds into reusable primitives for task synthesis.</li></ul>
+                
+            </div>
+        </article>
+        
+        <article class="band-item">
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.03178" target="_blank" rel="noopener">CoworkOS: Scaling AI Agent Coworkers for Real-world Automation</a></h3>
+            <p class="credit">
+                AI Research &middot; Hugging Face Papers
+                
+            </p>
+            <div class="story-body">
+                <p>CoworkOS is a new AI agent harness that separates task strategy from execution. It enables human-AI collaboration through shared artifacts and improves model performance with automated post-training. The system shows strong results on productivity benchmarks.</p>
+                
+                <ul><li>CoworkOS is a long-horizon agent harness that separates task strategy from execution management.</li><li>Its three-layer architecture allows direct execution or delegation to Subagents, which are specialized agents.</li><li>The system supports human-in-the-loop collaboration via a shared application layer, letting humans and agents co-edit documents, presentations, and CAD models.</li></ul>
                 
             </div>
         </article>
@@ -447,57 +447,28 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.03</span>
+            <span class="tail-rank">8.38</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.34722" target="_blank" rel="noopener">CEPO: A General Framework for Improving Prompt Optimization in Multi-Agent Systems</a>
-                <p>A new framework called CEPO improves prompt optimization in multi-agent AI systems by separating coordination from execution, leading to better performance and scaling.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.01560" target="_blank" rel="noopener">Unified Harness for Open-Weight Robot-Use Agents</a>
+                <p>Researchers introduced `uni-robot-agent`, a unified harness that allows open-weight robot-use agents to outperform proprietary models in zero-shot manipulation. An out-of-the-box `Qwen3.8-Flash-Next` model achieved a RoboDojo Score of 31.39, exceeding GPT-6 Astra-RoboProbe's 28.97.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.75</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.36545" target="_blank" rel="noopener">FrameForge: Harnessing Priors of Video Foundation Models for Unified Image Generation</a>
-                <p>FrameForge is a new AI model that uses video foundation models to improve conditional image generation. It adapts to different input conditions and performs better on various image generation tasks.</p>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-    </section>
-    
-
-    
-
-    
-    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.75</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.40762" target="_blank" rel="noopener">Quantum manifestations of converse symmetry breaking</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.40339" target="_blank" rel="noopener">Wizard: Manipulate Any World in Real Time via Agentic Control</a>
+                <a class="title-link" href="https://huggingface.co/papers/2610.40191" target="_blank" rel="noopener">Agent Harness Framework for Agentic Video Generation</a>
+                <p>A new paper introduces the "agent harness" framework, integrating video generation with agentic world models to enable planning, tool use, and recursive self-improvement for autonomous multi-shot video production.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
-        <div class="tail-row">
-            <span class="tail-rank">7.52</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2610.40693" target="_blank" rel="noopener">Finite-Element Electromagnetic Analysis and Evaluation of Antenna Performance Metrics Using a Quantum Linear System Solver</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
     </section>
+    
+
+    
+
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -508,14 +479,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            8 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            6 analysed &middot; 
             
-            8 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
+            5 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-11-02</span>
+        <span>Built 2026-11-03</span>
     </footer>
 
 </div>
