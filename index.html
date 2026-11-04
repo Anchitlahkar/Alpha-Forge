@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-11-03</title>
+    <title>Alpha Forge &mdash; 2026-11-04</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-11-03</b><br>
-            5 of 5 cleared
+            <b>2026-11-04</b><br>
+            5 of 8 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Wave Forcing for Speed-of-Light Streaming Video Generation</h2>
-            <div class="score">9.22<small>Ranked</small></div>
+            <h2>Route Anything: General-Purpose AI System Routing</h2>
+            <div class="score">8.48<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 9.0/10
+             &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers introduced Wave Forcing, a new co-designed method for streaming video generation that uses wavefront scheduling and parallel execution to produce consistent, high-quality long videos at high speeds, achieving 7.07x single-GPU throughput on 8xH200 GPUs.</p>
+        <p class="deck">Researchers introduced Route Anything, a framework for dynamically selecting and coordinating specialized AI models and policies, improving performance and efficiency by 8.82x on average across various tasks, paving the way for general AI.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Generating long, consistent videos efficiently is a major hurdle for AI. This method makes high-quality, continuous video output practical, opening new possibilities for real-time applications.</p>
+            <p>Building general-purpose AI systems may not require a single monolithic model. Dynamically routing tasks to specialized models can improve performance and efficiency across diverse domains.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Wave Forcing (WF) co-designs generation, training, and execution for continuous long-video output with multi-step denoising.</li><li>It uses chunk-wise causal attention to access earlier, cleaner video chunks before their denoising completes.</li><li>Wave Runtime (WaveRT) employs Wave Parallelism (WP) for early K/V delivery and communication-computation overlap, achieving 1F1C, which means one output chunk per concurrent forward round.</li><li>A three-stage training procedure introduces mixed-noise denoising, motion supervision, and causal adaptation.</li><li>On 8xH200 GPUs, 4-step WF achieves 147.6 DiT FPS and 134.8 end-to-end FPS, delivering 7.07x the single-GPU end-to-end throughput.</li></ul>
+            <ul><li>Route Anything is a framework for dynamically selecting and coordinating specialized AI models and policies to improve performance and efficiency.</li><li>The framework develops a theoretical foundation for optimal routing under quality-cost trade-offs.</li><li>An omni-modal trajectory matrix was constructed, spanning 25 benchmarks across language, image, video, speech, coding, agents, and robotics, with 374,401 scored runs from 452 candidate configurations.</li><li>Per-input oracle routing outperforms the best fixed candidate by 5.4 points.</li><li>Learned routers outperform the best fixed candidate by 0.3 points across 16 benchmarks.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Clone the GitHub repository at https://github.com/SJTU-DENG-Lab/WaveForcing.</li><li>Review the project page at https://sjtu-deng-lab.github.io/WaveForcing/ for more details.</li><li>Look up the authors, such as Yijie Jin and Zhijie Deng, to see their other work.</li></ul>
+            <ul><li>Read the paper on arXiv at 2611.05275 to understand the theoretical foundation and experimental setup.</li><li>Visit the project page to see more details and potentially find supplementary materials.</li><li>Clone the GitHub repository linked from the paper page to examine the code and implementation of Route Anything.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2611.00859" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2611.05275" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.52</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.03126" target="_blank" rel="noopener">CUA-Master: Scaling Computer-use Agents through Open-World Recursive Improvements</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.03233" target="_blank" rel="noopener">Axion 1.0: Open Agent Foundation Models</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>CUA-Master is a new framework that uses nested recursive loops and open-world data to continuously improve computer-use AI agents, achieving strong performance on benchmarks like OSWorld and WeaveBench.</p>
+                <p>Axion 1.0 is an open agent foundation model trained with a simple three-stage pipeline, demonstrating competitive performance on agentic benchmarks and releasing its full training data and code.</p>
                 
-                <ul><li>CUA-Master is a nested double-loop recursive improvement framework designed to scale computer-use agents.</li><li>Its outer loop, a 'world-data-model flywheel', integrates open-world data and uses evolving model weaknesses to guide optimization.</li><li>The inner loop combines 'open-world seeding', which mines authentic workflows from instructional videos, and 'autocatalytic propagation', which transforms these seeds into reusable primitives for task synthesis.</li></ul>
+                <ul><li>Axion 1.0 is an open agent foundation model, providing strong and broad agentic capabilities.</li><li>It uses a three-stage training recipe: two supervised fine-tuning (SFT) stages followed by reinforcement learning (RL).</li><li>The first SFT stage develops self-contained reasoning through model-aware data construction.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.03178" target="_blank" rel="noopener">CoworkOS: Scaling AI Agent Coworkers for Real-world Automation</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.05036" target="_blank" rel="noopener">ToolSpace: Environment Synthesis for Long-Horizon AI Agents</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>CoworkOS is a new AI agent harness that separates task strategy from execution. It enables human-AI collaboration through shared artifacts and improves model performance with automated post-training. The system shows strong results on productivity benchmarks.</p>
+                <p>ToolSpace is a new framework that creates realistic, multi-environment benchmarks for long-horizon AI agents by analyzing real tool execution traces, reversing the traditional data-centric approach.</p>
                 
-                <ul><li>CoworkOS is a long-horizon agent harness that separates task strategy from execution management.</li><li>Its three-layer architecture allows direct execution or delegation to Subagents, which are specialized agents.</li><li>The system supports human-in-the-loop collaboration via a shared application layer, letting humans and agents co-edit documents, presentations, and CAD models.</li></ul>
+                <ul><li>ToolSpace is a tool-centric framework for synthesizing environments for long-horizon agents, reversing the common data-centric approach.</li><li>It mines data, state, and retry dependencies from adjacent calls in execution traces of real MCP services and open agent corpora.</li><li>The framework clusters weighted tool-composition graphs into environments and synthesizes databases only for state-mutating environments.</li></ul>
                 
             </div>
         </article>
@@ -449,17 +449,17 @@
         <div class="tail-row">
             <span class="tail-rank">8.38</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.01560" target="_blank" rel="noopener">Unified Harness for Open-Weight Robot-Use Agents</a>
-                <p>Researchers introduced `uni-robot-agent`, a unified harness that allows open-weight robot-use agents to outperform proprietary models in zero-shot manipulation. An out-of-the-box `Qwen3.8-Flash-Next` model achieved a RoboDojo Score of 31.39, exceeding GPT-6 Astra-RoboProbe's 28.97.</p>
+                <a class="title-link" href="https://arxiv.org/abs/2308.10996" target="_blank" rel="noopener">Perturbation-based Non-perturbative Method for Eigenproblems</a>
+                <p>A new nonperturbative method solves eigenproblems by transforming them into perturbation problems, applying standard perturbation theory, and then analytically continuing the solution.</p>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.40191" target="_blank" rel="noopener">Agent Harness Framework for Agentic Video Generation</a>
-                <p>A new paper introduces the "agent harness" framework, integrating video generation with agentic world models to enable planning, tool use, and recursive self-improvement for autonomous multi-shot video production.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.04916" target="_blank" rel="noopener">Kling's Multimodal Understanding for Video Generation</a>
+                <p>Kling's technical report details its multimodal understanding stack, including Kling-MLLM, dense captioning, perceptual text encoders, and reward modeling, to address the shift in video generation's bottleneck from rendering to semantic control.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -470,6 +470,35 @@
     
 
     
+    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2611.02737" target="_blank" rel="noopener">MoviEdit: AI Framework for Long-Form Video Editing</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.52</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2004.10173" target="_blank" rel="noopener">Quantum Computational Timelock for Secure Key Agreement</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.82</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://blog.cloudflare.com/zero-wire/" target="_blank" rel="noopener">Cloudflare Launches Zero Wire for Internet Vulnerability Intelligence</a>
+            </span>
+            <span class="tail-src">Cloudflare Blog</span>
+        </div>
+        
+    </section>
+    
 
     <h2 class="rubric">This week, joined up</h2>
     
@@ -479,14 +508,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 11 answered &middot; 
-            6 analysed &middot; 
+            14 feeds polled &middot; 12 answered &middot; 
+            8 analysed &middot; 
             
-            5 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
+            8 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-11-03</span>
+        <span>Built 2026-11-04</span>
     </footer>
 
 </div>
