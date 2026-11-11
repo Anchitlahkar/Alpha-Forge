@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-11-10</title>
+    <title>Alpha Forge &mdash; 2026-11-11</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-11-10</b><br>
-            5 of 6 cleared
+            <b>2026-11-11</b><br>
+            5 of 5 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Sage-Taiyi: A Metacognitive Architecture for Scientific Discovery</h2>
-            <div class="score">8.45<small>Ranked</small></div>
+            <h2>World In-Context Learning for Agentic Robot Manipulation</h2>
+            <div class="score">8.8<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 8.0/10
+             &middot; signal 8.5/10
         </p>
 
-        <p class="deck">Sage-Taiyi is an AI architecture that uses metacognition to guide scientific discovery. It achieved a 54.0 score on the Taiyi-Bench benchmark, outperforming baselines. The system also improved chemical reaction yields in real-world tests.</p>
+        <p class="deck">Researchers introduced World In-Context Learning (WICL) and RoboScript, an infrastructure that enables robots to learn manipulation tasks from one demonstration in simulation and apply them to real-world scenarios, achieving 83.4% success on RoboTwin 2.0 tasks.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>AI systems can now autonomously guide scientific investigation and adapt research targets. This accelerates discovery in fields like chemistry and materials science.</p>
+            <p>Robots can now learn complex manipulation tasks from a single demonstration and generalize them to new environments. This approach allows for more adaptable and efficient robotic systems.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Sage-Taiyi is a metacognition-inspired AI architecture for scientific discovery.</li><li>It guides investigations by revising its understanding of evidence and adapting research targets.</li><li>On Taiyi-Bench, an AI co-scientist ideation benchmark, Sage-Taiyi scored 54.0. The strongest baseline, AI Scientist-v2, scored 47.9.</li><li>The system ranks first on all eight metrics of historical rediscovery and open-ended ideation on Taiyi-Bench.</li><li>Expert-guided collaborations validated its proposals in chemistry, materials science, and engineering.</li></ul>
+            <ul><li>Traditional trained action policies tie learned skills to network weights, limiting generalization to the distribution they were trained on.</li><li>In-context learning (ICL) avoids this coupling but has not matched trained policies due to a lack of real-world feedback in demonstrations.</li><li>The new World In-Context Learning (WICL) paradigm allows a frozen model to rehearse a task in a simulator and write feedback into its context, not its weights.</li><li>RoboScript, a modular infrastructure, implements WICL for agentic manipulation.</li><li>From a single demonstration, RoboScript learns tasks through simulation rehearsal, stores knowledge as Task Memory, and deploys it on new scenes.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper at arxiv:2611.12762.</li><li>Check the project page and GitHub repository linked from the paper page.</li></ul>
+            <ul><li>Look up the RoboScript GitHub repository at github.com/ArcheOne-AI/RoboScript.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2611.12762" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2611.12885" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">7.75</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.08452" target="_blank" rel="noopener">ReproBridge: Building Reproducibility into ML Research Artifacts</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.03142" target="_blank" rel="noopener">DepthGraft: Structural Regularization through Hierarchical Cross-Layer KV Reconstruction</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>ReproBridge is an agent workflow that creates refined reproducible artifacts (RRAs) for machine learning experiments. It raised mean reproduction success from 76.4% to 92.6% and cut API spending by 19.7%. This improves reliability and reduces costs.</p>
+                <p>DepthGraft improves deep language models. It shares key-value representations across layers, reducing memory by one third and boosting accuracy on models up to 16B parameters.</p>
                 
-                <ul><li>Reproducing machine learning experiments is difficult due to information scattered across papers, code, and artifacts.</li><li>ReproBridge is an agent workflow that constructs refined reproducible artifacts (RRAs).</li><li>An RRA comprises a refined codebase, environment setup, experiment launchers, and a reproduction guide.</li></ul>
+                <ul><li>DepthGraft is a hierarchical KV-sharing architecture that improves deep language model training.</li><li>It addresses depth-wise information dilution in Pre-LN architectures by reusing key-value (KV) representations across layers.</li><li>This method creates direct gradient paths, acting as an implicit structural regularizer for KV representation geometry.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.10771" target="_blank" rel="noopener">WorldFoundry: Towards Unified Infrastructure for World Intelligence</a></h3>
+            <div class="band-score">8.07</div>
+            <h3><a class="title-link" href="https://arxiv.org/abs/2611.12971" target="_blank" rel="noopener">Time Running Backwards, and Where It Stops: Superoscillations of Proper Time and the Memory of the Environment</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                Quantum Computing &middot; arXiv quant-ph
                 
             </p>
             <div class="story-body">
-                <p>WorldFoundry is open-source infrastructure for reproducibly evaluating generative world models across video, 3D/4D, embodied action, and interactive systems, providing a unified framework and benchmarks.</p>
+                <p>A quantum system prepared in a superposition of proper times can be post-selected to evolve for a negative or amplified duration, acting as a quantum time-translation machine. Reversing irreversible processes like atomic decay with this machine is limited by the environment's memory time and bandwidth, not entropy.</p>
                 
-                <ul><li>WorldFoundry is open-source infrastructure for reproducible inference and evaluation of generative world models.</li><li>A generative world model is defined as a predictive dynamical system that maintains a persistent, history-conditioned environment representation, updates it based on actions, and generates temporally coherent trajectories.</li><li>The infrastructure supports various modalities, including video, 3D/4D, embodied action, and interactive world systems.</li></ul>
+                <ul><li>A quantum system in a superposition of proper times evolves for different durations in each branch.</li><li>Post-selecting the control creates a superoscillation of the time-dilation factor, allowing the system to evolve for an effective proper time that can be negative, zero, or exceed unity.</li><li>This effect is called the quantum time-translation machine, originally proposed by Aharonov, Anandan, Popescu, and Vaidman.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,21 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">7.75</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2610.42148" target="_blank" rel="noopener">Flide: Accelerating Decision Inference with Exact State Forking</a>
-                <p>Flide is an open-source inference engine that speeds up decision-model LLM agents by up to 9.5 times while maintaining exact mathematical evaluations, addressing issues of recomputation and distorted probabilities in existing engines.</p>
+                <a class="title-link" href="https://arxiv.org/abs/2611.13079" target="_blank" rel="noopener">Quantum simulation of real-time bosonic dynamics with binary and unary position encodings on superconducting and trapped-ion processors</a>
+                <p>Researchers compared binary and unary qubit encodings for simulating bosonic dynamics on IBM and IonQ quantum processors. Unary encoding, with specific optimizations, used about 200 two-qubit gates to successfully simulate tunneling in a double well, while binary encoding required thousands of gates and failed to reproduce the transfer.</p>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">6.75</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.10329" target="_blank" rel="noopener">SIRIS: Can LLMs Tell When Simulation Errors Matter in AI-Driven Systems Research</a>
-                <p>A new benchmark, Siris, shows that large language models struggle to determine when imperfect simulator data invalidates their system design recommendations, even with self-correction.</p>
+                <a class="title-link" href="https://arxiv.org/abs/2611.12993" target="_blank" rel="noopener">Second-level termination of the PPT entanglement-cost hierarchy for two qutrits</a>
+                <p>Researchers proved that the semidefinite programming lower-bound hierarchy for the PPT entanglement cost terminates at the second level for two-qutrit quantum states.</p>
             </span>
-            <span class="tail-src">Hugging Face Papers</span>
+            <span class="tail-src">arXiv quant-ph</span>
         </div>
         
     </section>
@@ -469,19 +469,6 @@
 
     
 
-    
-    <h2 class="rubric">Also cleared <span class="n">1</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://netflixtechblog.com/fact-checking-at-scale-building-a-more-accurate-and-efficient-synopsis-factuality-system-d7d85859d808?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Fact-Checking at Scale: Building a More Accurate and Efficient Synopsis Factuality System</a>
-            </span>
-            <span class="tail-src">Netflix Tech Blog</span>
-        </div>
-        
-    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -492,14 +479,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 11 answered &middot; 
-            7 analysed &middot; 
+            14 feeds polled &middot; 12 answered &middot; 
+            5 analysed &middot; 
             
-            6 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
-            
+            5 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
+            <br>Gemini was unavailable for 3 articles; dropped rather than summarised.
         </span>
-        <span>Built 2026-11-10</span>
+        <span>Built 2026-11-11</span>
     </footer>
 
 </div>
