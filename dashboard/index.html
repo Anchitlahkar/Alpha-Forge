@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-11-11</title>
+    <title>Alpha Forge &mdash; 2026-11-12</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-11-11</b><br>
-            5 of 5 cleared
+            <b>2026-11-12</b><br>
+            5 of 6 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>World In-Context Learning for Agentic Robot Manipulation</h2>
-            <div class="score">8.8<small>Ranked</small></div>
+            <h2>Incentivizing Self-Learning in Large Language Models via Reinforcement Learning</h2>
+            <div class="score">8.45<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -376,32 +376,32 @@
              &middot; Hugging Face Papers
             
             
-             &middot; signal 8.5/10
+             &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers introduced World In-Context Learning (WICL) and RoboScript, an infrastructure that enables robots to learn manipulation tasks from one demonstration in simulation and apply them to real-world scenarios, achieving 83.4% success on RoboTwin 2.0 tasks.</p>
+        <p class="deck">Researchers used reinforcement learning and a `BookNavigator` interface to teach large language models to self-learn from textbooks, increasing one model's math proof accuracy from 51.5% to 79.5%.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Robots can now learn complex manipulation tasks from a single demonstration and generalize them to new environments. This approach allows for more adaptable and efficient robotic systems.</p>
+            <p>Large language models can now learn new subjects from long-form texts like textbooks, improving their ability to solve problems in unfamiliar domains. This makes them more adaptable beyond their initial training data.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Traditional trained action policies tie learned skills to network weights, limiting generalization to the distribution they were trained on.</li><li>In-context learning (ICL) avoids this coupling but has not matched trained policies due to a lack of real-world feedback in demonstrations.</li><li>The new World In-Context Learning (WICL) paradigm allows a frozen model to rehearse a task in a simulator and write feedback into its context, not its weights.</li><li>RoboScript, a modular infrastructure, implements WICL for agentic manipulation.</li><li>From a single demonstration, RoboScript learns tasks through simulation rehearsal, stores knowledge as Task Memory, and deploys it on new scenes.</li></ul>
+            <ul><li>Large language models (LLMs) can now self-learn by autonomously retrieving, studying, and applying knowledge from long-form reference materials.</li><li>Researchers created a textbook-based mathematical problem-solving task to test this capability.</li><li>A `BookNavigator` interface helps LLMs navigate textbook content.</li><li>Reinforcement learning (RL) with fine-grained rewards incentivizes the self-learning process.</li><li>The method raised `Intern-S2-Preview-35B`'s proof accuracy from 51.5% to 79.5%.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Look up the RoboScript GitHub repository at github.com/ArcheOne-AI/RoboScript.</li></ul>
+            <ul><li>Read the paper `arxiv:2610.39671` to understand the `BookNavigator` interface and RL reward structure.</li><li>Look up Lingkai Kong, the lead author, to see their other work.</li><li>Check the `hf papers read 2610.39671` command if you use the Hugging Face CLI.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2611.12885" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2610.39671" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.03142" target="_blank" rel="noopener">DepthGraft: Structural Regularization through Hierarchical Cross-Layer KV Reconstruction</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2608.22237" target="_blank" rel="noopener">Read Less, Solve More: Token-Efficient Sparse Reading of External Content for AI Agents</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>DepthGraft improves deep language models. It shares key-value representations across layers, reducing memory by one third and boosting accuracy on models up to 16B parameters.</p>
+                <p>AI agents often read entire documents, increasing costs. SparseRead is a new control layer that reduces token use by up to 92.9% and wall time by up to 89.0% without losing task quality.</p>
                 
-                <ul><li>DepthGraft is a hierarchical KV-sharing architecture that improves deep language model training.</li><li>It addresses depth-wise information dilution in Pre-LN architectures by reusing key-value (KV) representations across layers.</li><li>This method creates direct gradient paths, acting as an implicit structural regularizer for KV representation geometry.</li></ul>
+                <ul><li>AI agents frequently access web pages, documents, and tool responses, often reading entire objects when only sparse evidence is needed.</li><li>This over-reading increases token and latency costs, and can dilute relevant evidence.</li><li>SparseRead is a reusable reading control layer that governs content admission without modifying the agent model.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.07</div>
-            <h3><a class="title-link" href="https://arxiv.org/abs/2611.12971" target="_blank" rel="noopener">Time Running Backwards, and Where It Stops: Superoscillations of Proper Time and the Memory of the Environment</a></h3>
+            <div class="band-score">8.3</div>
+            <h3><a class="title-link" href="https://blog.cloudflare.com/choosing-quepaxa/" target="_blank" rel="noopener">Choosing QuePaxa, an unusual consensus algorithm</a></h3>
             <p class="credit">
-                Quantum Computing &middot; arXiv quant-ph
+                Software Engineering &middot; Cloudflare Blog
                 
             </p>
             <div class="story-body">
-                <p>A quantum system prepared in a superposition of proper times can be post-selected to evolve for a negative or amplified duration, acting as a quantum time-translation machine. Reversing irreversible processes like atomic decay with this machine is limited by the environment's memory time and bandwidth, not entropy.</p>
+                <p>Cloudflare introduced Meerkat, a new global distributed consensus service powered by QuePaxa, an algorithm designed to operate without a single leader and perform well in wide-area networks with unstable latency.</p>
                 
-                <ul><li>A quantum system in a superposition of proper times evolves for different durations in each branch.</li><li>Post-selecting the control creates a superoscillation of the time-dilation factor, allowing the system to evolve for an effective proper time that can be negative, zero, or exceed unity.</li><li>This effect is called the quantum time-translation machine, originally proposed by Aharonov, Anandan, Popescu, and Vaidman.</li></ul>
+                <ul><li>Cloudflare launched Meerkat, an experimental distributed consensus service for its internal global control plane.</li><li>Meerkat uses QuePaxa, a new consensus algorithm published in 2023 by researchers Tennage & Băsescu et al.</li><li>Traditional consensus algorithms like Raft and Paxos often slow down or become unavailable in wide-area networks due to their reliance on a single leader.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,21 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.75</span>
+            <span class="tail-rank">8.03</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2611.13079" target="_blank" rel="noopener">Quantum simulation of real-time bosonic dynamics with binary and unary position encodings on superconducting and trapped-ion processors</a>
-                <p>Researchers compared binary and unary qubit encodings for simulating bosonic dynamics on IBM and IonQ quantum processors. Unary encoding, with specific optimizations, used about 200 two-qubit gates to successfully simulate tunneling in a double well, while binary encoding required thousands of gates and failed to reproduce the transfer.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.10193" target="_blank" rel="noopener">Ensemble Routing for Prompt-Adaptive Cost-Aware LLM Inference</a>
+                <p>Researchers introduced PISA and PISA-E, new methods for routing large language model prompts. These improve cost-performance trade-offs.</p>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">6.75</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2611.12993" target="_blank" rel="noopener">Second-level termination of the PPT entanglement-cost hierarchy for two qutrits</a>
-                <p>Researchers proved that the semidefinite programming lower-bound hierarchy for the PPT entanglement cost terminates at the second level for two-qutrit quantum states.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.13028" target="_blank" rel="noopener">GTAGym: Real AAA Game Tasks Environment for Evaluation and Reinforcement Learning</a>
+                <p>GTAGym is a new environment and benchmark for evaluating and training AI agents using tasks from Grand Theft Auto V. It includes 103 online tasks and 47 image-based tasks. Outcome checks are automated.</p>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Hugging Face Papers</span>
         </div>
         
     </section>
@@ -469,6 +469,19 @@
 
     
 
+    
+    <h2 class="rubric">Also cleared <span class="n">1</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.52</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2610.40394" target="_blank" rel="noopener">Scaling Mathematical Proof Supervision from Structured Textbooks</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -479,14 +492,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            5 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            6 analysed &middot; 
             
-            5 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
-            <br>Gemini was unavailable for 3 articles; dropped rather than summarised.
+            6 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
+            
         </span>
-        <span>Built 2026-11-11</span>
+        <span>Built 2026-11-12</span>
     </footer>
 
 </div>
