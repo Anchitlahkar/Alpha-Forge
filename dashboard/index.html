@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-11-16</title>
+    <title>Alpha Forge &mdash; 2026-11-17</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-11-16</b><br>
-            5 of 9 cleared
+            <b>2026-11-17</b><br>
+            5 of 5 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Gamer: A Generalist AI Agent for Real-Time Game Play</h2>
-            <div class="score">8.52<small>Ranked</small></div>
+            <h2>K2-Horizon: A Frontier Fleet of Open Source Language Models</h2>
+            <div class="score">8.45<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -379,29 +379,29 @@
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers have developed 'Gamer,' a generalist AI agent capable of playing both 2D and 3D games in real-time. Operating solely on screen input, keyboard, and mouse controls, Gamer demonstrates high performance in complex titles such as Honkai: Star Rail, showcasing advancements in AI for interactive environments.</p>
+        <p class="deck">The K2-Horizon project released a fleet of six open language models, from 0.9B to 375B-A23B Mixture-of-Experts (MoE), competitive on agentic and coding tasks. They introduce Mixture-of-Value Attention (MoVA) and Uno lossless diffusion adapters for efficiency and speed, and provide full development history and pipelines for transparency.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>General-purpose AI agents can now learn complex skills in dynamic virtual worlds using human-like interfaces. This capability could lead to more robust automated testing and advanced embodied intelligence systems.</p>
+            <p>New open language models with novel architectures and full transparency are available. This allows for deeper understanding and faster iteration on AI development.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Gamer is a generalist Vision-Language-Action foundation model designed for long-horizon, real-time interaction in 2D and 3D game environments.</li><li>It interacts using screenshots, keyboard, and mouse, mimicking human input without privileged game states or APIs.</li><li>The model was trained through continued pre-training on over 10,000 hours of device-level keyboard and mouse interaction data.</li><li>Sparse-thinking instruction tuning reduces redundant computation while preserving reasoning for complex decisions.</li><li>Streaming-vLLM, a high-concurrency inference engine, achieves over 20 times lower inference latency, enabling real-time control.</li></ul>
+            <ul><li>K2-Horizon is a fleet of six fully open language models, ranging from 0.9 billion to 375 billion parameters (with 23 billion active parameters for the MoE model).</li><li>These models perform competitively with other open models of their size on agentic and coding benchmarks.</li><li>Mixture-of-Value Attention (MoVA), which applies MoE to attention value projections, and softplus attention gating are new techniques introduced to strengthen reasoning.</li><li>A 36B-A4B model using both MoVA and softplus gating nearly matches a 32B dense model trained on the same data, using one-seventh the active parameters.</li><li>Uno, lossless diffusion adapters, speeds up decoding by up to 2.2 times without needing a separate draft model.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper at https://arxiv.org/abs/2611.18397.</li><li>Visit the project page at https://mihoyo-gamer.github.io/ to see gameplay demos.</li></ul>
+            <ul><li>Look up the K2-Horizon project page at https://ifm.ai/k2/.</li><li>Read the paper arxiv:2611.21003.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2611.18397" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2611.21003" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.52</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.18359" target="_blank" rel="noopener">Proposal for Agentic Robotics Framework</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.07222" target="_blank" rel="noopener">SPILLWAY: Separating Target Admission from Sanitization to Defend Tool-Using Agents against Prompt Injection</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>A new paper introduces a comprehensive framework and research roadmap for 'agentic robotics.' This paradigm envisions robotic systems powered by foundation models, enabling them to perform complex, open-world tasks through an 'Embodied System 2' approach, marking a potential new era for robotics.</p>
+                <p>SPILLWAY is a new defense mechanism that protects tool-using AI agents from prompt injection attacks by separating target admission from sanitization, achieving near-zero attack success with minimal overhead.</p>
                 
-                <ul><li>Agentic robotics is a new paradigm for robotic systems, emerging with models like GPT-6 Astra.</li><li>It uses a foundation model to handle open-world embodied tasks, unlike traditional task-specific policies.</li><li>An agentic system operates in a closed loop: observing, interpreting intent, reasoning, invoking skills, verifying, and adapting.</li></ul>
+                <ul><li>SPILLWAY defends tool-using AI agents against prompt injection attacks by separating target admission from sanitization.</li><li>It uses a deterministic check that admits an action's recipient, account, or URL if it appears in your request or a typed field from a read-only tool.</li><li>Addresses found only in free text, like an email body, are refused unless your request explicitly delegates them.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.07226" target="_blank" rel="noopener">Loopback Transformer Design</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.20218" target="_blank" rel="noopener">SWE-CoWork: Benchmarking Coding Agents as Digital Employees in Organizations</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>A novel Transformer architecture, dubbed the 'Loopback Transformer,' has been introduced. This design is noted for its efficiency, utilizing fewer parameters while simultaneously achieving improved performance compared to existing Transformer models.</p>
+                <p>A new benchmark, SWE-CoWork, evaluates AI coding agents in simulated software organizations, revealing they complete fewer than 8% of assignments despite partial test success, primarily failing at requirement tracking.</p>
                 
-                <ul><li>The Loopback Transformer is a new architecture that views residual connections as memory operating along network depth.</li><li>It stores individual block updates and uses geometric decay to discount earlier passes, learning content-dependent attention over stored updates.</li><li>Loopback Transformer reduces Transformer parameters by 40-75% compared to standard baselines.</li></ul>
+                <ul><li>SWE-CoWork is a benchmark with 101 development assignments across 101 real repositories, 11 programming languages, and 12 application domains.</li><li>Each assignment places an agent in a simulated engineering organization with 26 colleagues.</li><li>Agents must recover requirements distributed across colleagues and workplace records, reconcile conflicting evidence, and implement changes.</li></ul>
                 
             </div>
         </article>
@@ -447,21 +447,21 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.45</span>
+            <span class="tail-rank">8.15</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2611.17431" target="_blank" rel="noopener">Quantum Violation of Causal Friendliness</a>
-                <p>New research demonstrates that quantum correlations violate 'Causal Friendliness' in instrumental networks. Causal Friendliness is a generalized form of nonclassicality that is stronger than Bell's theorem, expanding our understanding of how quantum theory fundamentally departs from classical physics.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.19937" target="_blank" rel="noopener">AllocFlow: End-to-End Portfolio Trading Action Generation from Raw Market Data</a>
+                <p>Researchers developed AllocFlow, an end-to-end flow-matching framework that uses a cross-asset flow Transformer and a two-stage reinforcement learning process to generate portfolio allocations directly from raw market data. It improved risk-adjusted returns on cryptocurrency perpetual futures, raising annualized net return from 27.79% to 51.38%.</p>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">8.38</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2611.17433" target="_blank" rel="noopener">Fast Mixing and Thermal Phases from Quantum Correlation Decay</a>
-                <p>New research reveals that strong correlation decay in quantum Gibbs states enables O(1)-time quasi-local evolutions to connect quantum states with their purifications. This finding also establishes fast mixing for specific classical Markov chains, such as the q-state Potts model, by leveraging methods from quantum physics.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.21218" target="_blank" rel="noopener">InclusionMed: Benchmarking AI for Inclusive Healthcare</a>
+                <p>InclusionMed is an open initiative to evaluate medical AI, introducing the InclusionMed Atlas for organizing benchmarks and the InclusionMed Index for scoring models. Initial findings show that model rankings and inference costs vary significantly by healthcare context, and models perform better on patient communication than clinical decision-making.</p>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Hugging Face Papers</span>
         </div>
         
     </section>
@@ -469,43 +469,6 @@
 
     
 
-    
-    <h2 class="rubric">Also cleared <span class="n">4</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">8.1</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.18549" target="_blank" rel="noopener">JVT: Simple Pixel-Space Video Diffusion Transformer</a>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.95</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.18482" target="_blank" rel="noopener">MMFlash: Faster Speculative Decoding for Vision-Language Models</a>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.75</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://magazine.sebastianraschka.com/p/understanding-positional-embeddings" target="_blank" rel="noopener">Understanding Positional Embeddings in LLMs</a>
-            </span>
-            <span class="tail-src">Ahead of AI</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">6.07</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2611.17417" target="_blank" rel="noopener">Analytic Spread Complexity in Quantum Systems</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -516,14 +479,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            9 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            5 analysed &middot; 
             
-            9 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
+            5 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-11-16</span>
+        <span>Built 2026-11-17</span>
     </footer>
 
 </div>
