@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-11-17</title>
+    <title>Alpha Forge &mdash; 2026-11-18</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-11-17</b><br>
-            5 of 5 cleared
+            <b>2026-11-18</b><br>
+            5 of 8 cleared
         </div>
     </header>
 
@@ -365,43 +365,43 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>K2-Horizon: A Frontier Fleet of Open Source Language Models</h2>
-            <div class="score">8.45<small>Ranked</small></div>
+            <h2>QEDist Software for Quantum Code Distance Certification</h2>
+            <div class="score">9.15<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
-            AI Research
-             &middot; Hugging Face Papers
+            Quantum Computing
+             &middot; arXiv quant-ph
+             &middot; 18 Nov
             
-            
-             &middot; signal 8.0/10
+             &middot; signal 9.0/10
         </p>
 
-        <p class="deck">The K2-Horizon project released a fleet of six open language models, from 0.9B to 375B-A23B Mixture-of-Experts (MoE), competitive on agentic and coding tasks. They introduce Mixture-of-Value Attention (MoVA) and Uno lossless diffusion adapters for efficiency and speed, and provide full development history and pipelines for transparency.</p>
+        <p class="deck">QEDist is a new software package that offers practical and exact distance certification for qubit stabilizer codes. It provides orders-of-magnitude speedups, making exact distance certification a viable tool for the selection and optimization of quantum codes.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>New open language models with novel architectures and full transparency are available. This allows for deeper understanding and faster iteration on AI development.</p>
+            <p>Practical exact distance certification helps you select and optimize finite-length quantum codes. This directly improves the feasibility and performance of future fault-tolerant quantum computers.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>K2-Horizon is a fleet of six fully open language models, ranging from 0.9 billion to 375 billion parameters (with 23 billion active parameters for the MoE model).</li><li>These models perform competitively with other open models of their size on agentic and coding benchmarks.</li><li>Mixture-of-Value Attention (MoVA), which applies MoE to attention value projections, and softplus attention gating are new techniques introduced to strengthen reasoning.</li><li>A 36B-A4B model using both MoVA and softplus gating nearly matches a 32B dense model trained on the same data, using one-seventh the active parameters.</li><li>Uno, lossless diffusion adapters, speeds up decoding by up to 2.2 times without needing a separate draft model.</li></ul>
+            <ul><li>QEDist is a method and software package that certifies the exact distance of qubit stabilizer codes.</li><li>It builds on tree-search methods, constructing candidate logical operators one qubit at a time.</li><li>The method uses sparse parity checks, stabilizer equivalence, and verified symmetries to reduce work.</li><li>QEDist prunes search branches by lower-bounding the weight needed to complete a logical operator, reducing search time.</li><li>It works for Calderbank-Shor-Steane (CSS) and non-CSS codes, and for the fault distance of syndrome-extraction circuits.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Look up the K2-Horizon project page at https://ifm.ai/k2/.</li><li>Read the paper arxiv:2611.21003.</li></ul>
+            <ul><li>Look up the QEDist software package to see if a public repository is available.</li><li>Search for the authors of this paper to find related work or implementations.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2611.21003" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://arxiv.org/abs/2611.21709" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -411,30 +411,30 @@
         
         <article class="band-item">
             <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.07222" target="_blank" rel="noopener">SPILLWAY: Separating Target Admission from Sanitization to Defend Tool-Using Agents against Prompt Injection</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.22115" target="_blank" rel="noopener">Xing4 Agentic Model Development on Domestic Chips</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>SPILLWAY is a new defense mechanism that protects tool-using AI agents from prompt injection attacks by separating target admission from sanitization, achieving near-zero attack success with minimal overhead.</p>
+                <p>Researchers have developed Xing4, a series of 285B-parameter agentic language models, detailing the system engineering involved in training them on 8,192 Ascend 910C cards using MindSpore HyperParallel and TeleGym.</p>
                 
-                <ul><li>SPILLWAY defends tool-using AI agents against prompt injection attacks by separating target admission from sanitization.</li><li>It uses a deterministic check that admits an action's recipient, account, or URL if it appears in your request or a typed field from a read-only tool.</li><li>Addresses found only in free text, like an email body, are refused unless your request explicitly delegates them.</li></ul>
+                <ul><li>Xing4 is a new series of large language models that extends the TeleChat lineage.</li><li>The models were trained on 8,192 Ascend 910C cards, a domestic chip platform.</li><li>A 285B-parameter model was successfully pre-trained using this infrastructure.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.20218" target="_blank" rel="noopener">SWE-CoWork: Benchmarking Coding Agents as Digital Employees in Organizations</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.19800" target="_blank" rel="noopener">Multi-Branch Transformer Architecture</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>A new benchmark, SWE-CoWork, evaluates AI coding agents in simulated software organizations, revealing they complete fewer than 8% of assignments despite partial test success, primarily failing at requirement tracking.</p>
+                <p>The Multi-Branch Transformer (MBT) is a new architecture designed to scale language models by processing inputs through parallel, independently parameterized branches. This approach, particularly when combined with shared KV caching, enhances model quality and inference efficiency, resulting in reduced training compute and increased decoding throughput.</p>
                 
-                <ul><li>SWE-CoWork is a benchmark with 101 development assignments across 101 real repositories, 11 programming languages, and 12 application domains.</li><li>Each assignment places an agent in a simulated engineering organization with 26 colleagues.</li><li>Agents must recover requirements distributed across colleagues and workplace records, reconcile conflicting evidence, and implement changes.</li></ul>
+                <ul><li>Multi-Branch Transformer (MBT) scales language models using parallel, independently parameterized branches of sequential blocks.</li><li>It processes input through shared initial layers, executes branches in parallel, and fuses their outputs before shared final layers.</li><li>The Joint-KV method constructs a shared KV cache from branch representations at each depth for better inference efficiency.</li></ul>
                 
             </div>
         </article>
@@ -447,19 +447,19 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.15</span>
+            <span class="tail-rank">8.38</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.19937" target="_blank" rel="noopener">AllocFlow: End-to-End Portfolio Trading Action Generation from Raw Market Data</a>
-                <p>Researchers developed AllocFlow, an end-to-end flow-matching framework that uses a cross-asset flow Transformer and a two-stage reinforcement learning process to generate portfolio allocations directly from raw market data. It improved risk-adjusted returns on cryptocurrency perpetual futures, raising annualized net return from 27.79% to 51.38%.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.21099" target="_blank" rel="noopener">ForceHarness for Robot Manipulation with Frozen Models</a>
+                <p>ForceHarness is a system that enables frozen multimodal AI models to effectively utilize contact force information for robot manipulation tasks. It achieves this by employing self-terminating force primitives and a physics translation layer, leading to significant improvements in zero-shot success rates on both real robots and benchmarks.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">8.03</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.21218" target="_blank" rel="noopener">InclusionMed: Benchmarking AI for Inclusive Healthcare</a>
-                <p>InclusionMed is an open initiative to evaluate medical AI, introducing the InclusionMed Atlas for organizing benchmarks and the InclusionMed Index for scoring models. Initial findings show that model rankings and inference costs vary significantly by healthcare context, and models perform better on patient communication than clinical decision-making.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.22055" target="_blank" rel="noopener">Weight-Space Programming with Non-Transformer LLMs</a>
+                <p>Large Language Models (LLMs) can be used to design efficient, sparse table or associative-memory neural networks for weight-space programming. These LLM-designed networks can outperform same-sized Transformers in terms of parameter count and inference speed, although pretrained LLMs still maintain higher accuracy.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -470,6 +470,35 @@
     
 
     
+    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.9</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2611.21685" target="_blank" rel="noopener">Characterization of CSS Circuits in Quantum Computing</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.67</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2611.17621" target="_blank" rel="noopener">AscendGYM NPU Optimization Benchmark</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.52</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://netflixtechblog.com/engineering-ai-discover-e244944cdc38?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">Netflix's AI Discover Generative AI Recommendations</a>
+            </span>
+            <span class="tail-src">Netflix Tech Blog</span>
+        </div>
+        
+    </section>
+    
 
     <h2 class="rubric">This week, joined up</h2>
     
@@ -479,14 +508,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 11 answered &middot; 
-            5 analysed &middot; 
+            14 feeds polled &middot; 12 answered &middot; 
+            9 analysed &middot; 
             
-            5 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
-            
+            8 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
+            <br>Gemini was unavailable for 1 article; dropped rather than summarised.
         </span>
-        <span>Built 2026-11-17</span>
+        <span>Built 2026-11-18</span>
     </footer>
 
 </div>
