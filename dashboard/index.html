@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-11-23</title>
+    <title>Alpha Forge &mdash; 2026-11-24</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-11-23</b><br>
-            5 of 7 cleared
+            <b>2026-11-24</b><br>
+            5 of 8 cleared
         </div>
     </header>
 
@@ -365,43 +365,43 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>MemOnce: Scalable Memory Architecture for Large Language Models</h2>
-            <div class="score">9.15<small>Ranked</small></div>
+            <h2>Diverse AI Developments (Huawei, LLNL, Stanford, Drone Detection)</h2>
+            <div class="score">8.45<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
 
         <p class="credit">
             AI Research
-             &middot; Hugging Face Papers
+             &middot; Import AI
+             &middot; 23 Nov
             
-            
-             &middot; signal 9.0/10
+             &middot; signal 8.0/10
         </p>
 
-        <p class="deck">MemOnce is a novel memory architecture developed for large language models. It dramatically reduces GPU memory consumption and accelerates processing by efficiently caching compact states and employing sparse attention mechanisms.</p>
+        <p class="deck">Recent AI advancements include Chinese researchers optimizing Huawei chips with AscendGYM, Lawrence Livermore scientists developing SciResearch-Eval to test AI's ability to communicate experimental uncertainty (finding only frontier models reliable), Stanford professors launching the 'plural intelligence' AI startup Noeri with $110M, and the release of A2A-UAV, a new multimodal dataset for air-to-air drone detection.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Large language models can now process much longer conversations and documents more efficiently. This makes advanced AI applications more practical to deploy.</p>
+            <p>Advanced AI models can now design experiments and communicate uncertainty, making them more reliable partners in scientific discovery. This capability could accelerate scientific progress and make AI-driven research more trustworthy.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>MemOnce is a memory architecture for large language models (LLMs) designed to handle long interactions efficiently.</li><li>It addresses the issue of standard Transformers, which accumulate KV caches, causing linear GPU memory growth and quadratic computational complexity.</li><li>The architecture includes a memory encoder-decoder that caches a small subset of final-layer hidden states as compact memory representations, decoding them into KV caches on demand.</li><li>It also uses memory sparse attention, which retrieves relevant memory representations and computes sparse indices once across layers.</li><li>These designs reduce GPU memory footprint and achieve linear-time complexity for LLM inference.</li></ul>
+            <ul><li>Shenzhen Loop Area Institute released AscendGYM, a kernel optimization benchmark for Huawei Ascend NPUs, to help AI develop custom kernels.</li><li>AscendGYM includes AscendForge, which provides unified interfaces for compilation, correctness checking, performance measurement, and feedback.</li><li>In tests, Opus 5, GPT-5.6, and GLM-5.3 showed strong performance in optimizing Ascend chips; Claude Code yielded the best absolute scores.</li><li>Lawrence Livermore National Laboratory researchers introduced SciResearch-Eval, a benchmark testing AI agents' ability to design experiments and report results with 95% uncertainty intervals.</li><li>SciResearch-Eval uses a deliberately flawed simulator to test AI's resilience to unanticipated equipment issues.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper arxiv:2611.27973.</li><li>Clone the GitHub repository linked from the paper page.</li><li>Look up the MemOnce project page.</li><li>Search for Chang Nie to find related research.</li></ul>
+            <ul><li>Look up AscendGYM on GitHub.</li><li>Read the AscendGYM paper on arXiv.</li><li>Read the SciResearch-Eval paper on arXiv.</li><li>Check out the SciResearch-Eval leaderboard.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2611.27973" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://importai.substack.com/p/import-ai-482-huawei-kernel-benchmarks" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.15449" target="_blank" rel="noopener">ReasonText: Improving Text-Aware Image Super-Resolution with Reasoning</a></h3>
+            <div class="band-score">7.67</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.30662" target="_blank" rel="noopener">Tencent's WeMM-Ecom for WeChat E-Commerce</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>A new paper highlights the challenges Text-Aware Image Super-Resolution (TAISR) models face with text requiring reasoning, introducing the ReasonText benchmark and GTTCA metric. To address this, they propose Reasoning Transfer via Captioning (RTC), a training-free plug-in utilizing Multimodal Large Language Models (MLLMs) to significantly improve text restoration performance on difficult texts.</p>
+                <p>Tencent has released WeMM-Ecom, a family of multimodal large language models specifically designed for WeChat e-commerce, which achieve state-of-the-art performance on e-commerce benchmarks and strong general-purpose results, with models and training details made public.</p>
                 
-                <ul><li>Existing Text-Aware Image Super-Resolution (TAISR) models struggle to restore severely degraded text. They rely on local visual evidence.</li><li>Humans use context, logical patterns, and prior knowledge to read such text.</li><li>The paper introduces ReasonText, a human-curated benchmark, and Ground-Truth Text-Crop Accuracy (GTTCA), a recognition-based metric.</li></ul>
+                <ul><li>WeMM-Ecom is a family of multimodal large language models developed by Tencent for WeChat e-commerce.</li><li>The family includes five models, from a 0.8B dense model to a 35B mixture-of-experts model with 3B active parameters.</li><li>Training involves two-stage continued pre-training and hybrid-thinking post-training, which combines on-policy distillation and reinforcement learning.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://arxiv.org/abs/2611.26720" target="_blank" rel="noopener">Improved Digitization Bounds for U(1) Lattice Gauge Theory</a></h3>
+            <div class="band-score">7.67</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.30989" target="_blank" rel="noopener">WorldLeague Benchmark for AI Physical Agency</a></h3>
             <p class="credit">
-                Quantum Computing &middot; arXiv quant-ph
+                AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>New research has significantly improved the accuracy of estimating resources required for simulating lattice gauge theories on quantum computers. The study provides exponentially better error bounds for both digitization and time evolution in U(1) Lattice Gauge Theory via semiclassical analysis.</p>
+                <p>WorldLeague introduces a benchmark of 60 simulated robot tasks to measure the physical agency of 13 AI systems, revealing that even top models like Claude Fable 5.2 complete only 13 tasks and often struggle to translate language understanding into physical action.</p>
                 
-                <ul><li>The paper derives a digitization error bound for low-lying eigenstates of the Kogut-Susskind Hamiltonian, a model for pure U(1) gauge theory.</li><li>It translates this into a bound on time-evolution error.</li><li>The new bound shows exponentially improved dependence on the inverse lattice spacing (1/a) and evolution time (T).</li></ul>
+                <ul><li>WorldLeague benchmarks 13 AI systems across 60 simulated robot tasks.</li><li>The tasks cover exploration (WorldSeek), object rearrangement (WorldShape), and adaptation (WorldShift).</li><li>The benchmark measures an Interactive Score for progress and a physical success rate for goal achievement.</li></ul>
                 
             </div>
         </article>
@@ -447,19 +447,19 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">8.03</span>
+            <span class="tail-rank">7.6</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.27963" target="_blank" rel="noopener">NoPeWorld: Non-penetrating World Models</a>
-                <p>Researchers have introduced NoPeWorld, a lightweight framework that leverages hidden states from frozen diffusion transformers to ensure objects do not penetrate each other in interactive video world models. This approach drastically reduces physical violations from 74% to 16% and demonstrates strong zero-shot generalization capabilities.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.29897" target="_blank" rel="noopener">Motion Mamba 2.0 for Humanoid Control</a>
+                <p>Motion Mamba 2.0 is a new Mamba-based diffusion architecture designed for generating long-horizon, controllable motion for humanoid robots, achieving a 6.138x speedup on an RTX 4090 and supporting real-world interactive control.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.75</span>
+            <span class="tail-rank">7.6</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.24636" target="_blank" rel="noopener">Clover-35B-A3B-Preview: A New Diffusion Language Model</a>
-                <p>DiffuSpace has unveiled Clover-35B-A3B-Preview, a 35 billion parameter mixture-of-experts diffusion language model. This model has achieved impressive scores on benchmarks like SWE-bench and Terminal-Bench, and is capable of generating 680 tokens per second on an NVIDIA GB300 GPU.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.31201" target="_blank" rel="noopener">Embo-Harness for Frontier Model Robot Control</a>
+                <p>Embo-Harness is a framework demonstrating how frontier multimodal models can effectively control robots by leveraging their native visual reasoning and tool-use capabilities, leading to high success rates in manipulation tasks.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -470,23 +470,31 @@
     
 
     
-    <h2 class="rubric">Also cleared <span class="n">2</span></h2>
+    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.67</span>
+            <span class="tail-rank">7.6</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.27193" target="_blank" rel="noopener">cmHC: Balancing Stream Mixing in Hyper-Connections</a>
+                <a class="title-link" href="https://huggingface.co/papers/2611.30013" target="_blank" rel="noopener">3AGameFactory-Motion for 3D Asset Animation</a>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">6.22</span>
+            <span class="tail-rank">7.45</span>
             <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2611.26705" target="_blank" rel="noopener">Certification of Non-Stabilizerness in Multi-Qubit Systems</a>
+                <a class="title-link" href="https://blog.cloudflare.com/probing-dns-at-cloudflare/" target="_blank" rel="noopener">Cloudflare's Flamingo DNS Testing Framework</a>
             </span>
-            <span class="tail-src">arXiv quant-ph</span>
+            <span class="tail-src">Cloudflare Blog</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.37</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://www.netinterest.co/p/supply-and-demand" target="_blank" rel="noopener">AI Investment and Productivity Lag</a>
+            </span>
+            <span class="tail-src">Net Interest</span>
         </div>
         
     </section>
@@ -500,14 +508,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            8 analysed &middot; 
+            14 feeds polled &middot; 13 answered &middot; 
+            10 analysed &middot; 
             
-            7 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
+            8 on this page &middot; below signal 5 dropped
+            <br>No answer: arXiv quant-ph.
             
         </span>
-        <span>Built 2026-11-23</span>
+        <span>Built 2026-11-24</span>
     </footer>
 
 </div>
