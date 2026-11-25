@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-11-24</title>
+    <title>Alpha Forge &mdash; 2026-11-25</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-11-24</b><br>
-            5 of 8 cleared
+            <b>2026-11-25</b><br>
+            5 of 5 cleared
         </div>
     </header>
 
@@ -365,7 +365,7 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Diverse AI Developments (Huawei, LLNL, Stanford, Drone Detection)</h2>
+            <h2>Loom Attention for Transformers</h2>
             <div class="score">8.45<small>Ranked</small></div>
         </div>
 
@@ -373,35 +373,35 @@
 
         <p class="credit">
             AI Research
-             &middot; Import AI
-             &middot; 23 Nov
+             &middot; Hugging Face Papers
+            
             
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Recent AI advancements include Chinese researchers optimizing Huawei chips with AscendGYM, Lawrence Livermore scientists developing SciResearch-Eval to test AI's ability to communicate experimental uncertainty (finding only frontier models reliable), Stanford professors launching the 'plural intelligence' AI startup Noeri with $110M, and the release of A2A-UAV, a new multimodal dataset for air-to-air drone detection.</p>
+        <p class="deck">Researchers have introduced Loom attention, a novel mechanism for Transformers that enables dynamic circuit rewiring per token. This innovation, integrated into LoomFormer, allows the architecture to achieve performance comparable to larger models with significantly less computational power (3x reduction) and demonstrates improved results on various downstream tasks.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Advanced AI models can now design experiments and communicate uncertainty, making them more reliable partners in scientific discovery. This capability could accelerate scientific progress and make AI-driven research more trustworthy.</p>
+            <p>New Transformer architectures can achieve higher performance with less computational cost. This makes advanced AI models more accessible and efficient to train.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Shenzhen Loop Area Institute released AscendGYM, a kernel optimization benchmark for Huawei Ascend NPUs, to help AI develop custom kernels.</li><li>AscendGYM includes AscendForge, which provides unified interfaces for compilation, correctness checking, performance measurement, and feedback.</li><li>In tests, Opus 5, GPT-5.6, and GLM-5.3 showed strong performance in optimizing Ascend chips; Claude Code yielded the best absolute scores.</li><li>Lawrence Livermore National Laboratory researchers introduced SciResearch-Eval, a benchmark testing AI agents' ability to design experiments and report results with 95% uncertainty intervals.</li><li>SciResearch-Eval uses a deliberately flawed simulator to test AI's resilience to unanticipated equipment issues.</li></ul>
+            <ul><li>Loom attention allows a Transformer to dynamically rewire its circuits at every token by interweaving vertical attention over earlier head outputs with horizontal attention over tokens.</li><li>LoomFormer is a dual-stream architecture that splits control and content between vector and matrix streams.</li><li>The architecture matches Transformers trained with over 3x compute across model sizes and training token budgets.</li><li>Trained on 300 billion Pile tokens with only 1.95% extra FLOPs, LoomPythia-2.8B achieves 1.6x the downstream gain of mHC-Pythia-2.8B.</li><li>LoomPythia-2.8B matches Pythia-12B in 0-shot (59.9) and surpasses it in 5-shot (61.6 vs 60.8) and FLAN ppl (6.94 vs 7.26).</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Look up AscendGYM on GitHub.</li><li>Read the AscendGYM paper on arXiv.</li><li>Read the SciResearch-Eval paper on arXiv.</li><li>Check out the SciResearch-Eval leaderboard.</li></ul>
+            <ul><li>Read the paper 'Rewirable Circuits in Transformers with Loom Attention' (arxiv:2611.30634).</li><li>Clone the LoomFormer GitHub repository at https://github.com/Caiyun-AI/LoomFormer.</li><li>Look up the authors: Da Xiao, Qingye Meng, Shengping Li, Xingyuan Yuan.</li><li>Check the LoomPythia-2.8B model on Hugging Face at https://huggingface.co/Caiyun-AI/LoomPythia-2.8B.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://importai.substack.com/p/import-ai-482-huawei-kernel-benchmarks" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2611.30634" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.30662" target="_blank" rel="noopener">Tencent's WeMM-Ecom for WeChat E-Commerce</a></h3>
+            <div class="band-score">8.45</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.32884" target="_blank" rel="noopener">Reinforcement Learning with Verifiable Beliefs (RLVB)</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Tencent has released WeMM-Ecom, a family of multimodal large language models specifically designed for WeChat e-commerce, which achieve state-of-the-art performance on e-commerce benchmarks and strong general-purpose results, with models and training details made public.</p>
+                <p>Researchers have introduced Reinforcement Learning with Verifiable Beliefs (RLVB), a new method designed to train AI agents to delay providing answers until they have gathered sufficient evidence. This approach has shown an average performance improvement of 17.1% on vision-language tasks.</p>
                 
-                <ul><li>WeMM-Ecom is a family of multimodal large language models developed by Tencent for WeChat e-commerce.</li><li>The family includes five models, from a 0.8B dense model to a 35B mixture-of-experts model with 3B active parameters.</li><li>Training involves two-stage continued pre-training and hybrid-thinking post-training, which combines on-policy distillation and reinforcement learning.</li></ul>
+                <ul><li>AI agents often commit to an answer before gathering enough evidence, even when their stated belief still names several possible answers.</li><li>Reinforcement Learning with Verifiable Beliefs (RLVB) rewards agents for delaying commitment until their inferred posterior over answers is sufficiently narrow.</li><li>RLVB does not require a judge, critic, or reward model.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
             <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.30989" target="_blank" rel="noopener">WorldLeague Benchmark for AI Physical Agency</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.31205" target="_blank" rel="noopener">ACAP Framework for Robot Control</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>WorldLeague introduces a benchmark of 60 simulated robot tasks to measure the physical agency of 13 AI systems, revealing that even top models like Claude Fable 5.2 complete only 13 tasks and often struggle to translate language understanding into physical action.</p>
+                <p>A new framework called ACAP (Asynchronous Coding Agents as Policy) has been developed for efficient robot control. It utilizes a team of persistent coding agents coordinated by a hyper-agent, leading to a 28.2% reduction in task completion time in real-world applications.</p>
                 
-                <ul><li>WorldLeague benchmarks 13 AI systems across 60 simulated robot tasks.</li><li>The tasks cover exploration (WorldSeek), object rearrangement (WorldShape), and adaptation (WorldShift).</li><li>The benchmark measures an Interactive Score for progress and a physical success rate for goal achievement.</li></ul>
+                <ul><li>ACAP organizes a robot as a team of persistent coding agents.</li><li>Each member agent controls a configurable robot component, such as an arm with its gripper.</li><li>A hyper-agent assigns tasks, coordinates dependencies, and dynamically allocates control between lead and member agents.</li></ul>
                 
             </div>
         </article>
@@ -447,19 +447,19 @@
     <section class="tail">
         
         <div class="tail-row">
-            <span class="tail-rank">7.6</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.29897" target="_blank" rel="noopener">Motion Mamba 2.0 for Humanoid Control</a>
-                <p>Motion Mamba 2.0 is a new Mamba-based diffusion architecture designed for generating long-horizon, controllable motion for humanoid robots, achieving a 6.138x speedup on an RTX 4090 and supporting real-world interactive control.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.28947" target="_blank" rel="noopener">NightWatch for Proactive Perception in Computer-Use Agents</a>
+                <p>NightWatch is a new plug-and-play framework that enhances vision-language computer-use agents with a lightweight streaming watcher, NightWatch-0.8B. This addition ensures agents remain synchronized with dynamic interfaces, reducing latency by 33% and wasted time by 53%, ultimately improving task success rates.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.6</span>
+            <span class="tail-rank">7.52</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.31201" target="_blank" rel="noopener">Embo-Harness for Frontier Model Robot Control</a>
-                <p>Embo-Harness is a framework demonstrating how frontier multimodal models can effectively control robots by leveraging their native visual reasoning and tool-use capabilities, leading to high success rates in manipulation tasks.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.25403" target="_blank" rel="noopener">Antom 3-in-1 Payment Foundation Model</a>
+                <p>Ant International has developed the Antom 3-in-1 Transformer, a 7B parameter payment foundation model. This model integrates sequence, tabular, and graph data to enhance risk detection, resulting in a 34.5% improvement in target business metrics and a 37.88% reduction in overall loss rates during a four-month online experiment.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -469,35 +469,6 @@
 
     
 
-    
-    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.6</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.30013" target="_blank" rel="noopener">3AGameFactory-Motion for 3D Asset Animation</a>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.45</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://blog.cloudflare.com/probing-dns-at-cloudflare/" target="_blank" rel="noopener">Cloudflare's Flamingo DNS Testing Framework</a>
-            </span>
-            <span class="tail-src">Cloudflare Blog</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.37</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://www.netinterest.co/p/supply-and-demand" target="_blank" rel="noopener">AI Investment and Productivity Lag</a>
-            </span>
-            <span class="tail-src">Net Interest</span>
-        </div>
-        
-    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -508,14 +479,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 13 answered &middot; 
-            10 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            5 analysed &middot; 
             
-            8 on this page &middot; below signal 5 dropped
-            <br>No answer: arXiv quant-ph.
+            5 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-11-24</span>
+        <span>Built 2026-11-25</span>
     </footer>
 
 </div>
