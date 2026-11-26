@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-11-25</title>
+    <title>Alpha Forge &mdash; 2026-11-26</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-11-25</b><br>
-            5 of 5 cleared
+            <b>2026-11-26</b><br>
+            5 of 8 cleared
         </div>
     </header>
 
@@ -365,7 +365,7 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Loom Attention for Transformers</h2>
+            <h2>Mixture-of-Loops Transformer Architecture</h2>
             <div class="score">8.45<small>Ranked</small></div>
         </div>
 
@@ -379,29 +379,29 @@
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">Researchers have introduced Loom attention, a novel mechanism for Transformers that enables dynamic circuit rewiring per token. This innovation, integrated into LoomFormer, allows the architecture to achieve performance comparable to larger models with significantly less computational power (3x reduction) and demonstrates improved results on various downstream tasks.</p>
+        <p class="deck">A new Transformer architecture, Mixture-of-Loops Transformer (MoLT), improves pretraining efficiency and inference latency by reusing key-value memory. Its U-shaped variant (U-MoLT) demonstrates 1.7x token efficiency and matches inference speeds compared to existing models like OLMo3.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>New Transformer architectures can achieve higher performance with less computational cost. This makes advanced AI models more accessible and efficient to train.</p>
+            <p>Training and running large language models can become more efficient. This reduces the computational resources needed for advanced AI capabilities.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Loom attention allows a Transformer to dynamically rewire its circuits at every token by interweaving vertical attention over earlier head outputs with horizontal attention over tokens.</li><li>LoomFormer is a dual-stream architecture that splits control and content between vector and matrix streams.</li><li>The architecture matches Transformers trained with over 3x compute across model sizes and training token budgets.</li><li>Trained on 300 billion Pile tokens with only 1.95% extra FLOPs, LoomPythia-2.8B achieves 1.6x the downstream gain of mHC-Pythia-2.8B.</li><li>LoomPythia-2.8B matches Pythia-12B in 0-shot (59.9) and surpasses it in 5-shot (61.6 vs 60.8) and FLAN ppl (6.94 vs 7.26).</li></ul>
+            <ul><li>Mixture-of-Loops Transformer (MoLT) reuses key-value (KV) memory across loops and depths.</li><li>Mixture-of-Loops Attention (MoLA) uses KV as memory for selective reuse.</li><li>U-shaped MoLT (U-MoLT) separates memory construction from prediction readout and skips unused decoder traversals.</li><li>In 400B-token pretraining, U-MoLT achieved 1.7x validation cross-entropy (CE) token efficiency at 700M models.</li><li>It improved 3B MoE 10-domain perplexity by 0.75 and 10-task accuracy by 2.1 percentage points.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper 'Rewirable Circuits in Transformers with Loom Attention' (arxiv:2611.30634).</li><li>Clone the LoomFormer GitHub repository at https://github.com/Caiyun-AI/LoomFormer.</li><li>Look up the authors: Da Xiao, Qingye Meng, Shengping Li, Xingyuan Yuan.</li><li>Check the LoomPythia-2.8B model on Hugging Face at https://huggingface.co/Caiyun-AI/LoomPythia-2.8B.</li></ul>
+            <ul><li>Clone the repository at https://github.com/hustvl/MoLT to examine the code.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2611.30634" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2611.34923" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -411,30 +411,30 @@
         
         <article class="band-item">
             <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.32884" target="_blank" rel="noopener">Reinforcement Learning with Verifiable Beliefs (RLVB)</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.33144" target="_blank" rel="noopener">PyRUA-Dex for Dexterous Bimanual Manipulation with Coding Agents</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Researchers have introduced Reinforcement Learning with Verifiable Beliefs (RLVB), a new method designed to train AI agents to delay providing answers until they have gathered sufficient evidence. This approach has shown an average performance improvement of 17.1% on vision-language tasks.</p>
+                <p>PyRUA-Dex is a framework that allows AI coding agents to programmatically learn complex bimanual manipulation policies without human demonstrations, achieving state-of-the-art simulation results and rapid real-world task learning.</p>
                 
-                <ul><li>AI agents often commit to an answer before gathering enough evidence, even when their stated belief still names several possible answers.</li><li>Reinforcement Learning with Verifiable Beliefs (RLVB) rewards agents for delaying commitment until their inferred posterior over answers is sufficiently narrow.</li><li>RLVB does not require a judge, critic, or reward model.</li></ul>
+                <ul><li>PyRUA-Dex is a framework for coding agents to develop dexterous bimanual manipulation policies.</li><li>It works without needing human demonstrations, addressing a key limitation in the field.</li><li>The framework develops programmatic policies in two stages: exploration and refinement.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
-            <div class="band-score">7.67</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.31205" target="_blank" rel="noopener">ACAP Framework for Robot Control</a></h3>
+            <div class="band-score">7.75</div>
+            <h3><a class="title-link" href="https://arxiv.org/abs/2611.33299" target="_blank" rel="noopener">Quditology: Harnessing Many Levels for Quantum Information Processing</a></h3>
             <p class="credit">
-                AI Research &middot; Hugging Face Papers
+                Quantum Computing &middot; arXiv quant-ph
                 
             </p>
             <div class="story-body">
-                <p>A new framework called ACAP (Asynchronous Coding Agents as Policy) has been developed for efficient robot control. It utilizes a team of persistent coding agents coordinated by a hyper-agent, leading to a 28.2% reduction in task completion time in real-world applications.</p>
+                <p>Quditology explores the use of qudits (quantum bits with more than two states) to process more information in quantum computers. Recent experimental advancements are bringing qudits closer to practical application across various quantum platforms.</p>
                 
-                <ul><li>ACAP organizes a robot as a team of persistent coding agents.</li><li>Each member agent controls a configurable robot component, such as an arm with its gripper.</li><li>A hyper-agent assigns tasks, coordinates dependencies, and dynamically allocates control between lead and member agents.</li></ul>
+                <ul><li>Quantum hardware faces a gap with classical computing capabilities, mainly due to decoherence limiting information storage and reliable logical steps.</li><li>Qudits, quantum bits that use a numerical base higher than binary (d), can increase quantum information processing from a given quantum computer size.</li><li>They also offer a natural encoding for high-dimensional physical degrees of freedom in quantum simulations.</li></ul>
                 
             </div>
         </article>
@@ -449,17 +449,17 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.28947" target="_blank" rel="noopener">NightWatch for Proactive Perception in Computer-Use Agents</a>
-                <p>NightWatch is a new plug-and-play framework that enhances vision-language computer-use agents with a lightweight streaming watcher, NightWatch-0.8B. This addition ensures agents remain synchronized with dynamic interfaces, reducing latency by 33% and wasted time by 53%, ultimately improving task success rates.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.34237" target="_blank" rel="noopener">VibeVideoAgent for Code-Driven Video Generation</a>
+                <p>VibeVideoAgent is a training-free framework that enables AI coding agents to inspect video drafts using multimodal perception, enhancing audiovisual quality and synchronization for advanced models like Claude Opus 5.5 and GPT-6 Astra.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.52</span>
+            <span class="tail-rank">7.6</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.25403" target="_blank" rel="noopener">Antom 3-in-1 Payment Foundation Model</a>
-                <p>Ant International has developed the Antom 3-in-1 Transformer, a 7B parameter payment foundation model. This model integrates sequence, tabular, and graph data to enhance risk detection, resulting in a 34.5% improvement in target business metrics and a 37.88% reduction in overall loss rates during a four-month online experiment.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.34575" target="_blank" rel="noopener">Sage-Med: Scaling Medical Multimodal Intelligence</a>
+                <p>Researchers introduced Sage-Med-Preview, a 35B-parameter medical multimodal model. It surpasses existing open-source medical and general scientific models and approaches proprietary models in performance across various clinical tasks.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -470,6 +470,35 @@
     
 
     
+    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
+    <section class="tail">
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.52</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2611.33284" target="_blank" rel="noopener">Structure-Factor Witnesses of Thermal Entanglement</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">7.3</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://arxiv.org/abs/2611.33270" target="_blank" rel="noopener">Universal Randomness Extraction Bounds</a>
+            </span>
+            <span class="tail-src">arXiv quant-ph</span>
+        </div>
+        
+        <div class="tail-row">
+            <span class="tail-rank">6.97</span>
+            <span class="tail-title">
+                <a class="title-link" href="https://huggingface.co/papers/2611.34849" target="_blank" rel="noopener">Real2SimLab: Unified Platform for Real-to-Simulation Transfer</a>
+            </span>
+            <span class="tail-src">Hugging Face Papers</span>
+        </div>
+        
+    </section>
+    
 
     <h2 class="rubric">This week, joined up</h2>
     
@@ -479,14 +508,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 11 answered &middot; 
-            5 analysed &middot; 
+            14 feeds polled &middot; 12 answered &middot; 
+            9 analysed &middot; 
             
-            5 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
+            8 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist.
             
         </span>
-        <span>Built 2026-11-25</span>
+        <span>Built 2026-11-26</span>
     </footer>
 
 </div>
