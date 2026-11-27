@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-11-26</title>
+    <title>Alpha Forge &mdash; 2026-11-27</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-11-26</b><br>
-            5 of 8 cleared
+            <b>2026-11-27</b><br>
+            5 of 5 cleared
         </div>
     </header>
 
@@ -365,7 +365,7 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>Mixture-of-Loops Transformer Architecture</h2>
+            <h2>OS-Omni Benchmark for Generalist AI Agents</h2>
             <div class="score">8.45<small>Ranked</small></div>
         </div>
 
@@ -379,29 +379,29 @@
              &middot; signal 8.0/10
         </p>
 
-        <p class="deck">A new Transformer architecture, Mixture-of-Loops Transformer (MoLT), improves pretraining efficiency and inference latency by reusing key-value memory. Its U-shaped variant (U-MoLT) demonstrates 1.7x token efficiency and matches inference speeds compared to existing models like OLMo3.</p>
+        <p class="deck">A new benchmark called OS-Omni has been developed to assess the capabilities of generalist AI agents on complex, long-horizon workflows across various platforms, including six operating systems and web environments. Initial evaluations using OS-Omni indicate that even advanced models like Claude Opus 5.5 fall significantly short of human-level performance, particularly on mobile and macOS.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Training and running large language models can become more efficient. This reduces the computational resources needed for advanced AI capabilities.</p>
+            <p>Current AI agents struggle with complex, multi-platform tasks, especially on iOS and macOS. This reveals a clear gap between AI performance and human ability in these areas.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>Mixture-of-Loops Transformer (MoLT) reuses key-value (KV) memory across loops and depths.</li><li>Mixture-of-Loops Attention (MoLA) uses KV as memory for selective reuse.</li><li>U-shaped MoLT (U-MoLT) separates memory construction from prediction readout and skips unused decoder traversals.</li><li>In 400B-token pretraining, U-MoLT achieved 1.7x validation cross-entropy (CE) token efficiency at 700M models.</li><li>It improved 3B MoE 10-domain perplexity by 0.75 and 10-task accuracy by 2.1 percentage points.</li></ul>
+            <ul><li>OS-Omni is a live cross-platform benchmark for evaluating computer-using agents.</li><li>It evaluates agents on long-horizon workflows across Windows, Ubuntu, macOS, iOS, Android, and Web environments.</li><li>The v1 release contains 48 tasks per platform and 12 cross-platform workflows pairing a desktop with an Android phone.</li><li>OS-Omni tasks require an average of 67.54 interaction steps, substantially more than OSWorld's 15.0 steps.</li><li>The strongest evaluated agent, Claude Opus 5.5, achieved 68.5% average success on v1.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Clone the repository at https://github.com/hustvl/MoLT to examine the code.</li></ul>
+            <ul><li>Read the paper at arxiv:2611.34232 to understand the benchmark's methodology.</li><li>Look up the OS-Omni project page for more details on the benchmark.</li><li>Check the OS-Omni GitHub repository to explore the execution environment and adapters.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2611.34923" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2611.34232" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
@@ -410,31 +410,31 @@
     <section class="band">
         
         <article class="band-item">
-            <div class="band-score">8.45</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.33144" target="_blank" rel="noopener">PyRUA-Dex for Dexterous Bimanual Manipulation with Coding Agents</a></h3>
+            <div class="band-score">8.38</div>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.31619" target="_blank" rel="noopener">Vernier Tool for Time-Series Forecasting Leaderboard Analysis</a></h3>
             <p class="credit">
                 AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>PyRUA-Dex is a framework that allows AI coding agents to programmatically learn complex bimanual manipulation policies without human demonstrations, achieving state-of-the-art simulation results and rapid real-world task learning.</p>
+                <p>A new tool named 'Vernier' has been developed to measure the resolution of time-series forecasting leaderboards. Vernier reveals that most existing leaderboards are unable to reliably differentiate between top-performing models and that rankings can be influenced by unrelated submissions, exposing flaws in their current evaluation methodologies.</p>
                 
-                <ul><li>PyRUA-Dex is a framework for coding agents to develop dexterous bimanual manipulation policies.</li><li>It works without needing human demonstrations, addressing a key limitation in the field.</li><li>The framework develops programmatic policies in two stages: exploration and refinement.</li></ul>
+                <ul><li>Vernier is a new tool that computes the 'resolution' of time-series forecasting leaderboards.</li><li>Resolution is the smallest score difference a leaderboard's datasets can reliably detect.</li><li>Most public leaderboards, including GIFT-Eval, fev-bench, Chronos Benchmark II, and TIME, have low resolution, often 3.6 to 19 times the gap between neighboring entries.</li></ul>
                 
             </div>
         </article>
         
         <article class="band-item">
             <div class="band-score">7.75</div>
-            <h3><a class="title-link" href="https://arxiv.org/abs/2611.33299" target="_blank" rel="noopener">Quditology: Harnessing Many Levels for Quantum Information Processing</a></h3>
+            <h3><a class="title-link" href="https://huggingface.co/papers/2611.34051" target="_blank" rel="noopener">Stable Gated DeltaNet-2 Model Introduction</a></h3>
             <p class="credit">
-                Quantum Computing &middot; arXiv quant-ph
+                AI Research &middot; Hugging Face Papers
                 
             </p>
             <div class="story-body">
-                <p>Quditology explores the use of qudits (quantum bits with more than two states) to process more information in quantum computers. Recent experimental advancements are bringing qudits closer to practical application across various quantum platforms.</p>
+                <p>Researchers have introduced Stable Gated DeltaNet-2, an enhanced linear attention model designed to resolve training instability issues in long-context scenarios. This new model utilizes symmetric erasure and decay-regulated writing, leading to improved performance on long-context tasks.</p>
                 
-                <ul><li>Quantum hardware faces a gap with classical computing capabilities, mainly due to decoherence limiting information storage and reliable logical steps.</li><li>Qudits, quantum bits that use a numerical base higher than binary (d), can increase quantum information processing from a given quantum computer size.</li><li>They also offer a natural encoding for high-dimensional physical degrees of freedom in quantum simulations.</li></ul>
+                <ul><li>Linear attention models offer efficient long-sequence modeling with linear complexity and fixed-size recurrent states.</li><li>Gated DeltaNet-2 (GDN-2), a linear attention model, suffers from training failures during long-context training.</li><li>These failures stem from asymmetric erasure in GDN-2, causing exponential state growth even without new writes.</li></ul>
                 
             </div>
         </article>
@@ -449,17 +449,17 @@
         <div class="tail-row">
             <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.34237" target="_blank" rel="noopener">VibeVideoAgent for Code-Driven Video Generation</a>
-                <p>VibeVideoAgent is a training-free framework that enables AI coding agents to inspect video drafts using multimodal perception, enhancing audiovisual quality and synchronization for advanced models like Claude Opus 5.5 and GPT-6 Astra.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.34457" target="_blank" rel="noopener">ProxyGenBench for Video Generation Evaluation</a>
+                <p>ProxyGenBench is a newly introduced benchmark specifically designed to evaluate proxy-guided video generation models. It assesses how effectively these models adhere to animated 3D blockouts, maintain structural integrity, complete content, correct artifacts, and bind multimodal conditions.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
         
         <div class="tail-row">
-            <span class="tail-rank">7.6</span>
+            <span class="tail-rank">7.67</span>
             <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.34575" target="_blank" rel="noopener">Sage-Med: Scaling Medical Multimodal Intelligence</a>
-                <p>Researchers introduced Sage-Med-Preview, a 35B-parameter medical multimodal model. It surpasses existing open-source medical and general scientific models and approaches proprietary models in performance across various clinical tasks.</p>
+                <a class="title-link" href="https://huggingface.co/papers/2611.34290" target="_blank" rel="noopener">StateWeaver for Long-Horizon Video Generation</a>
+                <p>StateWeaver is a novel AI method that employs active state tracking and hierarchical collaboration among multiple agents to generate long videos. This approach significantly improves cross-shot consistency and ensures more accurate depiction of state changes throughout the video.</p>
             </span>
             <span class="tail-src">Hugging Face Papers</span>
         </div>
@@ -469,35 +469,6 @@
 
     
 
-    
-    <h2 class="rubric">Also cleared <span class="n">3</span></h2>
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.52</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2611.33284" target="_blank" rel="noopener">Structure-Factor Witnesses of Thermal Entanglement</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.3</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://arxiv.org/abs/2611.33270" target="_blank" rel="noopener">Universal Randomness Extraction Bounds</a>
-            </span>
-            <span class="tail-src">arXiv quant-ph</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">6.97</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.34849" target="_blank" rel="noopener">Real2SimLab: Unified Platform for Real-to-Simulation Transfer</a>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-    </section>
     
 
     <h2 class="rubric">This week, joined up</h2>
@@ -508,14 +479,14 @@
     <footer class="colophon">
         <span>
             
-            14 feeds polled &middot; 12 answered &middot; 
-            9 analysed &middot; 
+            14 feeds polled &middot; 11 answered &middot; 
+            5 analysed &middot; 
             
-            8 on this page &middot; below signal 5 dropped
-            <br>No answer: Import AI, Quantum Zeitgeist.
+            5 on this page &middot; below signal 5 dropped
+            <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-11-26</span>
+        <span>Built 2026-11-27</span>
     </footer>
 
 </div>
