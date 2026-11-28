@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Forge &mdash; 2026-11-27</title>
+    <title>Alpha Forge &mdash; 2026-11-28</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230D0D0C'/><rect x='2' y='6' width='12' height='4' fill='%23F0442A'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,8 +354,8 @@
     <header class="masthead">
         <h1 class="wordmark"><span class="bar"></span>Alpha Forge</h1>
         <div class="dateline">
-            <b>2026-11-27</b><br>
-            5 of 5 cleared
+            <b>2026-11-28</b><br>
+            1 of 1 cleared
         </div>
     </header>
 
@@ -365,8 +365,8 @@
     
     <article class="lead">
         <div class="lead-head">
-            <h2>OS-Omni Benchmark for Generalist AI Agents</h2>
-            <div class="score">8.45<small>Ranked</small></div>
+            <h2>Solve Vision with Code: Coding Agents Are Stronger Visual Reasoners Than Video Models</h2>
+            <div class="score">8.03<small>Ranked</small></div>
         </div>
 
         <div class="lead-rule"></div>
@@ -374,97 +374,41 @@
         <p class="credit">
             AI Research
              &middot; Hugging Face Papers
+             &middot; 27 Nov
             
-            
-             &middot; signal 8.0/10
+             &middot; signal 7.5/10
         </p>
 
-        <p class="deck">A new benchmark called OS-Omni has been developed to assess the capabilities of generalist AI agents on complex, long-horizon workflows across various platforms, including six operating systems and web environments. Initial evaluations using OS-Omni indicate that even advanced models like Claude Opus 5.5 fall significantly short of human-level performance, particularly on mobile and macOS.</p>
+        <p class="deck">Coding agents that write programs for visual reasoning tasks outperform video generation models on a new benchmark, demonstrating program synthesis as a more reliable approach.</p>
 
         <div class="story-body">
             
             <h4>So what</h4>
-            <p>Current AI agents struggle with complex, multi-platform tasks, especially on iOS and macOS. This reveals a clear gap between AI performance and human ability in these areas.</p>
+            <p>AI systems that generate code to solve visual problems perform better than those that directly generate video. This suggests that symbolic reasoning through program synthesis offers a much more reliable path for visual intelligence.</p>
             
 
             
             <h4>Key points</h4>
-            <ul><li>OS-Omni is a live cross-platform benchmark for evaluating computer-using agents.</li><li>It evaluates agents on long-horizon workflows across Windows, Ubuntu, macOS, iOS, Android, and Web environments.</li><li>The v1 release contains 48 tasks per platform and 12 cross-platform workflows pairing a desktop with an Android phone.</li><li>OS-Omni tasks require an average of 67.54 interaction steps, substantially more than OSWorld's 15.0 steps.</li><li>The strongest evaluated agent, Claude Opus 5.5, achieved 68.5% average success on v1.</li></ul>
+            <ul><li>Video generation models are often evaluated for their visual reasoning capabilities.</li><li>Researchers compared video models against coding agents on identical visual reasoning tasks and inputs.</li><li>The evaluation used VBVR-Pro-Bench, a benchmark with 500 instances across five cognitive categories.</li><li>Coding agents received the same first frame and prompt as video models, without access to ground truth or metadata.</li><li>Three closed-model agents (Codex with gpt-6-astra, Claude Code with Fable 5.1, Gemini CLI with Gemini 3.1 Pro) scored 0.923, 0.894, and 0.893.</li></ul>
             
 
             
             <h4>Worth doing</h4>
-            <ul><li>Read the paper at arxiv:2611.34232 to understand the benchmark's methodology.</li><li>Look up the OS-Omni project page for more details on the benchmark.</li><li>Check the OS-Omni GitHub repository to explore the execution environment and adapters.</li></ul>
+            <ul><li>Read the paper `arxiv:2611.34813` to understand the methodology and results in detail.</li><li>Look up the lead author, Hokin Deng, and the other authors from Carnegie Mellon University.</li><li>Install the Hugging Face CLI by running `curl -LsSf https://hf.co/cli/install.sh | bash`.</li><li>Use the Hugging Face CLI to read the paper with `hf papers read 2611.34813`.</li></ul>
             
 
             
         </div>
 
         
-        <a class="read" href="https://huggingface.co/papers/2611.34232" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
+        <a class="read" href="https://huggingface.co/papers/2611.34813" target="_blank" rel="noopener">Read it <span class="arrow">&rarr;</span></a>
         
     </article>
 
     
     
-    <section class="band">
-        
-        <article class="band-item">
-            <div class="band-score">8.38</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.31619" target="_blank" rel="noopener">Vernier Tool for Time-Series Forecasting Leaderboard Analysis</a></h3>
-            <p class="credit">
-                AI Research &middot; Hugging Face Papers
-                
-            </p>
-            <div class="story-body">
-                <p>A new tool named 'Vernier' has been developed to measure the resolution of time-series forecasting leaderboards. Vernier reveals that most existing leaderboards are unable to reliably differentiate between top-performing models and that rankings can be influenced by unrelated submissions, exposing flaws in their current evaluation methodologies.</p>
-                
-                <ul><li>Vernier is a new tool that computes the 'resolution' of time-series forecasting leaderboards.</li><li>Resolution is the smallest score difference a leaderboard's datasets can reliably detect.</li><li>Most public leaderboards, including GIFT-Eval, fev-bench, Chronos Benchmark II, and TIME, have low resolution, often 3.6 to 19 times the gap between neighboring entries.</li></ul>
-                
-            </div>
-        </article>
-        
-        <article class="band-item">
-            <div class="band-score">7.75</div>
-            <h3><a class="title-link" href="https://huggingface.co/papers/2611.34051" target="_blank" rel="noopener">Stable Gated DeltaNet-2 Model Introduction</a></h3>
-            <p class="credit">
-                AI Research &middot; Hugging Face Papers
-                
-            </p>
-            <div class="story-body">
-                <p>Researchers have introduced Stable Gated DeltaNet-2, an enhanced linear attention model designed to resolve training instability issues in long-context scenarios. This new model utilizes symmetric erasure and decay-regulated writing, leading to improved performance on long-context tasks.</p>
-                
-                <ul><li>Linear attention models offer efficient long-sequence modeling with linear complexity and fixed-size recurrent states.</li><li>Gated DeltaNet-2 (GDN-2), a linear attention model, suffers from training failures during long-context training.</li><li>These failures stem from asymmetric erasure in GDN-2, causing exponential state growth even without new writes.</li></ul>
-                
-            </div>
-        </article>
-        
-    </section>
-    
 
     
-    
-    <section class="tail">
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.34457" target="_blank" rel="noopener">ProxyGenBench for Video Generation Evaluation</a>
-                <p>ProxyGenBench is a newly introduced benchmark specifically designed to evaluate proxy-guided video generation models. It assesses how effectively these models adhere to animated 3D blockouts, maintain structural integrity, complete content, correct artifacts, and bind multimodal conditions.</p>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-        <div class="tail-row">
-            <span class="tail-rank">7.67</span>
-            <span class="tail-title">
-                <a class="title-link" href="https://huggingface.co/papers/2611.34290" target="_blank" rel="noopener">StateWeaver for Long-Horizon Video Generation</a>
-                <p>StateWeaver is a novel AI method that employs active state tracking and hierarchical collaboration among multiple agents to generate long videos. This approach significantly improves cross-shot consistency and ensures more accurate depiction of state changes throughout the video.</p>
-            </span>
-            <span class="tail-src">Hugging Face Papers</span>
-        </div>
-        
-    </section>
     
 
     
@@ -480,13 +424,13 @@
         <span>
             
             14 feeds polled &middot; 11 answered &middot; 
-            5 analysed &middot; 
+            1 analysed &middot; 
             
-            5 on this page &middot; below signal 5 dropped
+            1 on this page &middot; below signal 5 dropped
             <br>No answer: Import AI, Quantum Zeitgeist, arXiv quant-ph.
             
         </span>
-        <span>Built 2026-11-27</span>
+        <span>Built 2026-11-28</span>
     </footer>
 
 </div>
